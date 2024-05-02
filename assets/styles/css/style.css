@@ -1177,6 +1177,14 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #fefefe;
 }
 
+.btn:hover {
+  background: #D69961;
+}
+
+.btn:active {
+  background: #BD5B01;
+}
+
 .cover {
   display: flex;
   justify-content: center;

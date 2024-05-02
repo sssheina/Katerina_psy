@@ -6,3 +6,12 @@
     background: $color-orangeMiddle;
     color: $color-white;
 }
+
+.btn:hover {
+    background: $color-orangeLight;
+}
+
+.btn:active {
+    background: $color-orangeDark;
+}
+
