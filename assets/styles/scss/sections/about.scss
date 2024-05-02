@@ -1,0 +1,48 @@
+.about {
+    display: flex;
+    
+  justify-content: center;
+  align-items: center;
+  padding: 145px 0 72px;
+}
+
+.about__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.about__content {
+    display: flex;
+    flex-direction: row;
+    padding: 85px 0 95px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about__video-block, .about__video {
+    width: 790px;
+}
+
+.about__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 779px;
+    
+}
+
+.about__hr {
+    width: 50px;
+    text-align: start;
+}
+
+.about__button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.about__button {
+    width: 386px;
+}
