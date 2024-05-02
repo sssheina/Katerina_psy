@@ -1,0 +1,134 @@
+$color-orangeDark: #BD5B01;
+$color-orangeMiddle: #BD5B01;
+$color-orangeLight: #D69961;
+$color-blueDark: #010E23;
+$color-blueLight: #D9E9FF;
+
+$color-grayDark: #B1B1B1;
+$color-graymiddle: #C8C7C7;
+$color-grayLight: #D9D9D9;
+$color-white: #fefefe;
+
+
+%h1-title {
+  font-family: var(--raleway-font-family);
+  font-size: var(--h1-title-font-size);
+  font-weight: var(--h1-title-font-weight, 600);
+  font-style: normal;
+  line-height: var(--h1-title-line-height);
+  letter-spacing: var(--h1-title-letter-spacing);
+  text-transform: var(--h1-title-text-transform);
+  text-decoration: var(--h1-title-text-decoration);
+  color: $color-blueDark;
+}
+
+%h2-title {
+  position: relative;
+  font-family: var(--raleway-font-family);
+  font-size: var(--h2-title-font-size);
+  font-weight: var(--h2-title-font-weight, 500);
+  font-style: normal;
+  line-height: var(--h2-title-line-height);
+  letter-spacing: var(--h2-title-letter-spacing);
+  text-transform: var(--h2-title-text-transform);
+  text-decoration: var(--h2-title-text-decoration);
+  text-align: var(--h2-title-text-align);
+  color: $color-blueDark;
+}
+
+%h3-title {
+  font-family: var(--raleway-font-family);
+  font-size: var(--h3-title-font-size);
+  font-weight: var(--h3-title-font-weight, 500);
+  font-style: normal;
+  line-height: var(--h3-title-line-height);
+  letter-spacing: var(--h3-title-letter-spacing);
+  text-transform: var(--h3-title-text-transform);
+  text-decoration: var(--h3-title-text-decoration);
+  color: $color-blueDark;
+}
+
+%h4-title {
+  font-family: var(--raleway-font-family);
+  font-size: var(--h4-title-font-size);
+  font-weight: var(--h4-title-font-weight, 500);
+  font-style: normal;
+  line-height: var(--h4-title-line-height);
+  letter-spacing: var(--h4-title-letter-spacing);
+  text-transform: var(--h4-title-text-transform);
+  text-decoration: var(--h4-title-text-decoration);
+  color: $color-blueDark;
+}
+
+%h5-title {
+  font-family: var(--raleway-font-family);
+  font-size: var(--h5-title-font-size);
+  font-weight: var(--h5-title-font-weight, 500);
+  font-style: normal;
+  line-height: var(--h5-title-line-height);
+  letter-spacing: var(--h5-title-letter-spacing);
+  text-transform: var(--h5-title-text-transform);
+  text-decoration: var(--h5-title-text-decoration);
+  color: $color-blueDark;
+}
+
+%paragraph-large {
+  font-family: var(--raleway-font-family);
+  font-size: var(--paragraph-large-font-size);
+  font-weight: var(--paragraph-large-font-weight, 500);
+  font-style: normal;
+  line-height: var(--paragraph-large-line-height);
+  letter-spacing: var(--paragraph-large-letter-spacing);
+  text-transform: var(--paragraph-large-text-transform);
+  text-decoration: var(--paragraph-large-text-decoration);
+  color: $color-blueDark;
+}
+
+%paragraph-medium {
+  font-family: var(--raleway-font-family);
+  font-size: var(--paragraph-medium-font-size);
+  font-weight: var(--paragraph-medium-font-weight, 500);
+  font-style: normal;
+  line-height: var(--paragraph-medium-line-height);
+  letter-spacing: var(--paragraph-medium-letter-spacing);
+  text-transform: var(--paragraph-medium-text-transform);
+  text-decoration: var(--paragraph-medium-text-decoration);
+  color: $color-blueDark;
+}
+
+%paragraph-standard {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--paragraph-standard-font-size);
+  font-weight: var(--paragraph-standard-font-weight, 500);
+  font-style: normal;
+  line-height: var(--paragraph-standard-line-height);
+  letter-spacing: var(--paragraph-standard-letter-spacing);
+  text-transform: var(--paragraph-standard-text-transform);
+  text-decoration: var(--paragraph-standard-text-decoration);
+  color: $color-blueDark;
+}
+
+
+%button-text {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--button-text-font-size);
+  font-weight: var(--button-text-font-weight, 500);
+  font-style: var(--button-text-font-style);
+  line-height: var(--button-text-line-height);
+  letter-spacing: var(--button-text-letter-spacing);
+  text-transform: var(--button-text-text-transform);
+  text-decoration: var(--button-text-text-decoration);
+  color: $color-blueDark;
+}
+
+%footnote-standard {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--footnote-standard-font-size);
+  font-weight: var(--footnote-standard-font-weight, 500);
+  font-style: var(--footnote-standard-font-style);
+  line-height: var(--footnote-standard-line-height);
+  letter-spacing: var(--footnote-standard-letter-spacing);
+  text-transform: var(--footnote-standard-text-transform);
+  text-decoration: var(--footnote-standard-text-decoration);
+  color: $color-blueDark;
+}
