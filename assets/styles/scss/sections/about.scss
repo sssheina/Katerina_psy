@@ -32,8 +32,11 @@
 }
 
 .about__hr {
-    width: 50px;
+    width: 200px;
+    margin-left: 0;
     text-align: start;
+    color: $color-blueDark;
+    height: 2px;
 }
 
 .about__button-block {

@@ -1288,8 +1288,11 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .about__hr {
-  width: 50px;
+  width: 200px;
+  margin-left: 0;
   text-align: start;
+  color: #010E23;
+  height: 2px;
 }
 
 .about__button-block {
