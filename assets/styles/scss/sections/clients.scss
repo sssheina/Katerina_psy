@@ -1,0 +1,45 @@
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 73px 0 72px;
+  }
+
+  .clients__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .clients__cards {
+    display: flex;
+    gap: 25px;
+    padding: 85px 0 95px;
+  }
+
+  .clients__h3 {
+    color: $color-orangeLight;
+  }
+
+  .client-card {
+    display: flex;
+    flex-direction: column;
+    width: 386px;
+    height: 400px;
+    padding: 30px;
+    justify-content: flex-end
+  }
+
+  .clients__button-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .clients__button {
+    width: 386px;
+  }
+
+  .clients__span {
+     color: $color-white;
+  }
