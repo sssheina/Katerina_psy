@@ -1,6 +1,7 @@
 $color-orangeDark: #BD5B01;
 $color-orangeMiddle: #BD5B01;
 $color-orangeLight: #D69961;
+$color-orange: #CE6A0E;
 $color-blueDark: #010E23;
 $color-blueLight: #D9E9FF;
 
@@ -99,7 +100,7 @@ $color-white: #fefefe;
 %paragraph-standard {
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
-  font-weight: var(--paragraph-standard-font-weight, 500);
+  font-weight: var(--paragraph-standard-font-weight, 400);
   font-style: normal;
   line-height: var(--paragraph-standard-line-height);
   letter-spacing: var(--paragraph-standard-letter-spacing);

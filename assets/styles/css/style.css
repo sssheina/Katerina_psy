@@ -818,7 +818,7 @@ textarea {
 .paragraph-standard {
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
-  font-weight: var(--paragraph-standard-font-weight, 500);
+  font-weight: var(--paragraph-standard-font-weight, 400);
   font-style: normal;
   line-height: var(--paragraph-standard-line-height);
   letter-spacing: var(--paragraph-standard-letter-spacing);
@@ -960,9 +960,9 @@ textarea {
   --paragraph-medium-text-transform: none;
   --paragraph-medium-text-decoration: none;
   --paragraph-standard-font-family: var(--montserrat-font-family);
-  --paragraph-standard-font-size: 18px;
-  --paragraph-standard-font-weight: 500;
-  --paragraph-standard-line-height: 1.5;
+  --paragraph-standard-font-size: 20px;
+  --paragraph-standard-font-weight: 400;
+  --paragraph-standard-line-height: 140%;
   --paragraph-standard-letter-spacing: 0;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
@@ -974,7 +974,7 @@ textarea {
   --button-text-text-decoration: none;
   /* footnote - standard */
   --footnote-standard-font-size: 18px;
-  --footnote-standard-font-weight: 500;
+  --footnote-standard-font-weight: 400;
   --footnote-standard-font-style: italic;
   --footnote-standard-line-height: 1.5;
   --footnote-standard-text-transform: none;
@@ -1348,7 +1348,7 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-direction: column;
   width: 386px;
   height: 400px;
-  padding: 30px;
+  padding: 28px;
   justify-content: flex-end;
 }
 
@@ -1365,6 +1365,69 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .clients__span {
   color: #fefefe;
+}
+
+.methods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+}
+
+.methods__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.methods__cards {
+  display: flex;
+  gap: 25px;
+  padding: 85px 0 95px;
+}
+
+.methods__h3-1,
+.methods__h3-3,
+.methods__h3-5 {
+  color: #CE6A0E;
+}
+
+.methods__h3-2,
+.methods__h3-6 {
+  color: #010E23;
+}
+
+.methods__h3-1,
+.methods__h3-2,
+.methods__h3-3,
+.methods__h3-6 {
+  padding-bottom: 50px;
+}
+
+.methods__h3-5 {
+  padding-bottom: 10px;
+}
+
+.methods-card {
+  display: flex;
+  flex-direction: column;
+  width: 255px;
+  height: 341px;
+}
+
+.methods__card-4 {
+  width: 249px;
+  height: 403px;
+}
+
+.methods__button-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.methods__button {
+  width: 386px;
 }
 
 /*# sourceMappingURL=style.css.map */

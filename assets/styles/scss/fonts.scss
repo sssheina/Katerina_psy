@@ -235,9 +235,9 @@
   // /* paragraph - standard*/ основной текст
 
   --paragraph-standard-font-family: var(--montserrat-font-family);
-  --paragraph-standard-font-size: 18px;
-  --paragraph-standard-font-weight: 500;
-  --paragraph-standard-line-height: 1.5;
+  --paragraph-standard-font-size: 20px;
+  --paragraph-standard-font-weight: 400;
+  --paragraph-standard-line-height: 140%;
   --paragraph-standard-letter-spacing: 0;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
@@ -276,7 +276,7 @@
 
   /* footnote - standard */
   --footnote-standard-font-size: 18px;
-  --footnote-standard-font-weight: 500;
+  --footnote-standard-font-weight: 400;
   --footnote-standard-font-style: italic;
   --footnote-standard-line-height:  1.5;
   // --footnote-standard-letter-spacing: 2px;
