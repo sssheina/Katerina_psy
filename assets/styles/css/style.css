@@ -733,7 +733,7 @@ textarea {
 .h1-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h1-title-font-size);
-  font-weight: var(--h1-title-font-weight, 600);
+  font-weight: var(--h1-title-font-weight, 500);
   font-style: normal;
   line-height: var(--h1-title-line-height);
   letter-spacing: var(--h1-title-letter-spacing);
@@ -941,9 +941,6 @@ textarea {
 :root {
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
-  --font-smoothing: antialiased; /* Сглаживание шрифтов */
-  --text-rendering: optimizeLegibility; /* Оптимизация читаемости */
-  --font-smooth: always; /* Сглаживание шрифтов (для Safari) */
   /* h1 - title */
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
@@ -994,9 +991,9 @@ textarea {
   --paragraph-medium-text-transform: none;
   --paragraph-medium-text-decoration: none;
   --paragraph-standard-font-family: var(--montserrat-font-family);
-  --paragraph-standard-font-size: 20px;
-  --paragraph-standard-font-weight: 400;
-  --paragraph-standard-line-height: 140%;
+  --paragraph-standard-font-size: 18px;
+  --paragraph-standard-font-weight: 500;
+  --paragraph-standard-line-height: 1.5;
   --paragraph-standard-letter-spacing: 0;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
@@ -1008,9 +1005,10 @@ textarea {
   --button-text-text-decoration: none;
   /* footnote - standard */
   --footnote-standard-font-size: 18px;
-  --footnote-standard-font-weight: 400;
+  --footnote-standard-font-weight: 500;
   --footnote-standard-font-style: italic;
-  --footnote-standard-line-height: 1.5;
+  --footnote-standard-line-height: 140%;
+  --footnote-standard-letter-spacing: 2px;
   --footnote-standard-text-transform: none;
   --footnote-standard-text-decoration: none;
   --swiper-navigation-size: 66px;
@@ -1038,9 +1036,7 @@ body._lock {
 .container {
   max-width: 1620px;
   width: 100%;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
+  margin: 0 20px;
 }
 
 .header {
@@ -1584,6 +1580,65 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .expertise__button {
+  width: 386px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+}
+
+.benefits__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefits__content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 85px 0 95px;
+}
+
+.cards-row {
+  display: flex;
+  gap: 25px;
+}
+
+.benefits-card_1,
+.benefits-card_2 {
+  display: flex;
+  flex-direction: column;
+  max-width: 387px;
+  width: 100%;
+  height: 270px;
+}
+
+.card-5_img {
+  width: 28px;
+  height: 28px;
+}
+
+.benefits-card_1 {
+  gap: 64px;
+}
+
+.benefits-card_2 {
+  gap: 25px;
+}
+
+.title-orange {
+  color: #CE6A0E;
+}
+
+.benefits__text {
+  max-width: 355px;
+  width: 100%;
+}
+
+.benefits__button {
   width: 386px;
 }
 

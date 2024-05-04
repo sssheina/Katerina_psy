@@ -66,10 +66,6 @@
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
 
-  --font-smoothing: antialiased; /* Сглаживание шрифтов */
-  --text-rendering: optimizeLegibility; /* Оптимизация читаемости */
-  --font-smooth: always; /* Сглаживание шрифтов (для Safari) */
-
   /* h1 - title */
 
   --h1-title-font-family: var(--raleway-font-family);
@@ -239,9 +235,9 @@
   // /* paragraph - standard*/ основной текст
 
   --paragraph-standard-font-family: var(--montserrat-font-family);
-  --paragraph-standard-font-size: 20px;
-  --paragraph-standard-font-weight: 400;
-  --paragraph-standard-line-height: 140%;
+  --paragraph-standard-font-size: 18px;
+  --paragraph-standard-font-weight: 500;
+  --paragraph-standard-line-height: 1.5;
   --paragraph-standard-letter-spacing: 0;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
@@ -280,10 +276,10 @@
 
   /* footnote - standard */
   --footnote-standard-font-size: 18px;
-  --footnote-standard-font-weight: 400;
+  --footnote-standard-font-weight: 500;
   --footnote-standard-font-style: italic;
-  --footnote-standard-line-height:  1.5;
-  // --footnote-standard-letter-spacing: 2px;
+  --footnote-standard-line-height: 140%;
+  --footnote-standard-letter-spacing: 2px;
   --footnote-standard-text-transform: none;
   --footnote-standard-text-decoration: none;
 
