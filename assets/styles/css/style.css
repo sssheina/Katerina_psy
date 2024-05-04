@@ -739,7 +739,7 @@ textarea {
   letter-spacing: var(--h1-title-letter-spacing);
   text-transform: var(--h1-title-text-transform);
   text-decoration: var(--h1-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -756,7 +756,7 @@ textarea {
   text-transform: var(--h2-title-text-transform);
   text-decoration: var(--h2-title-text-decoration);
   text-align: var(--h2-title-text-align);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -771,7 +771,7 @@ textarea {
   letter-spacing: var(--h3-title-letter-spacing);
   text-transform: var(--h3-title-text-transform);
   text-decoration: var(--h3-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -786,7 +786,7 @@ textarea {
   letter-spacing: var(--h4-title-letter-spacing);
   text-transform: var(--h4-title-text-transform);
   text-decoration: var(--h4-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -801,7 +801,7 @@ textarea {
   letter-spacing: var(--h5-title-letter-spacing);
   text-transform: var(--h5-title-text-transform);
   text-decoration: var(--h5-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -816,7 +816,7 @@ textarea {
   letter-spacing: var(--paragraph-large-letter-spacing);
   text-transform: var(--paragraph-large-text-transform);
   text-decoration: var(--paragraph-large-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -831,7 +831,7 @@ textarea {
   letter-spacing: var(--paragraph-medium-letter-spacing);
   text-transform: var(--paragraph-medium-text-transform);
   text-decoration: var(--paragraph-medium-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -846,7 +846,7 @@ textarea {
   letter-spacing: var(--paragraph-standard-letter-spacing);
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -861,7 +861,7 @@ textarea {
   letter-spacing: var(--button-text-letter-spacing);
   text-transform: var(--button-text-text-transform);
   text-decoration: var(--button-text-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -876,7 +876,7 @@ textarea {
   letter-spacing: var(--footnote-standard-letter-spacing);
   text-transform: var(--footnote-standard-text-transform);
   text-decoration: var(--footnote-standard-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -991,9 +991,9 @@ textarea {
   --paragraph-medium-text-transform: none;
   --paragraph-medium-text-decoration: none;
   --paragraph-standard-font-family: var(--montserrat-font-family);
-  --paragraph-standard-font-size: 18px;
-  --paragraph-standard-font-weight: 500;
-  --paragraph-standard-line-height: 1.5;
+  --paragraph-standard-font-size: 20px;
+  --paragraph-standard-font-weight: 400;
+  --paragraph-standard-line-height: 28px;
   --paragraph-standard-letter-spacing: 0;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
@@ -1101,7 +1101,7 @@ body._lock {
   color: #fefefe;
 }
 .menu__link:hover {
-  color: #010E23;
+  color: #010e23;
 }
 .menu__button {
   margin-left: 10px;
@@ -1147,7 +1147,7 @@ body._lock {
   }
 }
 .menu__sub-link:hover {
-  color: #010E23;
+  color: #010e23;
 }
 
 .language {
@@ -1176,7 +1176,7 @@ body._touch .menu__arrow {
   transition: transform 0.3s ease 0s;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid #D69961;
+  border-top: 10px solid #d69961;
   cursor: pointer;
 }
 
@@ -1194,7 +1194,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .link-span {
-  color: #010E23;
+  color: #010e23;
 }
 
 .btn {
@@ -1202,16 +1202,16 @@ body._touch .menu__list > li._active .menu__arrow {
   border-radius: 53px;
   text-align: center;
   border: none;
-  background: #BD5B01;
+  background: #bd5b01;
   color: #fefefe;
 }
 
 .btn:hover {
-  background: #D69961;
+  background: #d69961;
 }
 
 .btn:active {
-  background: #BD5B01;
+  background: #bd5b01;
 }
 
 .button-block {
@@ -1336,7 +1336,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 200px;
   margin-left: 0;
   text-align: start;
-  color: #010E23;
+  color: #010e23;
   height: 2px;
 }
 
@@ -1370,7 +1370,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .clients__h3 {
-  color: #D69961;
+  color: #d69961;
 }
 
 .client-card {
@@ -1418,12 +1418,12 @@ body._touch .menu__list > li._active .menu__arrow {
 .methods__h3-1,
 .methods__h3-3,
 .methods__h3-5 {
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 
 .methods__h3-2,
 .methods__h3-6 {
-  color: #010E23;
+  color: #010e23;
 }
 
 .methods__h3-1,
@@ -1504,7 +1504,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .expertise__line {
   flex-grow: 1;
   height: 1px;
-  background-color: #010E23;
+  background-color: #010e23;
   margin-left: 1em;
 }
 
@@ -1515,7 +1515,7 @@ body._touch .menu__list > li._active .menu__arrow {
   right: 0;
   width: 10px; /* Диаметр шарика */
   height: 10px; /* Диаметр шарика */
-  background-color: #010E23; /* Цвет шарика */
+  background-color: #010e23; /* Цвет шарика */
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -1552,14 +1552,14 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .expertise__h5 {
   white-space: nowrap;
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 
 .expertise__line-dash {
   flex-grow: 1;
   height: 1px;
   margin-left: 1em;
-  border-bottom: 1px dashed #CE6A0E;
+  border-bottom: 1px dashed #ce6a0e;
 }
 
 .expertise__conclusion {
@@ -1630,7 +1630,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .title-orange {
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 
 .benefits__text {
@@ -1640,6 +1640,47 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .benefits__button {
   width: 386px;
+}
+
+.faq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+}
+.faq__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.faq__content {
+  width: 100%;
+  max-width: 1209px;
+  display: grid;
+  gap: 35px;
+}
+
+.faq-item__title {
+  padding: 35px;
+  background: linear-gradient(#fefefe, #d9e9ff);
+}
+.faq-item__info {
+  padding: 35px;
+  display: none;
+  animation: faq-answer 0.5s ease-out;
+}
+.faq-item__info.open {
+  display: block;
+}
+
+@keyframes faq-answer {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
