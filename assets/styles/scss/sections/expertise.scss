@@ -1,0 +1,125 @@
+.expertise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 73px 0 72px;
+  }
+
+  .expertise__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .expertise__content {
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+    padding: 85px 0 95px;
+  }
+
+    .expertise__sexuality, 
+    .expertise__relationship,
+    .expertise__inner {
+        display: flex;    
+        gap: 25px;
+        align-items: flex-start;
+    }
+
+  .expertise__relationship-title,
+  .expertise__sexuality-title,
+  .expertise__inner-title {
+    display: flex;
+    align-items: center;
+    max-width: 487px;
+    width: 100%;
+    position: relative;
+  }
+
+  .expertise__h3 {
+    // display: inline-block;
+//   vertical-align: middle;
+  white-space: nowrap;
+  }
+
+  .expertise__line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $color-blueDark;
+    margin-left: 1em;
+  }
+
+  .expertise__line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px; /* Диаметр шарика */
+    height: 10px; /* Диаметр шарика */
+    background-color: $color-blueDark; /* Цвет шарика */
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .expertise__sexuality-pic,
+  .expertise__relationship-pic,
+  .expertise__inner-pic {
+    max-width: 387px;
+    width: 100%;
+    height: 580px;
+  }
+
+  .expertise__sexuality-text,
+  .expertise__relationship-text,
+  .expertise__inner-text {
+display: flex;
+flex-direction: column;
+gap: 30px;
+  }
+
+  .expertise__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .expertise__small-title {
+    display: flex;
+    align-items: center;
+    max-width: 670px;
+    width: 100%;
+    position: relative;
+  }
+
+  .expertise__h5 {
+  white-space: nowrap;
+  color: $color-orange;
+  }
+
+  .expertise__line-dash {
+    flex-grow: 1;
+    height: 1px;
+    // background-color: $color-blueDark;
+    margin-left: 1em;
+    border-bottom: 1px dashed $color-orange;
+  }
+
+  .expertise__conclusion {
+    display: flex;
+    width: 100%;
+    padding-bottom: 95px;
+  }
+
+  .expertise__conclusion-empty {
+    max-width: 512px;
+    width: 100%;
+  }
+
+  .expertise__conclusion-p {
+    text-align: left;
+    max-width: 685px;
+    width: 100%;
+  }
+
+  .expertise__button {
+    width: 386px;
+  }

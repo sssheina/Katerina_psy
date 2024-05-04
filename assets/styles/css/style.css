@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -739,6 +740,9 @@ textarea {
   text-transform: var(--h1-title-text-transform);
   text-decoration: var(--h1-title-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .h2-title {
@@ -753,6 +757,9 @@ textarea {
   text-decoration: var(--h2-title-text-decoration);
   text-align: var(--h2-title-text-align);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .h3-title {
@@ -765,6 +772,9 @@ textarea {
   text-transform: var(--h3-title-text-transform);
   text-decoration: var(--h3-title-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .h4-title {
@@ -777,6 +787,9 @@ textarea {
   text-transform: var(--h4-title-text-transform);
   text-decoration: var(--h4-title-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .h5-title {
@@ -789,6 +802,9 @@ textarea {
   text-transform: var(--h5-title-text-transform);
   text-decoration: var(--h5-title-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .paragraph-large {
@@ -801,6 +817,9 @@ textarea {
   text-transform: var(--paragraph-large-text-transform);
   text-decoration: var(--paragraph-large-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .paragraph-medium {
@@ -813,6 +832,9 @@ textarea {
   text-transform: var(--paragraph-medium-text-transform);
   text-decoration: var(--paragraph-medium-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .paragraph-standard {
@@ -825,6 +847,9 @@ textarea {
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .button-text {
@@ -837,6 +862,9 @@ textarea {
   text-transform: var(--button-text-text-transform);
   text-decoration: var(--button-text-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 .footnote-standard {
@@ -849,6 +877,9 @@ textarea {
   text-transform: var(--footnote-standard-text-transform);
   text-decoration: var(--footnote-standard-text-decoration);
   color: #010E23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 @font-face {
@@ -910,6 +941,9 @@ textarea {
 :root {
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
+  --font-smoothing: antialiased; /* Сглаживание шрифтов */
+  --text-rendering: optimizeLegibility; /* Оптимизация читаемости */
+  --font-smooth: always; /* Сглаживание шрифтов (для Safari) */
   /* h1 - title */
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
@@ -1427,6 +1461,129 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .methods__button {
+  width: 386px;
+}
+
+.expertise {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+}
+
+.expertise__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise__content {
+  display: flex;
+  flex-direction: column;
+  gap: 125px;
+  padding: 85px 0 95px;
+}
+
+.expertise__sexuality,
+.expertise__relationship,
+.expertise__inner {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+}
+
+.expertise__relationship-title,
+.expertise__sexuality-title,
+.expertise__inner-title {
+  display: flex;
+  align-items: center;
+  max-width: 487px;
+  width: 100%;
+  position: relative;
+}
+
+.expertise__h3 {
+  white-space: nowrap;
+}
+
+.expertise__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #010E23;
+  margin-left: 1em;
+}
+
+.expertise__line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 10px; /* Диаметр шарика */
+  height: 10px; /* Диаметр шарика */
+  background-color: #010E23; /* Цвет шарика */
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.expertise__sexuality-pic,
+.expertise__relationship-pic,
+.expertise__inner-pic {
+  max-width: 387px;
+  width: 100%;
+  height: 580px;
+}
+
+.expertise__sexuality-text,
+.expertise__relationship-text,
+.expertise__inner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.expertise__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.expertise__small-title {
+  display: flex;
+  align-items: center;
+  max-width: 670px;
+  width: 100%;
+  position: relative;
+}
+
+.expertise__h5 {
+  white-space: nowrap;
+  color: #CE6A0E;
+}
+
+.expertise__line-dash {
+  flex-grow: 1;
+  height: 1px;
+  margin-left: 1em;
+  border-bottom: 1px dashed #CE6A0E;
+}
+
+.expertise__conclusion {
+  display: flex;
+  width: 100%;
+  padding-bottom: 95px;
+}
+
+.expertise__conclusion-empty {
+  max-width: 512px;
+  width: 100%;
+}
+
+.expertise__conclusion-p {
+  text-align: left;
+  max-width: 685px;
+  width: 100%;
+}
+
+.expertise__button {
   width: 386px;
 }
 

@@ -21,6 +21,9 @@ $color-white: #fefefe;
   text-transform: var(--h1-title-text-transform);
   text-decoration: var(--h1-title-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %h2-title {
@@ -35,6 +38,9 @@ $color-white: #fefefe;
   text-decoration: var(--h2-title-text-decoration);
   text-align: var(--h2-title-text-align);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %h3-title {
@@ -47,6 +53,9 @@ $color-white: #fefefe;
   text-transform: var(--h3-title-text-transform);
   text-decoration: var(--h3-title-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %h4-title {
@@ -59,6 +68,9 @@ $color-white: #fefefe;
   text-transform: var(--h4-title-text-transform);
   text-decoration: var(--h4-title-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %h5-title {
@@ -71,6 +83,9 @@ $color-white: #fefefe;
   text-transform: var(--h5-title-text-transform);
   text-decoration: var(--h5-title-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %paragraph-large {
@@ -83,6 +98,9 @@ $color-white: #fefefe;
   text-transform: var(--paragraph-large-text-transform);
   text-decoration: var(--paragraph-large-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %paragraph-medium {
@@ -95,6 +113,9 @@ $color-white: #fefefe;
   text-transform: var(--paragraph-medium-text-transform);
   text-decoration: var(--paragraph-medium-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %paragraph-standard {
@@ -107,6 +128,9 @@ $color-white: #fefefe;
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 
@@ -120,6 +144,9 @@ $color-white: #fefefe;
   text-transform: var(--button-text-text-transform);
   text-decoration: var(--button-text-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }
 
 %footnote-standard {
@@ -132,4 +159,7 @@ $color-white: #fefefe;
   text-transform: var(--footnote-standard-text-transform);
   text-decoration: var(--footnote-standard-text-decoration);
   color: $color-blueDark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
 }

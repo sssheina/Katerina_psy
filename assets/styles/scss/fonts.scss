@@ -66,6 +66,10 @@
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
 
+  --font-smoothing: antialiased; /* Сглаживание шрифтов */
+  --text-rendering: optimizeLegibility; /* Оптимизация читаемости */
+  --font-smooth: always; /* Сглаживание шрифтов (для Safari) */
+
   /* h1 - title */
 
   --h1-title-font-family: var(--raleway-font-family);
