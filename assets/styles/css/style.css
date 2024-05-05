@@ -739,7 +739,7 @@ textarea {
   letter-spacing: var(--h1-title-letter-spacing);
   text-transform: var(--h1-title-text-transform);
   text-decoration: var(--h1-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -756,7 +756,7 @@ textarea {
   text-transform: var(--h2-title-text-transform);
   text-decoration: var(--h2-title-text-decoration);
   text-align: var(--h2-title-text-align);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -765,13 +765,13 @@ textarea {
 .h3-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h3-title-font-size);
-  font-weight: var(--h3-title-font-weight, 500);
+  font-weight: var(--h3-title-font-weight);
   font-style: normal;
   line-height: var(--h3-title-line-height);
   letter-spacing: var(--h3-title-letter-spacing);
   text-transform: var(--h3-title-text-transform);
   text-decoration: var(--h3-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -786,7 +786,7 @@ textarea {
   letter-spacing: var(--h4-title-letter-spacing);
   text-transform: var(--h4-title-text-transform);
   text-decoration: var(--h4-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -801,7 +801,7 @@ textarea {
   letter-spacing: var(--h5-title-letter-spacing);
   text-transform: var(--h5-title-text-transform);
   text-decoration: var(--h5-title-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -816,7 +816,7 @@ textarea {
   letter-spacing: var(--paragraph-large-letter-spacing);
   text-transform: var(--paragraph-large-text-transform);
   text-decoration: var(--paragraph-large-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -831,7 +831,7 @@ textarea {
   letter-spacing: var(--paragraph-medium-letter-spacing);
   text-transform: var(--paragraph-medium-text-transform);
   text-decoration: var(--paragraph-medium-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -846,7 +846,7 @@ textarea {
   letter-spacing: var(--paragraph-standard-letter-spacing);
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -861,7 +861,7 @@ textarea {
   letter-spacing: var(--button-text-letter-spacing);
   text-transform: var(--button-text-text-transform);
   text-decoration: var(--button-text-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -876,7 +876,7 @@ textarea {
   letter-spacing: var(--footnote-standard-letter-spacing);
   text-transform: var(--footnote-standard-text-transform);
   text-decoration: var(--footnote-standard-text-decoration);
-  color: #010E23;
+  color: #010e23;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -1101,7 +1101,7 @@ body._lock {
   color: #fefefe;
 }
 .menu__link:hover {
-  color: #010E23;
+  color: #010e23;
 }
 .menu__button {
   margin-left: 10px;
@@ -1147,7 +1147,7 @@ body._lock {
   }
 }
 .menu__sub-link:hover {
-  color: #010E23;
+  color: #010e23;
 }
 
 .language {
@@ -1176,7 +1176,7 @@ body._touch .menu__arrow {
   transition: transform 0.3s ease 0s;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 10px solid #D69961;
+  border-top: 10px solid #d69961;
   cursor: pointer;
 }
 
@@ -1194,34 +1194,37 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .link-span {
-  color: #010E23;
+  color: #010e23;
 }
 
 .icon-cross {
   max-width: 28px;
   max-height: 28px;
-  fill: #010E23;
+  fill: #010e23;
 }
 
 .btn {
+  max-width: 386px;
+  width: 100%;
   height: 93px;
   border-radius: 53px;
   text-align: center;
   border: none;
-  background: #BD5B01;
+  background: #bd5b01;
   color: #fefefe;
 }
 
 .btn:hover {
-  background: #D69961;
+  background: #d69961;
 }
 
 .btn:active {
-  background: #BD5B01;
+  background: #bd5b01;
 }
 
 .button-block {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
 }
@@ -1284,15 +1287,14 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__clients {
   padding-top: 10px;
 }
-.cover__button-div {
-  display: flex;
-  align-content: end;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
+.cover__action {
   padding-top: 50px;
 }
 .cover__button {
   width: 523px;
+}
+.cover__cross {
+  fill: #fefefe;
 }
 
 .about {
@@ -1325,7 +1327,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 200px;
   margin-left: 0;
   text-align: start;
-  color: #010E23;
+  color: #010e23;
   height: 2px;
 }
 .about__button-block {
@@ -1354,7 +1356,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 85px 0 95px;
 }
 .clients__h3 {
-  color: #D69961;
+  color: #d69961;
 }
 .clients__card {
   display: flex;
@@ -1393,10 +1395,10 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 85px 0 95px;
 }
 .methods__h3-1, .methods__h3-3, .methods__h3-5 {
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 .methods__h3-2, .methods__h3-6 {
-  color: #010E23;
+  color: #010e23;
 }
 .methods__h3-1, .methods__h3-2, .methods__h3-3, .methods__h3-6 {
   padding-bottom: 50px;
@@ -1425,7 +1427,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .card-2 {
-  background: linear-gradient(#fefefe, #D9E9FF);
+  background: linear-gradient(#fefefe, #d9e9ff);
 }
 
 .expertise {
@@ -1462,7 +1464,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .expertise__line {
   flex-grow: 1;
   height: 1px;
-  background-color: #010E23;
+  background-color: #010e23;
   margin-left: 1em;
 }
 .expertise__line::after {
@@ -1472,7 +1474,7 @@ body._touch .menu__list > li._active .menu__arrow {
   right: 0;
   width: 10px; /* Диаметр шарика */
   height: 10px; /* Диаметр шарика */
-  background-color: #010E23; /* Цвет шарика */
+  background-color: #010e23; /* Цвет шарика */
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -1500,13 +1502,13 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .expertise__h5 {
   white-space: nowrap;
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 .expertise__line-dash {
   flex-grow: 1;
   height: 1px;
   margin-left: 1em;
-  border-bottom: 1px dashed #CE6A0E;
+  border-bottom: 1px dashed #ce6a0e;
 }
 .expertise__conclusion {
   display: flex;
@@ -1564,7 +1566,7 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
 }
 .benefits .title-orange {
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 .benefits__text {
   max-width: 355px;
@@ -1586,6 +1588,9 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .feedback__h2 {
   color: #fefefe;
+}
+.feedback__cross {
+  fill: #fefefe;
 }
 
 .swiper {
@@ -1622,7 +1627,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .swiper__hr {
   width: 240px;
   height: 1px;
-  background-color: #CE6A0E;
+  background-color: #ce6a0e;
   border: none;
   margin-left: 0;
 }
@@ -1632,7 +1637,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .swiper_span {
-  color: #CE6A0E;
+  color: #ce6a0e;
 }
 
 .swiper-pagination {
@@ -1643,13 +1648,13 @@ body._touch .menu__list > li._active .menu__arrow {
   cursor: pointer;
   opacity: 1;
   margin: 0 5px;
-  background: #D9E9FF;
+  background: #d9e9ff;
   width: 20px;
   height: 20px;
 }
 
 .swiper-pagination-bullet-active {
-  background: #CE6A0E;
+  background: #ce6a0e;
 }
 
 .lunchbox {
@@ -1708,7 +1713,7 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
 }
 .steps__number {
-  color: #CE6A0E;
+  color: #ce6a0e;
   margin-right: 68px;
   line-height: 50%;
 }
@@ -1725,7 +1730,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .steps__line {
   flex-grow: 1;
   height: 1px;
-  background-color: #CE6A0E;
+  background-color: #ce6a0e;
   margin-left: 1em;
 }
 .steps__line::after {
@@ -1735,7 +1740,7 @@ body._touch .menu__list > li._active .menu__arrow {
   right: 0;
   width: 10px; /* Диаметр шарика */
   height: 10px; /* Диаметр шарика */
-  background-color: #CE6A0E; /* Цвет шарика */
+  background-color: #ce6a0e; /* Цвет шарика */
   border-radius: 50%;
   transform: translateY(-50%);
 }
@@ -1768,53 +1773,47 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 85px 0 95px;
   gap: 81px;
 }
-.price__card-item {
-  display: flex;
-  flex-direction: column;
-  width: 411px;
-  height: 600px;
-  padding: 50px 30px 30px;
-  gap: 30px;
-  background: #D9E9FF;
-}
-.price__card-item:nth-child(1) .price__h3 {
-  color: #fefefe;
-  margin-bottom: 45px;
-}
-.price__card-item:nth-child(1) .price__h5 {
-  color: #fefefe;
-}
-.price__card-item:nth-child(1) li {
-  color: #fefefe;
-}
-.price__card-item:nth-of-type(1) {
-  background: #BD5B01;
-  color: #fefefe;
-}
-.price__card-cross {
-  display: flex;
-  height: 28px;
+.price__card {
+  display: grid;
+  max-width: 411px;
   width: 100%;
+  padding: 50px 30px 46px;
   gap: 30px;
 }
-.price__card-text {
+
+.price-card__cross-container {
+  display: flex;
+  gap: 30px;
+}
+.price-card__list {
   list-style-type: disc;
   padding-left: 25px;
 }
-.price__span {
+.price-card__price {
   font-family: var(--raleway-font-family);
   font-size: 48px;
   font-weight: 500;
   text-transform: uppercase;
 }
-.price__button {
-  max-width: 386px;
-  width: 100%;
+.price-card:nth-child(1) {
+  background: #bd5b01;
+  color: #fefefe;
 }
-
-.card-cross {
-  width: 28px;
-  height: 28px;
+.price-card:nth-child(1) .price-card__cross {
+  fill: #fefefe;
+}
+.price-card:nth-child(1) .price-card__title {
+  color: #fefefe;
+  margin-bottom: 45px;
+}
+.price-card:nth-child(1) .price-card__duration {
+  color: #fefefe;
+}
+.price-card:nth-child(1) .price-card__list-item {
+  color: #fefefe;
+}
+.price-card:nth-child(2), .price-card:nth-child(3) {
+  background: #d9e9ff;
 }
 
 .registration {
@@ -1871,7 +1870,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .faq-item__title {
   padding: 35px;
-  background: linear-gradient(#fefefe, #D9E9FF);
+  background: linear-gradient(#fefefe, #d9e9ff);
 }
 .faq-item__info {
   padding: 35px;
@@ -1932,7 +1931,7 @@ body._touch .menu__list > li._active .menu__arrow {
 #comment {
   width: 523px;
   height: 267px;
-  border: 2px solid #010E23;
+  border: 2px solid #010e23;
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
   font-weight: var(--paragraph-standard-font-weight, 400);
@@ -1941,7 +1940,7 @@ body._touch .menu__list > li._active .menu__arrow {
   letter-spacing: var(--paragraph-standard-letter-spacing);
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
-  color: #010E23;
+  color: #010e23;
 }
 
 .modal {
@@ -2014,7 +2013,7 @@ body._touch .menu__list > li._active .menu__arrow {
   padding: 0.5rem 0.75rem;
   top: 13%;
   right: 6%;
-  background: #CE6A0E;
+  background: #ce6a0e;
   border-radius: 50%;
   border: none;
 }
@@ -2051,7 +2050,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .btn-close:hover {
-  background: #CE6A0E;
+  background: #ce6a0e;
 }
 
 .overlay {

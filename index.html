@@ -99,7 +99,6 @@
   <main class="main">
     <!-- ГЛАВНАЯ -->
 
-
     <section class="cover">
       <div class="cover__wrapper container">
         <div class="cover__overhead">
@@ -124,7 +123,10 @@
             Индивидуально, для пар, полиаморных союзов и семей
           </h3>
         </div>
-        <div class="cover__button-div">
+        <div class="cover__action button-block">
+          <svg class="cover__cross icon-cross">
+            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+          </svg>
           <button class="cover__button btn button-text">Записаться</button>
         </div>
       </div>
@@ -175,16 +177,20 @@
               <source src="./assets/video/video_5.mp4" type="video/mp4" />
             </video>
           </div>
-
         </div>
 
+        <div class="about__action button-block">
+          <svg class="about__cross icon-cross">
+            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+          </svg>
+          <button class="about__button btn button-text">Запись на сессию</button>
+        </div>
       </div>
 
     </section>
 
 
     <!-- CLIENTS -->
-
 
     <section class="clients">
       <div class="clients__wrapper container">
@@ -233,6 +239,13 @@
           </div>
         </div>
 
+        <div class="clients__action button-block">
+          <svg class="clients__cross icon-cross">
+            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+          </svg>
+          <button class="clients__button btn button-text">Запись</button>
+        </div>
+      </div>
     </section>
 
     <!-- METHODS -->
@@ -321,7 +334,6 @@
 
 
     <!-- EXPERTISE -->
-
 
     <section class="expertise">
       <div class="expertise__wrapper container">
@@ -571,14 +583,11 @@
 
     </section>
 
-
     <!-- BENEFITS -->
-
 
     <section class="benefits">
       <div class="benefits__wrapper container">
         <h2 class="benefits__h2 h2-title">Почему выбирают меня</h2>
-
 
         <div class="benefits__content">
           <div class="benefits__cards-row_1 cards-row">
@@ -605,7 +614,6 @@
                 на вас
               </p>
             </div>
-
 
             <div class="benefits__card-3 benefits-card_1"></div>
 
@@ -700,7 +708,6 @@
           </div>
         </div>
 
-
         <div class="benefits__button-block button-block">
           <svg class="benefits__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
@@ -723,12 +730,10 @@
       <div class="feedback__wrapper container">
         <h2 class="feedback__h2 h2-title">Отзывы клиентов</h2>
 
-
         <!-- slider -->
         <div class="lunchbox">
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-
 
           <div class="help__swiper swiper">
             <div class="swiper-pagination"></div>
@@ -852,12 +857,12 @@
           </div>
         </div>
 
-        <div class="benefits__button-block button-block">
-          <svg class="benefits__cross icon-cross">
+        <div class="feedback__button-block button-block">
+          <svg class="feedback__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
 
-          <button class="benefits__button btn button-text wave-button">
+          <button class="feedback__button btn button-text wave-button">
             Запись на сессию
           </button>
         </div>
@@ -952,97 +957,88 @@
     <!-- PRICE -->
 
     <section class="price">
-
       <div class="price__wrapper container">
-        <h2 class="price__h2 h2-title">стоимость</h2>
+        <h2 class="price__h2 h2-title">Стоимость</h2>
 
         <div class="price__cards">
-
-          <!-- 1 -->
-
-          <div class="price__card-item">
-
-            <div class="price__card-cross ">
-              <svg class="price__cross icon-cross">
+          <!-- 1 card -->
+          <div class="price-card price__card">
+            <div class="price-card__cross-container">
+              <svg class="price-card__cross icon-cross">
                 <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
               </svg>
-              <svg class="price__cross icon-cross">
+              <svg class="price-card__cross icon-cross">
                 <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
               </svg>
             </div>
 
-            <h3 class="price__h3 h3-title">Первая сессия</h3>
+            <h3 class="price-card__title h3-title">Первая сессия</h3>
 
-            <ul class="price__card-text">
-              <li class="paragraph-standard">вы поймете, комфортно ли вам со мной</li>
-              <li class="paragraph-standard">вы зададите вопросы</li>
-              <li class="paragraph-standard">мы выясним ваши потребности и ожидания</li>
-              <li class="paragraph-standard">мы выберем направление терапии</li>
+            <ul class="price-card__list">
+              <li class="price-card__list-item paragraph-standard">вы поймете, комфортно ли вам со мной</li>
+              <li class="price-card__list-item paragraph-standard">вы зададите вопросы</li>
+              <li class="price-card__list-item paragraph-standard">мы выясним ваши потребности и ожидания</li>
+              <li class="price-card__list-item paragraph-standard">мы выберем направление терапии</li>
             </ul>
 
-            <h5 class="price__h5 h5-title">длительность 30 минут</h5>
-
-            <span class="price__span">бесплатно</span>
-
+            <h5 class="price-card__duration h5-title">Длительность 30 минут</h5>
+            <p class="price-card__price">Бесплатно</p>
           </div>
 
-          <!-- 2 -->
+          <!-- 2 card -->
+          <div class="price-card price__card">
+            <div class="price-card__cross-container">
+              <svg class="price-card__cross icon-cross">
+                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+              </svg>
+            </div>
 
-          <div class="price__card-item">
-            <svg class="price__cross icon-cross">
-              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-            </svg>
-
-            <h3 class="price__h3 h3-title">индивидуальные
+            <h3 class="price-card__title h3-title">Индивидуальные
               сессии</h3>
 
-            <ul class="price__card-text">
-              <li class="paragraph-standard">мы затронем темы, которые важны для вас</li>
-              <li class="paragraph-standard">мы определим результаты, которые вы хотите получить</li>
-              <li class="paragraph-standard">мы будем идти в вашем темпе</li>
-              <li class="paragraph-standard">вы получите новые навыки</li>
-              <li class="paragraph-standard">выполните упражнения</li>
+            <ul class="price-card__list">
+              <li class="price-card__list-item paragraph-standard">мы затронем темы, которые важны для вас</li>
+              <li class="price-card__list-item paragraph-standard">мы определим результаты, которые вы хотите получить
+              </li>
+              <li class="price-card__list-item paragraph-standard">мы будем идти в вашем темпе</li>
+              <li class="price-card__list-item paragraph-standard">вы получите новые навыки</li>
+              <li class="price-card__list-item paragraph-standard">выполните упражнения</li>
             </ul>
 
-            <h5 class="price__h5 h5-title">длительность 50 минут</h5>
-
-            <span class="price__span">100 €</span>
+            <h5 class="price-card__duration h5-title">Длительность 50 минут</h5>
+            <p class="price-card__price">100 €</p>
           </div>
 
           <!-- 3 -->
-
-          <div class="price__card-item">
-            <div class="price__card-cross">
-              <svg class="price__cross icon-cross">
+          <div class="price-card price__card">
+            <div class="price-card__cross-container">
+              <svg class="price-card__cross-container icon-cross">
                 <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
               </svg>
-              <svg class="price__cross icon-cross">
+              <svg class="price-card__cross icon-cross">
                 <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
               </svg>
-              <svg class="price__cross icon-cross">
+              <svg class="price-card__cross icon-cross">
                 <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
               </svg>
             </div>
 
-            <h3 class="price__h3 h3-title">парные или групповые сессии</h3>
+            <h3 class="price-card__title h3-title">Парные или групповые сессии</h3>
 
-            <ul class="price__card-text">
-              <li class="paragraph-standard">мы исследуем ситуацию
+            <ul class="price-card__list">
+              <li class="price-card__list-item paragraph-standard">мы исследуем ситуацию
                 в ваших отношениях</li>
-              <li class="paragraph-standard">определим, чего вы хотите достичь</li>
-              <li class="paragraph-standard">согласуем общие ценности</li>
-              <li class="paragraph-standard">поработаем над навыками общения и сочувствия</li>
+              <li class="price-card__list-item paragraph-standard">определим, чего вы хотите достичь</li>
+              <li class="price-card__list-item paragraph-standard">согласуем общие ценности</li>
+              <li class="price-card__list-item paragraph-standard">поработаем над навыками общения и сочувствия</li>
             </ul>
 
-            <h5 class="price__h5 h5-title">длительность 70 минут</h5>
-
-            <span class="price__span">ОТ 180 €</span>
-
+            <h5 class="price-card__duration h5-title">длительность 70 минут</h5>
+            <p class="price-card__price">ОТ 180 €</p>
           </div>
         </div>
 
-
-        <div class="price__button-block button-block">
+        <div class="price__action button-block">
           <svg class="price__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
@@ -1050,7 +1046,6 @@
             Запись на сессию
           </button>
         </div>
-
       </div>
     </section>
 
@@ -1075,13 +1070,13 @@
       background-size: cover;
       background-position: center;
     ">
-        <div class="words__wrapper container"> 
-          <p class="words__content">Я искренне верю, что отношения могут быть для вас источником удовольствия 
-            и наполнять вашу жизнь смыслом</p>
-        </div>
-      </section>
-    
-      <!-- FAQ -->
+      <div class="words__wrapper container">
+        <p class="words__content">Я искренне верю, что отношения могут быть для вас источником удовольствия
+          и наполнять вашу жизнь смыслом</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
 
     <section class="faq">
       <div class="faq__wrapper container">
@@ -1149,34 +1144,34 @@
       </div>
     </section>
 
-    <!-- QASTIONS -->
+    <!-- QUESTIONS -->
 
-    <section class="quastions" >
-      <div class="quastions__wrapper container"> 
+    <section class="questions">
+      <div class="questions__wrapper container">
 
         <h2 class="registration__h2 h2-title">анонимные вопросы</h2>
-        <div class="quastions__content">
+        <div class="questions__content">
 
-          <div class="quastions__img-div"><img class="quastions__img"
-            src="./assets/images/quastions.png"
-            alt="Девушки прикрывают друг другу глаза руками"
-          /></div>
+          <div class="questions__img-div"><img class="questions__img" src="./assets/images/questions.png"
+              alt="Девушки прикрывают друг другу глаза руками" /></div>
 
-          <div class="quastions__text">
-            <p class="quastions__p paragraph-standard">У вас возник вопрос, но вы стесняетесь его задать? Спросите анонимно. Я буду выборочно отвечать на вопросы в instagram-блоге.</p>
-            <p class="quastions__p paragraph-standard">Другим людям тоже важно услышать ответ на ваш вопрос.</p>
-            <p class="quastions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
+          <div class="questions__text">
+            <p class="questions__p paragraph-standard">У вас возник вопрос, но вы стесняетесь его задать? Спросите
+              анонимно. Я буду выборочно отвечать на вопросы в instagram-блоге.</p>
+            <p class="questions__p paragraph-standard">Другим людям тоже важно услышать ответ на ваш вопрос.</p>
+            <p class="questions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
           </div>
-          
-          <form class="quastions__form-block">
-            <textarea  name="text" id="comment"  placeholder="(Задавайте здесь анонимные вопросы о сексуальности и отношениях, даже те, которые кажутся вам неуместными, глупыми или стыдными...)"></textarea>
+
+          <form class="questions__form-block">
+            <textarea name="text" id="comment"
+              placeholder="(Задавайте здесь анонимные вопросы о сексуальности и отношениях, даже те, которые кажутся вам неуместными, глупыми или стыдными...)"></textarea>
             <button class="price__button btn button-text" type="submit" id="sendButton" onclick="submitForm()"
-            disabled="true">
+              disabled="true">
               Отправить
             </button>
 
-             <!-- Thanx-message modal window -->
-             <div class="overlay hidden" id="overlay">
+            <!-- Thanx-message modal window -->
+            <div class="overlay hidden" id="overlay">
               <section class="modal hidden" id="modal_window">
                 <button class="btn-close" id="btn_close_modal">⨉</button>
 

@@ -75,15 +75,15 @@
     padding-top: 10px;
   }
 
-  &__button-div {
-    display: flex;
-    align-content: end;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+  &__action {
     padding-top: 50px;
   }
 
   &__button {
     width: 523px;
+  }
+
+  &__cross {
+    fill: $color-white;
   }
 }
