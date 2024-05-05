@@ -631,30 +631,30 @@ if (menuLinks.length > 0) {
 
 //  ----- BUTTON GLOW EFFECT -----
 
-(function setGlowEffectRx() {
-  const glowEffects = document.querySelectorAll(".glow-effect");
+// (function setGlowEffectRx() {
+//   const glowEffects = document.querySelectorAll(".glow-effect");
 
-  glowEffects.forEach((glowEffect) => {
-    const glowLines = glowEffect.querySelectorAll("rect");
-    const rx = getComputedStyle(glowEffect).borderRadius;
+//   glowEffects.forEach((glowEffect) => {
+//     const glowLines = glowEffect.querySelectorAll("rect");
+//     const rx = getComputedStyle(glowEffect).borderRadius;
 
-    glowLines.forEach((line) => {
-      line.setAttribute("rx", rx);
-    });
-  });
-})();
+//     glowLines.forEach((line) => {
+//       line.setAttribute("rx", rx);
+//     });
+//   });
+// })();
 
 // ---------Cookie------
 function acceptCookies() {
-  document.getElementById("cookieConsent").style.display = "none";
+  // document.getElementById("cookieConsent").style.display = "none";
   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
   // Активация кода отслеживания Google Analytics
-  gtag("config", "GTM-5M7R6KBB");
+  // gtag("config", "GTM-5M7R6KBB");
 }
 
 function acceptCookies1() {
-  document.getElementById("cookieConsent").style.display = "none";
+  // document.getElementById("cookieConsent").style.display = "none";
   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
   // Активация кода отслеживания Google Analytics
-  gtag("config", "GTM-5M7R6KBB");
+  // gtag("config", "GTM-5M7R6KBB");
 }
