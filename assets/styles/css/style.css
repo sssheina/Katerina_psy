@@ -1197,6 +1197,12 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #010E23;
 }
 
+.icon-cross {
+  max-width: 28px;
+  max-height: 28px;
+  fill: #010E23;
+}
+
 .btn {
   height: 93px;
   border-radius: 53px;
@@ -1216,7 +1222,6 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .button-block {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }
