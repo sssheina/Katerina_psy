@@ -1,0 +1,17 @@
+.registration {
+    display: flex;
+    justify-content: center;
+      align-items: center;
+      padding: 145px 0 72px;
+    
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%; 
+      }
+    }
+
+    // .calendly-inline-widget {
+    //     height: 530px;
+    // }
