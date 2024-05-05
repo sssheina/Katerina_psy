@@ -78,7 +78,7 @@
       color: $color-white;
   
       &:hover {
-        color: $color-blueDark;
+        color: $color-blue-dark;
       }
     }
   
@@ -126,7 +126,7 @@
       }
   
       &:hover {
-        color: $color-blueDark;
+        color: $color-blue-dark;
       }
     }
   }
@@ -158,7 +158,7 @@
     transition: transform 0.3s ease 0s;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 10px solid $color-orangeLight;
+    border-top: 10px solid $color-orange-light;
     cursor: pointer;
   }
   
@@ -176,5 +176,5 @@
   }
   
   .link-span {
-    color: $color-blueDark;
+    color: $color-blue-dark;
   }

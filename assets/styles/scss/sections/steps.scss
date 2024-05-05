@@ -1,0 +1,85 @@
+.steps {
+display: flex;
+justify-content: center;
+  align-items: center;
+  padding: 145px 0 72px;
+
+
+&__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+&__content {
+    display: flex;
+    gap: 162px;
+    margin: 85px 0 95px;
+}
+
+&__img {
+    max-width: 112px;
+    width: 100%;
+     height: 444px;
+}
+
+&__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+&__number{
+    color: $color-orange;
+    margin-right: 68px;
+    line-height: 50%;
+}
+
+&__name {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    width: 524px;
+}
+
+&__h3 {
+    white-space: nowrap;
+}
+
+&__line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: $color-orange;
+    margin-left: 1em;
+}
+
+&__line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 10px; /* Диаметр шарика */
+    height: 10px; /* Диаметр шарика */
+    background-color: $color-orange; /* Цвет шарика */
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+  }
+  &__text {
+     max-width: 660px;
+  }
+
+  &__button {
+    max-width: 386px;
+    width: 100%;
+  }
+
+}

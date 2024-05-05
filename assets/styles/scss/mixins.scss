@@ -80,62 +80,62 @@
   
     
   
-  @mixin h3-line {
-    &::after {
-      position: absolute;
-      content: "";
-      left: 28%;
-      transform: translate(-50%);
-      top: 24%;
-      width: 140px;
-      height: 2px;
-      background: $color-black;
+  // @mixin h3-line {
+  //   &::after {
+  //     position: absolute;
+  //     content: "";
+  //     left: 28%;
+  //     transform: translate(-50%);
+  //     top: 24%;
+  //     width: 140px;
+  //     height: 2px;
+  //     background: $color-black;
   
-      @include lg {
-        width: 110px;
-        height: 1px;
-      }
+  //     @include lg {
+  //       width: 110px;
+  //       height: 1px;
+  //     }
   
-      @include md {
-        width: 85px;
-        top: 22%;
-        left: 30%;
-      }
+  //     @include md {
+  //       width: 85px;
+  //       top: 22%;
+  //       left: 30%;
+  //     }
   
-      @include xs {
-        width: 85px;
-        top: 19%;
-        left: 32%;
-      }
-    }
-  }
+  //     @include xs {
+  //       width: 85px;
+  //       top: 19%;
+  //       left: 32%;
+  //     }
+  //   }
+  // }
   
   // hr
-  @mixin hr($width, $margin) {
-    width: $width;
-    margin: $margin;
-    background-color: $color-black;
-    height: 2px;
-    border: none;
+  // @mixin hr($width, $margin) {
+  //   width: $width;
+  //   margin: $margin;
+  //   background-color: $color-black;
+  //   height: 2px;
+  //   border: none;
   
-    @include md {
-      height: 1px;
-    }
+  //   @include md {
+  //     height: 1px;
+  //   }
   
-  }
+  // }
   
   // button focus
-  @mixin btn-focus($color) {
-    outline: 3px solid $color;
-    box-shadow: 0 0 4px 3px $color;
-    outline-offset: 7px;
-  }
+  // @mixin btn-focus($color) {
+  //   outline: 3px solid $color;
+  //   box-shadow: 0 0 4px 3px $color;
+  //   outline-offset: 7px;
+  // }
   
   // button hover
-  @mixin btn-hover() {
-    outline: none;
-    outline-offset: 0;
-  }
+  // @mixin btn-hover() {
+  //   outline: none;
+  //   outline-offset: 0;
+  // }
   
 
 

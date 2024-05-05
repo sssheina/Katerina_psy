@@ -162,7 +162,7 @@ window.addEventListener("scroll", function () {
       pageUpDown: true,
     },
     // slidesPerView: 1, // - по умолчанию значение 1
-    slidesPerView: 3,
+    slidesPerView: 2,
     breakpoints: {
       320: {
         slidesPerView: 1,
@@ -177,12 +177,12 @@ window.addEventListener("scroll", function () {
         spaceBetween: 20,
       },
       1440: {
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 30,
       },
     },
     loop: true,
-    loopedSlides: 3,
+    loopedSlides: 2,
     watchOverflow: true,
     spaceBetween: 37,
     slidesPerGroup: 1,
