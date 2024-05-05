@@ -1747,6 +1747,71 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
 }
 
+.price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+}
+.price__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.price__cards {
+  display: flex;
+  justify-content: center;
+  padding: 85px 0 95px;
+  gap: 81px;
+}
+.price__card-item {
+  display: flex;
+  flex-direction: column;
+  width: 411px;
+  height: 600px;
+  padding: 50px 30px 30px;
+  gap: 30px;
+  background: #D9E9FF;
+}
+.price__card-item:nth-child(1) .price__h3 {
+  color: #fefefe;
+  margin-bottom: 45px;
+}
+.price__card-item:nth-child(1) .price__h5 {
+  color: #fefefe;
+}
+.price__card-item:nth-child(1) li {
+  color: #fefefe;
+}
+.price__card-item:nth-of-type(1) {
+  background: #BD5B01;
+  color: #fefefe;
+}
+.price__card-cross {
+  display: flex;
+  height: 28px;
+  width: 100%;
+  gap: 30px;
+}
+.price__card-text {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+.price__span {
+  font-family: var(--raleway-font-family);
+  font-size: 48px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.price__button {
+  max-width: 386px;
+  width: 100%;
+}
+
+.card-cross {
+  width: 28px;
+  height: 28px;
+}
+
 .faq {
   display: flex;
   justify-content: center;

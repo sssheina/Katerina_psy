@@ -1,0 +1,78 @@
+.price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 73px 0 72px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: center;
+        padding: 85px 0 95px;
+        gap: 81px;
+    }
+
+    &__card-item {
+        display: flex;
+        flex-direction: column;
+        width: 411px;
+        height: 600px;
+        padding: 50px 30px 30px;
+        gap: 30px;
+        background: $color-blue-light;
+    }
+
+    &__card-item:nth-child(1) .price__h3 {
+        color: $color-white;
+        margin-bottom: 45px;
+      }
+
+      &__card-item:nth-child(1) .price__h5 {
+        color: $color-white;
+        
+      }
+
+      &__card-item:nth-child(1) li {
+        color: $color-white;
+        
+      }
+
+    &__card-item:nth-of-type(1) {
+        background: $color-orange-dark;
+        color: $color-white;
+    }
+
+    &__card-cross {
+        display: flex;
+        height: 28px;
+        width: 100%;
+        gap: 30px;
+    }
+    
+    &__card-text {
+        list-style-type: disc;
+        padding-left: 25px;
+    }
+
+    &__span {
+        font-family:var(--raleway-font-family) ;
+        font-size: 48px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    &__button {
+        max-width: 386px;
+        width: 100%;
+      }
+
+}
+
+.card-cross {
+        width: 28px;
+        height: 28px;
+    }
