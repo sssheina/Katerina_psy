@@ -44,6 +44,7 @@
     height: 341px;
   }
 
+  
   &__card-4 {
     width: 249px;
     height: 403px;
@@ -59,4 +60,8 @@
   &__button {
     width: 386px;
   }
+}
+
+.card-2 {
+  background: $color-blue-light-gradient;
 }
