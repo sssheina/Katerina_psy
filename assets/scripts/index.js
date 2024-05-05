@@ -188,13 +188,39 @@ const swiper = new Swiper(".swiper", {
       slidesPerView: 1,
       spaceBetween: 10,
     },
-    428: {
-      slidesPerView: 1,
-      spaceBetween: 15,
+
+    // slidesPerView: 1, // - по умолчанию значение 1
+    slidesPerView: 2,
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10,
+      },
+      428: {
+        slidesPerView: 1,
+        spaceBetween: 15,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1440: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
     },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 20,
+    loop: true,
+    loopedSlides: 2,
+    watchOverflow: true,
+    spaceBetween: 37,
+    slidesPerGroup: 1,
+    // centeredSlides: true,
+    initialSlide: 0,
+    freeMode: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+
     },
     1440: {
       slidesPerView: 3,

@@ -3,16 +3,16 @@
     border-radius: 53px;
     text-align: center;
     border: none;
-    background: $color-orangeMiddle;
+    background: $color-orange-middle;
     color: $color-white;
+    
 }
 
 .btn:hover {
-    background: $color-orangeLight;
+    background: $color-orange-light;
 }
 
 .btn:active {
-    background: $color-orangeDark;
+    background: $color-orange-dark;
 }
-
 
