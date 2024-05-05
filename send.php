@@ -3,7 +3,7 @@
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 require 'phpmailer/Exception.php';
-require 'dbfunctions/dbmain.php';
+require '../private/dbfunctions/dbmain.php';
 
 # проверка, что ошибки нет
 if (!error_get_last()) {
@@ -14,12 +14,7 @@ if (!error_get_last()) {
 
 
     // Переменные, которые отправляет пользователь
-    $name = $_POST['name'] ;
-    $email = $_POST['email'];
-    $whatsApp = $_POST['whatsApp'];
-    $telegram = $_POST['telegram'];
     $text = $_POST['text'];
-    //$file = $_FILES['myfile'];
     
     
     // Формирование самого письма
@@ -30,10 +25,6 @@ if (!error_get_last()) {
     $html = trim(file_get_contents("template.html"));
 
     // Replace placeholders with actual data
-    $html = str_replace("{NAME}", $name, $html);
-    $html = str_replace("{EMAIL}", $email, $html);
-    $html = str_replace("{WHATSAPP}", $whatsApp, $html);
-    $html = str_replace("{TELEGRAM}", $telegram, $html);
     $html = str_replace("{TEXT}", $text, $html);
     $html = str_replace("{RECORDNUMBER}", $recordNumber, $html);
 
@@ -61,15 +52,6 @@ if (!error_get_last()) {
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;
-
-
-    // Прикрипление файлов к письму
-    /*if (!empty($file['name'][0])) {
-        for ($i = 0; $i < count($file['tmp_name']); $i++) {
-            if ($file['error'][$i] === 0) 
-                $mail->addAttachment($file['tmp_name'][$i], $file['name'][$i]);
-        }
-    }*/
     
     // Отправка сообщения
     $mail->isHTML(true);

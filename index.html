@@ -1075,13 +1075,13 @@
       background-size: cover;
       background-position: center;
     ">
-      <div class="words__wrapper container">
-        <p class="words__content">Я искренне верю, что отношения могут быть для вас источником удовольствия
-          и наполнять вашу жизнь смыслом</p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
+        <div class="words__wrapper container"> 
+          <p class="words__content">Я искренне верю, что отношения могут быть для вас источником удовольствия 
+            и наполнять вашу жизнь смыслом</p>
+        </div>
+      </section>
+    
+      <!-- FAQ -->
 
     <section class="faq">
       <div class="faq__wrapper container">
@@ -1148,6 +1148,47 @@
         </div>
       </div>
     </section>
+
+    <!-- QASTIONS -->
+
+    <section class="quastions" >
+      <div class="quastions__wrapper container"> 
+
+        <h2 class="registration__h2 h2-title">анонимные вопросы</h2>
+        <div class="quastions__content">
+
+          <div class="quastions__img-div"><img class="quastions__img"
+            src="./assets/images/quastions.png"
+            alt="Девушки прикрывают друг другу глаза руками"
+          /></div>
+
+          <div class="quastions__text">
+            <p class="quastions__p paragraph-standard">У вас возник вопрос, но вы стесняетесь его задать? Спросите анонимно. Я буду выборочно отвечать на вопросы в instagram-блоге.</p>
+            <p class="quastions__p paragraph-standard">Другим людям тоже важно услышать ответ на ваш вопрос.</p>
+            <p class="quastions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
+          </div>
+          
+          <form class="quastions__form-block">
+            <textarea  name="text" id="comment"  placeholder="(Задавайте здесь анонимные вопросы о сексуальности и отношениях, даже те, которые кажутся вам неуместными, глупыми или стыдными...)"></textarea>
+            <button class="price__button btn button-text" type="submit" id="sendButton" onclick="submitForm()"
+            disabled="true">
+              Отправить
+            </button>
+
+             <!-- Thanx-message modal window -->
+             <div class="overlay hidden" id="overlay">
+              <section class="modal hidden" id="modal_window">
+                <button class="btn-close" id="btn_close_modal">⨉</button>
+
+                <div class="modal__content" id="modal_window_content"></div>
+              </section>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar"></script>
