@@ -1,41 +1,36 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/images/logo/favicon.svg"
-      type="image/svg"
-    />
-    <link rel="stylesheet" href="./assets/styles/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-    <title>Секс-терапия и психотерапия с Катериной Тартари</title>
-  </head>
-  <body id="my-scrollbar">
-    <!-- <div id="cookieConsent">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.svg" type="image/svg" />
+  <link rel="stylesheet" href="./assets/styles/css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <title>Секс-терапия и психотерапия с Катериной Тартари</title>
+</head>
+
+<body id="my-scrollbar">
+  <!-- <div id="cookieConsent">
         Этот сайт использует файлы cookie, чтобы обеспечить вам наилучшие
         впечатления от использования нашего сайта.
         <button class="cookieButton" onclick="acceptCookies()">Понятно!</button>
     </div> -->
 
-    <!-- HEADER -->
-    <header class="header">
-      <div class="header__container container">
-        <a class="header__logo" href="index.html">
-          <img src="./assets/images/logo/logo_white.svg" alt="Логотип" />
-        </a>
-        <div class="header__menu menu">
-          <div class="menu__icon">
-            <span></span>
-          </div>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header__container container">
+      <a class="header__logo" href="index.html">
+        <img src="./assets/images/logo/logo_white.svg" alt="Логотип" />
+      </a>
+      <div class="header__menu menu">
+        <div class="menu__icon">
+          <span></span>
+        </div>
 
-          <nav class="menu__body">
-            <ul class="menu__list">
-              <!-- <li>
+        <nav class="menu__body">
+          <ul class="menu__list">
+            <!-- <li>
                   <a href="#about" class="menu__link paragraph-standard">
                     Обо мне</a
                   >
@@ -77,35 +72,33 @@
                     >Контакты</a
                   >
                 </li> -->
-              <li>
-                <a class="menu__button" href="https://wa.me/79096989821">
-                  <img
-                    class="footer__social-icon"
-                    src="./assets/images/icons/whatsApp.svg"
-                    alt="Кнопка иконки WhatsApp"
-                  />
-                </a>
-              </li>
-              <li>
-                <a class="menu__link language">RU</a>
-                <span class="menu__arrow"></span>
-                <ul class="menu__sub-list">
-                  <li>
-                    <a href="en.html" class="menu__sub-link">EN</a>
-                  </li>
-                  <li>
-                    <a href="fr.html" class="menu__sub-link">FR</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </div>
+            <li>
+              <a class="menu__button" href="https://wa.me/79096989821">
+                <img class="footer__social-icon" src="./assets/images/icons/whatsApp.svg"
+                  alt="Кнопка иконки WhatsApp" />
+              </a>
+            </li>
+            <li>
+              <a class="menu__link language">RU</a>
+              <span class="menu__arrow"></span>
+              <ul class="menu__sub-list">
+                <li>
+                  <a href="en.html" class="menu__sub-link">EN</a>
+                </li>
+                <li>
+                  <a href="fr.html" class="menu__sub-link">FR</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class="main">
-      <!-- ГЛАВНАЯ -->
+  <main class="main">
+    <!-- ГЛАВНАЯ -->
+
 
       <section class="cover">
         <div class="cover__wrapper container">
@@ -184,21 +177,21 @@
                 <source src="./assets/video/video_5.mp4" type="video/mp4" />
               </video>
             </div>
+
           </div>
 
-          <div class="about__button-block">
-            <img
-              src="./assets/images/figures/cross_black.svg"
-              alt="Декоративная фигура"
-            />
-            <button class="about__button btn button-text">
-              Запись на сессию
-            </button>
+          <div class="about__video-block">
+            <video class="about__video" controls>
+              <source src="./assets/video/video_5.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
+
       </section>
 
-      <!-- CLIENTS -->
+
+    <!-- CLIENTS -->
+
 
       <section class="clients">
         <div class="clients__wrapper container">
@@ -246,27 +239,16 @@
             <div
               class="clients__card"
               style="
+
                 background-image: url('./assets/images/card_4.png');
                 background-size: cover;
                 background-position: center;
-              "
-            >
-              <h3 class="clients__h3 h3-title">группы</h3>
-              <span class="clients__span paragraph-standard"
-                >Друзья, коллеги</span
-              >
-            </div>
-          </div>
-          <div class="clients__button-block button-block">
-            <img
-              src="./assets/images/figures/cross_black.svg"
-              alt="Декоративная фигура"
-            />
-            <button class="clients__button btn button-text">
-              Запись на сессию
-            </button>
+              ">
+            <h3 class="clients__h3 h3-title">группы</h3>
+            <span class="clients__span paragraph-standard">Друзья, коллеги</span>
           </div>
         </div>
+
       </section>
 
       <!-- METHODS -->
@@ -290,18 +272,19 @@
             <div
               class="methods__card"
               style="
+
                 background-image: url('./assets/images/method_blue-card.png');
                 background-size: cover;
                 background-position: center;
-              "
-            >
-              <h3 class="methods__h3-2 h3-title">АСТ</h3>
-              <p class="methods__paragraph paragraph-standard">
-                Метод помогает оставаться в контакте <br />
-                с неудобными чувствами и мыслями, принимать осознанные решения,
-                основанные на ваших ценностях
-              </p>
-            </div>
+              ">
+            <h3 class="methods__h3-2 h3-title">АСТ</h3>
+            <p class="methods__paragraph paragraph-standard">
+              Метод помогает оставаться в контакте <br />
+              с неудобными чувствами и мыслями, принимать осознанные решения,
+              основанные на ваших ценностях
+            </p>
+          </div>
+
 
             <!-- card-3 -->
             <div class="methods__card">
@@ -338,297 +321,288 @@
             <div
               class="methods__card"
               style="
+
                 background-image: url('./assets/images/method_blue-card.png');
                 background-size: cover;
                 background-position: center;
-              "
-            >
-              <h3 class="methods__h3-6 h3-title">арт-терапия</h3>
-              <p class="methods__paragraph paragraph-standard">
-                Метод использует творчество для работы с бессознательным,
-                помогает выразить <br />
-                и осознать свои чувства через рисование или другие виды
-                творчества
-              </p>
-            </div>
-          </div>
-
-          <div class="methods__button-block button-block">
-            <img
-              src="./assets/images/figures/cross_black.svg"
-              alt="Декоративная фигура"
-            />
-            <button class="methods__button btn button-text">
-              Запись на сессию
-            </button>
+              ">
+            <h3 class="methods__h3-6 h3-title">арт-терапия</h3>
+            <p class="methods__paragraph paragraph-standard">
+              Метод использует творчество для работы с бессознательным,
+              помогает выразить <br />
+              и осознать свои чувства через рисование или другие виды
+              творчества
+            </p>
           </div>
         </div>
+
+        <div class="methods__button-block button-block">
+          <img src="./assets/images/figures/cross_black.svg" alt="Декоративная фигура" />
+          <button class="methods__button btn button-text">
+            Запись на сессию
+          </button>
+        </div>
+
       </section>
 
-      <!-- EXPERTISE -->
+
+    <!-- EXPERTISE -->
+
 
       <section class="expertise">
         <div class="expertise__wrapper container">
           <h2 class="expertise__h2 h2-title">С чем я работаю</h2>
 
-          <div class="expertise__content">
-            <div class="expertise__sexuality">
-              <div class="expertise__sexuality-title">
-                <h3 class="expertise__h3 h3-title">Сексуальность</h3>
-                <div class="expertise__line"></div>
-              </div>
 
-              <div
-                class="expertise__sexuality-pic"
-                style="
+        <div class="expertise__content">
+          <div class="expertise__sexuality">
+            <div class="expertise__sexuality-title">
+              <h3 class="expertise__h3 h3-title">Сексуальность</h3>
+              <div class="expertise__line"></div>
+            </div>
+
+            <div class="expertise__sexuality-pic" style="
                   background-image: url('./assets/images/expertise__sexuality.png');
                   background-size: cover;
                   background-position: center;
-                "
-              ></div>
+                "></div>
 
-              <div class="expertise__sexuality-text">
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      сексуальные дисфункции
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    У меня слишком слабое / сильное либидо, трудности <br />с
-                    возбуждением или получением оргазма
-                  </p>
+            <div class="expertise__sexuality-text">
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    сексуальные дисфункции
+                  </h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  У меня слишком слабое / сильное либидо, трудности <br />с
+                  возбуждением или получением оргазма
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">нет контакта с телом</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я плохо чувствую свое тело или оно кажется мне несексуальным
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">нет контакта с телом</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я плохо чувствую свое тело или оно кажется мне несексуальным
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">сексуальные различия</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Мои желания и партнера_ши не совпадают, страшно сказать о
-                    своих фантазиях или предпочтениях
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">сексуальные различия</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Мои желания и партнера_ши не совпадают, страшно сказать о
+                  своих фантазиях или предпочтениях
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      сексуализированное насилие
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я пытаюсь справиться с последствиями сексуализированного
-                    насилия, которое мешает мне двигаться дальше
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    сексуализированное насилие
+                  </h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я пытаюсь справиться с последствиями сексуализированного
+                  насилия, которое мешает мне двигаться дальше
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      ИССЛЕДОВАНИЕ СЕКСУАЛЬНОСТИ
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я не понимаю, что мне нравится в сексе, стыжусь некоторых
-                    практик, или сомневаюсь в своей сексуальной ориентации
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    ИССЛЕДОВАНИЕ СЕКСУАЛЬНОСТИ
+                  </h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я не понимаю, что мне нравится в сексе, стыжусь некоторых
+                  практик, или сомневаюсь в своей сексуальной ориентации
+                </p>
               </div>
             </div>
+          </div>
 
-            <div class="expertise__relationship">
-              <div class="expertise__relationship-title">
-                <h3 class="expertise__h3 h3-title">отношения</h3>
-                <div class="expertise__line"></div>
+          <div class="expertise__relationship">
+            <div class="expertise__relationship-title">
+              <h3 class="expertise__h3 h3-title">отношения</h3>
+              <div class="expertise__line"></div>
+            </div>
+
+            <div class="expertise__relationship-text">
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    СЛОЖНОСТИ В эмоциональной близости
+                  </h5>
+                  <div class="expertise__line-dash"></div>
+                </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я избегаю глубинной эмоциональной связи в отношениях или
+                  испытываю постоянную тревогу
+                </p>
               </div>
 
-              <div class="expertise__relationship-text">
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      СЛОЖНОСТИ В эмоциональной близости
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я избегаю глубинной эмоциональной связи в отношениях или
-                    испытываю постоянную тревогу
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">Трудности в общении</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
-
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">Трудности в общении</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Мы с трудом общаемся или договариваемся друг с другом
-                  </p>
-                </div>
-
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      неудовлетворенность отношениями
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я чувствую тревогу, потому что секс в отношениях исчез,
-                    произошла измена или просто нет контакта между нами
-                  </p>
-                </div>
-
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      "Токсичные" отношения
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    В наших отношениях происходит абьюз, мы хотим жить друг
-                    <br />с другом по-другому
-                  </p>
-                </div>
-
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">Кризисы</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Мы столкнулись с такими трудностями, как болезнь, потеря
-                    бизнеса, эмиграция или утрата близких, и пытаемся преодолеть
-                    их
-                  </p>
-                </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Мы с трудом общаемся или договариваемся друг с другом
+                </p>
               </div>
-              <div
-                class="expertise__relationship-pic"
-                style="
+
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    неудовлетворенность отношениями
+                  </h5>
+                  <div class="expertise__line-dash"></div>
+                </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я чувствую тревогу, потому что секс в отношениях исчез,
+                  произошла измена или просто нет контакта между нами
+                </p>
+              </div>
+
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    "Токсичные" отношения
+                  </h5>
+                  <div class="expertise__line-dash"></div>
+                </div>
+                <p class="expertise__item-p paragraph-standard">
+                  В наших отношениях происходит абьюз, мы хотим жить друг
+                  <br />с другом по-другому
+                </p>
+              </div>
+
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">Кризисы</h5>
+                  <div class="expertise__line-dash"></div>
+                </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Мы столкнулись с такими трудностями, как болезнь, потеря
+                  бизнеса, эмиграция или утрата близких, и пытаемся преодолеть
+                  их
+                </p>
+              </div>
+            </div>
+            <div class="expertise__relationship-pic" style="
                   background-image: url('./assets/images/expertise__relationship.png');
                   background-size: cover;
                   background-position: center;
-                "
-              ></div>
-            </div>
+                "></div>
+          </div>
 
-            <div class="expertise__inner">
-              <div class="expertise__inner-title">
-                <h3 class="expertise__h3 h3-title">внутренний мир</h3>
-                <div class="expertise__line"></div>
-              </div>
-              <div
-                class="expertise__inner-pic"
-                style="
+          <div class="expertise__inner">
+            <div class="expertise__inner-title">
+              <h3 class="expertise__h3 h3-title">внутренний мир</h3>
+              <div class="expertise__line"></div>
+            </div>
+            <div class="expertise__inner-pic" style="
                   background-image: url('./assets/images/expertise__inner.png');
                   background-size: cover;
                   background-position: center;
-                "
-              ></div>
-              <div class="expertise__inner-text">
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">низкая самооценка</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я постоянно критикую и виню себя, не верю в себя или страдаю
-                    от перфекционизма
-                  </p>
+                "></div>
+            <div class="expertise__inner-text">
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">низкая самооценка</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я постоянно критикую и виню себя, не верю в себя или страдаю
+                  от перфекционизма
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      Апатия и потерянность
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Нет больше стимула двигаться вперед и что-то делать, я не
-                    знаю, чего хочу
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    Апатия и потерянность
+                  </h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Нет больше стимула двигаться вперед и что-то делать, я не
+                  знаю, чего хочу
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">неуправляемые эмоции</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Иногда эмоции - тревога, страх, раздражение - управляют мной
-                    настолько, что мешают повседневной жизни, общению
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">неуправляемые эмоции</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Иногда эмоции - тревога, страх, раздражение - управляют мной
+                  настолько, что мешают повседневной жизни, общению
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">ПОСЛЕДСТВИЯ Абьюза</h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Я пытаюсь справиться с последствиями психологического
-                    <br />и физического насилия, что мешает мне двигаться дальше
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">ПОСЛЕДСТВИЯ Абьюза</h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Я пытаюсь справиться с последствиями психологического
+                  <br />и физического насилия, что мешает мне двигаться дальше
+                </p>
+              </div>
 
-                <div class="expertise__item">
-                  <div class="expertise__small-title">
-                    <h5 class="expertise__h5 h5-title">
-                      Межличностные конфликты
-                    </h5>
-                    <div class="expertise__line-dash"></div>
-                  </div>
-                  <p class="expertise__item-p paragraph-standard">
-                    Мне трудно общаться с другими людьми, часто возникают
-                    конфликты или мне сложно отстаивать себя
-                  </p>
+              <div class="expertise__item">
+                <div class="expertise__small-title">
+                  <h5 class="expertise__h5 h5-title">
+                    Межличностные конфликты
+                  </h5>
+                  <div class="expertise__line-dash"></div>
                 </div>
+                <p class="expertise__item-p paragraph-standard">
+                  Мне трудно общаться с другими людьми, часто возникают
+                  конфликты или мне сложно отстаивать себя
+                </p>
               </div>
             </div>
           </div>
-
-          <div class="expertise__conclusion">
-            <div class="expertise__conclusion-empty"></div>
-            <p class="expertise__conclusion-p paragraph-standard">
-              Это лишь несколько примеров того, с чем ко мне обращаются клиенты.
-              Ваш запрос может быть другим. <br />
-              Мы вместе разберемся с этим
-            </p>
-          </div>
-          <div class="expertise__button-block button-block">
-            <img
-              src="./assets/images/figures/cross_black.svg"
-              alt="Декоративная фигура"
-            />
-            <button class="expertise__button btn button-text">
-              Запись на сессию
-            </button>
-          </div>
         </div>
+
+        <div class="expertise__conclusion">
+          <div class="expertise__conclusion-empty"></div>
+          <p class="expertise__conclusion-p paragraph-standard">
+            Это лишь несколько примеров того, с чем ко мне обращаются клиенты.
+            Ваш запрос может быть другим. <br />
+            Мы вместе разберемся с этим
+          </p>
+        </div>
+        <div class="expertise__button-block button-block">
+          <img src="./assets/images/figures/cross_black.svg" alt="Декоративная фигура" />
+          <button class="expertise__button btn button-text">
+            Запись на сессию
+          </button>
+        </div>
+
       </section>
 
-      <!-- BENEFITS -->
+
+    <!-- BENEFITS -->
+
 
       <section class="benefits">
         <div class="benefits__wrapper container">
           <h2 class="benefits__h2 h2-title">Почему выбирают меня</h2>
+
 
           <div class="benefits__content">
             <div class="benefits__cards-row_1 cards-row">
@@ -658,6 +632,7 @@
                   на вас
                 </p>
               </div>
+
 
               <div class="benefits__card-3 benefits-card_1"></div>
 
@@ -719,6 +694,7 @@
                   работаю как с теми, кто пережил насилие, так и с его авторами
                 </p>
               </div>
+
             </div>
             <div class="benefits__cards-row_3 cards-row">
               <div class="benefits__card-9 benefits-card_2">
@@ -762,6 +738,7 @@
             </div>
           </div>
 
+
           <div class="benefits__button-block button-block">
             <img
               src="./assets/images/figures/cross_black.svg"
@@ -788,10 +765,12 @@
         <div class="feedback__wrapper container">
           <h2 class="feedback__h2 h2-title">Отзывы клиентов</h2>
 
+
           <!-- slider -->
           <div class="lunchbox">
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
+
 
             <div class="help__swiper swiper">
               <div class="swiper-pagination"></div>
@@ -946,6 +925,7 @@
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -1038,6 +1018,7 @@
             </div>
           </div>
 
+
           <div class="steps__button-block button-block">
             <img
               src="./assets/images/figures/cross_black.svg"
@@ -1049,13 +1030,79 @@
           </div>
         </div>
       </section>
-    </main>
+    
+    <!-- FAQ -->
 
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="./assets/scripts/localization.js"></script>
-    <script src="./assets/scripts/index.js"></script>
-  </body>
+    <section class="faq">
+      <div class="faq__wrapper container">
+        <h2 class="faq__h2 h2-title">FAQ</h2>
+        <div class="faq__content">
+          <!-- Как работает секс-терапия? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Как работает секс-терапия?</h4>
+            <p class="faq-item__info paragraph-standard">Секс-терапия работает с мыслями, эмоциями и действиями и
+              помогает
+              достичь
+              гармоничных сексуальных
+              отношений. Важно отметить, что секс-терапия - не медицинская помощь, это не заменяет консультацию
+              эндокринолога, гинеколога или психиатра.</p>
+          </div>
+
+          <!-- Сколько сессий нужно для достижения результата и как часто? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Сколько сессий нужно для достижения результата и как часто?</h4>
+            <p class="faq-item__info paragraph-standard">Количество сессий и их частота зависят от ваших потребностей и
+              целей. Это может быть несколько сеансов или несколько месяцев со встречами раз в неделю или раз в две
+              недели. Мы подберем график, который подходит именно вам</p>
+          </div>
+
+          <!-- Конфиденциальны ли эти консультации? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Конфиденциальны ли эти консультации?</h4>
+            <p class="faq-item__info paragraph-standard">Да, все консультации проводятся строго конфиденциально. Ваши
+              личные данные и содержание сессий будут защищены и не будут разглашаться, за исключением случаев, когда
+              это
+              требуется законом или существует потенциальная угроза вашей безопасности или безопасности других</p>
+          </div>
+
+          <!-- Какие есть условия и способы оплаты? а переноса сессии? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Какие есть условия и способы оплаты? а переноса сессии?</h4>
+            <p class="faq-item__info paragraph-standard">Перенос или отмена сессии - бесплатно, если уведомите об этом
+              не
+              позднее, чем за 24 часа до начала. В таком случае оплаченная сумма сохранится для следующей консультации.
+              Отмена сессии менее, чем за сутки - стоимость консультации не возвращается. Оплата принимается через
+              банковский перевод в евро или с помощью приложения PayPal. Если у вас возникли вопросы или трудности, не
+              стесняйтесь связаться со мной</p>
+          </div>
+
+          <!-- Как понять, когда записаться индивидуально, а когда - всем союзом? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Как понять, когда записаться индивидуально, а когда - всем союзом?</h4>
+            <p class="faq-item__info paragraph-standard">Если проблемы касаются секса, общения или отношений, которые
+              затрагивают всех в союзе, совместная консультация будет логичным выбором. Если вопросы скорее личные и
+              требуют отдельного внимания, то индивидуальная сессия будет предпочтительнее. Если у вас есть сомнения,
+              обсудите это со мной</p>
+          </div>
+
+          <!-- Не нашли ответ на ваш вопрос? -->
+          <div class="faq-item faq__item">
+            <h4 class="faq-item__title h4-title">Не нашли ответ на ваш вопрос?</h4>
+            <p class="faq-item__info paragraph-standard">Если у вас остались вопросы, просто напишите мне на
+              kat.tartary@gmail.com или найдите меня в Telegram: @Sartari / WhatsApp +33 6 46 81 18 34</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar"></script>
+  <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="./assets/scripts/localization.js"></script>
+  <script src="./assets/scripts/index.js"></script>
+</body>
+
 </html>
+

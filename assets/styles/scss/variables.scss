@@ -8,8 +8,9 @@ $color-blue-light: #D9E9FF;
 $color-gray-dark: #B1B1B1;
 $color-gray-middle: #C8C7C7;
 $color-gray-light: #D9D9D9;
-$color-white: #fefefe;
 
+$color-white: #fefefe;
+$color-blue-light-gradient: linear-gradient($color-white, $color-blueLight);
 
 %h1-title {
   font-family: var(--raleway-font-family);
@@ -132,7 +133,6 @@ $color-white: #fefefe;
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
 }
-
 
 %button-text {
   font-family: var(--montserrat-font-family);
