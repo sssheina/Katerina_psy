@@ -1924,7 +1924,7 @@ body._touch .menu__list > li._active .menu__arrow {
   align-items: flex-end;
 }
 
-#textarea {
+#comment {
   width: 523px;
   height: 267px;
   border: 2px solid #010E23;

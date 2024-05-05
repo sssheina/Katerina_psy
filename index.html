@@ -1256,13 +1256,23 @@
             <p class="quastions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
           </div>
           
-          <div class="quastions__form-block">
-            <textarea name="quastions__textarea" id="textarea"></textarea>
-            <button class="price__button btn button-text" type="submit" id="sendButton">
+          <form class="quastions__form-block">
+            <textarea  name="text" id="comment"  placeholder="(если не можешь сформулировать, оставь поле пустым, разберёмся вместе)"></textarea>
+            <button class="price__button btn button-text" type="submit" id="sendButton" onclick="submitForm()"
+            disabled="true">
               Отправить
             </button>
 
-          </div>
+             <!-- Thanx-message modal window -->
+             <div class="overlay hidden" id="overlay">
+              <section class="modal hidden" id="modal_window">
+                <button class="btn-close" id="btn_close_modal">⨉</button>
+
+                <div class="modal__content" id="modal_window_content"></div>
+              </section>
+            </div>
+
+          </form>
         </div>
       </div>
     </section>
