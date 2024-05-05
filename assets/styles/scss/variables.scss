@@ -1,13 +1,13 @@
-$color-orange-dark: #BD5B01;
-$color-orange-middle: #BD5B01;
-$color-orange-light: #D69961;
-$color-orange: #CE6A0E;
-$color-blue-dark: #010E23;
-$color-blue-light: #D9E9FF;
+$color-orange-dark: #bd5b01;
+$color-orange-middle: #bd5b01;
+$color-orange-light: #d69961;
+$color-orange: #ce6a0e;
+$color-blue-dark: #010e23;
+$color-blue-light: #d9e9ff;
 
-$color-gray-dark: #B1B1B1;
-$color-gray-middle: #C8C7C7;
-$color-gray-light: #D9D9D9;
+$color-gray-dark: #b1b1b1;
+$color-gray-middle: #c8c7c7;
+$color-gray-light: #d9d9d9;
 
 $color-white: #fefefe;
 $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
@@ -47,7 +47,7 @@ $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
 %h3-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h3-title-font-size);
-  font-weight: var(--h3-title-font-weight, 500);
+  font-weight: var(--h3-title-font-weight);
   font-style: normal;
   line-height: var(--h3-title-line-height);
   letter-spacing: var(--h3-title-letter-spacing);

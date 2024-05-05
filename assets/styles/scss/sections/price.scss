@@ -1,78 +1,72 @@
 .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 72px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cards {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 73px 0 72px;
+    padding: 85px 0 95px;
+    gap: 81px;
+  }
 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__cards {
-        display: flex;
-        justify-content: center;
-        padding: 85px 0 95px;
-        gap: 81px;
-    }
-
-    &__card-item {
-        display: flex;
-        flex-direction: column;
-        width: 411px;
-        height: 600px;
-        padding: 50px 30px 30px;
-        gap: 30px;
-        background: $color-blue-light;
-    }
-
-    &__card-item:nth-child(1) .price__h3 {
-        color: $color-white;
-        margin-bottom: 45px;
-      }
-
-      &__card-item:nth-child(1) .price__h5 {
-        color: $color-white;
-        
-      }
-
-      &__card-item:nth-child(1) li {
-        color: $color-white;
-        
-      }
-
-    &__card-item:nth-of-type(1) {
-        background: $color-orange-dark;
-        color: $color-white;
-    }
-
-    &__card-cross {
-        display: flex;
-        height: 28px;
-        width: 100%;
-        gap: 30px;
-    }
-    
-    &__card-text {
-        list-style-type: disc;
-        padding-left: 25px;
-    }
-
-    &__span {
-        font-family:var(--raleway-font-family) ;
-        font-size: 48px;
-        font-weight: 500;
-        text-transform: uppercase;
-    }
-
-    &__button {
-        max-width: 386px;
-        width: 100%;
-      }
-
+  &__card {
+    display: grid;
+    max-width: 411px;
+    width: 100%;
+    padding: 50px 30px 46px;
+    gap: 30px;
+  }
 }
 
-.card-cross {
-        width: 28px;
-        height: 28px;
+.price-card {
+  &__cross-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: 25px;
+  }
+
+  &__price {
+    font-family: var(--raleway-font-family);
+    font-size: 48px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &:nth-child(1) {
+    background: $color-orange-dark;
+    color: $color-white;
+
+    .price-card__cross {
+      fill: $color-white;
     }
+
+    .price-card__title {
+      color: $color-white;
+      margin-bottom: 45px;
+    }
+
+    .price-card__duration {
+      color: $color-white;
+    }
+
+    .price-card__list-item {
+      color: $color-white;
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    background: $color-blue-light;
+  }
+}
