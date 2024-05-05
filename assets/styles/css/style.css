@@ -1887,5 +1887,56 @@ body._touch .menu__list > li._active .menu__arrow {
     opacity: 1;
   }
 }
+.quastions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 145px;
+}
+.quastions__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.quastions__content {
+  display: flex;
+  max-height: 455px;
+  gap: 25px;
+  margin-top: 95px;
+}
+.quastions__img-div {
+  max-width: 523px;
+  width: 100%;
+}
+.quastions__img {
+  width: 100%;
+}
+.quastions__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 524px;
+  width: 100%;
+}
+.quastions__form-block {
+  display: flex;
+  flex-direction: column;
+  gap: 95px;
+  align-items: flex-end;
+}
+
+#textarea {
+  width: 523px;
+  height: 267px;
+  border: 2px solid #010E23;
+  font-family: var(--montserrat-font-family);
+  font-size: var(--paragraph-standard-font-size);
+  font-weight: var(--paragraph-standard-font-weight, 400);
+  font-style: normal;
+  line-height: var(--paragraph-standard-line-height);
+  letter-spacing: var(--paragraph-standard-letter-spacing);
+  text-transform: var(--paragraph-standard-text-transform);
+  text-decoration: var(--paragraph-standard-text-decoration);
+  color: #010E23;
+}
 
 /*# sourceMappingURL=style.css.map */

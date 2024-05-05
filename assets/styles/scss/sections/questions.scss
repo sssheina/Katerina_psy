@@ -1,0 +1,57 @@
+.quastions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 73px 0 145px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    display: flex;
+    max-height: 455px;
+    gap: 25px;
+    margin-top: 95px;
+  }
+
+  &__img-div {
+    max-width: 523px;
+    width: 100%;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 524px;
+    width: 100%;
+  }
+
+  &__form-block {
+    display: flex;
+    flex-direction: column;
+    gap: 95px;
+    align-items: flex-end;
+  }
+}
+
+#textarea {
+  width: 523px;
+  height: 267px;
+  border: 2px solid $color-blue-dark;
+  font-family: var(--montserrat-font-family);
+  font-size: var(--paragraph-standard-font-size);
+  font-weight: var(--paragraph-standard-font-weight, 400);
+  font-style: normal;
+  line-height: var(--paragraph-standard-line-height);
+  letter-spacing: var(--paragraph-standard-letter-spacing);
+  text-transform: var(--paragraph-standard-text-transform);
+  text-decoration: var(--paragraph-standard-text-decoration);
+  color: $color-blue-dark;
+}
