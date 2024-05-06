@@ -1263,7 +1263,7 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: space-between;
   align-items: center;
 }
-.cover .span-title {
+.cover__therapy name {
   font-family: var(--raleway-font-family);
   font-style: italic;
   font-size: 35px;
@@ -1375,7 +1375,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .clients__button {
   width: 386px;
 }
-.clients__span {
+.clients__info {
   color: #fefefe;
 }
 
@@ -1636,7 +1636,7 @@ body._touch .menu__list > li._active .menu__arrow {
   color: #fefefe;
 }
 
-.swiper_span {
+.swiper__name {
   color: #ce6a0e;
 }
 
