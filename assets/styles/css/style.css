@@ -1253,7 +1253,7 @@ body._touch .menu__list > li._active .menu__arrow {
   display: flex;
   flex-direction: column;
 }
-.cover__h3,
+.cover__overhead-title,
 .cover .h1-title, .cover__clients {
   color: #fefefe;
 }
@@ -1281,7 +1281,7 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-wrap: wrap;
   flex-direction: row-reverse;
 }
-.cover__h3 {
+.cover__overhead-title {
   padding-bottom: 10px;
 }
 .cover__clients {
@@ -1355,7 +1355,7 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
   padding: 85px 0 95px;
 }
-.clients__h3 {
+.clients__title-card {
   color: #d69961;
 }
 .clients__card {
@@ -1394,16 +1394,16 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
   padding: 85px 0 95px;
 }
-.methods__h3-1, .methods__h3-3, .methods__h3-5 {
+.methods__title-card-1, .methods__title-card-3, .methods__title-card-5 {
   color: #ce6a0e;
 }
-.methods__h3-2, .methods__h3-6 {
+.methods__title-card-2, .methods__title-card-6 {
   color: #010e23;
 }
-.methods__h3-1, .methods__h3-2, .methods__h3-3, .methods__h3-6 {
+.methods__title-card-1, .methods__title-card-2, .methods__title-card-3, .methods__title-card-6 {
   padding-bottom: 50px;
 }
-.methods__h3-5 {
+.methods__title-card-5 {
   padding-bottom: 10px;
 }
 .methods__card {
@@ -1458,7 +1458,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
   position: relative;
 }
-.expertise__h3 {
+.expertise__title-block {
   white-space: nowrap;
 }
 .expertise__line {
@@ -1500,7 +1500,7 @@ body._touch .menu__list > li._active .menu__arrow {
   width: 100%;
   position: relative;
 }
-.expertise__h5 {
+.expertise__title-section {
   white-space: nowrap;
   color: #ce6a0e;
 }
@@ -1565,7 +1565,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .benefits-card_2 {
   gap: 25px;
 }
-.benefits .title-orange {
+.benefits__title-card_orange {
   color: #ce6a0e;
 }
 .benefits__text {
@@ -1724,7 +1724,7 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   width: 524px;
 }
-.steps__h3 {
+.steps__title-step {
   white-space: nowrap;
 }
 .steps__line {
@@ -1903,6 +1903,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .quastions__content {
   display: flex;
+  flex-direction: row;
   max-height: 455px;
   gap: 25px;
   margin-top: 95px;

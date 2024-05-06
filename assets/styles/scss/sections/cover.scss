@@ -34,7 +34,7 @@
     //   align-items: center;
   }
 
-  &__h3,
+  &__overhead-title,
   .h1-title,
   &__clients {
     color: $color-white;
@@ -68,7 +68,7 @@
     flex-direction: row-reverse;
   }
 
-  &__h3 {
+  &__overhead-title {
     padding-bottom: 10px;
   }
   &__clients {
