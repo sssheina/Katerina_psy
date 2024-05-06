@@ -1891,38 +1891,38 @@ body._touch .menu__list > li._active .menu__arrow {
     opacity: 1;
   }
 }
-.quastions {
+.questions {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 73px 0 145px;
 }
-.quastions__wrapper {
+.questions__wrapper {
   display: flex;
   flex-direction: column;
 }
-.quastions__content {
+.questions__content {
   display: flex;
   flex-direction: row;
   max-height: 455px;
   gap: 25px;
   margin-top: 95px;
 }
-.quastions__img-div {
+.questions__img-div {
   max-width: 523px;
   width: 100%;
 }
-.quastions__img {
+.questions__img {
   width: 100%;
 }
-.quastions__text {
+.questions__text {
   display: flex;
   flex-direction: column;
   gap: 25px;
   max-width: 524px;
   width: 100%;
 }
-.quastions__form-block {
+.questions__form-block {
   display: flex;
   flex-direction: column;
   gap: 95px;
