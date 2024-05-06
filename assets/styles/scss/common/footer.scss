@@ -1,0 +1,256 @@
+.footer {
+  background: $color-blue-light;
+  
+
+  &__content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    padding: 130px 0 161px;
+    margin: 0 auto;
+
+    // @include lg {
+    //   padding: 175px 0 155px;
+    // }
+
+    // @include md {
+    //   grid-template-columns: 1fr;
+    //   justify-items: center;
+    //   gap: 50px;
+    //   padding: 88px 0 88px;
+    // }
+
+    // @include sm {
+    //   padding: 115px 0 115px;
+    // }
+
+    // @include xs {
+    //   padding: 85px 0 85px;
+    // }
+  }
+
+  &__card  {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+
+  &__logo-block {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+  }
+
+  &__logo {
+    width: 65px;
+    height: 73.84px;
+  }
+
+  &__logo-text {
+    max-width: 235px;
+  }
+
+  &__rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    // color: #fff;
+    background: $color-blue-dark;
+    padding: 47px 0 47px;
+
+    @include lg {
+      padding: 40px 0 40px;
+      font-size: 18px;
+    }
+
+    @include md {
+      font-size: 16px;
+    }
+
+    @include sm {
+      font-size: 12px;
+    }
+
+    @include xs {
+      padding: 30px 0 30px;
+      font-size: 11px;
+    }
+
+    p:last-child {
+      display: flex;
+      align-items: center;
+      color: $color-white;
+    }
+  }
+
+  &__paragraph-standard {
+    color: $color-white;
+  }
+
+  &__card:first-child {
+    h3 {
+      @include md {
+        text-align: center;
+      }
+    }
+
+    //   hr {
+    //     @include hr(130px, 30px 0 40px);
+
+    //     @include lg {
+    //       @include hr(92px, 23px 0 30px);
+    //     }
+
+    //     @include md {
+    //       @include hr(60px, 15px auto 40px);
+    //     }
+
+    //     @include sm {
+    //       @include hr(60px, 13px auto 40px);
+    //     }
+
+    //     @include xs {
+    //       @include hr(45px, 10px auto 30px);
+    //     }
+    //   }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    @include md {
+      gap: 110px;
+    }
+
+    @include sm {
+      gap: 54px;
+    }
+  }
+  &__wrapper-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper-card:last-child {
+    h3 {
+      text-align: right;
+
+      @include md {
+        text-align: left;
+      }
+    }
+
+    //   hr {
+    //     @include hr(130px, 30px 0 40px auto);
+
+    //     @include lg {
+    //       @include hr(92px, 23px 0 30px auto);
+    //     }
+
+    //     @include md {
+    //       @include hr(60px, 13px 0 30px);
+    //     }
+
+    //     @include sm {
+    //       @include hr(60px, 13px 0 25px);
+    //     }
+
+    //     @include xs {
+    //       @include hr(45px, 10px 0 20px);
+    //     }
+    //   }
+
+    nav a {
+      text-align: right;
+
+      @include md {
+        text-align: left;
+      }
+    }
+  }
+
+  &__social-icons {
+    display: flex;
+    gap: 93px;
+
+    @include lg {
+      gap: 36px;
+    }
+
+    @include md {
+      gap: 76px;
+    }
+
+    @include xs {
+      gap: 63px;
+    }
+  }
+
+  &__social-icon {
+    max-width: 53.33px;
+    width: 100%;
+
+    @include lg {
+      max-width: 40px;
+    }
+
+    @include xs {
+      max-width: 40px;
+    }
+  }
+
+  
+  &__link-studio {
+    text-decoration: none;
+    transition: 0.3s ease;
+    color: $color-white;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}
+
+.card  {
+  max-width: fit-content;
+
+  // hr {
+  //   @include hr(167px, 20px 0 40px);
+
+  //   @include lg {
+  //     @include hr(125px, 16px 0 31px);
+  //   }
+
+  //   @include md {
+  //     @include hr(66px, 15px 0 30px);
+  //   }
+
+  //   @include sm {
+  //     @include hr(66px, 15px 0 25px);
+  //   }
+
+  //   @include xs {
+  //     @include hr(50px, 10px 0 20px);
+  //   }
+  // }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include xs {
+      gap: 30px;
+    }
+
+    a {
+      text-decoration: none;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: $color-orange;
+      }
+    }
+  }
+}
