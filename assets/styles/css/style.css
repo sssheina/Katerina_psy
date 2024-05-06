@@ -1263,7 +1263,7 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: space-between;
   align-items: center;
 }
-.cover__therapy name {
+.cover__therapy-name {
   font-family: var(--raleway-font-family);
   font-style: italic;
   font-size: 35px;
