@@ -46,7 +46,9 @@
   }
 
   &__logo-text {
-    max-width: 235px;
+    // font-family: var(--raleway-font-family);
+    font-weight: 500;
+    max-width: 240px;
   }
 
   &__rights {

@@ -1221,7 +1221,8 @@ body._touch .menu__list > li._active .menu__arrow {
   height: 73.84px;
 }
 .footer__logo-text {
-  max-width: 235px;
+  font-weight: 500;
+  max-width: 240px;
 }
 .footer__rights {
   display: flex;
@@ -1993,6 +1994,9 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-direction: column;
   height: 100%;
 }
+.registration__title {
+  margin-bottom: 85px;
+}
 
 .words {
   display: flex;
@@ -2072,7 +2076,6 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-direction: row;
   max-height: 455px;
   gap: 25px;
-  margin-top: 95px;
 }
 .questions__img-div {
   max-width: 523px;
