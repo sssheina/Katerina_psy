@@ -1284,6 +1284,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .footer__wrapper-card {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 }
 .footer__wrapper-card:last-child h3 {
   text-align: right;
@@ -1292,6 +1293,9 @@ body._touch .menu__list > li._active .menu__arrow {
   .footer__wrapper-card:last-child h3 {
     text-align: left;
   }
+}
+.footer__wrapper-card:last-child nav {
+  align-items: flex-end;
 }
 .footer__wrapper-card:last-child nav a {
   text-align: right;
@@ -1349,6 +1353,7 @@ body._touch .menu__list > li._active .menu__arrow {
 .card nav {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 20px;
 }
 @media only screen and (max-width: 427px) {
@@ -2111,6 +2116,11 @@ body._touch .menu__list > li._active .menu__arrow {
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
   color: #010e23;
+  padding: 20px;
+}
+
+#comment::placeholder {
+  color: #d69961;
 }
 
 .modal {

@@ -54,4 +54,12 @@
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
   color: $color-blue-dark;
+  padding: 20px;
 }
+
+#comment::placeholder {
+  color: $color-orange-light; 
+}
+
+
+
