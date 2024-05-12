@@ -7,6 +7,8 @@
   <link rel="shortcut icon" href="./assets/images/logo/favicon.svg" type="image/svg" />
   <link rel="stylesheet" href="./assets/styles/css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.css">
+
   <title>Секс-терапия и психотерапия с Катериной Тартари</title>
 </head>
 
@@ -604,7 +606,7 @@
               </p>
             </div>
 
-           <!-- 2 -->
+            <!-- 2 -->
             <div class="benefits__card-2 benefits-card_1" style="
                   background-image: url('./assets/images/benefits_blue-card.png');
                   background-size: cover;
@@ -664,7 +666,7 @@
                   background-position: center;
                 "></div>
 
-                <!-- 8 -->
+            <!-- 8 -->
 
             <div class="benefits__card-8 benefits-card_2" style="
                   background-image: url('./assets/images/benefits_blue-card.png');
@@ -1029,7 +1031,7 @@
             <p class="price-card__price">100 €</p>
           </div>
 
-          <!-- 3 -->
+          <!-- 3 card -->
           <div class="price-card price__card">
             <div class="price-card__cross-container">
               <svg class="price-card__cross-container icon-cross">
@@ -1097,69 +1099,104 @@
     </section>
 
     <!-- FAQ -->
-
     <section class="faq">
       <div class="faq__wrapper container">
         <h2 class="faq__title h2-title">FAQ</h2>
 
-        <svg class="faq__cross icon-cross">
-          <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-        </svg>
-        <div class="faq__content">
+        <div class="faq__content accordion-container">
           <!-- Как работает секс-терапия? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Как работает секс-терапия?</h4>
-            <p class="faq-item__info paragraph-standard">Секс-терапия работает с мыслями, эмоциями и действиями и
-              помогает
-              достичь
-              гармоничных сексуальных
-              отношений. Важно отметить, что секс-терапия - не медицинская помощь, это не заменяет консультацию
-              эндокринолога, гинеколога или психиатра.</p>
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Как работает секс-терапия?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Секс-терапия работает с мыслями, эмоциями и
+                действиями и
+                помогает
+                достичь
+                гармоничных сексуальных
+                отношений. Важно отметить, что секс-терапия - не медицинская помощь, это не заменяет консультацию
+                эндокринолога, гинеколога или психиатра.</p>
+            </div>
           </div>
 
-          <!-- Сколько сессий нужно для достижения результата и как часто? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Сколько сессий нужно для результата и как часто?</h4>
-            <p class="faq-item__info paragraph-standard">Количество сессий и их частота зависят от ваших потребностей и
-              целей. Это может быть несколько сеансов или несколько месяцев со встречами раз в неделю или раз в две
-              недели. Мы подберем график, который подходит именно вам</p>
+          <!-- Сколько сессий нужно для результата и как часто? -->
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Сколько сессий нужно для результата и
+                как часто?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Количество сессий и их частота зависят от ваших потребностей и
+                целей. Это может быть несколько сеансов или несколько месяцев со встречами раз в неделю или раз в две
+                недели. Мы подберем график, который подходит именно вам</p>
+            </div>
           </div>
 
           <!-- Конфиденциальны ли эти консультации? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Конфиденциальны ли эти консультации?</h4>
-            <p class="faq-item__info paragraph-standard">Да, все консультации проводятся строго конфиденциально. Ваши
-              личные данные и содержание сессий будут защищены и не будут разглашаться, за исключением случаев, когда
-              это
-              требуется законом или существует потенциальная угроза вашей безопасности или безопасности других</p>
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Конфиденциальны ли эти
+                консультации?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Да, все консультации проводятся строго конфиденциально. Ваши
+                личные данные и содержание сессий будут защищены и не будут разглашаться, за исключением случаев, когда
+                это
+                требуется законом или существует потенциальная угроза вашей безопасности или безопасности других</p>
+            </div>
           </div>
 
           <!-- Какие есть условия и способы оплаты? а переноса сессии? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Какие есть условия и способы оплаты? а переноса сессии?</h4>
-            <p class="faq-item__info paragraph-standard">Перенос или отмена сессии - бесплатно, если уведомите об этом
-              не
-              позднее, чем за 24 часа до начала. В таком случае оплаченная сумма сохранится для следующей консультации.
-              Отмена сессии менее, чем за сутки - стоимость консультации не возвращается. Оплата принимается через
-              банковский перевод в евро или с помощью приложения PayPal. Если у вас возникли вопросы или трудности, не
-              стесняйтесь связаться со мной</p>
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Какие есть условия и способы оплаты? а
+                переноса сессии?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Перенос или отмена сессии - бесплатно, если уведомите об этом
+                не
+                позднее, чем за 24 часа до начала. В таком случае оплаченная сумма сохранится для следующей
+                консультации.
+                Отмена сессии менее, чем за сутки - стоимость консультации не возвращается. Оплата принимается через
+                банковский перевод в евро или с помощью приложения PayPal. Если у вас возникли вопросы или трудности, не
+                стесняйтесь связаться со мной</p>
+            </div>
           </div>
 
           <!-- Как понять, когда записаться индивидуально, а когда - всем союзом? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Как понять, когда записаться индивидуально, а когда - всем союзом?</h4>
-            <p class="faq-item__info paragraph-standard">Если проблемы касаются секса, общения или отношений, которые
-              затрагивают всех в союзе, совместная консультация будет логичным выбором. Если вопросы скорее личные и
-              требуют отдельного внимания, то индивидуальная сессия будет предпочтительнее. Если у вас есть сомнения,
-              обсудите это со мной</p>
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Как понять, когда записаться
+                индивидуально, а когда - всем союзом?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Если проблемы касаются секса, общения или отношений, которые
+                затрагивают всех в союзе, совместная консультация будет логичным выбором. Если вопросы скорее личные и
+                требуют отдельного внимания, то индивидуальная сессия будет предпочтительнее. Если у вас есть сомнения,
+                обсудите это со мной</p>
+            </div>
           </div>
 
           <!-- Не нашли ответ на ваш вопрос? -->
-          <div class="faq-item faq__item">
-            <h4 class="faq-item__title h4-title">Не нашли ответ на ваш вопрос?</h4>
-            <p class="faq-item__info paragraph-standard">Если у вас остались вопросы, просто напишите мне на
-              kat.tartary@gmail.com или найдите меня в Telegram: @Sartari / WhatsApp +33 6 46 81 18 34</p>
+          <div class="faq-item ac">
+            <h4 class="faq-item__header ac-header">
+              <button type="button" class="faq-item__title h4-title ac-trigger">Не нашли ответ на ваш вопрос?</button>
+            </h4>
+            <div class="faq-item__info ac-panel">
+              <p class="paragraph-standard">Если у вас остались вопросы, просто напишите мне на
+                kat.tartary@gmail.com или найдите меня в Telegram: @Sartari / WhatsApp +33 6 46 81 18 34</p>
+            </div>
           </div>
+        </div>
+
+        <div class="faq__action button-block">
+          <svg class="faq__cross icon-cross">
+            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+          </svg>
+          <button class="faq__button btn button-text">
+            Запись на сессию
+          </button>
         </div>
       </div>
     </section>
@@ -1176,10 +1213,11 @@
               alt="Девушки прикрывают друг другу глаза руками" /></div>
 
           <div class="questions__text">
-            <p class="questions__p paragraph-standard">У вас возник вопрос о сексуальности и отношениях, но вы стесняетесь его задать?</p> 
-              <p class="questions__p paragraph-standard">Спросите
-                анонимно.<br> Я буду выборочно отвечать на вопросы в instagram-блоге.</p>
-                <p class="questions__p paragraph-standard"></p>
+            <p class="questions__p paragraph-standard">У вас возник вопрос о сексуальности и отношениях, но вы
+              стесняетесь его задать?</p>
+            <p class="questions__p paragraph-standard">Спросите
+              анонимно.<br> Я буду выборочно отвечать на вопросы в instagram-блоге.</p>
+            <p class="questions__p paragraph-standard"></p>
             <p class="questions__p paragraph-standard">Многим людям важно узнать ответ на ваш вопрос.</p>
             <p class="questions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
           </div>
@@ -1224,26 +1262,14 @@
           </a>
           <p class="footer__logo-text paragraph-standard">Онлайн-консультации секс-терапевтки Катерины Тартари</p>
         </div>
-        
+
         <div class="footer__social-icons">
-          <a href="https://wa.me/79096989821"
-            ><img
-              class="footer__social-icon"
-              src="./assets/images/icons/icon-whatsapp.svg"
-              alt="Иконка кнопки WhatsApp"
-          /></a>
-          <a href="https://t.me/RinaRamzaeva"
-            ><img
-              class="footer__social-icon"
-              src="./assets/images/icons/icon-telegram.svg"
-              alt="Иконка кнопки Telegram"
-          /></a>
-          <a href="https://www.instagram.com/direct/t/17849178896617044"
-            ><img
-              class="footer__social-icon"
-              src="./assets/images/icons/icon-instagram.svg"
-              alt="Иконка кнопки Instagram"
-          /></a>
+          <a href="https://wa.me/79096989821"><img class="footer__social-icon"
+              src="./assets/images/icons/icon-whatsapp.svg" alt="Иконка кнопки WhatsApp" /></a>
+          <a href="https://t.me/RinaRamzaeva"><img class="footer__social-icon"
+              src="./assets/images/icons/icon-telegram.svg" alt="Иконка кнопки Telegram" /></a>
+          <a href="https://www.instagram.com/direct/t/17849178896617044"><img class="footer__social-icon"
+              src="./assets/images/icons/icon-instagram.svg" alt="Иконка кнопки Instagram" /></a>
         </div>
       </div>
 
@@ -1253,11 +1279,7 @@
           <h3 class="footer__title h3-title">Подписка</h3>
           <hr />
           <nav>
-            <a
-              href="https://www.instagram.com/rina_ramzaeva/"
-              class="paragraph-standard"
-              >Instagram-блог</a
-            >
+            <a href="https://www.instagram.com/rina_ramzaeva/" class="paragraph-standard">Instagram-блог</a>
           </nav>
         </div>
 
@@ -1272,29 +1294,26 @@
           </nav>
         </div>
 
- <!-- Ссылки -->
- <div class="footer__wrapper-card card">
-  <h3 class="footer__title h3-title">Ссылки</h3>
-  <hr />
-  <nav>
-    <a href="#benefits" class="paragraph-standard">Преимущества</a>
-    <a href="#tv" class="paragraph-standard">Просвещение</a>
-    <a href="#education" class="paragraph-standard">Образование</a>
-    <a href="#registration" class="paragraph-standard">Запись</a>
-    <a href="#faq" class="paragraph-standard">FAQ</a>
-  </nav>
-</div>
+        <!-- Ссылки -->
+        <div class="footer__wrapper-card card">
+          <h3 class="footer__title h3-title">Ссылки</h3>
+          <hr />
+          <nav>
+            <a href="#benefits" class="paragraph-standard">Преимущества</a>
+            <a href="#tv" class="paragraph-standard">Просвещение</a>
+            <a href="#education" class="paragraph-standard">Образование</a>
+            <a href="#registration" class="paragraph-standard">Запись</a>
+            <a href="#faq" class="paragraph-standard">FAQ</a>
+          </nav>
+        </div>
 
       </div>
     </div>
     <div class="footer__rights">
       <p class="footer__paragraph-standard paragraph-standard">&copy; 2024 Екатерина Тартари. Все права защищены.</p>
       <p>
-        <a 
-          href="https://www.instagram.com/ddc.web.studio/"
-          class="footer__link-studio paragraph-standard"
-          >Сайт разработан © DDС Web Studio</a
-        >
+        <a href="https://www.instagram.com/ddc.web.studio/" class="footer__link-studio paragraph-standard">Сайт
+          разработан © DDС Web Studio</a>
       </p>
     </div>
   </footer>
@@ -1305,8 +1324,10 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
+  <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
   <script src="./assets/scripts/localization.js"></script>
-  <script src="./assets/scripts/index.js"></script>
+  <script type="module" src="./assets/scripts/index.js"></script>
+
 </body>
 
 </html>

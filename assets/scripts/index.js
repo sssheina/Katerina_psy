@@ -1,21 +1,11 @@
 // FAQ
 
-const faqQuestions = document.querySelectorAll(".faq-item__title");
-const faqAnswers = document.querySelectorAll(".faq-item__info");
-
-const toggleFaqAnswer = (index) => {
-  const answer = faqAnswers[index];
-  if (answer.classList.contains("open")) {
-    answer.classList.remove("open");
-  } else {
-    answer.classList.add("open");
-  }
-};
-
-faqQuestions.forEach((question, index) => {
-  question.addEventListener("click", () => {
-    toggleFaqAnswer(index);
-  });
+new Accordion(".accordion-container", {
+  duration: 400,
+  showMultiple: true,
+  onOpen: function (currentElement) {
+    console.log(currentElement);
+  },
 });
 
 //  ----- HEADER COLOR -----
@@ -220,7 +210,6 @@ const swiper = new Swiper(".swiper", {
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
-
     },
     1440: {
       slidesPerView: 3,
