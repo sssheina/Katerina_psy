@@ -5,42 +5,64 @@
   padding: 145px 0 72px;
 
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 50px;
+  }
+
+  &__title {
   }
 
   &__content {
-    width: 100%;
-    max-width: 1209px;
-    display: grid;
-    gap: 35px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  &__action {
+    grid-column: span 2;
   }
 }
 
 .faq-item {
-  &__title {
-    padding: 35px;
+  margin: 0;
+  border: none !important;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px !important;
     background: $color-blue-light-gradient;
+  }
+
+  &__title {
+    font-weight: lighter !important;
+    font-size: 25px !important;
+    outline: none !important;
+
+    &:active {
+      outline: none;
+    }
   }
 
   &__info {
     padding: 35px;
-    display: none;
-    animation: faq-answer 0.5s ease-out;
-
-    &.open {
-      display: block;
-    }
   }
 }
 
-@keyframes faq-answer {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
+.ac .ac-trigger {
+  &::after {
+    content: url('data:image/svg+xml;utf8,<svg width="28" height="29" viewBox="0 0 28 29" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6 0.403809H15.4V10.2038H12.6V0.403809ZM12.6 18.6038H15.4V28.4038H12.6V18.6038ZM18.2 13.0038H28V15.8038H18.2V13.0038ZM0 13.0038H9.8V15.8038H0V13.0038Z" fill="dark blue"/></svg>') !important;
   }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+
+  &:focus {
+    color: $color-blue-dark !important;
+  }
+}
+
+.ac.is-active {
+  .ac-trigger::after {
+    // rotate: 45deg;
   }
 }
