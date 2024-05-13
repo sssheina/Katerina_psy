@@ -12,21 +12,29 @@
   );
   color: $color-white;
   position: relative;
-  //   padding: 550px 0 75px;
   padding: 470px 0 75px;
   height: 100%;
   overflow: hidden;
 
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: linear-gradient(180deg, rgba(164, 164, 248, 0.2) 0%, rgba(1, 1, 29, 0.1)100%);
-  //   z-index: 1; /* Чтобы синее затемнение было над видео */
-  // }
+  @include lg {
+    padding: 343px 0 55px;
+          }
+      
+          @include md {
+      padding: 177px 0 43px;
+          }
+  
+          @include sm {
+            padding: 194px 0 95px;
+                }
+      
+          @include xs {
+            padding: 134px 0 67px;
+          }
+
+
+
+  
 
   &__video-bg {
     position: absolute;
@@ -36,6 +44,50 @@
     transform: translate(-50%, -50%);
     min-width: 100%;
     min-height: 100%;
+
+    @include lg {
+    
+          }
+      
+          @include md {
+      
+          }
+  
+          @include sm {
+            // display: none;
+                }
+      
+          @include xs {
+            display: none;
+          }
+  }
+
+  &__image-bg {
+    display: none;
+    background-image: url('./../../../images/cover_background.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    @include lg {
+    
+    }
+
+    @include md {
+
+    }
+
+    @include sm {
+      // display: block;
+          }
+
+    @include xs {
+      display: block;
+    }
   }
 
   &__wrapper {
