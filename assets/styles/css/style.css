@@ -1506,7 +1506,30 @@ body._touch .menu__list > li._active .menu__arrow {
 .icon-cross {
   max-width: 28px;
   max-height: 28px;
-  fill: #010e23;
+}
+@media only screen and (max-width: 1919px) {
+  .icon-cross {
+    max-width: 21px;
+    max-height: 21px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .icon-cross {
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .icon-cross {
+    max-width: 16px;
+    max-height: 16px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .icon-cross {
+    padding: 30px 0 30px;
+    font-size: 11px;
+  }
 }
 
 .btn {
