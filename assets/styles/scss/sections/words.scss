@@ -1,20 +1,22 @@
 .words {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 161px 0 161px;
+  background-image: url('/assets/images/words_background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__wrapper {
     display: flex;
-    justify-content: center;
-      align-items: center;
-      padding: 161px 0 161px;
-    
-    
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%; 
-        align-items: center;
-      }
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+  }
 
-      &__content {
-        max-width: 820px;
-        text-align: center;
-
-      }
-    }
+  &__content {
+    max-width: 820px;
+    text-align: center;
+  }
+}
