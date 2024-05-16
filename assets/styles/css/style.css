@@ -1115,17 +1115,17 @@ textarea {
 }
 @media only screen and (max-width: 1919px) {
   :root {
-    --paragraph-text-font-size: 16px;
+    --paragraph-standard-font-size: 16px;
   }
 }
 @media only screen and (max-width: 1439px) {
   :root {
-    --paragraph-text-font-size: 15px;
+    --paragraph-standard-font-size: 15px;
   }
 }
 @media only screen and (max-width: 427px) {
   :root {
-    --paragraph-medium-font-size: 14px;
+    --paragraph-standard-font-size: 14px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -2335,17 +2335,48 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-direction: column;
 }
 .questions__content {
-  display: flex;
-  flex-direction: row;
-  max-height: 455px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
   gap: 25px;
+}
+@media only screen and (max-width: 1919px) {
+  .questions__content {
+    gap: 20px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .questions__content {
+    grid-template-columns: repeat(2, auto);
+    gap: 42px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .questions__content:first-child {
+    grid-column-start: 1;
+    grid-column: 1/span 2;
+  }
 }
 .questions__img-div {
   max-width: 523px;
   width: 100%;
 }
+@media only screen and (max-width: 1439px) {
+  .questions__img-div {
+    width: 243px;
+    height: 348px;
+    grid-row: span 2;
+  }
+}
 .questions__img {
   width: 100%;
+}
+@media only screen and (max-width: 1439px) {
+  .questions__img {
+    height: 348px;
+    width: 243px;
+    grid-column: span 2;
+    content: url("/assets/images/questions_768.png");
+  }
 }
 .questions__text {
   display: flex;
@@ -2353,6 +2384,12 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
   max-width: 524px;
   width: 100%;
+}
+@media only screen and (max-width: 1439px) {
+  .questions__text {
+    width: 342px;
+    height: 189px;
+  }
 }
 .questions__form-block {
   display: flex;
@@ -2375,6 +2412,11 @@ body._touch .menu__list > li._active .menu__arrow {
   text-decoration: var(--paragraph-standard-text-decoration);
   color: #010e23;
   padding: 20px;
+}
+@media only screen and (max-width: 1439px) {
+  #comment {
+    max-width: 342px;
+  }
 }
 
 #comment::placeholder {

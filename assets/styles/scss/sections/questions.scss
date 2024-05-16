@@ -10,19 +10,60 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: row;
-    max-height: 455px;
+    // display: flex;
+    // flex-direction: row;
+    // max-height: 455px;
+    // gap: 25px;
+
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     gap: 25px;
+
+    @include lg {
+      gap: 20px;
+    }
+
+    @include md {
+      grid-template-columns: repeat(2, auto);
+      gap: 42px;
+    }
+
+    @include sm {
+    }
+
+    @include xs {
+    }
+  }
+
+  &__content:first-child {
+    @include md {
+      grid-column-start: 1;
+      grid-column: 1 / span 2;
+    }
   }
 
   &__img-div {
     max-width: 523px;
     width: 100%;
+
+    @include md {
+      width: 243px;
+      height: 348px;
+      grid-row: span 2;
+    }
   }
 
   &__img {
     width: 100%;
+
+    @include md {
+      height: 348px;
+      width: 243px;
+      grid-column: span 2;
+      content: url("/assets/images/questions_768.png");
+    }
+
+    
   }
 
   &__text {
@@ -31,6 +72,12 @@
     gap: 25px;
     max-width: 524px;
     width: 100%;
+
+    @include md {
+      width: 342px;
+      height: 189px;
+      
+    }
   }
 
   &__form-block {
@@ -38,10 +85,12 @@
     flex-direction: column;
     gap: 95px;
     align-items: flex-end;
+
+    
   }
 }
 
-#comment{
+#comment {
   width: 523px;
   height: 267px;
   border: 2px solid $color-blue-dark;
@@ -55,11 +104,13 @@
   text-decoration: var(--paragraph-standard-text-decoration);
   color: $color-blue-dark;
   padding: 20px;
+
+  @include md {
+    max-width: 342px;
+    
+  }
 }
 
 #comment::placeholder {
-  color: $color-gray-dark; 
+  color: $color-gray-dark;
 }
-
-
-
