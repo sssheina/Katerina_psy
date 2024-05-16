@@ -1747,14 +1747,6 @@ body._touch .menu__list > li._active .menu__arrow {
 .clients__title-card {
   color: #d69961;
 }
-.clients__card {
-  display: flex;
-  flex-direction: column;
-  width: 386px;
-  height: 400px;
-  padding: 28px;
-  justify-content: flex-end;
-}
 .clients__button-block {
   display: flex;
   flex-direction: row;
@@ -1766,6 +1758,32 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .clients__info {
   color: #fefefe;
+}
+
+.clients-card {
+  display: flex;
+  flex-direction: column;
+  width: 386px;
+  height: 400px;
+  padding: 28px;
+  justify-content: flex-end;
+}
+.clients-card:nth-child(1), .clients-card:nth-child(2), .clients-card:nth-child(3), .clients-card:nth-child(4) {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.clients-card:nth-child(1) {
+  background-image: url("/assets/images/clients-individual.png");
+}
+.clients-card:nth-child(2) {
+  background-image: url("/assets/images/clients-pair.png");
+}
+.clients-card:nth-child(3) {
+  background-image: url("/assets/images/clients-family.png");
+}
+.clients-card:nth-child(4) {
+  background-image: url("/assets/images/clients-group.png");
 }
 
 .methods {
