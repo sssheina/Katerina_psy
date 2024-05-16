@@ -8,6 +8,57 @@ new Accordion(".accordion-container", {
   },
 });
 
+// ----- SLIDER HELP -----
+
+const swiper = new Swiper(".swiper", {
+  grabCursor: true,
+  touchRatio: 2,
+  slideToClickedSlide: true,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+
+  slidesPerView: 2,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    428: {
+      slidesPerView: 1,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    1440: {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+  },
+  loop: true,
+  loopedSlides: 2,
+  watchOverflow: true,
+  spaceBetween: 37,
+  slidesPerGroup: 1,
+  // centeredSlides: true,
+  initialSlide: 0,
+  freeMode: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  speed: 1200,
+});
+
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
@@ -28,9 +79,6 @@ window.addEventListener("scroll", function () {
 //   // Активация кода отслеживания Google Analytics
 //   gtag("config", "GTM-5M7R6KBB");
 // }
-
-
-
 
 // ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
 
@@ -129,83 +177,6 @@ window.addEventListener("scroll", function () {
 //     menuBody.classList.toggle("_active");
 //   });
 // }
-
-
-
-// ----- SLIDER HELP -----
-
-// const swiper = new Swiper(".swiper", {
-//   grabCursor: true,
-//   touchRatio: 2,
-//   slideToClickedSlide: true,
-//   keyboard: {
-//     enabled: true,
-//     onlyInViewport: true,
-//     pageUpDown: true,
-//   },
-//   // slidesPerView: 1, // - по умолчанию значение 1
-//   slidesPerView: 3,
-//   breakpoints: {
-//     320: {
-//       slidesPerView: 1,
-//       spaceBetween: 10,
-//     },
-
-//     // slidesPerView: 1, // - по умолчанию значение 1
-//     slidesPerView: 2,
-//     breakpoints: {
-//       320: {
-//         slidesPerView: 1,
-//         spaceBetween: 10,
-//       },
-//       428: {
-//         slidesPerView: 1,
-//         spaceBetween: 15,
-//       },
-//       768: {
-//         slidesPerView: 2,
-//         spaceBetween: 20,
-//       },
-//       1440: {
-//         slidesPerView: 2,
-//         spaceBetween: 30,
-//       },
-//     },
-//     loop: true,
-//     loopedSlides: 2,
-//     watchOverflow: true,
-//     spaceBetween: 37,
-//     slidesPerGroup: 1,
-//     // centeredSlides: true,
-//     initialSlide: 0,
-//     freeMode: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     1440: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//     },
-//   },
-//   loop: true,
-//   loopedSlides: 3,
-//   watchOverflow: true,
-//   spaceBetween: 37,
-//   slidesPerGroup: 1,
-//   // centeredSlides: true,
-//   initialSlide: 0,
-//   freeMode: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   speed: 1200,
-// });
 
 // ----- DOWNLOAD FILE -----
 
@@ -607,15 +578,15 @@ window.addEventListener("scroll", function () {
 
 // ---------Cookie------
 // function acceptCookies() {
-  // document.getElementById("cookieConsent").style.display = "none";
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  // gtag("config", "GTM-5M7R6KBB");
+// document.getElementById("cookieConsent").style.display = "none";
+// Дополнительные действия, которые вы хотите выполнить при согласии с куками
+// Активация кода отслеживания Google Analytics
+// gtag("config", "GTM-5M7R6KBB");
 // }
 
 // function acceptCookies1() {
-  // document.getElementById("cookieConsent").style.display = "none";
-  // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-  // Активация кода отслеживания Google Analytics
-  // gtag("config", "GTM-5M7R6KBB");
+// document.getElementById("cookieConsent").style.display = "none";
+// Дополнительные действия, которые вы хотите выполнить при согласии с куками
+// Активация кода отслеживания Google Analytics
+// gtag("config", "GTM-5M7R6KBB");
 // }
