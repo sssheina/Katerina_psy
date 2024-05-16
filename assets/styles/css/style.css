@@ -869,6 +869,18 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
+.bg-gradient {
+  background: linear-gradient(#fefefe, #d9e9ff);
+}
+
+.orange {
+  color: #ce6a0e;
+}
+
+.orange-light {
+  color: #d69961;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(./../../fonts/raleway/Raleway-Regular.ttf);
@@ -1744,9 +1756,6 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 25px;
   padding: 85px 0 95px;
 }
-.clients__title-card {
-  color: #d69961;
-}
 .clients__button-block {
   display: flex;
   flex-direction: row;
@@ -1817,12 +1826,6 @@ body._touch .menu__list > li._active .menu__arrow {
   display: grid;
   grid-template-rows: 35% 1fr;
   width: 245px;
-}
-.methods-card:nth-child(odd) .methods-card__title {
-  color: #ce6a0e;
-}
-.methods-card:nth-child(2), .methods-card:nth-child(6) {
-  background: linear-gradient(#fefefe, #d9e9ff);
 }
 
 .expertise {
@@ -1955,9 +1958,6 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .benefits-card_2 {
   gap: 25px;
-}
-.benefits__title-card_orange {
-  color: #ce6a0e;
 }
 .benefits__text {
   max-width: 375px;
@@ -2348,7 +2348,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 #comment::placeholder {
-  color: #d69961;
+  color: #b1b1b1;
 }
 
 .modal {
