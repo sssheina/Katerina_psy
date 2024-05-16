@@ -1,20 +1,12 @@
 .methods {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 73px 0 72px;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__cards {
-    display: flex;
-    gap: 25px;
+    gap: 0 25px;
     padding: 85px 0 95px;
-    justify-content: space-between;
-    align-items:flex-start;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 15%;
   }
 
   &__button-block {
@@ -31,24 +23,21 @@
 
 .methods-card {
   display: grid;
-    grid-template-rows: 35% 1fr;
-    width: 245px;
-    // height: auto ;
-    // gap: 9px;
+  grid-template-rows: 30% 1fr;
+  gap: 10px;
 
-    // &:nth-child(odd) {
-    //   .methods-card__title {
-    //     color: $color-orange;
-    //   }
-    // }
-    
-    // &:nth-child(2) {
-    //   padding-bottom: 60px;
-    // }
+  &:nth-child(odd) {
+    .methods-card__title {
+      color: $color-orange;
+    }
+  }
 
-    // &:nth-child(6) {
-    //   padding-bottom: 50px;
-    // }
+  &:nth-child(2),
+  &:nth-child(6) {
+    background: $color-blue-light-gradient;
+  }
 
+  &:nth-child(4) {
+    grid-row: span 2;
+  }
 }
-
