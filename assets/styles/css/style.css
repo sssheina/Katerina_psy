@@ -1608,7 +1608,9 @@ body._touch .menu__list > li._active .menu__arrow {
   position: relative;
   background: linear-gradient(180deg, rgba(1, 8, 20, 0) 0%, rgba(1, 9, 22, 0.105) 23.5%, rgba(1, 13, 32, 0.66) 55.5%, #010e23 96%);
   color: #fefefe;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
   padding-top: 100px;
   padding-bottom: 75px;
 }
@@ -1721,6 +1723,8 @@ body._touch .menu__list > li._active .menu__arrow {
 .cover__video {
   position: absolute;
   inset: 0;
+  min-width: 100%;
+  min-height: 100%;
   z-index: -1;
 }
 @media only screen and (max-width: 767px) {
