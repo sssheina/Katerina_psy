@@ -1935,7 +1935,7 @@ body._touch .menu__list > li._active .menu__arrow {
   gap: 50px;
   padding: 85px 0 95px;
 }
-.benefits .cards-row {
+.benefits__cards-row {
   display: flex;
   gap: 25px;
 }
