@@ -1,9 +1,6 @@
 .cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  // background: rgba(0,0,0,.5);
-  background-image: linear-gradient(
+  position: relative;
+  background: linear-gradient(
     180deg,
     rgba(1, 8, 20, 0) 0%,
     rgba(1, 9, 22, 0.105) 23.5%,
@@ -11,142 +8,149 @@
     #010e23 96%
   );
   color: $color-white;
-  position: relative;
-  padding: 470px 0 75px;
-  height: 100%;
-  overflow: hidden;
+  height: 100vh;
+  // height: 100%;
+  // overflow: hidden;
+  padding-top: $header-height;
+  padding-bottom: 75px;
 
   @include lg {
-    padding: 343px 0 55px;
-          }
-      
-          @include md {
-      padding: 177px 0 43px;
-          }
-  
-          @include sm {
-            padding: 194px 0 95px;
-                }
-      
-          @include xs {
-            padding: 134px 0 67px;
-          }
-
-
-
-  
-
-  &__video-bg {
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-
-    @include lg {
-    
-          }
-      
-          @include md {
-      
-          }
-  
-          @include sm {
-            // display: none;
-                }
-      
-          @include xs {
-            display: none;
-          }
+    padding-bottom: 55px;
   }
 
-  &__image-bg {
-    display: none;
-    background-image: url('./../../../images/cover_background.png');
+  @include md {
+    padding-bottom: 43px;
+  }
+
+  @include sm {
+    padding-bottom: 95px;
+    background-image: url("/assets/images/cover_background.png");
     background-size: cover;
     background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    background-repeat: no-repeat;
+  }
 
-    @include lg {
-    
-    }
-
-    @include md {
-
-    }
-
-    @include sm {
-      // display: block;
-          }
-
-    @include xs {
-      display: block;
-    }
+  @include xs {
+    padding-bottom: 67px;
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    // justify-content: center;
-    //   align-items: center;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
   }
 
-  &__overhead-title,
-  .h1-title,
-  &__clients {
-    color: $color-white;
-  }
-
-  &__title_1-line {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  &__content {
+    grid-row: 2 / 3;
+    display: grid;
     align-items: center;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas:
+      "subtitle-top subtitle-top subtitle-top subtitle-top"
+      "title-top title-top title-top psychotherapy"
+      "sextherapy icons title-bottom title-bottom"
+      "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+
+    @include sm {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 20px;
+      grid-template-areas:
+        "subtitle-top subtitle-top subtitle-top"
+        "title-top title-top title-top"
+        "sextherapy icons psychotherapy"
+        "title-bottom title-bottom title-bottom"
+        "subtitle-bottom subtitle-bottom subtitle-bottom";
+    }
   }
 
-  &__therapy-name {
+  &__title {
+    &.top {
+      grid-area: title-top;
+    }
+
+    &.bottom {
+      grid-area: title-bottom;
+
+      @include sm {
+        max-width: 70%;
+        justify-self: end;
+        text-align: right;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: $color-white;
+
+    &.top {
+      grid-area: subtitle-top;
+    }
+
+    &.bottom {
+      grid-area: subtitle-bottom;
+      text-align: right;
+    }
+  }
+
+  &__therapy {
     font-family: var(--raleway-font-family);
-    font-style: italic;
     font-size: 35px;
     font-weight: var(--h2-title-font-weight, 500);
+    font-style: italic;
+
+    @include lg {
+      font-size: 26px;
+    }
+
+    @include md {
+      font-size: 16px;
+    }
+
+    @include xs {
+      font-size: 14px;
+    }
+
+    &.psychotherapy {
+      grid-area: psychotherapy;
+    }
+
+    &.sextherapy {
+      grid-area: sextherapy;
+    }
   }
 
-  &__title_2-line {
+  &__icons-container {
+    grid-area: icons;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-  }
-
-  &__clients {
-    display: flex;
-    align-content: end;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
-  }
-
-  &__overhead-title {
-    padding-bottom: 10px;
-  }
-  &__clients {
-    padding-top: 10px;
   }
 
   &__action {
+    grid-row: 3 / 4;
     padding-top: 50px;
-  }
-
-  &__button {
-    width: 523px;
   }
 
   &__cross {
     fill: $color-white;
+  }
+
+  &__video {
+    position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    inset: 0;
+    // min-width: 100%;
+    // min-height: 100%;
+    // width: 100vw;
+    // height: 100vh;
+    // top: 0;
+    // right: 0;
+    z-index: -1;
+
+    @include sm {
+      display: none;
+    }
   }
 }
