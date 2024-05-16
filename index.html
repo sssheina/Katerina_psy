@@ -100,33 +100,28 @@
 
   <main class="main">
     <!-- ГЛАВНАЯ -->
-
     <section class="cover">
       <div class="cover__wrapper container">
-        <div class="cover__overhead">
-          <h3 class="cover__overhead-title h3-title">Начните с бесплатной сессии</h3>
-        </div>
-
-        <div class="cover__title_1-line">
-          <h1 class="cover__title-main h1-title">Онлайн консультации</h1>
-          <span class="cover__therapy-name">психотерапия</span>
-        </div>
-        
-        <div class="cover__title_2-line">
-          <span class="cover__therapy-name">секс-терапия</span>
-          <svg class="cover__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <svg class="cover__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <h1 class="cover__name h1-title">Катерины Тартари</h1>
-        </div>
-        <div class="cover__subtitle">
-          <h3 class="cover__clients h3-title">
+        <div class="cover__content">
+          <h1 class="cover__title top h1-title">Онлайн консультации</h1>
+          <h2 class="cover__title bottom h1-title">Катерины Тартари</h2>
+          <h3 class="cover__subtitle top h3-title">Начните с бесплатной сессии</h3>
+          <h3 class="cover__subtitle bottom h3-title">
             Индивидуально, для пар, полиаморных союзов и семей
           </h3>
+          <p class="cover__therapy psychotherapy">психотерапия</p>
+          <p class="cover__therapy sextherapy">секс-терапия</p>
+
+          <div class="cover__icons-container">
+            <svg class="cover__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <svg class="cover__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+          </div>
         </div>
+
         <div class="cover__action button-block">
           <svg class="cover__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
@@ -134,10 +129,9 @@
           <button class="cover__button btn button-text">Записаться</button>
         </div>
       </div>
-      <video class="cover__video-bg" autoplay muted loop>
+      <video class="cover__video" autoplay muted loop>
         <source src="./assets/video/video_5.mp4" type="video/mp4" />
       </video>
-      <div class="cover__image-bg"></div>
     </section>
 
     <!-- ABOUT -->
@@ -279,9 +273,9 @@
 
           <!-- card-4 -->
           <div class="methods-card methods__card">
-          <img src="./assets/images/method_pic-card_1.png" alt="абстратные линии">
+            <img src="./assets/images/method_pic-card_1.png" alt="абстратные линии">
           </div>
-          
+
 
           <!-- card-5 -->
           <div class="methods-card methods__card">
@@ -471,8 +465,8 @@
               </div>
             </div>
             <div class="expertise__relationship-pic">
-                <img src="./assets/images/expertise__relationship.png" alt="Мужчина и женщина в ссоре">
-              </div>
+              <img src="./assets/images/expertise__relationship.png" alt="Мужчина и женщина в ссоре">
+            </div>
           </div>
 
           <!-- Внутренний мир -->
@@ -483,8 +477,8 @@
               <div class="expertise__line"></div>
             </div>
             <div class="expertise__inner-pic">
-                <img src="./assets/images/expertise__inner.png" alt="Женщина наслаждается моментом наедине с собой">
-              </div>
+              <img src="./assets/images/expertise__inner.png" alt="Женщина наслаждается моментом наедине с собой">
+            </div>
             <div class="expertise__inner-text">
               <div class="expertise__item">
                 <div class="expertise__small-title">
@@ -588,7 +582,8 @@
             </div>
 
             <!-- 2 -->
-            <div class="benefits__card benefits-card-gap_1 bg-gradient" >
+
+            <div class="benefits__card-2 benefits-card_1 bg-gradient">
               <h3 class="benefits__title-card-1 h3-title">ФЕМИНИСТСКАЯ ОПТИКА</h3>
               <p class="benefits__text paragraph-standard">
                 Я учитываю в работе социо-культурный контекст вашей жизни,
@@ -641,7 +636,8 @@
 
             <!-- 8 -->
 
-            <div class="benefits__card benefits-card-gap_2 bg-gradient" >
+            <div class="benefits__card-8 benefits-card_2 bg-gradient">
+
               <h3 class="benefits__title-card-1 h3-title">
                 Работа с травмой насилия
               </h3>
@@ -1043,7 +1039,8 @@
 
     <section class="words">
       <div class="words__wrapper container">
-        <p class="words__content paragraph-medium">Я искренне верю, что отношения могут быть для вас источником удовольствия
+        <p class="words__content paragraph-medium">Я искренне верю, что отношения могут быть для вас источником
+          удовольствия
           и наполнять вашу жизнь смыслом</p>
       </div>
     </section>

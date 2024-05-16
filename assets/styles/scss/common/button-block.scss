@@ -3,4 +3,13 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+
+  @include sm {
+    justify-content: center;
+    align-items: center;
+
+    .icon-cross {
+      display: none;
+    }
+  }
 }
