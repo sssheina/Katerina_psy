@@ -1181,7 +1181,7 @@ body._lock {
 .container {
   max-width: 1620px;
   width: 100%;
-  margin: 0 20px;
+  margin: 0 auto;
 }
 
 .header {
@@ -1588,114 +1588,139 @@ body._touch .menu__list > li._active .menu__arrow {
   justify-content: space-between;
   align-items: flex-end;
 }
+@media only screen and (max-width: 767px) {
+  .button-block {
+    justify-content: center;
+    align-items: center;
+  }
+  .button-block .icon-cross {
+    display: none;
+  }
+}
 
 .cover {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(180deg, rgba(1, 8, 20, 0) 0%, rgba(1, 9, 22, 0.105) 23.5%, rgba(1, 13, 32, 0.66) 55.5%, #010e23 96%);
-  color: #fefefe;
   position: relative;
-  padding: 470px 0 75px;
-  height: 100%;
-  overflow: hidden;
+  background: linear-gradient(180deg, rgba(1, 8, 20, 0) 0%, rgba(1, 9, 22, 0.105) 23.5%, rgba(1, 13, 32, 0.66) 55.5%, #010e23 96%);
+  color: #fefefe;
+  height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 75px;
 }
 @media only screen and (max-width: 1919px) {
   .cover {
-    padding: 343px 0 55px;
+    padding-bottom: 55px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .cover {
-    padding: 177px 0 43px;
+    padding-bottom: 43px;
   }
 }
 @media only screen and (max-width: 767px) {
   .cover {
-    padding: 194px 0 95px;
+    padding-bottom: 95px;
+    background-image: url("/assets/images/cover_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 @media only screen and (max-width: 427px) {
   .cover {
-    padding: 134px 0 67px;
-  }
-}
-.cover__video-bg {
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  min-width: 100%;
-  min-height: 100%;
-}
-@media only screen and (max-width: 427px) {
-  .cover__video-bg {
-    display: none;
-  }
-}
-.cover__image-bg {
-  display: none;
-  background-image: url("./../../../images/cover_background.png");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-@media only screen and (max-width: 427px) {
-  .cover__image-bg {
-    display: block;
+    padding-bottom: 67px;
   }
 }
 .cover__wrapper {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr auto;
 }
-.cover__overhead-title,
-.cover .h1-title, .cover__clients {
+.cover__content {
+  grid-row: 2/3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top psychotherapy" "sextherapy icons title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+}
+@media only screen and (max-width: 767px) {
+  .cover__content {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    grid-template-areas: "subtitle-top subtitle-top subtitle-top" "title-top title-top title-top" "sextherapy icons psychotherapy" "title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom";
+  }
+}
+.cover__title.top {
+  grid-area: title-top;
+}
+.cover__title.bottom {
+  grid-area: title-bottom;
+}
+@media only screen and (max-width: 767px) {
+  .cover__title.bottom {
+    max-width: 70%;
+    justify-self: end;
+    text-align: right;
+  }
+}
+.cover__subtitle {
   color: #fefefe;
 }
-.cover__title_1-line {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.cover__subtitle.top {
+  grid-area: subtitle-top;
 }
-.cover__therapy-name {
+.cover__subtitle.bottom {
+  grid-area: subtitle-bottom;
+  text-align: right;
+}
+.cover__therapy {
   font-family: var(--raleway-font-family);
-  font-style: italic;
   font-size: 35px;
   font-weight: var(--h2-title-font-weight, 500);
+  font-style: italic;
 }
-.cover__title_2-line {
+@media only screen and (max-width: 1919px) {
+  .cover__therapy {
+    font-size: 26px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .cover__therapy {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .cover__therapy {
+    font-size: 14px;
+  }
+}
+.cover__therapy.psychotherapy {
+  grid-area: psychotherapy;
+}
+.cover__therapy.sextherapy {
+  grid-area: sextherapy;
+}
+.cover__icons-container {
+  grid-area: icons;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
-.cover__clients {
-  display: flex;
-  align-content: end;
-  flex-wrap: wrap;
-  flex-direction: row-reverse;
-}
-.cover__overhead-title {
-  padding-bottom: 10px;
-}
-.cover__clients {
-  padding-top: 10px;
-}
 .cover__action {
+  grid-row: 3/4;
   padding-top: 50px;
-}
-.cover__button {
-  width: 523px;
 }
 .cover__cross {
   fill: #fefefe;
+}
+.cover__video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+@media only screen and (max-width: 767px) {
+  .cover__video {
+    display: none;
+  }
 }
 
 .about {
