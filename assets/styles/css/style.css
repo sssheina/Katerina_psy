@@ -1832,21 +1832,14 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 
 .methods {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 73px 0 72px;
 }
-.methods__wrapper {
-  display: flex;
-  flex-direction: column;
-}
 .methods__cards {
-  display: flex;
-  gap: 25px;
+  gap: 0 25px;
   padding: 85px 0 95px;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr 15%;
 }
 .methods__button-block {
   display: flex;
@@ -1860,8 +1853,17 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .methods-card {
   display: grid;
-  grid-template-rows: 35% 1fr;
-  width: 245px;
+  grid-template-rows: 30% 1fr;
+  gap: 10px;
+}
+.methods-card:nth-child(odd) .methods-card__title {
+  color: #ce6a0e;
+}
+.methods-card:nth-child(2), .methods-card:nth-child(6) {
+  background: linear-gradient(#fefefe, #d9e9ff);
+}
+.methods-card:nth-child(4) {
+  grid-row: span 2;
 }
 
 .expertise {
