@@ -2005,7 +2005,7 @@ body._touch .menu__list > li._active .menu__arrow {
   background-repeat: no-repeat;
 }
 .feedback__wrapper {
-  padding: 145px 0 145px;
+  padding: 145px 0;
 }
 .feedback__title {
   color: #fefefe;
