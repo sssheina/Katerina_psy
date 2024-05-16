@@ -36,18 +36,12 @@
     // height: auto ;
     // gap: 9px;
 
-    &:nth-child(odd) {
-      .methods-card__title {
-        color: $color-orange;
-      }
-    }
+    // &:nth-child(odd) {
+    //   .methods-card__title {
+    //     color: $color-orange;
+    //   }
+    // }
     
-    &:nth-child(2),
-    &:nth-child(6) {
-      background: $color-blue-light-gradient;
-      // height: 150% !important;
-    }
-
     // &:nth-child(2) {
     //   padding-bottom: 60px;
     // }

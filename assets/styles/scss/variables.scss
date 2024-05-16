@@ -152,3 +152,15 @@ $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
 }
+
+.bg-gradient {
+  background: $color-blue-light-gradient;
+}
+
+.orange {
+  color: $color-orange;
+}
+
+.orange-light {
+  color: $color-orange-light;
+}
