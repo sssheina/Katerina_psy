@@ -3,7 +3,7 @@
 
   &__cards {
     gap: 0 25px;
-    padding: 85px 0 95px;
+    padding: 85px 2px 95px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 15%;
@@ -23,7 +23,7 @@
 
 .methods-card {
   display: grid;
-  grid-template-rows: 30% 1fr;
+  grid-template-rows: 25% 1fr;
   gap: 10px;
 
   &:nth-child(odd) {

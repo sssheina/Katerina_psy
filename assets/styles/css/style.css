@@ -1010,7 +1010,7 @@ textarea {
 }
 @media only screen and (max-width: 1919px) {
   :root {
-    --h1-title-font-size: 78.8px;
+    --h1-title-font-size: 78px;
   }
 }
 @media only screen and (max-width: 1439px) {
@@ -1836,7 +1836,7 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .methods__cards {
   gap: 0 25px;
-  padding: 85px 0 95px;
+  padding: 85px 2px 95px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 15%;
@@ -1853,7 +1853,7 @@ body._touch .menu__list > li._active .menu__arrow {
 
 .methods-card {
   display: grid;
-  grid-template-rows: 30% 1fr;
+  grid-template-rows: 25% 1fr;
   gap: 10px;
 }
 .methods-card:nth-child(odd) .methods-card__title {
