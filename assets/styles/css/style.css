@@ -1752,7 +1752,8 @@ body._touch .menu__list > li._active .menu__arrow {
   flex-direction: column;
 }
 .clients__cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   padding: 85px 0 95px;
 }
