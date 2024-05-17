@@ -2252,39 +2252,40 @@ body._touch .menu__list > li._active .menu__arrow {
 .faq__content {
   grid-column: 2/3;
   grid-row: 2/3;
+  display: grid;
+  gap: 35px;
 }
 .faq__action {
   grid-column: span 2;
 }
 
-.faq-item {
-  margin: 0;
-  border: none !important;
-}
-.faq-item__header {
+.faq-box__question {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px !important;
+  padding: 35px;
   background: linear-gradient(#fefefe, #d9e9ff);
 }
-.faq-item__title {
-  font-weight: lighter !important;
-  font-size: 25px !important;
-  outline: none !important;
+.faq-box__answer {
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.4s ease;
 }
-.faq-item__title:active {
-  outline: none;
-}
-.faq-item__info {
+.faq-box__text {
   padding: 35px;
 }
-
-.ac .ac-trigger::after {
-  content: url('data:image/svg+xml;utf8,<svg width="28" height="29" viewBox="0 0 28 29" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6 0.403809H15.4V10.2038H12.6V0.403809ZM12.6 18.6038H15.4V28.4038H12.6V18.6038ZM18.2 13.0038H28V15.8038H18.2V13.0038ZM0 13.0038H9.8V15.8038H0V13.0038Z" fill="dark blue"/></svg>') !important;
+.faq-box__link {
+  text-decoration: none;
+  color: #ce6a0e;
 }
-.ac .ac-trigger:focus {
-  color: #010e23 !important;
+.faq-box__link:hover {
+  color: #d69961;
+}
+.faq-box__cross {
+  transition: 0.4s ease;
+}
+.faq-box.active .faq-box__cross {
+  transform: rotate(45deg);
 }
 
 .questions {

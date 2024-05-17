@@ -13,6 +13,7 @@ $color-white: #fefefe;
 $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
 
 $header-height: 100px;
+$transition: 0.4s ease;
 
 %h1-title {
   font-family: var(--raleway-font-family);
@@ -154,4 +155,3 @@ $header-height: 100px;
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
 }
-

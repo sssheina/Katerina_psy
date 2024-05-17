@@ -1,11 +1,24 @@
 // FAQ
 
-new Accordion(".accordion-container", {
-  duration: 400,
-  showMultiple: true,
-  onOpen: function (currentElement) {
-    console.log(currentElement);
-  },
+const questions = Array.from(document.querySelectorAll(".faq-box"));
+
+const showQuestion = (e) => {
+  // e.preventDefault();
+
+  let currentQuestion = e.target.closest(".faq-box");
+  let currentAnswer = currentQuestion.querySelector(".faq-box__answer");
+
+  currentQuestion.classList.toggle("active");
+
+  if (currentQuestion.classList.contains("active")) {
+    currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
+  } else {
+    currentAnswer.style.maxHeight = 0;
+  }
+};
+
+questions.forEach((question) => {
+  question.addEventListener("click", showQuestion);
 });
 
 // ----- SLIDER HELP -----

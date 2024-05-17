@@ -17,6 +17,8 @@
   &__content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    display: grid;
+    gap: 35px;
   }
 
   &__action {
@@ -24,45 +26,41 @@
   }
 }
 
-.faq-item {
-  margin: 0;
-  border: none !important;
-
-  &__header {
+.faq-box {
+  &__question {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 35px !important;
+    padding: 35px;
     background: $color-blue-light-gradient;
   }
 
-  &__title {
-    font-weight: lighter !important;
-    font-size: 25px !important;
-    outline: none !important;
+  &__answer {
+    overflow: hidden;
+    max-height: 0;
+    transition: $transition;
+  }
 
-    &:active {
-      outline: none;
+  &__text {
+    padding: 35px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-orange;
+
+    &:hover {
+      color: $color-orange-light;
     }
   }
 
-  &__info {
-    padding: 35px;
-  }
-}
-
-.ac .ac-trigger {
-  &::after {
-    content: url('data:image/svg+xml;utf8,<svg width="28" height="29" viewBox="0 0 28 29" xmlns="http://www.w3.org/2000/svg"> <path d="M12.6 0.403809H15.4V10.2038H12.6V0.403809ZM12.6 18.6038H15.4V28.4038H12.6V18.6038ZM18.2 13.0038H28V15.8038H18.2V13.0038ZM0 13.0038H9.8V15.8038H0V13.0038Z" fill="dark blue"/></svg>') !important;
+  &__cross {
+    transition: $transition;
   }
 
-  &:focus {
-    color: $color-blue-dark !important;
-  }
-}
-
-.ac.is-active {
-  .ac-trigger::after {
-    // rotate: 45deg;
+  &.active {
+    .faq-box__cross {
+      transform: rotate(45deg);
+    }
   }
 }
