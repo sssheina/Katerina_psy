@@ -26,10 +26,6 @@
   &__button {
     width: 386px;
   }
-
-  &__info {
-    color: $color-white;
-  }
 }
 
 .clients-card {
@@ -63,5 +59,13 @@
 
   &:nth-child(4) {
     background-image: url('/assets/images/clients-group.png');
+  }
+
+  &__title {
+    color: $color-orange-light;
+  }
+
+  &__info {
+    color: $color-white;
   }
 }
