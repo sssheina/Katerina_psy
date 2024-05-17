@@ -1795,9 +1795,6 @@ body._touch .menu__list > li._active .menu__arrow {
 .clients__button {
   width: 386px;
 }
-.clients__info {
-  color: #fefefe;
-}
 
 .clients-card {
   display: flex;
@@ -1823,6 +1820,12 @@ body._touch .menu__list > li._active .menu__arrow {
 }
 .clients-card:nth-child(4) {
   background-image: url("/assets/images/clients-group.png");
+}
+.clients-card__title {
+  color: #d69961;
+}
+.clients-card__info {
+  color: #fefefe;
 }
 
 .methods {
