@@ -10,13 +10,13 @@
   justify-content: center;
   background: transparent;
   transition: background 0.3s ease-in-out;
-  // box-sizing: border-box;
 
   @include lg {
     max-height: 75px;
   }
 
   &__container {
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -35,146 +35,68 @@
     }
   }
 
-  &.scrolled {
-    background: $color-white;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
-    // padding: 0;
-    // margin: 0;
+  &__nav {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 50vw;
+    height: 100vh;
+    background-image: url("/assets/images/words_background.png");
+    background-size: cover;
+    background-position: 85% bottom;
+    background-repeat: no-repeat;
   }
-}
 
-.menu {
-  &__icon {
-    display: none;
+  &__menu {
+    display: grid;
+    align-items: center;
+    padding: $header-height 50px $header-height 100px;
+    height: 100%;
+    overflow-y: scroll;
   }
 
-  &__list {
+  &__menu-item {
+    height: fit-content;
+  }
+
+  &__menu-link {
+    color: $color-gray-middle;
+    text-transform: uppercase;
+    transition: $transition;
+
+    &:hover {
+      color: $color-white;
+    }
+
+    &:active {
+      color: $color-orange;
+    }
+  }
+
+  &__end {
     display: flex;
     align-items: center;
-    height: 100%;
     gap: 20px;
+  }
 
-    @include lg {
-      gap: 13px;
-    }
-
-    @include md {
-    }
-
-    @include sm {
-    }
-
-    @include xs {
-    }
-
-    li:nth-child(11) {
-      position: relative;
-      cursor: pointer;
-    }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 
   &__link {
     white-space: nowrap;
     color: $color-white;
+    transition: $transition;
 
     &:hover {
-      color: $color-blue-dark;
+      color: $color-orange;
     }
   }
 
-  &__button {
-    margin-left: 10px;
-
-    @include md {
-      display: none;
-    }
-
-    img {
-      max-width: 40px;
-
-      @include lg {
-        max-width: 30px;
-      }
-    }
+  &.scrolled {
+    background: $color-white;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
   }
-
-  &__sub-list {
-    width: 50px;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-    padding: 5px 0;
-    text-align: center;
-    transform: translate(0px, -10%);
-    transition: all 0.3s ease 0s;
-    pointer-events: none;
-    z-index: 1000;
-  }
-
-  &__sub-link {
-    color: $color-white;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 20px;
-
-    @include lg {
-      font-size: 16px;
-    }
-
-    &:hover {
-      color: $color-blue-dark;
-    }
-  }
-}
-
-.language {
-  font-family: var(--montserrat-font-family);
-  font-weight: 500;
-  font-size: 20px;
-  // color: #635d5d;
-
-  @include lg {
-    font-size: 16px;
-  }
-}
-
-body._pc .menu__list > li:hover .menu__sub-list {
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0px, 0px);
-  pointer-events: all;
-}
-
-body._touch .menu__arrow {
-  display: block;
-  width: 0;
-  height: 0;
-  margin: 20px 0px 0px 0px;
-
-  transition: transform 0.3s ease 0s;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 10px solid $color-orange-light;
-  cursor: pointer;
-}
-
-body._touch .menu__list > li._active .menu__sub-list {
-  display: flex;
-  opacity: 1;
-  visibility: visible;
-  transform: translate(0px, 0px);
-  pointer-events: all;
-}
-
-body._touch .menu__list > li._active .menu__arrow {
-  margin: 10px 0px 0px 0px;
-  transform: rotate(-180deg);
-}
-
-.link-span {
-  color: $color-blue-dark;
 }

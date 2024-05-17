@@ -74,15 +74,14 @@ const swiper = new Swiper(".swiper", {
 
 //  ----- HEADER COLOR -----
 
-window.addEventListener("scroll", function () {
-  const header = document.querySelector(".header");
-  if (window.scrollY > 100) {
-    // Измените это значение на то, которое вам подходит
-    header.classList.toggle("scrolled", true);
-  } else {
-    header.classList.toggle("scrolled", false);
-  }
-});
+// window.addEventListener("scroll", function () {
+//   const header = document.querySelector(".header");
+//   if (window.scrollY > 100) {
+//     header.classList.toggle("scrolled", true);
+//   } else {
+//     header.classList.toggle("scrolled", false);
+//   }
+// });
 
 //----------Cookies---------
 

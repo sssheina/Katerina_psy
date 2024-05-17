@@ -24,82 +24,81 @@
       <a class="header__logo" href="index.html">
         <img src="./assets/images/logo/logo_white.svg" alt="Логотип" />
       </a>
-      <div class="header__menu menu">
-        <div class="menu__icon">
-          <span></span>
+
+      <!-- <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#main" class="header__menu-link paragraph-standard">
+              Главная</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#about" class="header__menu-link paragraph-standard">
+              Обо мне</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#clients" class="header__menu-link paragraph-standard">Клиенты</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#methods" class="header__menu-link paragraph-standard">Методы</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#expertise" class="header__menu-link paragraph-standard">С чем я работаю</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#benefits" class="header__menu-link paragraph-standard">
+              Почему выбирают меня</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#feedback" class="header__menu-link paragraph-standard">Отзывы</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#steps" class="header__menu-link paragraph-standard">Этапы работы</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#price" class="header__menu-link paragraph-standard">Стоимость</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#registration" class="header__menu-link paragraph-standard">Запись на сессию</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#faq" class="header__menu-link paragraph-standard">FAQ</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#questions" class="header__menu-link paragraph-standard">Анонимные вопросы</a>
+          </li>
+        </ul>
+      </nav> -->
+      <div class="overlay1"></div>
+      <div class="header__end">
+        <div class="header__contacts">
+          <a class="header__menu-link" href="https://wa.me/79096989821">
+            <svg class="header__icon icon-whatsapp">
+              <use xlink:href="/assets/images/figures/sprite.svg#whatsApp"></use>
+            </svg>
+          </a>
+
+          <a class="header__menu-link paragraph-standard language">RU</a>
+          <!-- <ul class="header__sub-list">
+            <li>
+              <a href="en.html" class="header__menu-link">EN</a>
+            </li>
+            <li>
+              <a href="fr.html" class="header__menu-link">FR</a>
+            </li>
+          </ul> -->
         </div>
 
-        <nav class="menu__body">
-          <ul class="menu__list">
-            <!-- <li>
-                  <a href="#about" class="menu__link paragraph-standard">
-                    Обо мне</a
-                  >
-                </li>
-  
-                <li>
-                  <a href="#help" class="menu__link paragraph-standard"
-                    >С чем работаю</a
-                  >
-                </li>
-                <li>
-                  <a href="#steps" class="menu__link paragraph-standard"
-                    >Этапы работы</a
-                  >
-                </li>
-                <li>
-                  <a href="#consultations" class="menu__link paragraph-standard"
-                    >Стоимость</a
-                  >
-                </li>
-                <li>
-                  <a href="#payment" class="menu__link paragraph-standard">
-                    Как оплатить</a
-                  >
-                </li>
-                <li>
-                  <a href="#registration" class="menu__link paragraph-standard"
-                    ><span class="link-span">✎ </span>Запись</a
-                  >
-                </li>
-  
-                <li>
-                  <a href="#present" class="menu__link paragraph-standard"
-                    >Подарки</a
-                  >
-                </li>
-                <li>
-                  <a href="#contacts" class="menu__link paragraph-standard"
-                    >Контакты</a
-                  >
-                </li> -->
-            <li>
-              <a class="menu__button" href="https://wa.me/79096989821">
-                <img class="footer__social-icon" src="./assets/images/icons/whatsApp_white_3.svg"
-                  alt="Кнопка иконки WhatsApp" />
-              </a>
-            </li>
-            <li>
-              <a class="menu__link language">RU</a>
-              <span class="menu__arrow"></span>
-              <ul class="menu__sub-list">
-                <li>
-                  <a href="en.html" class="menu__sub-link">EN</a>
-                </li>
-                <li>
-                  <a href="fr.html" class="menu__sub-link">FR</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <div class="header-burger header__burger">
+          <span></span>
+        </div>
       </div>
+
     </div>
   </header>
 
   <main class="main">
     <!-- ГЛАВНАЯ -->
-    <section class="cover">
+    <section class="cover" id="main">
       <div class="cover__wrapper container">
         <div class="cover__content">
           <h1 class="cover__title top h1-title">Онлайн консультации</h1>
@@ -134,8 +133,7 @@
     </section>
 
     <!-- ABOUT -->
-
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__wrapper container">
         <h2 class="about__title h2-title">Обо мне</h2>
         <div class="about__content">
@@ -188,15 +186,12 @@
     </section>
 
     <!-- EXPERTISE -->
-    <section class="expertise">
+    <section class="expertise" id="expertise">
       <div class="expertise__wrapper container">
         <h2 class="expertise__title h2-title">С чем я работаю</h2>
 
-
         <div class="expertise__content">
-
           <!-- Сексуальность -->
-
           <div class="expertise__sexuality">
             <div class="expertise__sexuality-title">
               <h3 class="expertise__title-block h3-title">Сексуальность</h3>
@@ -271,7 +266,6 @@
           </div>
 
           <!-- Отношения -->
-
           <div class="expertise__relationship">
             <div class="expertise__relationship-title">
               <h3 class="expertise__title-block h3-title">Отношения</h3>
@@ -346,7 +340,6 @@
           </div>
 
           <!-- Внутренний мир -->
-
           <div class="expertise__inner">
             <div class="expertise__inner-title">
               <h3 class="expertise__title-block h3-title">Внутренний мир</h3>
@@ -426,6 +419,7 @@
             Мы вместе разберемся с этим
           </p>
         </div>
+
         <div class="expertise__button-block button-block">
           <svg class="expertise__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
@@ -434,13 +428,11 @@
             Запись на сессию
           </button>
         </div>
-
     </section>
 
 
     <!-- CLIENTS -->
-
-    <section class="clients">
+    <section class="clients" id="clients">
       <div class="clients__wrapper container">
         <h2 class="clients__title h2-title">Кто может обратиться ко мне</h2>
         <div class="clients__cards">
@@ -480,7 +472,7 @@
     </section>
 
     <!-- METHODS -->
-    <section class="methods">
+    <section class="methods" id="methods">
       <div class="methods__wrapper container">
         <h2 class="methods__title h2-title">Я применяю эти методы</h2>
 
@@ -555,12 +547,11 @@
     </section>
 
     <!-- BENEFITS -->
-    <section class="benefits">
+    <section class="benefits" id="benefits">
       <div class="benefits__wrapper container">
         <h2 class="benefits__title h2-title">Почему выбирают меня</h2>
 
         <div class="benefits__content">
-
           <!-- 1 -->
           <div class="benefits-card benefits__card">
             <h3 class="benefits-card__title h3-title">
@@ -683,7 +674,7 @@
     </section>
 
     <!-- FEEDBACK -->
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="feedback__wrapper container">
         <h2 class="feedback__title h2-title">Отзывы клиентов</h2>
 
@@ -815,8 +806,7 @@
     </section>
 
     <!-- STEPS -->
-
-    <section class="steps">
+    <section class="steps" id="steps">
       <div class="steps__wrapper container">
         <h2 class="steps__title h2-title">этапы работы</h2>
 
@@ -896,7 +886,7 @@
     </section>
 
     <!-- PRICE -->
-    <section class="price">
+    <section class="price" id="price">
       <div class="price__wrapper container">
         <h2 class="price__title h2-title">Стоимость</h2>
 
@@ -990,8 +980,7 @@
     </section>
 
     <!-- REGISTRATION -->
-
-    <section class="registration">
+    <section class="registration" id="registration">
 
       <div class="registration__wrapper container">
 
@@ -1004,7 +993,6 @@
     </section>
 
     <!-- WORDS -->
-
     <section class="words">
       <div class="words__wrapper container">
         <p class="words__content paragraph-medium">Я искренне верю, что отношения могут быть для вас источником
@@ -1014,7 +1002,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="faq">
+    <section class="faq" id="faq">
       <div class="faq__wrapper container">
         <h2 class="faq__title h2-title">FAQ</h2>
 
@@ -1146,14 +1134,12 @@
     </section>
 
     <!-- QUESTIONS -->
-
-    <section class="questions">
+    <section class="questions" id="questions">
       <div class="questions__wrapper container">
 
         <h2 class="registration__title h2-title">анонимные вопросы</h2>
 
         <div class="questions__content">
-
           <div class="questions__img-div"><img class="questions__img" src="./assets/images/questions.png"
               alt="Девушки прикрывают друг другу глаза руками" /></div>
 
@@ -1183,13 +1169,10 @@
                 <div class="modal__content" id="modal_window_content"></div>
               </section>
             </div>
-
           </form>
         </div>
-
       </div>
     </section>
-
   </main>
 
   <button class="button-up">
@@ -1274,8 +1257,6 @@
   <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script> -->
   <!-- <script src="./assets/scripts/localization.js"></script> -->
   <script type="module" src="./assets/scripts/index.js"></script>
-
-
 </body>
 
 </html>
