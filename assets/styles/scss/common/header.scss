@@ -39,15 +39,15 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 50vw;
+    width: 30vw;
     height: 100vh;
-    background-image: url("/assets/images/words_background.png");
+    background-image: url("/assets/images/menu_background.png");
     background-size: cover;
     background-position: 85% bottom;
     background-repeat: no-repeat;
     z-index: 10;
 
-    box-shadow: 10px 0 30px 5px #000;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 1);
     overflow-y: auto;
     transform: translateX(100%);
     transition: transform 0.4s linear;
@@ -94,7 +94,7 @@
     }
 
     &.active {
-      color: $color-orange;
+      color: $color-orange-light;
     }
   }
 
@@ -116,7 +116,10 @@
     transition: $transition;
 
     &:hover {
-      color: $color-orange;
+      color: $color-gray-middle;
+    }
+    &:active {
+      color: $color-orange-light;
     }
   }
 
@@ -139,7 +142,7 @@
 
   &.scrolled {
     background: $color-white;
-    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
 
     .icon__logo {
       stroke: $color-blue-dark;

@@ -1211,14 +1211,14 @@ body.lock {
   position: fixed;
   top: 0;
   right: 0;
-  width: 50vw;
+  width: 30vw;
   height: 100vh;
-  background-image: url("/assets/images/words_background.png");
+  background-image: url("/assets/images/menu_background.png");
   background-size: cover;
   background-position: 85% bottom;
   background-repeat: no-repeat;
   z-index: 10;
-  box-shadow: 10px 0 30px 5px #000;
+  box-shadow: 0px 3px 4px 0px rgb(0, 0, 0);
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform 0.4s linear;
@@ -1287,7 +1287,7 @@ body.lock {
   color: #fefefe;
 }
 .header__menu-link.active {
-  color: #ce6a0e;
+  color: #d69961;
 }
 .header__end {
   display: flex;
@@ -1305,7 +1305,10 @@ body.lock {
   transition: 0.4s ease;
 }
 .header__link:hover {
-  color: #ce6a0e;
+  color: #c8c7c7;
+}
+.header__link:active {
+  color: #d69961;
 }
 .header__overlay {
   position: fixed;
@@ -1324,7 +1327,7 @@ body.lock {
 }
 .header.scrolled {
   background: #fefefe;
-  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
 }
 .header.scrolled .icon__logo {
   stroke: #010e23;
@@ -1374,14 +1377,14 @@ body.lock {
   transform: rotate(-45deg) translate(0, -50%);
   width: 40px;
   height: 3px;
-  background: #ce6a0e !important;
+  background: #c8c7c7 !important;
 }
 .header-burger.active::after {
   bottom: 50%;
   transform: rotate(45deg) translate(0, 50%);
   width: 40px;
   height: 3px;
-  background: #ce6a0e !important;
+  background: #c8c7c7 !important;
 }
 .header-burger.active span {
   width: 0;
@@ -1679,7 +1682,6 @@ body.lock {
   overflow: hidden;
   padding-top: 100px;
   padding-bottom: 75px;
-  box-shadow: 0 8px 40px rgba(47, 69, 104, 0.6392156863);
 }
 @media only screen and (max-width: 1919px) {
   .cover {
