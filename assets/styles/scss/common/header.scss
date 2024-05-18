@@ -36,15 +36,38 @@
   }
 
   &__nav {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 5%;
+    right: 0;
     width: 50vw;
     height: 100vh;
     background-image: url("/assets/images/words_background.png");
     background-size: cover;
     background-position: 85% bottom;
     background-repeat: no-repeat;
+    z-index: 10;
+
+    box-shadow: 10px 0 30px 5px #000;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.4s linear;
+
+    &.show {
+      transform: translateX(0px);
+
+      .header__menu {
+        .header__menu-item {
+          transform: translateX(0px);
+          opacity: 1;
+
+          @for $i from 1 through 12 {
+            &:nth-child(#{$i}) {
+              transition-delay: #{($i * 0.09)}s;
+            }
+          }
+        }
+      }
+    }
   }
 
   &__menu {
@@ -57,6 +80,8 @@
 
   &__menu-item {
     height: fit-content;
+    transition: $transition;
+    transform: translateX(25px);
   }
 
   &__menu-link {
@@ -68,7 +93,7 @@
       color: $color-white;
     }
 
-    &:active {
+    &.active {
       color: $color-orange;
     }
   }
@@ -95,8 +120,41 @@
     }
   }
 
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $color-blue-dark;
+    transition: $transition;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+
+    &.show {
+      opacity: 0.5;
+      visibility: visible;
+    }
+  }
+
   &.scrolled {
     background: $color-white;
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+
+    .icon__logo {
+      stroke: $color-blue-dark;
+    }
+
+    .header__link {
+      color: $color-blue-dark;
+    }
+
+    .header__burger {
+      &::before,
+      &::after,
+      span {
+        background: $color-blue-dark;
+      }
+    }
   }
 }

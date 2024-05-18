@@ -22,10 +22,12 @@
   <header class="header">
     <div class="header__container container">
       <a class="header__logo" href="index.html">
-        <img src="./assets/images/logo/logo_white.svg" alt="Логотип" />
+        <svg class="icon__logo">
+          <use xlink:href="/assets/images/figures/sprite.svg#logo"></use>
+        </svg>
       </a>
 
-      <!-- <nav class="header__nav">
+      <nav class="header__nav">
         <ul class="header__menu">
           <li class="header__menu-item">
             <a href="#main" class="header__menu-link paragraph-standard">
@@ -67,17 +69,18 @@
             <a href="#questions" class="header__menu-link paragraph-standard">Анонимные вопросы</a>
           </li>
         </ul>
-      </nav> -->
-      <div class="overlay1"></div>
+      </nav>
+
+
       <div class="header__end">
         <div class="header__contacts">
-          <a class="header__menu-link" href="https://wa.me/79096989821">
+          <a class="header__link" href="https://wa.me/79096989821">
             <svg class="header__icon icon-whatsapp">
               <use xlink:href="/assets/images/figures/sprite.svg#whatsApp"></use>
             </svg>
           </a>
 
-          <a class="header__menu-link paragraph-standard language">RU</a>
+          <a class="header__link paragraph-standard language">RU</a>
           <!-- <ul class="header__sub-list">
             <li>
               <a href="en.html" class="header__menu-link">EN</a>
@@ -92,6 +95,8 @@
           <span></span>
         </div>
       </div>
+
+      <div class="header__overlay"></div>
 
     </div>
   </header>
@@ -1162,13 +1167,13 @@
             </button>
 
             <!-- Thanx-message modal window -->
-            <div class="overlay hidden" id="overlay">
+            <!-- <div class="overlay hidden" id="overlay">
               <section class="modal hidden" id="modal_window">
                 <button class="btn-close" id="btn_close_modal">⨉</button>
 
                 <div class="modal__content" id="modal_window_content"></div>
               </section>
-            </div>
+            </div> -->
           </form>
         </div>
       </div>

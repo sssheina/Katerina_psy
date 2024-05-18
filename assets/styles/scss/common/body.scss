@@ -1,29 +1,19 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 auto;
+
+  &.lock {
+    overflow: hidden;
   }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    margin: 0 auto;
-    // font-family: var(--font-main);
-    // background: radial-gradient(#a3e7da, #ffcaca 70%, #b2e1ff);
-    // background-repeat: no-repeat;
-    // background-size: cover;
-  
-    &._lock {
-      overflow: hidden;
-    }
-  }
-  
-  // @keyframes rotate {
-  //   to {
-  //     transform: rotate(360deg);
-  //   }
-  // }
-  
-  .main {
-    overflow-x: hidden;
-  }
+}
+
+.main {
+  overflow-x: hidden;
+}

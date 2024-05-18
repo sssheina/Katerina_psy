@@ -1,10 +1,49 @@
+//  ----- HEADER COLOR -----
+
+window.addEventListener("scroll", function () {
+  const header = document.querySelector(".header");
+  if (window.scrollY > 1000) {
+    header.classList.toggle("scrolled", true);
+  } else {
+    header.classList.toggle("scrolled", false);
+  }
+});
+
+// ----- BURGER MENU -----
+const burger = document.querySelector(".header-burger");
+const overlay = document.querySelector(".header__overlay");
+const headerMenuLinks = document.querySelectorAll(".header__menu-link");
+
+document.addEventListener("DOMContentLoaded", function () {
+  burger.addEventListener("click", showHeaderMenu);
+  overlay.addEventListener("click", showHeaderMenu);
+});
+
+const showHeaderMenu = () => {
+  burger.classList.toggle("active");
+  overlay.classList.toggle("show");
+
+  const nav = document.querySelector(".header__nav");
+
+  nav.classList.toggle("show");
+  document.body.classList.toggle("lock");
+};
+
+headerMenuLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    headerMenuLinks.forEach((otherLink) =>
+      otherLink.classList.remove("active")
+    );
+
+    link.classList.add("active");
+  });
+});
+
 // FAQ
 
 const questions = Array.from(document.querySelectorAll(".faq-box"));
 
 const showQuestion = (e) => {
-  // e.preventDefault();
-
   let currentQuestion = e.target.closest(".faq-box");
   let currentAnswer = currentQuestion.querySelector(".faq-box__answer");
 
@@ -71,17 +110,6 @@ const swiper = new Swiper(".swiper", {
   },
   speed: 1200,
 });
-
-//  ----- HEADER COLOR -----
-
-// window.addEventListener("scroll", function () {
-//   const header = document.querySelector(".header");
-//   if (window.scrollY > 100) {
-//     header.classList.toggle("scrolled", true);
-//   } else {
-//     header.classList.toggle("scrolled", false);
-//   }
-// });
 
 //----------Cookies---------
 
@@ -178,17 +206,6 @@ const swiper = new Swiper(".swiper", {
 //   .addEventListener("hide.bs.modal", function () {
 //     document.body.style.overflow = "";
 //   });
-
-// // ----- BURGER MENU -----
-// const iconMenu = document.querySelector(".menu__icon");
-// const menuBody = document.querySelector(".menu__body");
-// if (iconMenu) {
-//   iconMenu.addEventListener("click", function (e) {
-//     document.body.classList.toggle("_lock");
-//     iconMenu.classList.toggle("_active");
-//     menuBody.classList.toggle("_active");
-//   });
-// }
 
 // ----- DOWNLOAD FILE -----
 
