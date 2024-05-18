@@ -41,8 +41,9 @@
   }
 
   &__logo {
-    width: 65px;
-    height: 73.84px;
+    width: 92px;
+    height: 90px;
+    fill: $color-blue-dark;
   }
 
   &__logo-text {
@@ -199,6 +200,7 @@ align-items: flex-end;
   &__social-icon {
     max-width: 53.33px;
     width: 100%;
+    color:$color-blue-dark;
 
     @include lg {
       max-width: 40px;
