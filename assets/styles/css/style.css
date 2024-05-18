@@ -1611,6 +1611,7 @@ body.lock {
 .icon-whatsapp {
   max-width: 40px;
   max-height: 40px;
+  fill: #fefefe;
 }
 
 .btn {
