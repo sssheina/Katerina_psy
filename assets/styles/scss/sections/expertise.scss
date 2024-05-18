@@ -130,3 +130,11 @@ gap: 30px;
 // .expertise__relationship-text {
 //   order: 2; /* Установить порядок для текста */
 // }
+
+.relationship-pic {
+  filter: saturate(100%) brightness(100%);
+  
+    &:hover {
+      filter: saturate(130%) brightness(110%);
+  }
+}

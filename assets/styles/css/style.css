@@ -1878,6 +1878,7 @@ body.lock {
   height: 400px;
   padding: 28px;
   justify-content: flex-end;
+  filter: saturate(100%) brightness(100%);
 }
 .clients-card:nth-child(1), .clients-card:nth-child(2), .clients-card:nth-child(3), .clients-card:nth-child(4) {
   background-size: cover;
@@ -1895,6 +1896,9 @@ body.lock {
 }
 .clients-card:nth-child(4) {
   background-image: url("/assets/images/clients-group.png");
+}
+.clients-card:hover {
+  filter: saturate(160%) brightness(115%);
 }
 .clients-card__title {
   color: #d69961;
@@ -2036,6 +2040,13 @@ body.lock {
   width: 386px;
 }
 
+.relationship-pic {
+  filter: saturate(100%) brightness(100%);
+}
+.relationship-pic:hover {
+  filter: saturate(130%) brightness(110%);
+}
+
 .benefits {
   display: flex;
   justify-content: center;
@@ -2062,6 +2073,12 @@ body.lock {
 }
 .benefits-card:nth-child(2), .benefits-card:nth-child(8), .benefits-card:nth-child(11) {
   background: linear-gradient(#fefefe, #d9e9ff);
+}
+.benefits-card__img {
+  filter: saturate(100%) brightness(100%);
+}
+.benefits-card__img:hover {
+  filter: saturate(130%) brightness(115%);
 }
 
 .feedback {
