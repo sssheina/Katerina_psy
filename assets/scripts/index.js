@@ -2,7 +2,7 @@
 
 window.addEventListener("scroll", function () {
   const header = document.querySelector(".header");
-  if (window.scrollY > 1000) {
+  if (window.scrollY > 300) {
     header.classList.toggle("scrolled", true);
   } else {
     header.classList.toggle("scrolled", false);

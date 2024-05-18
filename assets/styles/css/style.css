@@ -1407,8 +1407,9 @@ body.lock {
   gap: 35px;
 }
 .footer__logo {
-  width: 65px;
-  height: 73.84px;
+  width: 92px;
+  height: 90px;
+  fill: #010e23;
 }
 .footer__logo-text {
   font-weight: 500;
@@ -1517,6 +1518,7 @@ body.lock {
 .footer__social-icon {
   max-width: 53.33px;
   width: 100%;
+  color: #010e23;
 }
 @media only screen and (max-width: 1919px) {
   .footer__social-icon {
@@ -2089,6 +2091,7 @@ body.lock {
 .feedback__text {
   color: #fefefe;
   margin-bottom: 10px;
+  padding-right: 5rem;
 }
 .feedback__line {
   width: 240px;
