@@ -36,14 +36,6 @@
   &:nth-child(11) {
     background: $color-blue-light-gradient;  
   }
-
-  &__img {
-    filter: saturate(100%) brightness(100%);
-  
-    &:hover {
-      filter: saturate(130%) brightness(115%);
-  }
-  }
 }
 
 
