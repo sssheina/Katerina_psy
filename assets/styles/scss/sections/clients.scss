@@ -35,8 +35,7 @@
   height: 400px;
   padding: 28px;
   justify-content: flex-end;
-  filter: saturate(100%) brightness(100%);
-
+  
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3),
@@ -59,12 +58,8 @@
   }
 
   &:nth-child(4) {
-    background-image: url('/assets/images/clients-group.png');
+    background-image: url('/assets/images/clients-group_3.png');
   }
-
-  &:hover {
-    filter: saturate(160%) brightness(115%);
-}
 
   &__title {
     color: $color-orange-light;
