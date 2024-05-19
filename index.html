@@ -204,7 +204,8 @@
             </div>
 
             <div class="expertise__sexuality-pic">
-              <img class="relationship-pic" src="./assets/images/expertise__sexuality.png" alt="Нежное прикосновение рук партнёрш">
+              <img class="relationship-pic" src="./assets/images/expertise__sexuality.png"
+                alt="Нежное прикосновение рук партнёрш">
             </div>
 
             <div class="expertise__sexuality-text">
@@ -340,7 +341,8 @@
               </div>
             </div>
             <div class="expertise__relationship-pic">
-              <img class="relationship-pic" src="./assets/images/expertise__relationship.png" alt="Мужчина и женщина в ссоре">
+              <img class="relationship-pic" src="./assets/images/expertise__relationship.png"
+                alt="Мужчина и женщина в ссоре">
             </div>
           </div>
 
@@ -351,7 +353,8 @@
               <div class="expertise__line"></div>
             </div>
             <div class="expertise__inner-pic">
-              <img class="relationship-pic" src="./assets/images/expertise__inner.png" alt="Женщина наслаждается моментом наедине с собой">
+              <img class="relationship-pic" src="./assets/images/expertise__inner.png"
+                alt="Женщина наслаждается моментом наедине с собой">
             </div>
             <div class="expertise__inner-text">
               <div class="expertise__item">
@@ -1142,11 +1145,13 @@
     <section class="questions" id="questions">
       <div class="questions__wrapper container">
 
-        <h2 class="registration__title h2-title">анонимные вопросы</h2>
+        <h2 class="registration__title h2-title">Анонимные вопросы</h2>
 
         <div class="questions__content">
-          <div class="questions__img-div"><img class="questions__img" src="./assets/images/questions.png"
-              alt="Девушки прикрывают друг другу глаза руками" /></div>
+          <div class="questions__img">
+            <img class="questions__picture" src="./assets/images/questions.png"
+              alt="Девушки прикрывают друг другу глаза руками" />
+          </div>
 
           <div class="questions__text">
             <p class="questions__p paragraph-standard">У вас возник вопрос о сексуальности и отношениях, но вы
@@ -1158,14 +1163,9 @@
             <p class="questions__p paragraph-standard">Давайте будем бережны друг к другу!</p>
           </div>
 
-          <form class="questions__form-block">
-            <textarea name="text" id="comment"
+          <form class="questions__form">
+            <textarea name="text" class="questions__comment"
               placeholder="(Задавайте здесь анонимные вопросы, даже те, которые кажутся вам неуместными, глупыми или стыдными...)"></textarea>
-            <button class="price__button btn button-text" type="submit" id="sendButton" onclick="submitForm()"
-              disabled="true">
-              Отправить
-            </button>
-
             <!-- Thanx-message modal window -->
             <!-- <div class="overlay hidden" id="overlay">
               <section class="modal hidden" id="modal_window">
@@ -1175,6 +1175,9 @@
               </section>
             </div> -->
           </form>
+          <button class="questions__button btn button-text" type="submit" disabled="true">
+            Отправить
+          </button>
         </div>
       </div>
     </section>

@@ -8,16 +8,18 @@
   background: $color-orange-middle;
   color: $color-white;
 
+  &:hover {
+    background: $color-orange-light;
+  }
 
-&:hover {
-  background: $color-orange-light;
+  &:active {
+    background: $color-orange-dark;
+  }
 }
 
-&:active {
-  background: $color-orange-dark;
-}
-}
+// .btn-outline {
 
+// }
 
 .button-up {
   display: block;
@@ -31,13 +33,13 @@
   height: 60px;
   padding: 0.6rem 0.7rem 0.9rem;
   z-index: 998;
-  transition: 0.4s ease; 
+  transition: 0.4s ease;
 
   &:hover {
     background: $color-gray-light;
   }
-  
+
   &:active {
     background: $color-gray-dark;
   }
-  }
+}
