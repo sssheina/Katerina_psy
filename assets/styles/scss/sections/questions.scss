@@ -93,12 +93,8 @@
     padding: 20px;
     transition: $transition;
 
-    &:hover {
-      border: 2px solid $color-orange-light;
-    }
-
     &:focus {
-      border: 2px solid $color-blue-dark;
+      border: 2px solid $color-orange-light;
     }
 
     &::placeholder {

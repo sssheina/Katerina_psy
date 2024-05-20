@@ -46,6 +46,11 @@
   &:nth-child(1) {
     background: $color-orange-dark;
     color: $color-white;
+    transition: $transition;
+
+    &:hover {
+      background:$color-orange;
+  }
 
     .price-card__cross {
       fill: $color-white;
@@ -69,5 +74,10 @@
   &:nth-child(3) {
     background: $color-blue-light;
     color: $color-blue-dark;
+    transition: $transition;
+
+    &:hover {
+      background:$color-blue-lightest;
+  }
   }
 }
