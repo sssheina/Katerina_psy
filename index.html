@@ -1,87 +1,109 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link
+      rel="shortcut icon"
+      href="/assets/images/logo/favicon.svg"
+      type="image/svg"
+    >
+    <link rel="stylesheet" href="/assets/styles/css/style.css" >
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    >
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="/assets/images/logo/favicon.svg" type="image/svg" />
-  <link rel="stylesheet" href="/assets/styles/css/style.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <title>Секс-терапия и&nbsp;психотерапия с&nbsp;Катериной Тартари</title>
+  </head>
 
-  <title>Секс-терапия и&nbsp;психотерапия с&nbsp;Катериной Тартари</title>
-</head>
-
-<body id="my-scrollbar">
-  <!-- <div id="cookieConsent">
+  <body id="my-scrollbar">
+    <!-- <div id="cookieConsent">
         Этот сайт использует файлы cookie, чтобы обеспечить вам наилучшие
         впечатления от использования нашего сайта.
         <button class="cookieButton" onclick="acceptCookies()">Понятно!</button>
     </div> -->
 
-  <!-- HEADER -->
-  <header class="header">
-    <div class="header__container container">
-      <a class="header__logo" href="index.html">
-        <svg class="icon__logo">
-          <use xlink:href="/assets/images/figures/sprite.svg#logo"></use>
-        </svg>
-      </a>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__container container">
+        <a class="header__logo" href="index.html">
+          <svg class="icon__logo">
+            <use xlink:href="/assets/images/figures/sprite.svg#logo"></use>
+          </svg>
+        </a>
 
-      <nav class="header__nav">
-        <ul class="header__menu">
-          <li class="header__menu-item">
-            <a href="#main" class="header__menu-link h5-title">
-              Главная</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#about" class="header__menu-link h5-title">
-              Обо мне</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#expertise" class="header__menu-link h5-title">С чем я работаю</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#clients" class="header__menu-link h5-title">Кто может обратиться</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#methods" class="header__menu-link h5-title">Методы работы</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#benefits" class="header__menu-link h5-title">
-              Почему выбирают меня</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#feedback" class="header__menu-link h5-title">Отзывы</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#steps" class="header__menu-link h5-title">Этапы работы</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#price" class="header__menu-link h5-title">Стоимость</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#registration" class="header__menu-link h5-title">Запись на сессию</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#faq" class="header__menu-link h5-title">FAQ</a>
-          </li>
-          <li class="header__menu-item">
-            <a href="#questions" class="header__menu-link h5-title">Анонимные вопросы</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a href="#main" class="header__menu-link h5-title"> Главная</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#about" class="header__menu-link h5-title"> Обо мне</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#expertise" class="header__menu-link h5-title"
+                >С чем я работаю</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#clients" class="header__menu-link h5-title"
+                >Кто может обратиться</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#methods" class="header__menu-link h5-title"
+                >Методы работы</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#benefits" class="header__menu-link h5-title">
+                Почему выбирают меня</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#feedback" class="header__menu-link h5-title">Отзывы</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#steps" class="header__menu-link h5-title"
+                >Этапы работы</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#price" class="header__menu-link h5-title">Стоимость</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#registration" class="header__menu-link h5-title"
+                >Запись на сессию</a
+              >
+            </li>
+            <li class="header__menu-item">
+              <a href="#faq" class="header__menu-link h5-title">FAQ</a>
+            </li>
+            <li class="header__menu-item">
+              <a href="#questions" class="header__menu-link h5-title"
+                >Анонимные вопросы</a
+              >
+            </li>
+          </ul>
+        </nav>
 
+        <div class="header__end">
+          <div class="header__contacts">
+            <a
+              target="_blank"
+              class="header__link"
+              href="https://wa.me/79096989821"
+            >
+              <svg class="header__icon icon-whatsapp">
+                <use
+                  xlink:href="/assets/images/figures/sprite.svg#whatsApp"
+                ></use>
+              </svg>
+            </a>
 
-      <div class="header__end">
-        <div class="header__contacts">
-          <a target="_blank" class="header__link" href="https://wa.me/79096989821">
-            <svg class="header__icon icon-whatsapp">
-              <use xlink:href="/assets/images/figures/sprite.svg#whatsApp"></use>
-            </svg>
-          </a>
-
-          <a class="header__link paragraph-standard language">RU</a>
-          <!-- <ul class="header__sub-list">
+            <a class="header__link paragraph-standard language">RU</a>
+            <!-- <ul class="header__sub-list">
             <li>
               <a href="en.html" class="header__menu-link">EN</a>
             </li>
@@ -89,1176 +111,1388 @@
               <a href="fr.html" class="header__menu-link">FR</a>
             </li>
           </ul> -->
+          </div>
+
+          <div class="header-burger header__burger">
+            <span></span>
+          </div>
         </div>
 
-        <div class="header-burger header__burger">
-          <span></span>
-        </div>
+        <div class="header__overlay"></div>
       </div>
+    </header>
 
-      <div class="header__overlay"></div>
+    <main class="main">
+      <!-- ГЛАВНАЯ -->
+      <section class="cover" id="main">
+        <div class="cover__wrapper container">
+          <div class="cover__content">
+            <h1 class="cover__title top h1-title">Онлайн консультации</h1>
+            <h2 class="cover__title bottom h1-title">Катерины Тартари</h2>
+            <h3 class="cover__subtitle top h3-title">
+              Начните с бесплатной сессии
+            </h3>
+            <h3 class="cover__subtitle bottom h3-title">
+              Индивидуально, для пар, полиаморных союзов и&nbsp;семей
+            </h3>
+            <p class="cover__therapy psychotherapy">психотерапия</p>
+            <p class="cover__therapy sextherapy">секс-терапия</p>
 
-    </div>
-  </header>
+            <div class="cover__icons-container">
+              <svg class="cover__cross icon-cross">
+                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+              </svg>
+              <svg class="cover__cross icon-cross">
+                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+              </svg>
+            </div>
+          </div>
 
-  <main class="main">
-    <!-- ГЛАВНАЯ -->
-    <section class="cover" id="main">
-      <div class="cover__wrapper container">
-        <div class="cover__content">
-          <h1 class="cover__title top h1-title">Онлайн консультации</h1>
-          <h2 class="cover__title bottom h1-title">Катерины Тартари</h2>
-          <h3 class="cover__subtitle top h3-title">Начните с бесплатной сессии</h3>
-          <h3 class="cover__subtitle bottom h3-title">
-            Индивидуально, для пар, полиаморных союзов и&nbsp;семей
-          </h3>
-          <p class="cover__therapy psychotherapy">психотерапия</p>
-          <p class="cover__therapy sextherapy">секс-терапия</p>
-
-          <div class="cover__icons-container">
+          <div class="cover__action button-block">
             <svg class="cover__cross icon-cross">
               <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
             </svg>
-            <svg class="cover__cross icon-cross">
+            <button class="cover__button btn button-text">Записаться</button>
+          </div>
+        </div>
+        <video class="cover__video" autoplay muted loop>
+          <source src="/assets/video/video_5.mp4" type="video/mp4" >
+        </video>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="about" id="about">
+        <div class="about__wrapper container">
+          <h2 class="about__title h2-title">Обо мне</h2>
+          <div class="about__content">
+            <div class="about__text-block">
+              <p class="paragraph-standard">
+                Привет! Меня зовут Катерина Тартари.
+              </p>
+              <p class="paragraph-standard">
+                Я секс-терапевтка, ACT* и&nbsp;EFT** консультантка, обучалась
+                психологической помощи при травме насилия. С 2022 года помогаю
+                клиентам из&nbsp;15 стран: провожу консультации, организую
+                терапевтические ретриты и&nbsp;арт-терапию для&nbsp;групп.
+              </p>
+
+              <p class="paragraph-standard">
+                Как полиаморка, феминистка и квир-персона, я&nbsp;работаю
+                с&nbsp;людьми различных гендерных идентичностей, находящихся
+                в&nbsp;разных форматах отношений, включая полиаморные союзы.
+              </p>
+              <p class="paragraph-standard">
+                Помогаю людям осознавать свои ценности, искать себя
+                и&nbsp;выстраивать близкие отношения.
+              </p>
+              <hr class="about__hr" >
+              <p class="footnote-standard">
+                * Терапия принятия и ответственности (Acceptance
+                &&nbsp;Commitment Therapy ACT)
+              </p>
+              <p class="footnote-standard">
+                ** Эмоционально фокусированная терапия для&nbsp;союзов
+                (Emotionally Focused Therapy EFT)
+              </p>
+            </div>
+
+            <div class="about__video-block">
+              <video class="about__video" controls>
+                <source src="/assets/video/video_5.mp4" type="video/mp4" >
+              </video>
+            </div>
+          </div>
+
+          <div class="about__action button-block">
+            <svg class="about__cross icon-cross">
               <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
             </svg>
+            <button class="about__button btn button-text">
+              Запись на сессию
+            </button>
           </div>
         </div>
+      </section>
 
-        <div class="cover__action button-block">
-          <svg class="cover__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="cover__button btn button-text">Записаться</button>
-        </div>
-      </div>
-      <video class="cover__video" autoplay muted loop>
-        <source src="/assets/video/video_5.mp4" type="video/mp4" />
-      </video>
-    </section>
+      <!-- EXPERTISE -->
+      <section class="expertise" id="expertise">
+        <div class="expertise__wrapper container">
+          <h2 class="expertise__title h2-title">С чем я работаю</h2>
 
-    <!-- ABOUT -->
-    <section class="about" id="about">
-      <div class="about__wrapper container">
-        <h2 class="about__title h2-title">Обо мне</h2>
-        <div class="about__content">
-          <div class="about__text-block">
-            <p class="paragraph-standard">
-              Привет! Меня зовут Катерина Тартари.
-            </p>
-            <p class="paragraph-standard">
-              Я секс-терапевтка, ACT* и&nbsp;EFT** консультантка, обучалась
-              психологической помощи при травме насилия. С 2022 года помогаю
-              клиентам из&nbsp;15 стран: провожу консультации, организую
-              терапевтические ретриты и&nbsp;арт-терапию для&nbsp;групп.
-            </p>
-
-            <p class="paragraph-standard">
-              Как полиаморка, феминистка и квир-персона, я&nbsp;работаю с&nbsp;людьми
-              различных гендерных идентичностей, находящихся в&nbsp;разных форматах
-              отношений, включая полиаморные союзы.
-            </p>
-            <p class="paragraph-standard">
-              Помогаю людям осознавать свои ценности, искать себя и&nbsp;выстраивать близкие отношения.
-            </p>
-            <hr class="about__hr" />
-            <p class="footnote-standard">
-              * Терапия принятия и ответственности (Acceptance &&nbsp;Commitment
-              Therapy ACT)
-            </p>
-            <p class="footnote-standard">
-              ** Эмоционально фокусированная терапия для&nbsp;союзов (Emotionally
-              Focused Therapy EFT)
-            </p>
-          </div>
-
-          <div class="about__video-block">
-            <video class="about__video" controls>
-              <source src="/assets/video/video_5.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-
-        <div class="about__action button-block">
-          <svg class="about__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="about__button btn button-text">Запись на сессию</button>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- EXPERTISE -->
-    <section class="expertise" id="expertise">
-      <div class="expertise__wrapper container">
-        <h2 class="expertise__title h2-title">С чем я работаю</h2>
-
-        <div class="expertise__content">
-          <!-- Сексуальность -->
-          <div class="expertise__sexuality">
-            <div class="expertise__sexuality-title">
-              <h3 class="expertise__title-block h3-title">Сексуальность</h3>
-              <div class="expertise__line"></div>
-            </div>
-
-            <div class="expertise__sexuality-pic">
-
-              <img class="sexuality-pic hover-filter" src="/assets/images/expertise__sexuality.png" alt="Нежное прикосновение рук партнёрш">
-
-            </div>
-
-            <div class="expertise__sexuality-text">
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    сексуальные дисфункции
-                  </h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  У меня слишком слабое / сильное либидо, трудности с&nbsp;возбуждением или&nbsp;получением оргазма
-                </p>
+          <div class="expertise__content">
+            <!-- Сексуальность -->
+            <div class="expertise__sexuality">
+              <div class="expertise__sexuality-title">
+                <h3 class="expertise__title-block h3-title">Сексуальность</h3>
+                <div class="expertise__line"></div>
               </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">нет контакта с телом</h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я плохо чувствую свое тело или&nbsp;оно кажется мне несексуальным
-                </p>
+              <div class="expertise__sexuality-pic">
+                <img
+                  class="sexuality-pic hover-filter"
+                  src="/assets/images/expertise__sexuality.png"
+                  alt="Нежное прикосновение рук партнёрш"
+                >
               </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">сексуальные различия</h5>
-                  <div class="expertise__line-dash"></div>
+              <div class="expertise__sexuality-text">
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      сексуальные дисфункции
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    У меня слишком слабое / сильное либидо, трудности
+                    с&nbsp;возбуждением или&nbsp;получением оргазма
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Мои желания и партнера_ши не совпадают, страшно сказать о&nbsp;своих фантазиях или&nbsp;предпочтениях
-                </p>
-              </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    сексуализированное насилие
-                  </h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      нет контакта с телом
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я плохо чувствую свое тело или&nbsp;оно кажется мне
+                    несексуальным
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я пытаюсь справиться с последствиями сексуализированного
-                  насилия, которое мешает мне двигаться дальше
-                </p>
-              </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    ИССЛЕДОВАНИЕ СЕКСУАЛЬНОСТИ
-                  </h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      сексуальные различия
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Мои желания и партнера_ши не совпадают, страшно сказать
+                    о&nbsp;своих фантазиях или&nbsp;предпочтениях
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я не понимаю, что мне нравится в&nbsp;сексе, стыжусь некоторых
-                  практик, или&nbsp;сомневаюсь в&nbsp;своей сексуальной ориентации
-                </p>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      сексуализированное насилие
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я пытаюсь справиться с последствиями сексуализированного
+                    насилия, которое мешает мне двигаться дальше
+                  </p>
+                </div>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      ИССЛЕДОВАНИЕ СЕКСУАЛЬНОСТИ
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я не понимаю, что мне нравится в&nbsp;сексе, стыжусь
+                    некоторых практик, или&nbsp;сомневаюсь в&nbsp;своей
+                    сексуальной ориентации
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Отношения -->
-          <div class="expertise__relationship">
-            <div class="expertise__relationship-title">
-              <h3 class="expertise__title-block h3-title">Отношения</h3>
-              <div class="expertise__line"></div>
+            <!-- Отношения -->
+            <div class="expertise__relationship">
+              <div class="expertise__relationship-title">
+                <h3 class="expertise__title-block h3-title">Отношения</h3>
+                <div class="expertise__line"></div>
+              </div>
+
+              <div class="expertise__relationship-text">
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      СЛОЖНОСТИ В эмоциональной близости
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я избегаю глубинной эмоциональной связи в&nbsp;отношениях
+                    или&nbsp;испытываю постоянную тревогу
+                  </p>
+                </div>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      Трудности в общении
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Мы с трудом общаемся или договариваемся друг с&nbsp;другом
+                  </p>
+                </div>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      неудовлетворенность отношениями
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я чувствую тревогу, потому что секс в&nbsp;отношениях исчез,
+                    произошла измена или&nbsp;просто нет контакта между нами
+                  </p>
+                </div>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      Токсичные отношения
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    В наших отношениях происходит абьюз, мы&nbsp;хотим жить друг
+                    с&nbsp;другом по-другому
+                  </p>
+                </div>
+
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">Кризисы</h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Мы столкнулись с такими трудностями, как болезнь, потеря
+                    бизнеса, эмиграция или&nbsp;утрата близких, и&nbsp;пытаемся
+                    преодолеть&nbsp;их
+                  </p>
+                </div>
+              </div>
+              <div class="expertise__relationship-pic">
+                <img
+                  class="relationship-pic hover-filter"
+                  src="/assets/images/expertise__relationship.png"
+                  alt="Мужчина и женщина в ссоре"
+                >
+              </div>
             </div>
 
-            <div class="expertise__relationship-text">
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    СЛОЖНОСТИ В эмоциональной близости
-                  </h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я избегаю глубинной эмоциональной связи в&nbsp;отношениях или&nbsp;испытываю постоянную тревогу
-                </p>
+            <!-- Внутренний мир -->
+            <div class="expertise__inner">
+              <div class="expertise__inner-title">
+                <h3 class="expertise__title-block h3-title">Внутренний мир</h3>
+                <div class="expertise__line"></div>
               </div>
-
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">Трудности в общении</h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Мы с трудом общаемся или договариваемся друг с&nbsp;другом
-                </p>
+              <div class="expertise__inner-pic">
+                <img
+                  class="inner-pic hover-filter"
+                  src="/assets/images/expertise__inner.png"
+                  alt="Женщина наслаждается моментом наедине с собой"
+                >
               </div>
-
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    неудовлетворенность отношениями
-                  </h5>
-                  <div class="expertise__line-dash"></div>
+              <div class="expertise__inner-text">
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      низкая самооценка
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я постоянно критикую и&nbsp;виню себя, не&nbsp;верю
+                    в&nbsp;себя или&nbsp;страдаю от&nbsp;перфекционизма
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я чувствую тревогу, потому что секс в&nbsp;отношениях исчез,
-                  произошла измена или&nbsp;просто нет контакта между нами
-                </p>
-              </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    Токсичные отношения
-                  </h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      Апатия и потерянность
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Нет больше стимула двигаться вперед и&nbsp;что-то делать,
+                    я&nbsp;не&nbsp;знаю, чего хочу
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  В наших отношениях происходит абьюз, мы&nbsp;хотим жить друг
-                  с&nbsp;другом по-другому
-                </p>
-              </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">Кризисы</h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      неуправляемые эмоции
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Иногда эмоции - тревога, страх, раздражение - управляют мной
+                    настолько, что&nbsp;мешают повседневной жизни, общению
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Мы столкнулись с такими трудностями, как болезнь, потеря
-                  бизнеса, эмиграция или&nbsp;утрата близких, и&nbsp;пытаемся преодолеть&nbsp;их
-                </p>
-              </div>
-            </div>
-            <div class="expertise__relationship-pic">
 
-              <img class="relationship-pic hover-filter" src="/assets/images/expertise__relationship.png" alt="Мужчина и женщина в ссоре">
-            </div>
-          </div>
-
-          <!-- Внутренний мир -->
-          <div class="expertise__inner">
-            <div class="expertise__inner-title">
-              <h3 class="expertise__title-block h3-title">Внутренний мир</h3>
-              <div class="expertise__line"></div>
-            </div>
-            <div class="expertise__inner-pic">
-
-              <img class="inner-pic hover-filter" src="/assets/images/expertise__inner.png" alt="Женщина наслаждается моментом наедине с собой">
-            </div>
-            <div class="expertise__inner-text">
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">низкая самооценка</h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      ПОСЛЕДСТВИЯ Абьюза
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Я пытаюсь справиться с последствиями психологического
+                    и&nbsp;физического насилия, что&nbsp;мешает мне двигаться
+                    дальше
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я постоянно критикую и&nbsp;виню себя, не&nbsp;верю в&nbsp;себя или&nbsp;страдаю
-                  от&nbsp;перфекционизма
-                </p>
-              </div>
 
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    Апатия и потерянность
-                  </h5>
-                  <div class="expertise__line-dash"></div>
+                <div class="expertise__item">
+                  <div class="expertise__small-title">
+                    <h5 class="expertise__title-section h5-title">
+                      Межличностные конфликты
+                    </h5>
+                    <div class="expertise__line-dash"></div>
+                  </div>
+                  <p class="expertise__item-p paragraph-standard">
+                    Мне трудно общаться с другими людьми, часто возникают
+                    конфликты или&nbsp;мне сложно отстаивать себя
+                  </p>
                 </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Нет больше стимула двигаться вперед и&nbsp;что-то делать, я&nbsp;не&nbsp;знаю, чего хочу
-                </p>
-              </div>
-
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">неуправляемые эмоции</h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Иногда эмоции - тревога, страх, раздражение - управляют мной
-                  настолько, что&nbsp;мешают повседневной жизни, общению
-                </p>
-              </div>
-
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">ПОСЛЕДСТВИЯ Абьюза</h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Я пытаюсь справиться с последствиями психологического
-                  и&nbsp;физического насилия, что&nbsp;мешает мне двигаться дальше
-                </p>
-              </div>
-
-              <div class="expertise__item">
-                <div class="expertise__small-title">
-                  <h5 class="expertise__title-section h5-title">
-                    Межличностные конфликты
-                  </h5>
-                  <div class="expertise__line-dash"></div>
-                </div>
-                <p class="expertise__item-p paragraph-standard">
-                  Мне трудно общаться с другими людьми, часто возникают
-                  конфликты или&nbsp;мне сложно отстаивать себя
-                </p>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="expertise__conclusion">
-          <div class="expertise__conclusion-empty"></div>
-          <p class="expertise__conclusion-p paragraph-standard">
-            Это лишь несколько примеров того, с&nbsp;чем ко мне обращаются клиенты.
-            Ваш запрос может быть другим. <br />
-            Мы вместе разберемся с&nbsp;этим
-          </p>
-        </div>
-
-        <div class="expertise__button-block button-block">
-          <svg class="expertise__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="expertise__button btn button-text">
-            Запись на сессию
-          </button>
-        </div>
-    </section>
-
-
-    <!-- CLIENTS -->
-    <section class="clients" id="clients">
-      <div class="clients__wrapper container">
-        <h2 class="clients__title h2-title">Кто может обратиться ко мне</h2>
-        <div class="clients__cards">
-
-          <!-- 1 -->
-          <div class="clients-card hover-filter hover-transform">
-            <h4 class="clients-card__title h4-title">Индивидуально</h4>
-            <span class="clients-card__info paragraph-standard">Любой взрослый человек</span>
+          <div class="expertise__conclusion">
+            <div class="expertise__conclusion-empty"></div>
+            <p class="expertise__conclusion-p paragraph-standard">
+              Это лишь несколько примеров того, с&nbsp;чем ко мне обращаются
+              клиенты. Ваш запрос может быть другим. <br >
+              Мы вместе разберемся с&nbsp;этим
+            </p>
           </div>
 
-          <!-- 2 -->
-          <div class="clients-card hover-filter hover-transform">
-            <h4 class="clients-card__title h4-title">Пары и союзы</h4>
-            <span class="clients-card__info paragraph-standard">Моногамные и немоногамные</span>
-          </div>
-
-          <!-- 3 -->
-          <div class="clients-card hover-filter hover-transform">
-            <h4 class="clients-card__title h4-title">Семьи</h4>
-            <span class="clients-card__info paragraph-standard">Взрослые родственники</span>
-          </div>
-
-          <!-- 4 -->
-          <div class="clients-card hover-filter hover-transform">
-            <h4 class="clients-card__title h4-title">Группы</h4>
-            <span class="clients-card__info paragraph-standard">Друзья, коллеги</span>
+          <div class="expertise__button-block button-block">
+            <svg class="expertise__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="expertise__button btn button-text">
+              Запись на сессию
+            </button>
           </div>
         </div>
+      </section>
 
-        <div class="clients__action button-block">
-          <svg class="clients__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="clients__button btn button-text">Запись</button>
-        </div>
-      </div>
-    </section>
+      <!-- CLIENTS -->
+      <section class="clients" id="clients">
+        <div class="clients__wrapper container">
+          <h2 class="clients__title h2-title">Кто может обратиться ко мне</h2>
+          <div class="clients__cards">
+            <!-- 1 -->
+            <div class="clients-card hover-filter hover-transform">
+              <h4 class="clients-card__title h4-title">Индивидуально</h4>
+              <span class="clients-card__info paragraph-standard"
+                >Любой взрослый человек</span
+              >
+            </div>
 
-    <!-- METHODS -->
-    <section class="methods" id="methods">
-      <div class="methods__wrapper container">
-        <h2 class="methods__title h2-title">Я применяю эти методы</h2>
+            <!-- 2 -->
+            <div class="clients-card hover-filter hover-transform">
+              <h4 class="clients-card__title h4-title">Пары и союзы</h4>
+              <span class="clients-card__info paragraph-standard"
+                >Моногамные и немоногамные</span
+              >
+            </div>
 
-        <div class="methods__cards">
-          <!-- 1 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title ">Секс-терапия</h3>
-            <p class="methods__text paragraph-standard">
-              Терапия эмоциональных
-              и&nbsp;психологических аспектов сексуальных проблем. Помогает решить
-              проблемы, связанные
-              с&nbsp;интимностью
-            </p>
+            <!-- 3 -->
+            <div class="clients-card hover-filter hover-transform">
+              <h4 class="clients-card__title h4-title">Семьи</h4>
+              <span class="clients-card__info paragraph-standard"
+                >Взрослые родственники</span
+              >
+            </div>
+
+            <!-- 4 -->
+            <div class="clients-card hover-filter hover-transform">
+              <h4 class="clients-card__title h4-title">Группы</h4>
+              <span class="clients-card__info paragraph-standard"
+                >Друзья, коллеги</span
+              >
+            </div>
           </div>
 
-          <!-- 2 card -->
-          <div class="methods-card methods__card ">
-            <h3 class="methods-card__title h3-title">АСТ</h3>
-            <p class="methods__text paragraph-standard">
-              Метод помогает оставаться в&nbsp;контакте
-              с&nbsp;неудобными чувствами и&nbsp;мыслями, принимать осознанные решения,
-              основанные на&nbsp;ваших ценностях
-            </p>
-          </div>
-
-          <!-- 3 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title ">ЭФТ</h3>
-            <p class="methods__text paragraph-standard">
-              Метод работает
-              с&nbsp;эмоциональными реакциями
-              и&nbsp;поведением, помогает наладить коммуникацию
-              в&nbsp;союзе, раскрыть истинные потребности
-            </p>
-          </div>
-
-          <!-- 4 card -->
-          <div class="methods-card methods__card">
-            <img src="/assets/images/method_pic-card_1.png" alt="абстратные линии">
-          </div>
-
-
-          <!-- 5 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">IFS при травме насилия</h3>
-            <p class="methods__text paragraph-standard">
-              Модель внутренних семейных систем, чтобы восстановиться после
-              опыта насилия, абъюзивных отношений. <br />
-              Работа с авторами абьюза
-            </p>
-          </div>
-
-          <!-- 6 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">Арт-терапия</h3>
-            <p class="methods__text paragraph-standard">
-              Метод использует творчество для работы с&nbsp;бессознательным,
-              помогает выразить
-              и&nbsp;осознать свои чувства через искусство
-            </p>
+          <div class="clients__action button-block">
+            <svg class="clients__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="clients__button btn button-text">Запись</button>
           </div>
         </div>
+      </section>
 
-        <div class="methods__button-block button-block">
-          <svg class="methods__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="methods__button btn button-text">
-            Запись на сессию
-          </button>
+      <!-- METHODS -->
+      <section class="methods" id="methods">
+        <div class="methods__wrapper container">
+          <h2 class="methods__title h2-title">Я применяю эти методы</h2>
+
+          <div class="methods__cards">
+            <!-- 1 card -->
+            <div class="methods-card methods__card">
+              <h3 class="methods-card__title h3-title">Секс-терапия</h3>
+              <p class="methods__text paragraph-standard">
+                Терапия эмоциональных и&nbsp;психологических аспектов
+                сексуальных проблем. Помогает решить проблемы, связанные
+                с&nbsp;интимностью
+              </p>
+            </div>
+
+            <!-- 2 card -->
+            <div class="methods-card methods__card">
+              <h3 class="methods-card__title h3-title">АСТ</h3>
+              <p class="methods__text paragraph-standard">
+                Метод помогает оставаться в&nbsp;контакте с&nbsp;неудобными
+                чувствами и&nbsp;мыслями, принимать осознанные решения,
+                основанные на&nbsp;ваших ценностях
+              </p>
+            </div>
+
+            <!-- 3 card -->
+            <div class="methods-card methods__card">
+              <h3 class="methods-card__title h3-title">ЭФТ</h3>
+              <p class="methods__text paragraph-standard">
+                Метод работает с&nbsp;эмоциональными реакциями
+                и&nbsp;поведением, помогает наладить коммуникацию в&nbsp;союзе,
+                раскрыть истинные потребности
+              </p>
+            </div>
+
+            <!-- 4 card -->
+            <div class="methods-card methods__card">
+              <img
+                src="/assets/images/method_pic-card_1.png"
+                alt="абстратные линии"
+              >
+            </div>
+
+            <!-- 5 card -->
+            <div class="methods-card methods__card">
+              <h3 class="methods-card__title h3-title">
+                IFS при травме насилия
+              </h3>
+              <p class="methods__text paragraph-standard">
+                Модель внутренних семейных систем, чтобы восстановиться после
+                опыта насилия, абъюзивных отношений. <br >
+                Работа с авторами абьюза
+              </p>
+            </div>
+
+            <!-- 6 card -->
+            <div class="methods-card methods__card">
+              <h3 class="methods-card__title h3-title">Арт-терапия</h3>
+              <p class="methods__text paragraph-standard">
+                Метод использует творчество для работы с&nbsp;бессознательным,
+                помогает выразить и&nbsp;осознать свои чувства через искусство
+              </p>
+            </div>
+          </div>
+
+          <div class="methods__button-block button-block">
+            <svg class="methods__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="methods__button btn button-text">
+              Запись на сессию
+            </button>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- BENEFITS -->
-    <section class="benefits" id="benefits">
-      <div class="benefits__wrapper container">
-        <h2 class="benefits__title h2-title">Почему выбирают меня</h2>
+      <!-- BENEFITS -->
+      <section class="benefits" id="benefits">
+        <div class="benefits__wrapper container">
+          <h2 class="benefits__title h2-title">Почему выбирают меня</h2>
 
-        <div class="benefits__content">
-          <!-- 1 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              научный подход
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я использую научно доказанные методы. Сочетаю инструменты из&nbsp;ACT, EFT, IFS, биопсихосоциальной модели в&nbsp;секс-терапии и&nbsp;других подходов
-            </p>
+          <div class="benefits__content">
+            <!-- 1 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">научный подход</h3>
+              <p class="benefits-card__text paragraph-standard">
+                Я использую научно доказанные методы. Сочетаю инструменты
+                из&nbsp;ACT, EFT, IFS, биопсихосоциальной модели
+                в&nbsp;секс-терапии и&nbsp;других подходов
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">ФЕМИНИСТСКАЯ ОПТИКА</h3>
+              <p class="benefits-card__text paragraph-standard">
+                Я учитываю в работе социо-культурный контекст вашей жизни,
+                предрассудки и&nbsp;дискриминацию, которые вызывают стресс
+                и&nbsp;давят на&nbsp;вас
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="benefits-card benefits__card"></div>
+
+            <!-- 4 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">Поддержка ЛГБТК+</h3>
+              <p class="benefits-card__text paragraph-standard">
+                Поддержка ЛГБТК+ сообщества отражает мои глубинные ценности.
+                Я&nbsp;помогу вам почувствовать себя принятым и&nbsp;услышанным,
+                выстроить личные отношения
+              </p>
+            </div>
+
+            <!-- 5 -->
+            <div class="benefits-card benefits__card">
+              <svg class="benefits__cross icon-cross">
+                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+              </svg>
+            </div>
+
+            <!-- 6 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">
+                Немоногамные отношения
+              </h3>
+              <p class="benefits-card__text paragraph-standard">
+                Я знаю, как&nbsp;работать с&nbsp;особенностями создания
+                эмоциональной близости и&nbsp;сложностями в&nbsp;немоногамных
+                отношениях
+              </p>
+            </div>
+
+            <!-- 7 -->
+            <div class="benefits-card benefits__card">
+              <img
+                class="benefits-card__img hover-filter"
+                src="/assets/images/benefits.png"
+                alt="Женщина нежно обнимает партнёршу"
+              >
+            </div>
+
+            <!-- 8 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">
+                Работа с травмой насилия
+              </h3>
+              <p class="benefits-card__text paragraph-standard">
+                Я помогаю в ситуациях психического и&nbsp;физического насилия.
+                Я&nbsp;работаю как с&nbsp;теми, кто пережил насилие, так
+                и&nbsp;с&nbsp;его авторами
+              </p>
+            </div>
+
+            <!-- 9 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">
+                Информированность о нейроотличиях
+              </h3>
+              <p class="benefits-card__text paragraph-standard">
+                У меня есть навыки работы с&nbsp;СДВГ, РАС, БАР и&nbsp;другими
+                нейроотличиями. Я&nbsp;создаю безопасную обстановку, учитывающую
+                ваши особенности
+              </p>
+            </div>
+
+            <!-- 10 -->
+            <div class="benefits-card benefits__card"></div>
+
+            <!-- 11 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">
+                Повышение квалификации
+              </h3>
+              <p class="benefits-card__text paragraph-standard">
+                Я постоянно развиваю и&nbsp;совершенствую свои навыки благодаря
+                личной терапии, регулярной супервизии, обучению и&nbsp;общению
+                с&nbsp;коллегами
+              </p>
+            </div>
+
+            <!-- 12 -->
+            <div class="benefits-card benefits__card">
+              <h3 class="benefits-card__title h3-title">
+                Мультикультурный опыт
+              </h3>
+              <p class="benefits-card__text paragraph-standard">
+                Личная история эмиграции помогает мне понимать и&nbsp;учитывать
+                культурные особенности клиентов из&nbsp;разных стран
+              </p>
+            </div>
           </div>
 
-          <!-- 2 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">ФЕМИНИСТСКАЯ ОПТИКА</h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я учитываю в работе социо-культурный контекст вашей жизни,
-              предрассудки и&nbsp;дискриминацию, которые вызывают стресс и&nbsp;давят
-              на&nbsp;вас
-            </p>
-          </div>
-
-          <!-- 3 -->
-          <div class="benefits-card benefits__card"></div>
-
-          <!-- 4 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Поддержка ЛГБТК+
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Поддержка ЛГБТК+ сообщества отражает мои глубинные ценности. Я&nbsp;помогу вам почувствовать себя принятым и&nbsp;услышанным, выстроить
-              личные отношения
-            </p>
-          </div>
-
-          <!-- 5 -->
-          <div class="benefits-card benefits__card">
+          <div class="benefits__button-block button-block">
             <svg class="benefits__cross icon-cross">
               <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
             </svg>
-          </div>
 
-          <!-- 6 -->
-          <div class="benefits-card benefits__card">
-            <h3 class=" benefits-card__title h3-title">
-              Немоногамные отношения
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я знаю, как&nbsp;работать
-              с&nbsp;особенностями создания эмоциональной близости
-              и&nbsp;сложностями в&nbsp;немоногамных отношениях
-            </p>
-          </div>
-
-          <!-- 7 -->
-          <div class="benefits-card benefits__card ">
-            <img class="benefits-card__img hover-filter" src="/assets/images/benefits.png" alt="Женщина нежно обнимает партнёршу">
-          </div>
-
-          <!-- 8 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Работа с травмой насилия
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я помогаю в ситуациях психического и&nbsp;физического насилия. Я&nbsp;работаю как с&nbsp;теми, кто пережил насилие, так и&nbsp;с&nbsp;его авторами
-            </p>
-          </div>
-
-          <!-- 9 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Информированность о нейроотличиях
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              У меня есть навыки работы с&nbsp;СДВГ, РАС, БАР и&nbsp;другими нейроотличиями. Я&nbsp;создаю безопасную обстановку,
-              учитывающую ваши особенности
-            </p>
-          </div>
-
-          <!-- 10 -->
-          <div class="benefits-card benefits__card"></div>
-
-          <!-- 11 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">Повышение квалификации</h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я постоянно развиваю и&nbsp;совершенствую свои навыки
-              благодаря личной терапии, регулярной супервизии, обучению и&nbsp;общению с&nbsp;коллегами
-            </p>
-          </div>
-
-          <!-- 12 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Мультикультурный опыт
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Личная история эмиграции помогает мне понимать и&nbsp;учитывать
-              культурные особенности клиентов из&nbsp;разных стран
-            </p>
+            <button class="benefits__button btn button-text wave-button">
+              Запись на сессию
+            </button>
           </div>
         </div>
+      </section>
 
-        <div class="benefits__button-block button-block">
-          <svg class="benefits__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
+      <!-- FEEDBACK -->
+      <section class="feedback" id="feedback">
+        <div class="feedback__wrapper container">
+          <h2 class="feedback__title h2-title">Отзывы клиентов</h2>
 
-          <button class="benefits__button btn button-text wave-button">
-            Запись на сессию
-          </button>
+          <!-- slider -->
+          <div class="feedback__content">
+            <div class="feedback__prev swiper-button-prev"></div>
+            <div class="feedback__next swiper-button-next"></div>
+
+            <div class="feedback__swiper swiper">
+              <div class="feedback__pagination swiper-pagination"></div>
+
+              <div class="feedback__swiper-wrapper swiper-wrapper">
+                <!-- 1 -->
+                <div class="feedback__slide swiper-slide">
+                  <svg class="feedback__quote icon-quote">
+                    <use
+                      xlink:href="/assets/images/figures/sprite.svg#quote"
+                    ></use>
+                  </svg>
+
+                  <p class="feedback__text paragraph-standard">
+                    Мне было комфортно с&nbsp;Катериной, я&nbsp;могла быть
+                    открытой. Здорово, что&nbsp;была обратная связь
+                    по&nbsp;дополнительным заданиям, которые она мне давала,
+                    и&nbsp;это было использовано в&nbsp;дальнейшей работе
+                    <br ><br >
+                  </p>
+                  <hr class="feedback__line" >
+                  <p class="feedback__client h5-title">МАРИЯ</p>
+                  <p class="feedback__client-info paragraph-standard">
+                    23 года, Франция
+                  </p>
+                </div>
+
+                <!-- 2 -->
+                <div class="feedback__slide swiper-slide">
+                  <svg class="feedback__quote icon-quote">
+                    <use
+                      xlink:href="/assets/images/figures/sprite.svg#quote"
+                    ></use>
+                  </svg>
+
+                  <p class="feedback__text paragraph-standard">
+                    Екатерина, я хочу поблагодарить тебя за&nbsp;такую бережную
+                    и&nbsp;глубокую работу со&nbsp;мной. Ты&nbsp;не&nbsp;только
+                    помогла разобраться в&nbsp;проблеме,
+                    но&nbsp;и&nbsp;показала, какие инструменты можно
+                    использовать для ее&nbsp;решения. Я&nbsp;ухожу от&nbsp;тебя
+                    реальным планом действий. Спасибо тебе большое!
+                  </p>
+                  <hr class="feedback__line" >
+                  <p class="feedback__client h5-title">АНАСТАСИЯ</p>
+                  <p class="feedback__client-info paragraph-standard">
+                    36 лет, Россия
+                  </p>
+                </div>
+
+                <!-- 3 -->
+                <div class="feedback__slide swiper-slide">
+                  <svg class="feedback__quote icon-quote">
+                    <use
+                      xlink:href="/assets/images/figures/sprite.svg#quote"
+                    ></use>
+                  </svg>
+
+                  <p class="feedback__text paragraph-standard">
+                    Катерина была внимательна, заботлива и&nbsp;я&nbsp;сразу
+                    почувствовал себя в&nbsp;безопасности. Она помогла мне
+                    развернуть нить моих мыслей и&nbsp;посмотреть
+                    со&nbsp;стороны на&nbsp;мои действия. Спустя несколько
+                    месяцев я&nbsp;до&nbsp;сих&nbsp;пор использую этот анализ.
+                  </p>
+                  <hr class="feedback__line" >
+                  <p class="feedback__client h5-title">А.</p>
+                  <p class="feedback__client-info paragraph-standard">
+                    31 год, Франция
+                  </p>
+                </div>
+
+                <!-- 4 -->
+                <div class="feedback__slide swiper-slide">
+                  <svg class="feedback__quote icon-quote">
+                    <use
+                      xlink:href="/assets/images/figures/sprite.svg#quote"
+                    ></use>
+                  </svg>
+
+                  <p class="feedback__text paragraph-standard">
+                    Обратились к&nbsp;тебе, уже&nbsp;буквально находясь
+                    на&nbsp;грани разрыва наших отношений. И&nbsp;тебе удалось
+                    с&nbsp;первой сессии понизить градус наших дискуссий,
+                    а&nbsp;некоторые вопросы вообще убрать из&nbsp;обсуждения
+                    как&nbsp;решённые. Мы&nbsp;начали друг друга слушать
+                    и&nbsp;понимать, а&nbsp;с&nbsp;пониманием пришло сочувствие
+                    друг к&nbsp;другу.
+                  </p>
+                  <hr class="feedback__line" >
+                  <p class="feedback__client h5-title">Е. Б.</p>
+                  <p class="feedback__client-info paragraph-standard">
+                    60 и 30 лет, Грузия
+                  </p>
+                </div>
+
+                <!-- 5 -->
+                <div class="feedback__slide swiper-slide">
+                  <svg class="feedback__quote icon-quote">
+                    <use
+                      xlink:href="/assets/images/figures/sprite.svg#quote"
+                    ></use>
+                  </svg>
+
+                  <p class="feedback__text paragraph-standard">
+                    Я с трудом справлялась в тяжёлый период моей жизни. Мне
+                    не&nbsp;хватало поддержки из-за&nbsp;того, что&nbsp;близких
+                    людей уже нет на&nbsp;свете. Я&nbsp;скептически отнеслась
+                    к&nbsp;упражнениям и&nbsp;очень удивилась, когда прямо
+                    на&nbsp;сессии получила облегчение. Феноменально! Катя,
+                    спасибо за&nbsp;мою команду поддержки!
+                  </p>
+                  <hr class="feedback__line" >
+                  <p class="feedback__client h5-title">СВЕТЛАНА</p>
+                  <p class="feedback__client-info paragraph-standard">
+                    46 лет, Беларусь
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="feedback__button-block button-block">
+            <svg class="feedback__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+
+            <button class="feedback__button btn button-text wave-button">
+              Запись на сессию
+            </button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- FEEDBACK -->
-    <section class="feedback" id="feedback">
-      <div class="feedback__wrapper container">
-        <h2 class="feedback__title h2-title">Отзывы клиентов</h2>
+      <!-- STEPS -->
+      <section class="steps" id="steps">
+        <div class="steps__wrapper container">
+          <h2 class="steps__title h2-title">этапы работы</h2>
 
-        <!-- slider -->
-        <div class="feedback__content">
-          <div class="feedback__prev swiper-button-prev"></div>
-          <div class="feedback__next swiper-button-next"></div>
+          <div class="steps__content">
+            <div class="steps__img">
+              <img src="/assets/images/steps__img.png" alt="" >
+            </div>
+            <div class="steps__info">
+              <!-- 01 -->
+              <div class="steps__step">
+                <h2 class="steps__number h2-title">01</h2>
+                <div class="steps__name">
+                  <h3 class="steps__title-step h3-title">запись</h3>
+                  <div class="steps__line"></div>
+                </div>
+                <div class="steps__text paragraph-standard">
+                  Выберите в календаре консультаций удобное время
+                  для&nbsp;первой бесплатной 30-минутной сессии
+                </div>
+              </div>
 
-          <div class="feedback__swiper swiper">
-            <div class="feedback__pagination swiper-pagination"></div>
+              <!-- 02 -->
+              <div class="steps__step">
+                <h2 class="steps__number h2-title">02</h2>
+                <div class="steps__name">
+                  <h3 class="steps__title-step h3-title">Подтверждение</h3>
+                  <div class="steps__line"></div>
+                </div>
+                <div class="steps__text paragraph-standard">
+                  На вашу электронную почту придет письмо с&nbsp;датой
+                  и&nbsp;ссылкой Google Meet - подтвердите участие
+                  и&nbsp;внесите в&nbsp;свой календарь. Второе письмо -
+                  с&nbsp;документом об&nbsp;информированном согласии
+                  на&nbsp;консультацию
+                </div>
+              </div>
 
-            <div class="feedback__swiper-wrapper swiper-wrapper">
-              <!-- 1 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
+              <!-- 03 -->
+              <div class="steps__step">
+                <h2 class="steps__number h2-title">03</h2>
+                <div class="steps__name">
+                  <h3 class="steps__title-step h3-title">первая сессия</h3>
+                  <div class="steps__line"></div>
+                </div>
+                <div class="steps__text paragraph-standard">
+                  Перейдите по ссылке Google Meet из&nbsp;письма
+                  с&nbsp;приглашением или&nbsp;из&nbsp;вашего календаря. Если
+                  вы&nbsp;потеряли ссылку, напишите мне в&nbsp;WhatsApp
+                  или&nbsp;Telegram
+                </div>
+              </div>
+
+              <!-- 04 -->
+              <div class="steps__step">
+                <h2 class="steps__number h2-title">04</h2>
+                <div class="steps__name">
+                  <h3 class="steps__title-step h3-title">Последующие сессии</h3>
+                  <div class="steps__line"></div>
+                </div>
+                <div class="steps__text paragraph-standard">
+                  Мы проведем столько сеансов, сколько вам потребуется.
+                  Информация о&nbsp;способах оплаты присылается в&nbsp;отдельном
+                  письме. Оплата сессии - не&nbsp;позднее 24 часов
+                  до&nbsp;начала. Полная сессия длится
+                  50&nbsp;-&nbsp;70&nbsp;минут
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="steps__button-block button-block">
+            <svg class="steps__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="steps__button btn button-text">
+              Запись на сессию
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRICE -->
+      <section class="price" id="price">
+        <div class="price__wrapper container">
+          <h2 class="price__title h2-title">Стоимость</h2>
+
+          <div class="price__cards">
+            <!-- 1 card -->
+            <div class="price-card price__card hover-transform hover-orange">
+              <div class="price-card__cross-container">
+                <svg class="price-card__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
                 </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Мне было комфортно с&nbsp;Катериной, я&nbsp;могла быть открытой.
-                  Здорово, что&nbsp;была обратная связь по&nbsp;дополнительным
-                  заданиям, которые она мне давала, и&nbsp;это было использовано
-                  в&nbsp;дальнейшей работе 
-                  <br><br>
-                </p>
-                <hr class="feedback__line" />
-                <p class="feedback__client h5-title">
-                  МАРИЯ
-                </p>
-                <p class="feedback__client-info paragraph-standard">
-                  23 года, Франция
-                </p>
-              </div>
-
-              <!-- 2 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
+                <svg class="price-card__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
                 </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Екатерина, я хочу поблагодарить тебя за&nbsp;такую бережную
-                  и&nbsp;глубокую работу со&nbsp;мной. Ты&nbsp;не&nbsp;только помогла
-                  разобраться в&nbsp;проблеме, но&nbsp;и&nbsp;показала, какие
-                  инструменты можно использовать для ее&nbsp;решения. Я&nbsp;ухожу от&nbsp;тебя реальным планом действий. Спасибо тебе большое!
-                </p>
-                <hr class="feedback__line" />
-                <p class="feedback__client h5-title">
-                  АНАСТАСИЯ
-                </p>
-                <p class="feedback__client-info paragraph-standard">
-                  36 лет, Россия
-                </p>
               </div>
 
-              <!-- 3 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
+              <h3 class="price-card__title h3-title">Первая сессия</h3>
+
+              <ul class="price-card__list">
+                <li class="price-card__list-item paragraph-standard">
+                  вы поймете, комфортно ли вам&nbsp;со&nbsp;мной
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  вы зададите вопросы
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  мы выясним ваши потребности и&nbsp;ожидания
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  мы выберем направление терапии
+                </li>
+              </ul>
+
+              <h5 class="price-card__duration h5-title">
+                Длительность 30 минут
+              </h5>
+              <p class="price-card__price paragraph-large">Бесплатно</p>
+            </div>
+
+            <!-- 2 card -->
+            <div class="price-card price__card hover-transform">
+              <div class="price-card__cross-container">
+                <svg class="price-card__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
                 </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Катерина была внимательна, заботлива и&nbsp;я&nbsp;сразу
-                  почувствовал себя в&nbsp;безопасности. Она помогла мне
-                  развернуть нить моих мыслей и&nbsp;посмотреть со&nbsp;стороны на&nbsp;мои
-                  действия. Спустя несколько месяцев я&nbsp;до&nbsp;сих&nbsp;пор использую
-                  этот анализ.
-                </p>
-                <hr class="feedback__line" />
-                <p class="feedback__client h5-title"> А.</p>
-                <p class="feedback__client-info paragraph-standard">
-                  31 год, Франция
-                </p>
               </div>
 
-              <!-- 4 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
+              <h3 class="price-card__title h3-title">Индивидуальные сессии</h3>
+
+              <ul class="price-card__list">
+                <li class="price-card__list-item paragraph-standard">
+                  мы затронем темы, которые важны для&nbsp;вас
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  мы определим результаты, которые вы хотите получить
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  мы будем идти в&nbsp;вашем темпе
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  вы получите новые навыки
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  выполните упражнения
+                </li>
+              </ul>
+
+              <h5 class="price-card__duration h5-title">
+                Длительность 50 минут
+              </h5>
+              <p class="price-card__price paragraph-large">100 €</p>
+            </div>
+
+            <!-- 3 card -->
+            <div class="price-card price__card hover-transform">
+              <div class="price-card__cross-container">
+                <svg class="price-card__cross-container icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
                 </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Обратились к&nbsp;тебе, уже&nbsp;буквально находясь на&nbsp;грани разрыва
-                  наших отношений. И&nbsp;тебе удалось с&nbsp;первой сессии понизить
-                  градус наших дискуссий, а&nbsp;некоторые вопросы вообще убрать
-                  из&nbsp;обсуждения как&nbsp;решённые. Мы&nbsp;начали друг друга слушать 
-                  и&nbsp;понимать, а&nbsp;с&nbsp;пониманием пришло сочувствие друг к&nbsp;другу.
-                </p>
-                <hr class="feedback__line" />
-                <p class="feedback__client h5-title"> Е. Б.</p>
-                <p class="feedback__client-info paragraph-standard">
-                  60 и 30 лет, Грузия
-                </p>
-              </div>
-
-              <!-- 5 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
+                <svg class="price-card__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
                 </svg>
+                <svg class="price-card__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
 
-                <p class="feedback__text paragraph-standard">
-                  Я с трудом справлялась в тяжёлый период моей жизни. Мне не&nbsp;хватало 
-                  поддержки из-за&nbsp;того, что&nbsp;близких людей уже нет на&nbsp;свете. 
-                  Я&nbsp;скептически отнеслась к&nbsp;упражнениям и&nbsp;очень
-                  удивилась, когда прямо на&nbsp;сессии получила облегчение. Феноменально!
-                  Катя, спасибо за&nbsp;мою команду поддержки!
+              <h3 class="price-card__title h3-title">
+                Парные или групповые сессии
+              </h3>
+
+              <ul class="price-card__list">
+                <li class="price-card__list-item paragraph-standard">
+                  мы исследуем ситуацию в&nbsp;ваших отношениях
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  определим, чего вы&nbsp;хотите достичь
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  согласуем общие ценности
+                </li>
+                <li class="price-card__list-item paragraph-standard">
+                  поработаем над навыками общения и&nbsp;сочувствия
+                </li>
+              </ul>
+
+              <h5 class="price-card__duration h5-title">
+                длительность 70 минут
+              </h5>
+              <p class="price-card__price paragraph-large">ОТ 180 €</p>
+            </div>
+          </div>
+
+          <div class="price__action button-block">
+            <svg class="price__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="price__button btn button-text">
+              Запись на сессию
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- REGISTRATION -->
+      <section class="registration" id="registration">
+        <div class="registration__wrapper container">
+          <h2 class="registration__title h2-title">запись на сессию</h2>
+
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/kat-tartary/counselling-session"
+            style="min-width: 320px; height: 760px"
+          ></div>
+        </div>
+      </section>
+
+      <!-- WORDS -->
+      <section class="words">
+        <div class="words__wrapper container">
+          <p class="words__content paragraph-medium">
+            Я искренне верю, что&nbsp;отношения могут быть для&nbsp;вас
+            источником удовольствия и&nbsp;наполнять вашу жизнь смыслом
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="faq__wrapper container">
+          <h2 class="faq__title h2-title">FAQ</h2>
+
+          <div class="faq__content">
+            <!-- Как работает секс-терапия? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Как работает секс-терапия?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Секс-терапия работает с&nbsp;мыслями, эмоциями
+                  и&nbsp;действиями, помогает достичь гармоничных сексуальных
+                  отношений. Важно отметить, что секс-терапия -
+                  не&nbsp;медицинская помощь, это не&nbsp;заменяет консультацию
+                  эндокринолога, гинеколога или&nbsp;психиатра.
                 </p>
-                <hr class="feedback__line" />
-                <p class="feedback__client h5-title">СВЕТЛАНА</p>
-                <p class="feedback__client-info paragraph-standard">
-                  46 лет, Беларусь
+              </div>
+            </div>
+
+            <!-- Сколько сессий нужно для результата и как часто? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Сколько сессий нужно для результата и&nbsp;как часто?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Количество сессий и&nbsp;их&nbsp;частота зависят от&nbsp;ваших
+                  потребностей и&nbsp;целей. Это может быть несколько сеансов
+                  или&nbsp;несколько месяцев со&nbsp;встречами раз в&nbsp;неделю
+                  или&nbsp;раз в&nbsp;две недели. Мы подберем график, который
+                  подходит именно вам
+                </p>
+              </div>
+            </div>
+
+            <!-- Конфиденциальны ли эти консультации? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Конфиденциальны ли эти консультации?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Да, все консультации проводятся строго конфиденциально. Ваши
+                  личные данные и&nbsp;содержание сессий будут защищены
+                  и&nbsp;не&nbsp;будут разглашаться, за&nbsp;исключением
+                  случаев, когда это требуется законом или&nbsp;существует
+                  потенциальная угроза вашей безопасности или&nbsp;безопасности
+                  других
+                </p>
+              </div>
+            </div>
+
+            <!-- Какие есть условия и способы оплаты? а переноса сессии? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Какие есть условия и&nbsp;способы оплаты? А переноса сессии?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Перенос или&nbsp;отмена сессии - бесплатно, если уведомите
+                  об&nbsp;этом не&nbsp;позднее, чем&nbsp;за&nbsp;24&nbsp;часа
+                  до&nbsp;начала. В&nbsp;таком случае оплаченная сумма
+                  сохранится для&nbsp;следующей консультации. Отмена сессии
+                  менее, чем&nbsp;за&nbsp;сутки - стоимость консультации
+                  не&nbsp;возвращается. Оплата принимается через банковский
+                  перевод в&nbsp;евро или&nbsp;с&nbsp;помощью приложения PayPal.
+                  Если у&nbsp;вас возникли вопросы или&nbsp;трудности,
+                  не&nbsp;стесняйтесь связаться со&nbsp;мной
+                </p>
+              </div>
+            </div>
+
+            <!-- Как понять, когда записаться индивидуально, а когда - всем союзом? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Как понять, когда записаться индивидуально, а&nbsp;когда -
+                  всем союзом?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Если проблемы касаются секса, общения или&nbsp;отношений,
+                  которые затрагивают всех в&nbsp;союзе, совместная консультация
+                  будет логичным выбором. Если вопросы скорее личные
+                  и&nbsp;требуют отдельного внимания, то&nbsp;индивидуальная
+                  сессия будет предпочтительнее. Если у&nbsp;вас есть сомнения,
+                  обсудите это со&nbsp;мной
+                </p>
+              </div>
+            </div>
+
+            <!-- Не нашли ответ на ваш вопрос? -->
+            <div class="faq-box faq__box">
+              <div class="faq-box__question">
+                <h4 class="faq-box__title h4-title">
+                  Не нашли ответ на ваш вопрос?
+                </h4>
+                <svg class="faq-box__cross icon-cross">
+                  <use
+                    xlink:href="/assets/images/figures/sprite.svg#cross"
+                  ></use>
+                </svg>
+              </div>
+
+              <div class="faq-box__answer">
+                <p class="faq-box__text paragraph-standard">
+                  Если у вас остались вопросы, просто напишите мне
+                  на&nbsp;электронную почту
+                  <a
+                    href="mailto:kat.tartary@gmail.com"
+                    target="_blank"
+                    class="faq-box__link link"
+                    >kat.tartary@gmail.com</a
+                  >
+                  или&nbsp;найдите меня в&nbsp;Telegram:
+                  <a
+                    href="https://t.me/Sartari"
+                    target="_blank"
+                    class="faq-box__link"
+                    >@Sartari</a
+                  >&nbsp;/ WhatsApp
+                  <a
+                    href="https://wa.me/+33646811834"
+                    target="_blank"
+                    class="faq-box__link"
+                    >+33 6 46 81 18 34</a
+                  >
                 </p>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="feedback__button-block button-block">
-          <svg class="feedback__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-
-          <button class="feedback__button btn button-text wave-button">
-            Запись на сессию
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- STEPS -->
-    <section class="steps" id="steps">
-      <div class="steps__wrapper container">
-        <h2 class="steps__title h2-title">этапы работы</h2>
-
-        <div class="steps__content">
-          <div class="steps__img"><img src="/assets/images/steps__img.png" alt=""></div>
-          <div class="steps__info">
-
-            <!-- 01 -->
-            <div class="steps__step">
-              <h2 class="steps__number h2-title">01</h2>
-              <div class="steps__name">
-                <h3 class="steps__title-step h3-title">запись</h3>
-                <div class="steps__line"></div>
-              </div>
-              <div class="steps__text paragraph-standard">
-                Выберите в календаре консультаций удобное время для&nbsp;первой
-                бесплатной 30-минутной сессии
-              </div>
-            </div>
-
-            <!-- 02 -->
-            <div class="steps__step">
-              <h2 class="steps__number h2-title">02</h2>
-              <div class="steps__name">
-                <h3 class="steps__title-step h3-title">Подтверждение</h3>
-                <div class="steps__line"></div>
-              </div>
-              <div class="steps__text paragraph-standard">
-                На вашу электронную почту придет письмо с&nbsp;датой и&nbsp;ссылкой Google Meet - подтвердите участие и&nbsp;внесите в&nbsp;свой
-                календарь. Второе письмо - с&nbsp;документом об&nbsp;информированном
-                согласии на&nbsp;консультацию
-              </div>
-            </div>
-
-            <!-- 03 -->
-            <div class="steps__step">
-              <h2 class="steps__number h2-title">03</h2>
-              <div class="steps__name">
-                <h3 class="steps__title-step h3-title">первая сессия</h3>
-                <div class="steps__line"></div>
-              </div>
-              <div class="steps__text paragraph-standard">
-                Перейдите по ссылке Google Meet из&nbsp;письма с&nbsp;приглашением 
-                или&nbsp;из&nbsp;вашего календаря. Если вы&nbsp;потеряли ссылку, 
-                напишите мне в&nbsp;WhatsApp или&nbsp;Telegram
-              </div>
-            </div>
-
-            <!-- 04 -->
-            <div class="steps__step">
-              <h2 class="steps__number h2-title">04</h2>
-              <div class="steps__name">
-                <h3 class="steps__title-step h3-title">Последующие сессии</h3>
-                <div class="steps__line"></div>
-              </div>
-              <div class="steps__text paragraph-standard">
-                Мы проведем столько сеансов, сколько вам потребуется.
-                Информация о&nbsp;способах оплаты присылается в&nbsp;отдельном письме.
-                Оплата сессии - не&nbsp;позднее 24 часов до&nbsp;начала. Полная сессия
-                длится 50&nbsp;-&nbsp;70&nbsp;минут
-              </div>
-            </div>
+          <div class="faq__action button-block">
+            <svg class="faq__cross icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button class="faq__button btn button-text">
+              Запись на сессию
+            </button>
           </div>
         </div>
+      </section>
 
+      <!-- QUESTIONS -->
+      <section class="questions" id="questions">
+        <div class="questions__wrapper container">
+          <h2 class="registration__title h2-title">Анонимные вопросы</h2>
 
-        <div class="steps__button-block button-block">
-          <svg class="steps__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="steps__button btn button-text">
-            Запись на сессию
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRICE -->
-    <section class="price" id="price">
-      <div class="price__wrapper container">
-        <h2 class="price__title h2-title">Стоимость</h2>
-
-        <div class="price__cards">
-          <!-- 1 card -->
-          <div class="price-card price__card hover-transform hover-orange">
-            <div class="price-card__cross-container">
-              <svg class="price-card__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-              <svg class="price-card__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
+          <div class="questions__content">
+            <div class="questions__img">
+              <img
+                class="questions__picture hover-filter"
+                src="/assets/images/questions.png"
+                alt="Девушки прикрывают друг другу глаза руками"
+              >
             </div>
 
-            <h3 class="price-card__title h3-title">Первая сессия</h3>
-
-            <ul class="price-card__list">
-              <li class="price-card__list-item paragraph-standard">вы поймете, комфортно ли вам&nbsp;со&nbsp;мной</li>
-              <li class="price-card__list-item paragraph-standard">вы зададите вопросы</li>
-              <li class="price-card__list-item paragraph-standard">мы выясним ваши потребности и&nbsp;ожидания</li>
-              <li class="price-card__list-item paragraph-standard">мы выберем направление терапии</li>
-            </ul>
-
-            <h5 class="price-card__duration h5-title">Длительность 30 минут</h5>
-            <p class="price-card__price paragraph-large">Бесплатно</p>
-          </div>
-
-          <!-- 2 card -->
-          <div class="price-card price__card hover-transform">
-            <div class="price-card__cross-container">
-              <svg class="price-card__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <h3 class="price-card__title h3-title">Индивидуальные
-              сессии</h3>
-
-            <ul class="price-card__list">
-              <li class="price-card__list-item paragraph-standard">мы затронем темы, которые важны для&nbsp;вас</li>
-              <li class="price-card__list-item paragraph-standard">мы определим результаты, которые вы хотите получить
-              </li>
-              <li class="price-card__list-item paragraph-standard">мы будем идти в&nbsp;вашем темпе</li>
-              <li class="price-card__list-item paragraph-standard">вы получите новые навыки</li>
-              <li class="price-card__list-item paragraph-standard">выполните упражнения</li>
-            </ul>
-
-            <h5 class="price-card__duration h5-title">Длительность 50 минут</h5>
-            <p class="price-card__price paragraph-large">100 €</p>
-          </div>
-
-          <!-- 3 card -->
-          <div class="price-card price__card hover-transform">
-            <div class="price-card__cross-container">
-              <svg class="price-card__cross-container icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-              <svg class="price-card__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-              <svg class="price-card__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <h3 class="price-card__title h3-title">Парные или групповые сессии</h3>
-
-            <ul class="price-card__list">
-              <li class="price-card__list-item paragraph-standard">мы исследуем ситуацию в&nbsp;ваших отношениях</li>
-              <li class="price-card__list-item paragraph-standard">определим, чего вы&nbsp;хотите достичь</li>
-              <li class="price-card__list-item paragraph-standard">согласуем общие ценности</li>
-              <li class="price-card__list-item paragraph-standard">поработаем над навыками общения и&nbsp;сочувствия</li>
-            </ul>
-
-            <h5 class="price-card__duration h5-title">длительность 70 минут</h5>
-            <p class="price-card__price paragraph-large">ОТ 180 €</p>
-          </div>
-        </div>
-
-        <div class="price__action button-block">
-          <svg class="price__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="price__button btn button-text">
-            Запись на сессию
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- REGISTRATION -->
-    <section class="registration" id="registration">
-
-      <div class="registration__wrapper container">
-
-        <h2 class="registration__title h2-title">запись на сессию</h2>
-
-        <div class="calendly-inline-widget" data-url="https://calendly.com/kat-tartary/counselling-session"
-          style="min-width:320px;height:760px;"></div>
-      </div>
-
-    </section>
-
-    <!-- WORDS -->
-    <section class="words">
-      <div class="words__wrapper container">
-        <p class="words__content paragraph-medium">Я искренне верю, что&nbsp;отношения могут быть для&nbsp;вас источником
-          удовольствия
-          и&nbsp;наполнять вашу жизнь смыслом</p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="faq" id="faq">
-      <div class="faq__wrapper container">
-        <h2 class="faq__title h2-title">FAQ</h2>
-
-        <div class="faq__content">
-          <!-- Как работает секс-терапия? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Как работает секс-терапия?</h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Секс-терапия работает с&nbsp;мыслями, эмоциями и&nbsp;действиями, помогает достичь гармоничных сексуальных отношений. Важно отметить, что секс-терапия - не&nbsp;медицинская помощь, это не&nbsp;заменяет консультацию
-                эндокринолога, гинеколога или&nbsp;психиатра.
+            <div class="questions__text">
+              <p class="questions__p paragraph-standard">
+                У вас возник вопрос о&nbsp;сексуальности и&nbsp;отношениях,
+                но&nbsp;вы стесняетесь его задать?
+              </p>
+              <p class="questions__p paragraph-standard">
+                Спросите анонимно.<br >
+                Я&nbsp;буду выборочно отвечать на&nbsp;вопросы
+                в&nbsp;instagram-блоге.
+              </p>
+              <p class="questions__p paragraph-standard"></p>
+              <p class="questions__p paragraph-standard">
+                Многим людям важно узнать ответ на&nbsp;ваш вопрос.
+              </p>
+              <p class="questions__p paragraph-standard">
+                Давайте будем бережны друг к&nbsp;другу!
               </p>
             </div>
-          </div>
 
-          <!-- Сколько сессий нужно для результата и как часто? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Сколько сессий нужно для результата и&nbsp;как часто?</h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Количество сессий и&nbsp;их&nbsp;частота зависят от&nbsp;ваших потребностей и&nbsp;целей. Это может быть несколько сеансов или&nbsp;несколько месяцев со&nbsp;встречами раз в&nbsp;неделю или&nbsp;раз в&nbsp;две
-                недели. Мы подберем график, который подходит именно вам
-              </p>
-            </div>
-          </div>
-
-          <!-- Конфиденциальны ли эти консультации? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Конфиденциальны ли эти консультации?</h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Да, все консультации проводятся строго конфиденциально. Ваши
-                личные данные и&nbsp;содержание сессий будут защищены и&nbsp;не&nbsp;будут разглашаться, за&nbsp;исключением случаев, когда
-                это
-                требуется законом или&nbsp;существует потенциальная угроза вашей безопасности или&nbsp;безопасности других
-              </p>
-            </div>
-          </div>
-
-          <!-- Какие есть условия и способы оплаты? а переноса сессии? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Какие есть условия и&nbsp;способы оплаты? А переноса сессии?</h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Перенос или&nbsp;отмена сессии - бесплатно, если уведомите об&nbsp;этом
-                не&nbsp;позднее, чем&nbsp;за&nbsp;24&nbsp;часа до&nbsp;начала. В&nbsp;таком случае оплаченная сумма сохранится для&nbsp;следующей
-                консультации.
-                Отмена сессии менее, чем&nbsp;за&nbsp;сутки - стоимость консультации не&nbsp;возвращается. Оплата принимается через
-                банковский перевод в&nbsp;евро или&nbsp;с&nbsp;помощью приложения PayPal. Если у&nbsp;вас возникли вопросы или&nbsp;трудности, не&nbsp;стесняйтесь связаться со&nbsp;мной
-              </p>
-            </div>
-          </div>
-
-          <!-- Как понять, когда записаться индивидуально, а когда - всем союзом? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Как понять, когда записаться индивидуально, а&nbsp;когда - всем союзом?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Если проблемы касаются секса, общения или&nbsp;отношений, которые
-                затрагивают всех в&nbsp;союзе, совместная консультация будет логичным выбором. 
-                Если вопросы скорее личные и&nbsp;требуют отдельного внимания, то&nbsp;индивидуальная сессия будет предпочтительнее. Если у&nbsp;вас есть сомнения,
-                обсудите это со&nbsp;мной
-              </p>
-            </div>
-          </div>
-
-          <!-- Не нашли ответ на ваш вопрос? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">Не нашли ответ на ваш вопрос?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">Если у вас остались вопросы, просто напишите мне на&nbsp;электронную почту
-                <a href="mailto:kat.tartary@gmail.com" target="_blank"
-                  class="faq-box__link link">kat.tartary@gmail.com</a>
-                или&nbsp;найдите меня в&nbsp;Telegram:
-                <a href="https://t.me/Sartari" target="_blank" class="faq-box__link">@Sartari</a>&nbsp;/ WhatsApp
-                <a href="https://wa.me/+33646811834" target="_blank" class="faq-box__link">+33 6 46 81 18 34</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="faq__action button-block">
-          <svg class="faq__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="faq__button btn button-text">
-            Запись на сессию
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUESTIONS -->
-    <section class="questions" id="questions">
-      <div class="questions__wrapper container">
-
-        <h2 class="registration__title h2-title">Анонимные вопросы</h2>
-
-        <div class="questions__content">
-          <div class="questions__img">
-            <img class="questions__picture hover-filter " src="/assets/images/questions.png"
-              alt="Девушки прикрывают друг другу глаза руками" />
-          </div>
-
-          <div class="questions__text">
-            <p class="questions__p paragraph-standard">У вас возник вопрос о&nbsp;сексуальности и&nbsp;отношениях, но&nbsp;вы
-              стесняетесь его задать?</p>
-            <p class="questions__p paragraph-standard">Спросите
-              анонимно.<br> Я&nbsp;буду выборочно отвечать на&nbsp;вопросы в&nbsp;instagram-блоге.</p>
-            <p class="questions__p paragraph-standard"></p>
-            <p class="questions__p paragraph-standard">Многим людям важно узнать ответ на&nbsp;ваш вопрос.</p>
-            <p class="questions__p paragraph-standard">Давайте будем бережны друг к&nbsp;другу!</p>
-          </div>
-
-          <form class="questions__form">
-            <textarea name="text" class="questions__comment"
-              placeholder="(Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными...)"></textarea>
-            <!-- Thanx-message modal window -->
-            <!-- <div class="overlay hidden" id="overlay">
+            <form class="questions__form">
+              <textarea
+                name="text"
+                class="questions__comment"
+                placeholder="(Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными...)"
+              ></textarea>
+              <!-- Thanx-message modal window -->
+              <!-- <div class="overlay hidden" id="overlay">
               <section class="modal hidden" id="modal_window">
                 <button class="btn-close" id="btn_close_modal">⨉</button>
 
                 <div class="modal__content" id="modal_window_content"></div>
               </section>
             </div> -->
-          </form>
-          <button class="questions__button btn button-text" type="submit" disabled="true">
-            Отправить
-          </button>
+            </form>
+            <button
+              class="questions__button btn button-text"
+              type="submit"
+              disabled="true"
+            >
+              Отправить
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="button-up">
+      <svg class="icon-up">
+        <use xlink:href="/assets/images/figures/sprite.svg#arrow_up"></use>
+      </svg>
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="contacts">
+      <div class="footer__content container">
+        <!-- Контакты -->
+        <div class="footer__card card">
+          <div class="footer__logo-block">
+            <a class="footer__logo" href="index.html">
+              <svg class="footer__logo">
+                <use
+                  xlink:href="/assets/images/figures/sprite.svg#logo-footer"
+                ></use>
+              </svg>
+            </a>
+            <p class="footer__logo-text paragraph-standard">
+              Онлайн-консультации секс-терапевтки Катерины Тартари
+            </p>
+          </div>
+
+          <div class="footer__social-icons">
+            <a target="_blank" href="https://wa.me/33646811834">
+              <svg class="footer__social-icon">
+                <use
+                  xlink:href="/assets/images/figures/sprite.svg#whatsApp"
+                ></use>
+              </svg>
+            </a>
+            <a target="_blank" href="https://t.me/Sartari">
+              <svg class="footer__social-icon">
+                <use
+                  xlink:href="/assets/images/figures/sprite.svg#telegram"
+                ></use>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/inspired.intimacy/"
+            >
+              <svg class="footer__social-icon">
+                <use
+                  xlink:href="/assets/images/figures/sprite.svg#instagram"
+                ></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__wrapper">
+          <!-- Подписка -->
+          <div class="footer__wrapper-card card">
+            <h3 class="footer__title h3-title">Подписка</h3>
+            <hr >
+            <nav>
+              <a
+                href="https://www.instagram.com/rina_ramzaeva/"
+                class="paragraph-standard"
+                >Instagram-блог</a
+              >
+            </nav>
+          </div>
+
+          <!-- Проекты -->
+          <div class="footer__wrapper-card card">
+            <h3 class="footer__title h3-title">Проекты</h3>
+            <hr >
+            <nav>
+              <a target="_blank" href="#benefits" class="paragraph-standard"
+                >Арт-терапия</a
+              >
+              <a target="_blank" href="#tv" class="paragraph-standard"
+                >Группы</a
+              >
+              <a target="_blank" href="#education" class="paragraph-standard"
+                >Проект</a
+              >
+            </nav>
+          </div>
+
+          <!-- Ссылки -->
+          <div class="footer__wrapper-card card">
+            <h3 class="footer__title h3-title">Ссылки</h3>
+            <hr >
+            <nav>
+              <a href="#benefits" class="paragraph-standard">Преимущества</a>
+              <a href="#tv" class="paragraph-standard">Просвещение</a>
+              <a href="#education" class="paragraph-standard">Образование</a>
+              <a href="#registration" class="paragraph-standard">Запись</a>
+              <a href="#faq" class="paragraph-standard">FAQ</a>
+            </nav>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
-
-  <button class="button-up">
-    <svg class="icon-up">
-      <use xlink:href="/assets/images/figures/sprite.svg#arrow_up"></use>
-    </svg>
-  </button>
-
-  <!-- FOOTER -->
-  <footer class="footer" id="contacts">
-    <div class="footer__content container">
-
-      <!-- Контакты -->
-      <div class="footer__card card">
-        <div class="footer__logo-block">
-          <a class="footer__logo" href="index.html">
-            <svg class="footer__logo">
-              <use xlink:href="/assets/images/figures/sprite.svg#logo-footer"></use>
-            </svg>
-          </a>
-          <p class="footer__logo-text paragraph-standard">Онлайн-консультации секс-терапевтки Катерины Тартари</p>
-        </div>
-
-        <div class="footer__social-icons">
-          <a target="_blank" href="https://wa.me/33646811834">
-            <svg class="footer__social-icon">
-              <use xlink:href="/assets/images/figures/sprite.svg#whatsApp"></use>
-            </svg>
-          </a>
-          <a target="_blank" href="https://t.me/Sartari">
-            <svg class="footer__social-icon">
-              <use xlink:href="/assets/images/figures/sprite.svg#telegram"></use>
-            </svg>
-          </a>
-          <a target="_blank" href="https://www.instagram.com/inspired.intimacy/">
-            <svg class="footer__social-icon">
-              <use xlink:href="/assets/images/figures/sprite.svg#instagram"></use>
-            </svg>
-          </a>
-        </div>
+      <div class="footer__rights">
+        <p class="footer__paragraph-standard paragraph-standard">
+          &copy; 2024 Екатерина Тартари. Все права защищены.
+        </p>
+        <p>
+          <a
+            href="https://www.instagram.com/ddc.web.studio/"
+            class="footer__link-studio paragraph-standard"
+            >Сайт разработан © DDС Web Studio</a
+          >
+        </p>
       </div>
+    </footer>
+    <div id="language_version" hidden>ru</div>
 
-      <div class="footer__wrapper">
-        <!-- Подписка -->
-        <div class="footer__wrapper-card card">
-          <h3 class="footer__title h3-title">Подписка</h3>
-          <hr />
-          <nav>
-            <a href="https://www.instagram.com/rina_ramzaeva/" class="paragraph-standard">Instagram-блог</a>
-          </nav>
-        </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 
-        <!-- Проекты -->
-        <div class="footer__wrapper-card card">
-          <h3 class="footer__title h3-title">Проекты</h3>
-          <hr />
-          <nav>
-            <a target="_blank" href="#benefits" class="paragraph-standard">Арт-терапия</a>
-            <a target="_blank" href="#tv" class="paragraph-standard">Группы</a>
-            <a target="_blank" href="#education" class="paragraph-standard">Проект</a>
-          </nav>
-        </div>
-
-        <!-- Ссылки -->
-        <div class="footer__wrapper-card card">
-          <h3 class="footer__title h3-title">Ссылки</h3>
-          <hr />
-          <nav>
-            <a href="#benefits" class="paragraph-standard">Преимущества</a>
-            <a href="#tv" class="paragraph-standard">Просвещение</a>
-            <a href="#education" class="paragraph-standard">Образование</a>
-            <a href="#registration" class="paragraph-standard">Запись</a>
-            <a href="#faq" class="paragraph-standard">FAQ</a>
-          </nav>
-        </div>
-
-      </div>
-    </div>
-    <div class="footer__rights">
-      <p class="footer__paragraph-standard paragraph-standard">&copy; 2024 Екатерина Тартари. Все права защищены.</p>
-      <p>
-        <a href="https://www.instagram.com/ddc.web.studio/" class="footer__link-studio paragraph-standard">Сайт
-          разработан © DDС Web Studio</a>
-      </p>
-    </div>
-  </footer>
-  <div id="language_version" hidden>ru</div>
-
-  <!-- <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script> -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
-  
-  <!-- <script src="/assets/scripts/localization.js"></script> -->
-  <script type="module" src="/assets/scripts/index.js"></script>
-  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script>
-</body>
-
+    <!-- <script src="/assets/scripts/localization.js"></script> -->
+    <script type="module" src="/assets/scripts/index.js"></script>
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+    ></script>
+  </body>
 </html>
