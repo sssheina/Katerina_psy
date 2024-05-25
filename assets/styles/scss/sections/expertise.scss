@@ -1,132 +1,157 @@
 .expertise {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 73px 0 72px;
-  
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+  padding: 73px 0 72px;
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 125px;
+    display: grid;
+    align-items: start;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto;
+    gap: 93px 25px;
     padding: 85px 0 95px;
-  }
 
-    &__sexuality, 
-    &__relationship,
-    &__inner {
-        display: flex;    
-        gap: 25px;
-        align-items: flex-start;
+    @include r(1140) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 1fr auto 1fr auto 1fr auto;
     }
-
-  &__relationship-title,
-  &__sexuality-title,
-  &__inner-title {
-    display: flex;
-    align-items: center;
-    max-width: 487px;
-    width: 100%;
-    position: relative;
   }
 
-  &__title-block {
-  white-space: nowrap;
+  &__conclusion {
+    grid-column: 2;
+    grid-row: 4 / 5;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 7 / 8;
+    }
+  }
+}
+
+.expertise-heading {
+  display: flex;
+  align-items: center;
+
+  &:nth-child(3) {
+    grid-row: 2 / 3;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 3 / 4;
+    }
+  }
+
+  &:nth-child(5) {
+    grid-row: 3 / 4;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 5 / 6;
+    }
+  }
+
+  &__title {
+    white-space: nowrap;
   }
 
   &__line {
+    position: relative;
     flex-grow: 1;
     height: 1px;
     background-color: $color-blue-dark;
     margin-left: 1em;
-  }
 
-  &__line::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 10px; /* Диаметр шарика */
-    height: 10px; /* Диаметр шарика */
-    background-color: $color-blue-dark; /* Цвет шарика */
-    border-radius: 50%;
-    transform: translateY(-50%);
-  }
-
-  &__sexuality-pic,
-  &__relationship-pic,
-  &__inner-pic {
-    max-width: 387px;
-    width: 100%;
-    height: 580px;
-  }
-
-  &__sexuality-text,
-  &__relationship-text,
-  &__inner-text {
-display: flex;
-flex-direction: column;
-gap: 30px;
-  }
-
-  &__item {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  &__small-title {
-    display: flex;
-    align-items: center;
-    max-width: 670px;
-    width: 100%;
-    position: relative;
-  }
-
-  &__title-section {
-  white-space: nowrap;
-  color: $color-orange;
-  }
-
-  &__line-dash {
-    flex-grow: 1;
-    height: 1px;
-    // background-color: $color-blueDark;
-    margin-left: 1em;
-    border-bottom: 1px dashed $color-orange;
-  }
-
-  &__conclusion {
-    display: flex;
-    width: 100%;
-    padding-bottom: 95px;
-  }
-
-  &__conclusion-empty {
-    max-width: 512px;
-    width: 100%;
-  }
-
-  &__conclusion-p {
-    text-align: left;
-    max-width: 685px;
-    width: 100%;
-  }
-
-  &__button {
-    width: 386px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $color-blue-dark;
+    }
   }
 }
 
-// .expertise__relationship-pic {
-//   order: 1; /* Установить порядок для изображения */
-// }
+.expertise-block {
+  display: flex;
+  gap: 25px;
 
-// .expertise__relationship-text {
-//   order: 2; /* Установить порядок для текста */
-// }
+  @include sm {
+    flex-direction: column;
+  }
+
+  &:nth-child(2) {
+    grid-column: 2;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 2 / 3;
+    }
+  }
+
+  &:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2 / 3;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 4 / 5;
+    }
+
+    @include sm {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &:nth-child(6) {
+    grid-column: 2;
+    grid-row: 3 / 4;
+
+    @include r(1140) {
+      grid-column: 1;
+      grid-row: 6 / 7;
+    }
+  }
+
+  &__picture {
+    display: flex;
+
+    @include sm {
+      justify-content: center;
+    }
+
+    img {
+      @include md {
+        max-width: 295px;
+      }
+    }
+  }
+
+  &__text {
+    display: grid;
+    gap: 30px;
+  }
+}
+
+.expertise-block-item {
+  display: grid;
+  gap: 10px;
+
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+
+  &__title {
+    white-space: nowrap;
+    color: $color-orange;
+  }
+
+  &__line {
+    flex: 1;
+    height: 1px;
+    border-bottom: 1px dashed $color-orange;
+  }
+}
