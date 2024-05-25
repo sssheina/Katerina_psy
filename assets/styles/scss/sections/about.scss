@@ -1,50 +1,49 @@
 .about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 145px 0 72px;
 
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-
   &__content {
-    display: flex;
-    flex-direction: row;
-    padding: 85px 0 95px;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 49%;
+    gap: 44px;
     justify-content: space-between;
-  }
+    padding: 85px 0 95px;
 
-  &__video-block,
-  &__video {
-    width: 790px;
+    @include lg {
+      padding: 65px 0 72px;
+    }
+
+    @include r(1250) {
+      grid-template-columns: 1fr;
+      gap: 34px;
+      padding: 40px 0;
+    }
+
+    @include sm {
+      gap: 30px;
+    }
+
+    @include xs {
+      padding: 35px 0;
+    }
   }
 
   &__text-block {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 15px;
-    width: 779px;
   }
 
-  &__hr {
+  &__video-block {
+    @include r(1250) {
+      grid-row: -1;
+    }
+  }
+
+  &__line {
     width: 200px;
+    justify-self: start;
     margin-left: 0;
-    text-align: start;
-    color: $color-blue-dark;
-    height: 2px;
-  }
-
-  &__button-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  &__button {
-    width: 386px;
+    height: 1px;
+    border: none;
+    background: $color-gray-dark;
   }
 }
