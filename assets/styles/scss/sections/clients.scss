@@ -1,13 +1,5 @@
 .clients {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 73px 0 72px;
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__cards {
     display: grid;
@@ -35,30 +27,30 @@
   height: 400px;
   padding: 28px;
   justify-content: flex-end;
-  
+
   &:nth-child(1),
   &:nth-child(2),
   &:nth-child(3),
   &:nth-child(4) {
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
   }
 
   &:nth-child(1) {
-    background-image: url('/assets/images/clients-individual.png');
+    background-image: url("/assets/images/clients-individual.png");
   }
 
   &:nth-child(2) {
-    background-image: url('/assets/images/clients-pair.png');
+    background-image: url("/assets/images/clients-pair.png");
   }
 
   &:nth-child(3) {
-    background-image: url('/assets/images/clients-family.png');
+    background-image: url("/assets/images/clients-family.png");
   }
 
   &:nth-child(4) {
-    background-image: url('/assets/images/clients-group_3.png');
+    background-image: url("/assets/images/clients-group_3.png");
   }
 
   &__title {

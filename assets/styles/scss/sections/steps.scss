@@ -1,92 +1,78 @@
 .steps {
-display: flex;
-justify-content: center;
-  align-items: center;
   padding: 145px 0 72px;
 
-
-&__wrapper {
-    display: flex;
-    flex-direction: column;
+  &__content {
+    display: grid;
+    grid-template-columns: auto 15% 32% 1fr;
+    gap: 25px;
+    margin: 85px 0 95px;
   }
 
-
-
-&__content {
-    display: flex;
-    gap: 162px;
-    margin: 85px 0 95px;
-}
-
-&__img  {
+  &__img {
     max-width: 112px;
     width: 100%;
-     height: 444px;
+    grid-row: span 3;
 
-     img {
+    img {
+      display: block;
       width: 100%;
-      height: 100%;
-     }
-}
+    }
+  }
 
-
-
-&__step {
-    display: flex;
-    align-items: flex-start;
-    gap: 25px;
-}
-
-&__number{
-    color: $color-orange;
-    margin-right: 68px;
+  &__number {
+    justify-self: end;
+    margin-right: 40px;
     line-height: 50%;
-}
+    color: $color-orange;
 
-&__name {
+    &:nth-of-type(1) {
+      grid-column: 2;
+    }
+
+    &:nth-of-type(2) {
+      grid-column: 2;
+    }
+
+    &:nth-of-type(3) {
+      grid-column: 2;
+    }
+
+    &:nth-of-type(4) {
+      grid-column: 2;
+    }
+  }
+
+  &__step {
     display: flex;
     align-items: center;
-    width: 100%;
-    position: relative;
-    width: 524px;
-}
+    height: fit-content;
+    gap: 0.5em;
+  }
 
-&__title-step {
+  &__subtitle {
     white-space: nowrap;
-}
+  }
 
-&__line {
-    flex-grow: 1;
+  &__line {
+    position: relative;
+    flex: 1;
     height: 1px;
     background-color: $color-orange;
     margin-left: 1em;
-}
 
-&__line::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 10px; /* Диаметр шарика */
-    height: 10px; /* Диаметр шарика */
-    background-color: $color-orange; /* Цвет шарика */
-    border-radius: 50%;
-    transform: translateY(-50%);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      width: 10px;
+      height: 10px;
+      background: $color-orange;
+      border-radius: 50%;
+    }
   }
 
-
-  &__info {
-    display: flex;
-    flex-direction: column;
-    gap: 75px;
-  }
   &__text {
-     max-width: 660px;
   }
-
-  &__button {
-    max-width: 386px;
-    width: 100%;
-  }
-
 }
