@@ -2361,9 +2361,6 @@ body.lock {
 }
 
 .words {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 161px 0 161px;
   background-image: url("/assets/images/words_background.png");
   background-size: cover;
@@ -2371,9 +2368,9 @@ body.lock {
   background-repeat: no-repeat;
 }
 .words__wrapper {
-  display: flex;
-  flex-direction: column;
   height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 .words__content {
