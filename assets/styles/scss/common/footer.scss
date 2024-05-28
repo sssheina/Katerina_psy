@@ -1,6 +1,5 @@
 .footer {
   background: $color-blue-light;
-  
 
   &__content {
     display: grid;
@@ -28,10 +27,16 @@
     // }
   }
 
-  &__card  {
-    display: flex;
-    flex-direction: column;
-    gap: 70px;
+  &__left {
+    max-width: fit-content;
+    display: grid;
+    align-content: space-between;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-blue-dark;
+    transition: $transition;
   }
 
   &__logo-block {
@@ -43,23 +48,46 @@
   &__logo {
     width: 92px;
     height: 90px;
-    fill: $color-blue-dark;
   }
 
   &__logo-text {
-    // font-family: var(--raleway-font-family);
     font-weight: 500;
     max-width: 240px;
   }
 
-  &__rights {
+  &__socials {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: space-between;
+    gap: 33px;
+  }
+
+  &__menu {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: right;
+    gap: 23px;
+  }
+
+  &__nav {
+    display: grid;
+    gap: 20px;
+
+    @include xs {
+      gap: 30px;
+    }
+  }
+
+  &__rights {
+    display: grid;
+    justify-items: center;
     gap: 15px;
-    // color: #fff;
-    background: $color-blue-dark;
     padding: 47px 0 47px;
+    background: $color-blue-dark;
 
     @include lg {
       padding: 40px 0 40px;
@@ -78,192 +106,17 @@
       padding: 30px 0 30px;
       font-size: 11px;
     }
-
-    p:last-child {
-      display: flex;
-      align-items: center;
-      color: $color-white;
-    }
   }
 
-  &__paragraph-standard {
+  &__copyright {
     color: $color-white;
   }
 
-  &__card:first-child {
-    h3 {
-      @include md {
-        text-align: center;
-      }
-    }
-
-    //   hr {
-    //     @include hr(130px, 30px 0 40px);
-
-    //     @include lg {
-    //       @include hr(92px, 23px 0 30px);
-    //     }
-
-    //     @include md {
-    //       @include hr(60px, 15px auto 40px);
-    //     }
-
-    //     @include sm {
-    //       @include hr(60px, 13px auto 40px);
-    //     }
-
-    //     @include xs {
-    //       @include hr(45px, 10px auto 30px);
-    //     }
-    //   }
-  }
-
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    
-
-    @include md {
-      gap: 110px;
-    }
-
-    @include sm {
-      gap: 54px;
-    }
-  }
-  &__wrapper-card {
-    display: flex;
-    flex-direction: column;
-align-items: flex-end;
-  }
-
-  &__wrapper-card:last-child {
-    h3 {
-      text-align: right;
-
-      @include md {
-        text-align: left;
-      }
-    }
-
-    //   hr {
-    //     @include hr(130px, 30px 0 40px auto);
-
-    //     @include lg {
-    //       @include hr(92px, 23px 0 30px auto);
-    //     }
-
-    //     @include md {
-    //       @include hr(60px, 13px 0 30px);
-    //     }
-
-    //     @include sm {
-    //       @include hr(60px, 13px 0 25px);
-    //     }
-
-    //     @include xs {
-    //       @include hr(45px, 10px 0 20px);
-    //     }
-    //   }
-
-    nav {
-      align-items: flex-end;
-    }
-    
-
-    nav a {
-      text-align: right;
-
-      @include md {
-        text-align: left;
-      }
-    }
-  }
-
-  &__social-icons {
-    display: flex;
-    gap: 93px;
-
-    @include lg {
-      gap: 36px;
-    }
-
-    @include md {
-      gap: 76px;
-    }
-
-    @include xs {
-      gap: 63px;
-    }
-  }
-
-  &__social-icon {
-    max-width: 53.33px;
-    width: 100%;
-    color:$color-blue-dark;
-
-    @include lg {
-      max-width: 40px;
-    }
-
-    @include xs {
-      max-width: 40px;
-    }
-  }
-
-  
   &__link-studio {
-    text-decoration: none;
-    transition: 0.3s ease;
     color: $color-white;
 
     &:hover {
       color: $color-orange;
-    }
-  }
-}
-
-.card  {
-  max-width: fit-content;
-
-  // hr {
-  //   @include hr(167px, 20px 0 40px);
-
-  //   @include lg {
-  //     @include hr(125px, 16px 0 31px);
-  //   }
-
-  //   @include md {
-  //     @include hr(66px, 15px 0 30px);
-  //   }
-
-  //   @include sm {
-  //     @include hr(66px, 15px 0 25px);
-  //   }
-
-  //   @include xs {
-  //     @include hr(50px, 10px 0 20px);
-  //   }
-  // }
-
-  nav {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 20px;
-    
-
-    @include xs {
-      gap: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      transition: 0.3s ease;
-
-      &:hover {
-        color: $color-orange;
-      }
     }
   }
 }

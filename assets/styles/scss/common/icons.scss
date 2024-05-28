@@ -48,3 +48,14 @@
   max-height: 40px;
   fill: $color-white;
 }
+
+.icon-social {
+  max-width: 53px;
+  max-height: 53px;
+  color: $color-blue-dark;
+
+  @include lg {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}

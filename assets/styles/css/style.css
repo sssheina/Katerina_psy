@@ -1398,10 +1398,15 @@ body.lock {
   padding: 130px 0 161px;
   margin: 0 auto;
 }
-.footer__card {
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
+.footer__left {
+  max-width: fit-content;
+  display: grid;
+  align-content: space-between;
+}
+.footer__link {
+  text-decoration: none;
+  color: #010e23;
+  transition: 0.4s ease;
 }
 .footer__logo-block {
   display: flex;
@@ -1411,19 +1416,41 @@ body.lock {
 .footer__logo {
   width: 92px;
   height: 90px;
-  fill: #010e23;
 }
 .footer__logo-text {
   font-weight: 500;
   max-width: 240px;
 }
-.footer__rights {
+.footer__socials {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__right {
+  display: flex;
+  justify-content: space-between;
+  gap: 33px;
+}
+.footer__menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: right;
+  gap: 23px;
+}
+.footer__nav {
+  display: grid;
+  gap: 20px;
+}
+@media only screen and (max-width: 427px) {
+  .footer__nav {
+    gap: 30px;
+  }
+}
+.footer__rights {
+  display: grid;
+  justify-items: center;
   gap: 15px;
-  background: #010e23;
   padding: 47px 0 47px;
+  background: #010e23;
 }
 @media only screen and (max-width: 1919px) {
   .footer__rights {
@@ -1447,119 +1474,13 @@ body.lock {
     font-size: 11px;
   }
 }
-.footer__rights p:last-child {
-  display: flex;
-  align-items: center;
+.footer__copyright {
   color: #fefefe;
-}
-.footer__paragraph-standard {
-  color: #fefefe;
-}
-@media only screen and (max-width: 1439px) {
-  .footer__card:first-child h3 {
-    text-align: center;
-  }
-}
-.footer__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 1439px) {
-  .footer__wrapper {
-    gap: 110px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .footer__wrapper {
-    gap: 54px;
-  }
-}
-.footer__wrapper-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.footer__wrapper-card:last-child h3 {
-  text-align: right;
-}
-@media only screen and (max-width: 1439px) {
-  .footer__wrapper-card:last-child h3 {
-    text-align: left;
-  }
-}
-.footer__wrapper-card:last-child nav {
-  align-items: flex-end;
-}
-.footer__wrapper-card:last-child nav a {
-  text-align: right;
-}
-@media only screen and (max-width: 1439px) {
-  .footer__wrapper-card:last-child nav a {
-    text-align: left;
-  }
-}
-.footer__social-icons {
-  display: flex;
-  gap: 93px;
-}
-@media only screen and (max-width: 1919px) {
-  .footer__social-icons {
-    gap: 36px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .footer__social-icons {
-    gap: 76px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .footer__social-icons {
-    gap: 63px;
-  }
-}
-.footer__social-icon {
-  max-width: 53.33px;
-  width: 100%;
-  color: #010e23;
-}
-@media only screen and (max-width: 1919px) {
-  .footer__social-icon {
-    max-width: 40px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .footer__social-icon {
-    max-width: 40px;
-  }
 }
 .footer__link-studio {
-  text-decoration: none;
-  transition: 0.3s ease;
   color: #fefefe;
 }
 .footer__link-studio:hover {
-  color: #ce6a0e;
-}
-
-.card {
-  max-width: fit-content;
-}
-.card nav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 20px;
-}
-@media only screen and (max-width: 427px) {
-  .card nav {
-    gap: 30px;
-  }
-}
-.card nav a {
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-.card nav a:hover {
   color: #ce6a0e;
 }
 
@@ -1618,6 +1539,18 @@ body.lock {
   fill: #fefefe;
 }
 
+.icon-social {
+  max-width: 53px;
+  max-height: 53px;
+  color: #010e23;
+}
+@media only screen and (max-width: 1919px) {
+  .icon-social {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
 .btn {
   max-width: 386px;
   width: 100%;
@@ -1636,7 +1569,6 @@ body.lock {
 }
 
 .button-up {
-  display: block;
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
@@ -1645,7 +1577,6 @@ body.lock {
   border-radius: 30px;
   width: 60px;
   height: 60px;
-  padding: 0.6rem 0.7rem 0.9rem;
   z-index: 998;
   transition: 0.4s ease;
 }
