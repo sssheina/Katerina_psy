@@ -7,50 +7,18 @@
     gap: 25px;
     padding: 85px 0 95px;
   }
-
-  &__button-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  &__button {
-    width: 386px;
-  }
 }
 
 .clients-card {
-  display: flex;
-  flex-direction: column;
-  width: 386px;
-  height: 400px;
-  padding: 28px;
-  justify-content: flex-end;
+  position: relative;
 
-  &:nth-child(1),
-  &:nth-child(2),
-  &:nth-child(3),
-  &:nth-child(4) {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-
-  &:nth-child(1) {
-    background-image: url("/assets/images/clients-individual.png");
-  }
-
-  &:nth-child(2) {
-    background-image: url("/assets/images/clients-pair.png");
-  }
-
-  &:nth-child(3) {
-    background-image: url("/assets/images/clients-family.png");
-  }
-
-  &:nth-child(4) {
-    background-image: url("/assets/images/clients-group_3.png");
+  &__text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px;
   }
 
   &__title {
