@@ -1328,7 +1328,7 @@ body.lock {
   background: #fefefe;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.05);
 }
-.header.scrolled .icon__logo {
+.header.scrolled .icon-logo {
   stroke: #010e23;
 }
 .header.scrolled .header__link {
@@ -1398,10 +1398,32 @@ body.lock {
   padding: 130px 0 161px;
   margin: 0 auto;
 }
+@media only screen and (max-width: 767px) {
+  .footer__content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .footer__content {
+    gap: 35px;
+  }
+}
 .footer__left {
   max-width: fit-content;
   display: grid;
   align-content: space-between;
+}
+@media only screen and (max-width: 767px) {
+  .footer__left {
+    gap: 34px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .footer__left {
+    gap: 14px;
+  }
 }
 .footer__link {
   text-decoration: none;
@@ -1413,9 +1435,24 @@ body.lock {
   align-items: center;
   gap: 35px;
 }
+@media only screen and (max-width: 1919px) {
+  .footer__logo-block {
+    gap: 25px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .footer__logo-block {
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .footer__logo-block {
+    gap: 10px;
+  }
+}
 .footer__logo {
-  width: 92px;
-  height: 90px;
+  max-width: 92px;
+  max-height: 105px;
 }
 .footer__logo-text {
   font-weight: 500;
@@ -1425,10 +1462,27 @@ body.lock {
   display: flex;
   justify-content: space-between;
 }
+@media only screen and (max-width: 767px) {
+  .footer__socials {
+    justify-content: space-around;
+  }
+}
 .footer__right {
   display: flex;
   justify-content: space-between;
   gap: 33px;
+}
+@media only screen and (max-width: 767px) {
+  .footer__right {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .footer__right {
+    gap: 25px;
+  }
 }
 .footer__menu {
   display: flex;
@@ -1436,19 +1490,24 @@ body.lock {
   text-align: right;
   gap: 23px;
 }
+@media only screen and (max-width: 767px) {
+  .footer__menu {
+    gap: 10px;
+    text-align: center;
+  }
+}
 .footer__nav {
   display: grid;
   gap: 20px;
 }
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
   .footer__nav {
-    gap: 30px;
+    gap: 8px;
   }
 }
 .footer__rights {
   display: grid;
   justify-items: center;
-  gap: 15px;
   padding: 47px 0 47px;
   background: #010e23;
 }
@@ -1484,7 +1543,7 @@ body.lock {
   color: #ce6a0e;
 }
 
-.icon__logo {
+.icon-logo {
   max-width: 35px;
   max-height: 40px;
   stroke: #fefefe;
