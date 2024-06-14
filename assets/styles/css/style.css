@@ -927,14 +927,12 @@ textarea {
 :root {
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
-  /* h1 - title */
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
   --h1-title-font-weight: 500;
   --h1-title-line-height: 100%;
   --h1-title-text-transform: uppercase;
   --h1-title-text-decoration: none;
-  /* h2 - title */
   --h2-title-font-family: var(--raleway-font-family);
   --h2-title-font-size: 64px;
   --h2-title-font-weight: 500;
@@ -942,21 +940,18 @@ textarea {
   --h2-title-text-transform: uppercase;
   --h2-title-text-decoration: none;
   --h2-title-text-align: left;
-  /* h3 - title */
   --h3-title-font-family: var(--raleway-font-family);
   --h3-title-font-size: 30px;
   --h3-title-font-weight: 500;
   --h3-title-line-height: 130%;
   --h3-title-text-transform: uppercase;
   --h3-title-text-decoration: none;
-  /* h4 - title */
   --h4-title-font-family: var(--raleway-font-family);
   --h4-title-font-size: 25px;
   --h4-title-font-weight: 500;
   --h4-title-line-height: 130%;
   --h4-title-text-transform: uppercase;
   --h4-title-text-decoration: none;
-  /* h5 - title */
   --h5-title-font-family: var(--raleway-font-family);
   --h5-title-font-size: 20px;
   --h5-title-font-weight: 500;
@@ -980,13 +975,11 @@ textarea {
   --paragraph-standard-line-height: 28px;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
-  /* button - text */
   --button-text-font-family: var(--montserrat-font-family);
   --button-text-font-size: 32px;
   --button-text-font-weight: 400;
   --button-text-font-style: normal;
   --button-text-text-decoration: none;
-  /* footnote - standard */
   --footnote-standard-font-size: 18px;
   --footnote-standard-font-weight: 400;
   --footnote-standard-font-style: italic;
@@ -1187,7 +1180,7 @@ body.lock {
 
 .link {
   text-decoration: none;
-  color: #bd5b01;
+  color: #ce6a0e;
   transition: 0.4s ease;
 }
 .link:hover {
@@ -1647,6 +1640,30 @@ body.lock {
 .button:active {
   background: #bd5b01;
 }
+@media only screen and (max-width: 1919px) {
+  .button {
+    max-width: 295px;
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .button {
+    max-width: 213px;
+    height: 50px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button {
+    max-width: 278px;
+    height: 70px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .button {
+    max-width: 208px;
+    height: 53px;
+  }
+}
 
 .button__primary {
   background: #bd5b01;
@@ -1661,9 +1678,9 @@ body.lock {
 }
 
 .button__outline {
-  border: 1px solid #bd5b01;
+  border: 1px solid #ce6a0e;
   background: #fefefe;
-  color: #bd5b01;
+  color: #ce6a0e;
 }
 .button__outline:hover {
   background: #d69961;
@@ -2556,6 +2573,19 @@ body.lock {
 .questions {
   padding: 73px 0 145px;
 }
+.questions__title {
+  margin-bottom: 85px;
+}
+@media only screen and (max-width: 1919px) {
+  .questions__title {
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .questions__title {
+    margin-bottom: 35px;
+  }
+}
 .questions__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2572,7 +2602,7 @@ body.lock {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto 1fr auto;
     grid-template-areas: "img text" "img form" "button button";
-    gap: 42px;
+    gap: 40px;
   }
 }
 @media only screen and (max-width: 740px) {
@@ -2616,7 +2646,7 @@ body.lock {
 .questions__comment {
   width: 100%;
   height: 100%;
-  border: 2px solid #b1b1b1;
+  border: 1px solid #b1b1b1;
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
   font-weight: var(--paragraph-standard-font-weight, 400);
@@ -2643,6 +2673,7 @@ body.lock {
 @media only screen and (max-width: 740px) {
   .questions__button {
     justify-self: center;
+    margin-top: 20px;
   }
 }
 

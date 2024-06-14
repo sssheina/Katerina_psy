@@ -14,6 +14,26 @@
   &:active {
     background: $color-orange-dark;
   }
+
+  @include lg {
+    max-width: 295px;
+    height: 70px;
+  }
+
+  @include md {
+    max-width: 213px;
+    height: 50px;
+  }
+
+  @include sm {
+    max-width: 278px;
+    height: 70px;
+  }
+
+  @include xs {
+    max-width: 208px;
+    height: 53px;
+  }
 }
 
 .button__primary {
@@ -31,9 +51,9 @@
 }
 
 .button__outline {
-  border: 1px solid $color-orange-middle;
+  border: 1px solid $color-orange;
   background: $color-white;
-  color: $color-orange-middle;
+  color: $color-orange;
 
   &:hover {
     background: $color-orange-light;
