@@ -1,0 +1,21 @@
+.section {
+  padding: 0 2rem;
+
+  @include sm {
+    padding: 0 30px;
+  }
+
+  @include xs {
+    padding: 0 20px;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $color-orange-middle;
+  transition: $transition;
+
+  &:hover {
+    color: $color-orange-light;
+  }
+}
