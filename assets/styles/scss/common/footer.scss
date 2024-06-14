@@ -3,31 +3,25 @@
 
   &__content {
     display: grid;
-    grid-template-columns: 45% 55%;
+    place-items: center;
+    // grid-template-columns: 45% 55%;
     padding: 130px 0 161px;
     margin: 0 auto;
-
-    // @include lg {
-    //   padding: 175px 0 155px;
-    // }
 
     // @include md {
     //   grid-template-columns: 1fr;
     //   justify-items: center;
     //   gap: 50px;
-    //   padding: 88px 0 88px;
     // }
 
     @include sm {
-      grid-template-columns: 1fr;
-      justify-items: center;
+      // grid-template-columns: 1fr;
+      // justify-items: center;
       gap: 50px;
-      //   padding: 115px 0 115px;
     }
 
     @include xs {
       gap: 35px;
-      //   padding: 85px 0 85px;
     }
   }
 
@@ -35,6 +29,7 @@
     max-width: fit-content;
     display: grid;
     align-content: space-between;
+    gap: 20px;
 
     @include sm {
       gap: 34px;

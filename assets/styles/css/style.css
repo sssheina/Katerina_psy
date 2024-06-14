@@ -1394,14 +1394,12 @@ body.lock {
 }
 .footer__content {
   display: grid;
-  grid-template-columns: 45% 55%;
+  place-items: center;
   padding: 130px 0 161px;
   margin: 0 auto;
 }
 @media only screen and (max-width: 767px) {
   .footer__content {
-    grid-template-columns: 1fr;
-    justify-items: center;
     gap: 50px;
   }
 }
@@ -1414,6 +1412,7 @@ body.lock {
   max-width: fit-content;
   display: grid;
   align-content: space-between;
+  gap: 20px;
 }
 @media only screen and (max-width: 767px) {
   .footer__left {
