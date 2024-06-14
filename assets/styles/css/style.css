@@ -2503,8 +2503,23 @@ body.lock {
   align-items: center;
 }
 .words__content {
-  max-width: 820px;
+  max-width: 702px;
   text-align: center;
+}
+@media only screen and (max-width: 1919px) {
+  .words__content {
+    max-width: 526px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .words__content {
+    max-width: 347px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .words__content {
+    max-width: 259px;
+  }
 }
 
 .faq {
