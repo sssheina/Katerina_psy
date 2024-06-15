@@ -1,18 +1,6 @@
 .questions {
   padding: 73px 0 145px;
 
-  &__title {
-    margin-bottom: 85px;
-
-    @include lg {
-      margin-bottom: 64px;
-    }
-
-    @include md {
-      margin-bottom: 35px;
-    }
-  }
-
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

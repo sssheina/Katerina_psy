@@ -1,18 +1,9 @@
 .price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 73px 0 72px;
-
-  &__wrapper {
-    display: flex;
-    flex-direction: column;
-  }
 
   &__cards {
     display: flex;
     justify-content: center;
-    padding: 85px 0 95px;
     gap: 81px;
   }
 
@@ -49,8 +40,8 @@
     transition: $transition;
 
     &:hover {
-      background:$color-orange;
-  }
+      background: $color-orange;
+    }
 
     .price-card__cross {
       fill: $color-white;
@@ -77,7 +68,7 @@
     transition: $transition;
 
     &:hover {
-      background:$color-blue-lightest;
-  }
+      background: $color-blue-lightest;
+    }
   }
 }

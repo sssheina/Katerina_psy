@@ -1164,29 +1164,6 @@ body.lock {
   margin: 0 auto;
 }
 
-.section {
-  padding: 0 2rem;
-}
-@media only screen and (max-width: 767px) {
-  .section {
-    padding: 0 30px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .section {
-    padding: 0 20px;
-  }
-}
-
-.link {
-  text-decoration: none;
-  color: #ce6a0e;
-  transition: 0.4s ease;
-}
-.link:hover {
-  color: #d69961;
-}
-
 .header {
   position: fixed;
   top: 0;
@@ -1558,6 +1535,34 @@ body.lock {
   color: #ce6a0e;
 }
 
+.section {
+  padding: 0 2rem;
+}
+@media only screen and (max-width: 767px) {
+  .section {
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .section {
+    padding: 0 20px;
+  }
+}
+
+.title {
+  margin-bottom: 85px;
+}
+@media only screen and (max-width: 1919px) {
+  .title {
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .title {
+    margin-bottom: 35px;
+  }
+}
+
 .icon-logo {
   max-width: 35px;
   max-height: 40px;
@@ -1703,6 +1708,17 @@ body.lock {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
+  margin-top: 95px;
+}
+@media only screen and (max-width: 1919px) {
+  .button-block {
+    margin-top: 70px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .button-block {
+    margin-top: 40px;
+  }
 }
 @media only screen and (max-width: 767px) {
   .button-block {
@@ -1711,6 +1727,11 @@ body.lock {
   }
   .button-block .icon-cross {
     display: none;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .button-block {
+    margin-top: 35px;
   }
 }
 
@@ -1727,6 +1748,15 @@ body.lock {
 }
 .hover-transform:hover {
   transform: translateY(-5px);
+}
+
+.link {
+  text-decoration: none;
+  color: #ce6a0e;
+  transition: 0.4s ease;
+}
+.link:hover {
+  color: #d69961;
 }
 
 .cover {
@@ -2407,19 +2437,11 @@ body.lock {
   border-radius: 50%;
 }
 .price {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 73px 0 72px;
-}
-.price__wrapper {
-  display: flex;
-  flex-direction: column;
 }
 .price__cards {
   display: flex;
   justify-content: center;
-  padding: 85px 0 95px;
   gap: 81px;
 }
 .price__card {
@@ -2667,19 +2689,6 @@ body.lock {
 
 .questions {
   padding: 73px 0 145px;
-}
-.questions__title {
-  margin-bottom: 85px;
-}
-@media only screen and (max-width: 1919px) {
-  .questions__title {
-    margin-bottom: 64px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .questions__title {
-    margin-bottom: 35px;
-  }
 }
 .questions__content {
   display: grid;
