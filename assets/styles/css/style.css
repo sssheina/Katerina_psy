@@ -962,7 +962,7 @@ textarea {
   --paragraph-large-font-size: 48px;
   --paragraph-large-font-weight: 500;
   --paragraph-large-line-height: 1.5;
-  --paragraph-large-text-transform: none;
+  --paragraph-large-text-transform: uppercase;
   --paragraph-medium-font-family: var(--raleway-font-family);
   --paragraph-medium-font-size: 40px;
   --paragraph-medium-font-weight: 400;
@@ -2444,29 +2444,62 @@ body.lock {
   justify-content: center;
   gap: 81px;
 }
+@media only screen and (max-width: 1919px) {
+  .price__cards {
+    gap: 62px;
+  }
+}
+@media only screen and (max-width: 1170px) {
+  .price__cards {
+    display: grid;
+    justify-items: center;
+    grid-template-areas: "first first" "second third";
+    gap: 34px;
+  }
+}
+@media only screen and (max-width: 920px) {
+  .price__cards {
+    grid-template-areas: "first" "second" "third";
+  }
+}
+@media only screen and (max-width: 767px) {
+  .price__cards {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .price__cards {
+    gap: 25px;
+  }
+}
 .price__card {
   display: grid;
   max-width: 411px;
   width: 100%;
-  padding: 50px 30px 46px;
+  padding: 50px 30px;
   gap: 30px;
+}
+@media only screen and (max-width: 1919px) {
+  .price__card {
+    max-width: 320px;
+    padding: 35px 20px;
+    gap: 22px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .price__card {
+    padding: 30px 15px;
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .price__card {
+    padding: 25px 15px;
+  }
 }
 
-.price-card__cross-container {
-  display: flex;
-  gap: 30px;
-}
-.price-card__list {
-  list-style-type: disc;
-  padding-left: 25px;
-}
-.price-card__price {
-  font-family: var(--raleway-font-family);
-  font-size: 48px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 .price-card:nth-child(1) {
+  grid-area: first;
   background: #bd5b01;
   color: #fefefe;
   transition: 0.4s ease;
@@ -2487,13 +2520,31 @@ body.lock {
 .price-card:nth-child(1) .price-card__list-item {
   color: #fefefe;
 }
-.price-card:nth-child(2), .price-card:nth-child(3) {
+.price-card:nth-child(2) {
+  grid-area: second;
   background: #d9e9ff;
   color: #010e23;
   transition: 0.4s ease;
 }
-.price-card:nth-child(2):hover, .price-card:nth-child(3):hover {
+.price-card:nth-child(2):hover {
   background: #e5effc;
+}
+.price-card:nth-child(3) {
+  grid-area: third;
+  background: #d9e9ff;
+  color: #010e23;
+  transition: 0.4s ease;
+}
+.price-card:nth-child(3):hover {
+  background: #e5effc;
+}
+.price-card__cross-container {
+  display: flex;
+  gap: 30px;
+}
+.price-card__list {
+  list-style-type: disc;
+  padding-left: 25px;
 }
 
 .registration {

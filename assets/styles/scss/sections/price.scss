@@ -5,36 +5,63 @@
     display: flex;
     justify-content: center;
     gap: 81px;
+
+    @include lg {
+      gap: 62px;
+    }
+
+    @include r(1170) {
+      display: grid;
+      justify-items: center;
+      grid-template-areas:
+        "first first"
+        "second third";
+      gap: 34px;
+    }
+
+    @include r(920) {
+      grid-template-areas:
+        "first"
+        "second"
+        "third";
+    }
+
+    @include sm {
+      gap: 30px;
+    }
+
+    @include xs {
+      gap: 25px;
+    }
   }
 
   &__card {
     display: grid;
     max-width: 411px;
     width: 100%;
-    padding: 50px 30px 46px;
+    padding: 50px 30px;
     gap: 30px;
+
+    @include lg {
+      max-width: 320px;
+      padding: 35px 20px;
+      gap: 22px;
+    }
+
+    @include md {
+      padding: 30px 15px;
+      gap: 15px;
+    }
+
+    @include xs {
+      padding: 25px 15px;
+    }
   }
 }
 
 .price-card {
-  &__cross-container {
-    display: flex;
-    gap: 30px;
-  }
-
-  &__list {
-    list-style-type: disc;
-    padding-left: 25px;
-  }
-
-  &__price {
-    font-family: var(--raleway-font-family);
-    font-size: 48px;
-    font-weight: 500;
-    text-transform: uppercase;
-  }
-
   &:nth-child(1) {
+    grid-area: first;
     background: $color-orange-dark;
     color: $color-white;
     transition: $transition;
@@ -61,8 +88,8 @@
     }
   }
 
-  &:nth-child(2),
-  &:nth-child(3) {
+  &:nth-child(2) {
+    grid-area: second;
     background: $color-blue-light;
     color: $color-blue-dark;
     transition: $transition;
@@ -70,5 +97,26 @@
     &:hover {
       background: $color-blue-lightest;
     }
+  }
+
+  &:nth-child(3) {
+    grid-area: third;
+    background: $color-blue-light;
+    color: $color-blue-dark;
+    transition: $transition;
+
+    &:hover {
+      background: $color-blue-lightest;
+    }
+  }
+
+  &__cross-container {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__list {
+    list-style-type: disc;
+    padding-left: 25px;
   }
 }
