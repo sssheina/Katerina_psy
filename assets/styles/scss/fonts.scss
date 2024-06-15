@@ -65,9 +65,8 @@
 :root {
   --montserrat-font-family: "Montserrat", sans-serif;
   --raleway-font-family: "Raleway", sans-serif;
-  
 
-  /* h1 - title */
+  // h1 - title
 
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
@@ -78,20 +77,17 @@
 
   @include lg {
     --h1-title-font-size: 78px;
-    
   }
 
   @include md {
     --h1-title-font-size: 41px;
-    
   }
 
   @include xs {
     --h1-title-font-size: 31px;
-    
   }
 
-  /* h2 - title */
+  // h2 - title
 
   --h2-title-font-family: var(--raleway-font-family);
   --h2-title-font-size: 64px;
@@ -113,7 +109,7 @@
     --h2-title-font-size: 31px;
   }
 
-  /* h3 - title */
+  // h3 - title
 
   --h3-title-font-family: var(--raleway-font-family);
   --h3-title-font-size: 30px;
@@ -134,7 +130,7 @@
     --h3-title-font-size: 16px;
   }
 
-  /* h4 - title */
+  // h4 - title
 
   --h4-title-font-family: var(--raleway-font-family);
   --h4-title-font-size: 25px;
@@ -144,7 +140,7 @@
   --h4-title-text-decoration: none;
 
   @include lg {
-    --h4-title-font-size: 19px; 
+    --h4-title-font-size: 19px;
   }
 
   @include md {
@@ -155,7 +151,7 @@
     --h4-title-font-size: 14px;
   }
 
-  /* h5 - title */
+  // h5 - title
 
   --h5-title-font-family: var(--raleway-font-family);
   --h5-title-font-size: 20px;
@@ -176,7 +172,7 @@
     --h5-title-font-size: 12px;
   }
 
-  // /* paragraph - large */ цена в тарифах
+  // paragraph - large  цена в тарифах
 
   --paragraph-large-font-family: var(--raleway-font-family);
   --paragraph-large-font-size: 48px;
@@ -196,7 +192,7 @@
     --h5-title-font-size: 20px;
   }
 
-  // /* paragraph - medium */ текст в блоке слова
+  // paragraph - medium  текст в блоке слова
 
   --paragraph-medium-font-family: var(--raleway-font-family);
   --paragraph-medium-font-size: 40px;
@@ -217,7 +213,7 @@
     --paragraph-medium-font-size: 15px;
   }
 
-  // /* paragraph - standard*/ основной текст
+  // paragraph - standard основной текст
 
   --paragraph-standard-font-family: var(--montserrat-font-family);
   --paragraph-standard-font-size: 20px;
@@ -238,7 +234,8 @@
     --paragraph-standard-font-size: 14px;
   }
 
-  /* button - text */
+  // button - text
+
   --button-text-font-family: var(--montserrat-font-family);
   --button-text-font-size: 32px;
   --button-text-font-weight: 400;
@@ -257,7 +254,8 @@
     --button-text-font-size: 15px;
   }
 
-  /* footnote - standard */
+  // footnote - standard
+
   --footnote-standard-font-size: 18px;
   --footnote-standard-font-weight: 400;
   --footnote-standard-font-style: italic;
