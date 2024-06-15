@@ -1,9 +1,4 @@
 .faq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 145px 0 72px;
-
   &__wrapper {
     display: grid;
     grid-template-columns: 15% 1fr;

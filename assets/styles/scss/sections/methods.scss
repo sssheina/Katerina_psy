@@ -1,9 +1,7 @@
 .methods {
-  padding: 73px 0 72px;
-
   &__cards {
     gap: 0 25px;
-    padding: 85px 2px 95px;
+    padding: 0 2px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 15%;

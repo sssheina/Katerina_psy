@@ -1,15 +1,8 @@
 .feedback {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("/assets/images/feedback_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  &__wrapper {
-    padding: 145px 0;
-  }
 
   &__title {
     color: $color-white;

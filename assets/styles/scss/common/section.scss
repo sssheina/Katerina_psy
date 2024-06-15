@@ -1,11 +1,19 @@
 .section {
-  padding: 0 2rem;
+  padding: 90px 150px;
+
+  @include lg {
+    padding: 80px 100px;
+  }
+
+  @include md {
+    padding: 60px 50px;
+  }
 
   @include sm {
-    padding: 0 30px;
+    padding: 80px 30px;
   }
 
   @include xs {
-    padding: 0 20px;
+    padding: 70px 20px;
   }
 }

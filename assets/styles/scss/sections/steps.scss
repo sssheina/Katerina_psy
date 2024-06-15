@@ -1,6 +1,4 @@
 .steps {
-  padding: 145px 0 72px;
-
   &__content {
     display: grid;
     grid-template-columns: auto 15% 32% 1fr;
@@ -22,7 +20,7 @@
     }
 
     @include xs {
-      gap: 0 18px;
+      gap: 0 15px;
     }
   }
 
@@ -96,6 +94,10 @@
     align-items: center;
     height: fit-content;
     gap: 0.5em;
+
+    @include sm {
+      gap: 0.3em;
+    }
   }
 
   &__subtitle {
@@ -108,6 +110,10 @@
     height: 1px;
     background-color: $color-orange;
     margin-left: 1em;
+
+    @include sm {
+      margin-left: 0.3em;
+    }
 
     &::after {
       content: "";
