@@ -2179,17 +2179,15 @@ body.lock {
 }
 @media only screen and (max-width: 1919px) {
   .benefits-card {
-    grid-template-rows: 30% 1fr;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .benefits-card {
     grid-template-rows: auto auto;
     gap: 15px;
   }
 }
 .benefits-card__img {
+  width: 100%;
+  object-fit: cover;
   justify-self: center;
+  display: block;
 }
 @media only screen and (max-width: 1439px) {
   .benefits-card__img {

@@ -28,16 +28,15 @@
   grid-template-rows: 38% 1fr;
 
   @include lg {
-    grid-template-rows: 30% 1fr;
-  }
-
-  @include sm {
     grid-template-rows: auto auto;
     gap: 15px;
   }
 
   &__img {
+    width: 100%;
+    object-fit: cover;
     justify-self: center;
+    display: block;
 
     @include md {
       max-width: 213px;
