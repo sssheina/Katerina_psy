@@ -60,7 +60,7 @@ questions.forEach((question) => {
   question.addEventListener("click", showQuestion);
 });
 
-// ----- SLIDER HELP -----
+// ----- FEEDBACK -----
 
 const swiper = new Swiper(".swiper", {
   grabCursor: true,

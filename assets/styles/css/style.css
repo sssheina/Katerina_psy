@@ -1602,6 +1602,17 @@ body.lock {
   max-height: 100px;
   fill: #fefefe;
 }
+@media only screen and (max-width: 1919px) {
+  .icon-quote {
+    max-width: 40px;
+    max-height: 70px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .icon-quote {
+    max-width: 30px;
+  }
+}
 
 .icon-up {
   width: 100%;
@@ -1668,7 +1679,7 @@ body.lock {
 }
 
 .button__primary {
-  background: #bd5b01;
+  background: #ce6a0e;
   color: #fefefe;
   border: none;
 }
@@ -2271,25 +2282,60 @@ body.lock {
   justify-content: center;
   padding: 0 70px;
 }
+@media only screen and (max-width: 1439px) {
+  .feedback__content {
+    padding: 0 50px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .feedback__content {
+    padding: 0 40px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .feedback__content {
+    padding: 0 20px;
+  }
+}
 .feedback__slide {
   display: grid !important;
   grid-template-rows: auto 1fr auto auto auto;
   gap: 15px;
+}
+@media only screen and (max-width: 767px) {
+  .feedback__slide {
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .feedback__slide {
+    gap: 2px;
+  }
 }
 .feedback__text {
   color: #fefefe;
   margin-bottom: 10px;
   padding-right: 5rem;
 }
+@media only screen and (max-width: 1439px) {
+  .feedback__text {
+    padding-right: 2rem;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .feedback__text {
+    padding-right: 3rem;
+  }
+}
 .feedback__line {
   width: 240px;
   height: 1px;
-  background-color: #ce6a0e;
+  background-color: #d69961;
   border: none;
   margin-left: 0;
 }
 .feedback__client {
-  color: #ce6a0e;
+  color: #d69961;
 }
 .feedback__client-info {
   color: #fefefe;
@@ -2301,6 +2347,16 @@ body.lock {
 .swiper {
   position: relative;
   padding-bottom: 6% !important;
+}
+@media only screen and (max-width: 767px) {
+  .swiper {
+    padding-bottom: 10% !important;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .swiper {
+    padding-bottom: 15% !important;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -2314,21 +2370,56 @@ body.lock {
 .swiper-pagination-bullet-active {
   width: 25px !important;
   border-radius: 5px !important;
-  background: #ce6a0e !important;
+  background: #d69961 !important;
 }
 
 .swiper-button-prev::after {
   left: 0;
   color: #fefefe;
 }
+@media only screen and (max-width: 1439px) {
+  .swiper-button-prev::after {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swiper-button-prev::after {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .swiper-button-prev::after {
+    font-size: 24px !important;
+  }
+}
 
 .swiper-button-next::after {
   right: 0;
   color: #fefefe;
 }
+@media only screen and (max-width: 1439px) {
+  .swiper-button-next::after {
+    font-size: 35px !important;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .swiper-button-next::after {
+    font-size: 30px !important;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .swiper-button-next::after {
+    font-size: 24px !important;
+  }
+}
 
 .swiper-wrapper {
   gap: 25px;
+}
+@media only screen and (max-width: 1439px) {
+  .swiper-wrapper {
+    gap: 18px;
+  }
 }
 
 .steps__content {
