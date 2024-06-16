@@ -1968,26 +1968,47 @@ body.lock {
 }
 
 .methods__cards {
-  gap: 0 25px;
-  padding: 0 2px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr 15%;
+  gap: 0 25px;
+  padding: 0 2px;
 }
-.methods__button-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end;
+@media only screen and (max-width: 1919px) {
+  .methods__cards {
+    gap: 0 20px;
+  }
 }
-.methods__button {
-  width: 386px;
+@media only screen and (max-width: 1439px) {
+  .methods__cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 34px 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .methods__cards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
 }
 
 .methods-card {
   display: grid;
   grid-template-rows: 25% 1fr;
   gap: 10px;
+}
+@media only screen and (max-width: 1919px) {
+  .methods-card {
+    grid-template-rows: 20% 1fr;
+    padding-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .methods-card {
+    grid-template-rows: 18% 1fr;
+    padding-bottom: unset;
+  }
 }
 .methods-card:nth-child(odd) .methods-card__title {
   color: #ce6a0e;
@@ -1997,6 +2018,33 @@ body.lock {
 }
 .methods-card:nth-child(4) {
   grid-row: span 2;
+}
+@media only screen and (max-width: 1439px) {
+  .methods-card:nth-child(4) {
+    grid-row: 2/3;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .methods-card:nth-child(4) {
+    grid-row: 4/5;
+  }
+}
+.methods-card__img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media only screen and (max-width: 1439px) {
+  .methods-card__img {
+    object-position: top center;
+    aspect-ratio: 0.83;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .methods-card__img {
+    object-position: center top;
+    aspect-ratio: 2.16;
+  }
 }
 
 .expertise__content {
