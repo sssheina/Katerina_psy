@@ -826,7 +826,7 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
-.questions__comment::placeholder, .paragraph-standard {
+.questions__comment::placeholder, .footer__field::placeholder, .paragraph-standard {
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
   font-weight: var(--paragraph-standard-font-weight, 400);
@@ -1387,7 +1387,8 @@ body.lock {
 }
 .footer__content {
   display: grid;
-  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
   padding: 130px 0 161px;
 }
 @media only screen and (max-width: 767px) {
@@ -1398,22 +1399,6 @@ body.lock {
 @media only screen and (max-width: 427px) {
   .footer__content {
     gap: 35px;
-  }
-}
-.footer__left {
-  max-width: fit-content;
-  display: grid;
-  align-content: space-between;
-  gap: 20px;
-}
-@media only screen and (max-width: 767px) {
-  .footer__left {
-    gap: 34px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .footer__left {
-    gap: 14px;
   }
 }
 .footer__link {
@@ -1449,6 +1434,34 @@ body.lock {
   font-weight: 500;
   max-width: 240px;
 }
+.footer__subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.footer__form {
+  display: flex;
+}
+.footer__field {
+  flex: 1;
+  height: 52px;
+  border: 1px solid #010e23;
+  padding: 12px 19px;
+}
+.footer__field::placeholder {
+  color: #b1b1b1;
+}
+.footer__button {
+  max-width: 63px;
+  width: 100%;
+  background: #010e23;
+  color: #fefefe;
+}
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 .footer__socials {
   display: flex;
   justify-content: space-between;
@@ -1456,44 +1469,6 @@ body.lock {
 @media only screen and (max-width: 767px) {
   .footer__socials {
     justify-content: space-around;
-  }
-}
-.footer__right {
-  display: flex;
-  justify-content: space-between;
-  gap: 33px;
-}
-@media only screen and (max-width: 767px) {
-  .footer__right {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .footer__right {
-    gap: 25px;
-  }
-}
-.footer__menu {
-  display: flex;
-  flex-direction: column;
-  text-align: right;
-  gap: 23px;
-}
-@media only screen and (max-width: 767px) {
-  .footer__menu {
-    gap: 10px;
-    text-align: center;
-  }
-}
-.footer__nav {
-  display: grid;
-  gap: 20px;
-}
-@media only screen and (max-width: 767px) {
-  .footer__nav {
-    gap: 8px;
   }
 }
 .footer__rights {
@@ -1636,6 +1611,11 @@ body.lock {
     max-width: 40px;
     max-height: 40px;
   }
+}
+
+.icon-arrow-right {
+  max-width: 20px;
+  max-height: 20px;
 }
 
 .button {

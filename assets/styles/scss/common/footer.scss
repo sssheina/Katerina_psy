@@ -2,9 +2,12 @@
   background: $color-blue-light;
 
   &__content {
+    // display: flex;
+    // justify-content: space-between;
     display: grid;
-    place-items: center;
-    // grid-template-columns: 45% 55%;
+    // place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
     padding: 130px 0 161px;
 
     // @include md {
@@ -21,21 +24,6 @@
 
     @include xs {
       gap: 35px;
-    }
-  }
-
-  &__left {
-    max-width: fit-content;
-    display: grid;
-    align-content: space-between;
-    gap: 20px;
-
-    @include sm {
-      gap: 34px;
-    }
-
-    @include xs {
-      gap: 14px;
     }
   }
 
@@ -83,49 +71,48 @@
     max-width: 240px;
   }
 
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__field {
+    flex: 1;
+    height: 52px;
+    border: 1px solid $color-blue-dark;
+    padding: 12px 19px;
+
+    &::placeholder {
+      color: $color-gray-dark;
+
+      @extend %paragraph-standard;
+    }
+  }
+
+  &__button {
+    max-width: 63px;
+    width: 100%;
+    background: $color-blue-dark;
+    color: $color-white;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   &__socials {
     display: flex;
     justify-content: space-between;
 
     @include sm {
       justify-content: space-around;
-    }
-  }
-
-  &__right {
-    display: flex;
-    justify-content: space-between;
-    gap: 33px;
-
-    @include sm {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    @include xs {
-      gap: 25px;
-    }
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 23px;
-
-    @include sm {
-      gap: 10px;
-      text-align: center;
-    }
-  }
-
-  &__nav {
-    display: grid;
-    gap: 20px;
-
-    @include sm {
-      gap: 8px;
     }
   }
 
