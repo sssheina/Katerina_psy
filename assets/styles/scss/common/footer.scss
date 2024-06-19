@@ -2,24 +2,20 @@
   background: $color-blue-light;
 
   &__content {
-    // display: flex;
-    // justify-content: space-between;
     display: grid;
-    // place-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     padding: 130px 0 161px;
 
-    // @include md {
-    //   grid-template-columns: 1fr;
-    //   justify-items: center;
-    //   gap: 50px;
-    // }
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
 
     @include sm {
-      // grid-template-columns: 1fr;
-      // justify-items: center;
-      gap: 50px;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 40px;
     }
 
     @include xs {
@@ -75,6 +71,19 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include lg {
+      gap: 23px;
+    }
+
+    @include md {
+      grid-row: 2 / 3;
+    }
+
+    @include sm {
+      grid-column: 1;
+      grid-row: 3;
+    }
   }
 
   &__form {
@@ -92,6 +101,11 @@
 
       @extend %paragraph-standard;
     }
+
+    @include sm {
+      height: 43px;
+      padding: 10px;
+    }
   }
 
   &__button {
@@ -102,9 +116,28 @@
   }
 
   &__contacts {
+    max-width: 336px;
+    width: 100%;
+    justify-self: end;
     display: flex;
     flex-direction: column;
     gap: 30px;
+
+    @include lg {
+      max-width: 252px;
+      gap: 23px;
+    }
+
+    @include md {
+      grid-column: 2 / 3;
+    }
+
+    @include sm {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: center;
+      text-align: center;
+    }
   }
 
   &__socials {
