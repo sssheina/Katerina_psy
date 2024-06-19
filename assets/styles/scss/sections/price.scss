@@ -8,7 +8,7 @@
       gap: 62px;
     }
 
-    @include r(1170) {
+    @include md {
       display: grid;
       justify-items: center;
       grid-template-areas:
@@ -17,14 +17,11 @@
       gap: 34px;
     }
 
-    @include r(920) {
+    @include sm {
       grid-template-areas:
         "first"
         "second"
         "third";
-    }
-
-    @include sm {
       gap: 30px;
     }
 
@@ -47,6 +44,7 @@
     }
 
     @include md {
+      max-width: 280px;
       padding: 30px 15px;
       gap: 15px;
     }

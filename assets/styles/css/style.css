@@ -972,7 +972,7 @@ textarea {
   --paragraph-standard-font-family: var(--montserrat-font-family);
   --paragraph-standard-font-size: 20px;
   --paragraph-standard-font-weight: 400;
-  --paragraph-standard-line-height: 28px;
+  --paragraph-standard-line-height: 140%;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
   --button-text-font-family: var(--montserrat-font-family);
@@ -2123,6 +2123,11 @@ body.lock {
     grid-template-rows: repeat(6, auto);
   }
 }
+@media only screen and (min-width: 1439.1px) {
+  .methods__text br {
+    display: none;
+  }
+}
 
 .methods-card {
   display: grid;
@@ -2764,7 +2769,7 @@ body.lock {
     gap: 62px;
   }
 }
-@media only screen and (max-width: 1170px) {
+@media only screen and (max-width: 1439px) {
   .price__cards {
     display: grid;
     justify-items: center;
@@ -2772,13 +2777,9 @@ body.lock {
     gap: 34px;
   }
 }
-@media only screen and (max-width: 920px) {
-  .price__cards {
-    grid-template-areas: "first" "second" "third";
-  }
-}
 @media only screen and (max-width: 767px) {
   .price__cards {
+    grid-template-areas: "first" "second" "third";
     gap: 30px;
   }
 }
@@ -2803,6 +2804,7 @@ body.lock {
 }
 @media only screen and (max-width: 1439px) {
   .price__card {
+    max-width: 280px;
     padding: 30px 15px;
     gap: 15px;
   }
