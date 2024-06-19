@@ -70,19 +70,20 @@
   position: fixed;
   right: 1.5rem;
   bottom: 1.5rem;
-  background: $color-gray-middle;
+  background: rgba(217, 217, 217, 0.5);
   border: none;
   border-radius: 30px;
-  width: 60px;
-  height: 60px;
-  z-index: 998;
+  width: 55px;
+  height: 55px;
+  z-index: 2;
   transition: $transition;
 
   &:hover {
     background: $color-gray-light;
+    transform: translateY(-4px);
   }
 
   &:active {
-    background: $color-gray-dark;
+    background: $color-orange-light;
   }
 }

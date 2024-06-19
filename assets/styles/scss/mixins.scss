@@ -93,3 +93,19 @@
 //   outline: none;
 //   outline-offset: 0;
 // }
+
+@mixin header() {
+  max-height: 100px;
+
+  @include lg {
+    max-height: 85px;
+  }
+
+  @include md {
+    max-height: 70px;
+  }
+
+  @include sm {
+    max-height: 60px;
+  }
+}

@@ -13,6 +13,7 @@ window.addEventListener("scroll", function () {
 const burger = document.querySelector(".header-burger");
 const overlay = document.querySelector(".header__overlay");
 const headerMenuLinks = document.querySelectorAll(".header__menu-link");
+let activeLink;
 
 document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", showHeaderMenu);
@@ -27,6 +28,10 @@ const showHeaderMenu = () => {
 
   nav.classList.toggle("show");
   document.body.classList.toggle("lock");
+
+  if (!nav.classList.contains("show")) {
+    activeLink.classList.remove("active");
+  }
 };
 
 headerMenuLinks.forEach((link) => {
@@ -36,6 +41,7 @@ headerMenuLinks.forEach((link) => {
     );
 
     link.classList.add("active");
+    activeLink = link;
   });
 });
 
@@ -109,6 +115,27 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
   speed: 1200,
+});
+
+// ----- BUTTON UP -----
+
+const btnUp = document.querySelector(".button-up");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  if (scrollY > 400) {
+    btnUp.style.display = "block";
+  } else {
+    btnUp.style.display = "none";
+  }
+});
+
+btnUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
 //----------Cookies---------
@@ -534,27 +561,6 @@ const swiper = new Swiper(".swiper", {
 // function validateCheckboxes(checkboxes) {
 //   return [...checkboxes].some((checkbox) => checkbox.checked);
 // }
-
-// ----- BUTTON UP -----
-
-// const btnUp = document.querySelector(".button-up");
-
-// window.addEventListener("scroll", () => {
-//   const scrollY = window.scrollY || document.documentElement.scrollTop;
-//   if (scrollY > 400) {
-//     btnUp.style.display = "block";
-//   } else {
-//     btnUp.style.display = "none";
-//   }
-// });
-
-// btnUp.addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-// });
 
 // ----- Прокрутка при клике -----
 // const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
