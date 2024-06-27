@@ -1219,7 +1219,6 @@ body.lock {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
   margin: 0;
 }
 .header__logo {
@@ -3448,8 +3447,18 @@ body.lock {
   text-transform: var(--paragraph-standard-text-transform);
   text-decoration: var(--paragraph-standard-text-decoration);
   color: #010e23;
-  padding: 20px;
+  padding: 16px;
   transition: 0.4s ease;
+}
+@media only screen and (max-width: 767px) {
+  .questions__comment {
+    padding: 12px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .questions__comment {
+    padding: 10px 8px;
+  }
 }
 .questions__comment:focus {
   border: 2px solid #d69961;

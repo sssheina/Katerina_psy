@@ -82,8 +82,16 @@
     text-transform: var(--paragraph-standard-text-transform);
     text-decoration: var(--paragraph-standard-text-decoration);
     color: $color-blue-dark;
-    padding: 20px;
+    padding: 16px;
     transition: $transition;
+
+    @include sm {
+      padding: 12px;
+    }
+
+    @include sm {
+      padding: 10px 8px;
+    }
 
     &:focus {
       border: 2px solid $color-orange-light;
