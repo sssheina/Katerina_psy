@@ -40,7 +40,7 @@
     justify-self: center;
     display: block;
 
-    @include md {
+    @include r(920) {
       max-width: 213px;
       aspect-ratio: 0.95;
     }

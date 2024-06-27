@@ -2278,6 +2278,11 @@ body.lock {
 @media only screen and (max-width: 1439px) {
   .methods-card__img {
     object-position: top center;
+    aspect-ratio: 1.59;
+  }
+}
+@media only screen and (max-width: 915px) {
+  .methods-card__img {
     aspect-ratio: 0.83;
   }
 }
@@ -2534,7 +2539,7 @@ body.lock {
   justify-self: center;
   display: block;
 }
-@media only screen and (max-width: 1439px) {
+@media only screen and (max-width: 920px) {
   .benefits-card__img {
     max-width: 213px;
     aspect-ratio: 0.95;
