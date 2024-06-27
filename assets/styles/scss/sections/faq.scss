@@ -1,4 +1,6 @@
 .faq {
+  @include section-padding-lg;
+
   &__wrapper {
     display: grid;
     grid-template-columns: 15% 1fr;

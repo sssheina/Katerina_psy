@@ -1,4 +1,6 @@
 .questions {
+  @include section-padding-md;
+
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

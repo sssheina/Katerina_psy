@@ -4,6 +4,8 @@
   background-position: center;
   background-repeat: no-repeat;
 
+  @include section-padding-standard;
+
   &__title {
     color: $color-white;
   }

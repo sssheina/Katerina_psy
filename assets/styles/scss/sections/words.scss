@@ -1,9 +1,21 @@
 .words {
-  padding: 161px 0 161px;
+  padding: 161px 0;
   background-image: url("/assets/images/words_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  @include lg {
+    padding: 120px 0;
+  }
+
+  @include md {
+    padding: 65px 0;
+  }
+
+  @include xs {
+    padding: 48px 0;
+  }
 
   &__wrapper {
     height: 100%;

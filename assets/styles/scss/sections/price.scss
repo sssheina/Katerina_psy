@@ -1,4 +1,6 @@
 .price {
+  @include section-padding-sm;
+
   &__cards {
     display: flex;
     justify-content: center;

@@ -1,4 +1,6 @@
 .benefits {
+  @include section-padding-md;
+
   &__content {
     display: grid;
     gap: 50px 22px;

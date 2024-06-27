@@ -1,4 +1,6 @@
 .about {
+  @include section-padding-lg;
+
   &__content {
     display: grid;
     grid-template-columns: 1fr 49%;

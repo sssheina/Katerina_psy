@@ -1,4 +1,6 @@
 .steps {
+  @include section-padding-lg;
+
   &__content {
     display: grid;
     grid-template-columns: auto 15% 32% 1fr;

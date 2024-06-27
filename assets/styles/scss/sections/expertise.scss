@@ -1,4 +1,6 @@
 .expertise {
+  @include section-padding-sm;
+
   &__content {
     display: grid;
     align-items: start;
