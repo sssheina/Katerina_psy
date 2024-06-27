@@ -1,3 +1,94 @@
+// ----- SCROLL ANIMATION -----
+
+gsap.registerPlugin(ScrollTrigger);
+
+const h2_title = gsap.utils.toArray(".h2-title");
+
+h2_title.forEach((title) => {
+  const anim = gsap.from(title, {
+    x: -100,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_heading = gsap.utils.toArray(".expertise-heading");
+expertise_heading.forEach((title) => {
+  const anim = gsap.from(title, {
+    x: -50,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_picture = gsap.utils.toArray(".expertise-block__picture");
+expertise_picture.forEach((picture) => {
+  const anim = gsap.from(picture, {
+    x: -10,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: picture,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: picture,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_block = gsap.utils.toArray(".expertise-block-item");
+expertise_block.forEach((box) => {
+  const anim = gsap.from(box, {
+    y: -20,
+    opacity: 0,
+    delay: 0.4,
+    stagger: 0.2,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
@@ -10,6 +101,7 @@ window.addEventListener("scroll", function () {
 });
 
 // ----- BURGER MENU -----
+
 const burger = document.querySelector(".header-burger");
 const overlay = document.querySelector(".header__overlay");
 const headerMenuLinks = document.querySelectorAll(".header__menu-link");
