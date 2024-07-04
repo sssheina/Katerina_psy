@@ -178,7 +178,7 @@
   --paragraph-large-font-size: 48px;
   --paragraph-large-font-weight: 500;
   --paragraph-large-line-height: 1.5;
-  --paragraph-large-text-transform: none;
+  --paragraph-large-text-transform: uppercase;
 
   @include lg {
     --paragraph-large-font-size: 36px;
@@ -189,7 +189,7 @@
   }
 
   @include xs {
-    --h5-title-font-size: 20px;
+    --paragraph-large-font-size: 20px;
   }
 
   // paragraph - medium  текст в блоке слова
@@ -218,7 +218,7 @@
   --paragraph-standard-font-family: var(--montserrat-font-family);
   --paragraph-standard-font-size: 20px;
   --paragraph-standard-font-weight: 400;
-  --paragraph-standard-line-height: 28px;
+  --paragraph-standard-line-height: 140%;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
 

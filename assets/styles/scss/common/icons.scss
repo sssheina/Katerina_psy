@@ -25,6 +25,15 @@
   max-width: 50px;
   max-height: 100px;
   fill: $color-white;
+
+  @include lg {
+    max-width: 40px;
+    max-height: 70px;
+  }
+
+  @include md {
+    max-width: 30px;
+  }
 }
 
 .icon-up {
@@ -48,4 +57,9 @@
     max-width: 40px;
     max-height: 40px;
   }
+}
+
+.icon-arrow-right {
+  max-width: 20px;
+  max-height: 20px;
 }

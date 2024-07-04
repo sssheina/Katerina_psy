@@ -1,15 +1,10 @@
 .feedback {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: url("/assets/images/feedback_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  &__wrapper {
-    padding: 145px 0;
-  }
+  @include section-padding-standard;
 
   &__title {
     color: $color-white;
@@ -20,30 +15,58 @@
     display: flex;
     justify-content: center;
     padding: 0 70px;
+
+    @include md {
+      padding: 0 50px;
+    }
+
+    @include md {
+      padding: 0 40px;
+    }
+
+    @include xs {
+      padding: 0 20px;
+    }
   }
 
   &__slide {
     display: grid !important;
     grid-template-rows: auto 1fr auto auto auto;
     gap: 15px;
+
+    @include sm {
+      gap: 10px;
+    }
+
+    @include xs {
+      gap: 2px;
+    }
   }
 
   &__text {
     color: $color-white;
     margin-bottom: 10px;
     padding-right: 5rem;
+
+    @include md {
+      padding-right: 2rem;
+    }
+
+    @include xs {
+      padding-right: 3rem;
+    }
   }
 
   &__line {
     width: 240px;
     height: 1px;
-    background-color: $color-orange;
+    background-color: $color-orange-light;
     border: none;
     margin-left: 0;
   }
 
   &__client {
-    color: $color-orange;
+    color: $color-orange-light;
   }
 
   &__client-info {
@@ -57,8 +80,15 @@
 
 .swiper {
   position: relative;
-  margin: 98px 0 78px;
   padding-bottom: 6% !important;
+
+  @include sm {
+    padding-bottom: 10% !important;
+  }
+
+  @include xs {
+    padding-bottom: 15% !important;
+  }
 }
 
 .swiper-pagination-bullet {
@@ -72,19 +102,47 @@
 .swiper-pagination-bullet-active {
   width: 25px !important;
   border-radius: 5px !important;
-  background: $color-orange !important;
+  background: $color-orange-light !important;
 }
 
 .swiper-button-prev::after {
   left: 0;
   color: $color-white;
+
+  @include md {
+    font-size: 35px !important;
+  }
+
+  @include sm {
+    font-size: 30px !important;
+  }
+
+  @include xs {
+    font-size: 24px !important;
+  }
 }
 
 .swiper-button-next::after {
   right: 0;
   color: $color-white;
+
+  @include md {
+    font-size: 35px !important;
+  }
+
+  @include sm {
+    font-size: 30px !important;
+  }
+
+  @include xs {
+    font-size: 24px !important;
+  }
 }
 
 .swiper-wrapper {
   gap: 25px;
+
+  @include md {
+    gap: 18px;
+  }
 }

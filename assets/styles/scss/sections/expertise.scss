@@ -1,5 +1,5 @@
 .expertise {
-  padding: 73px 0 72px;
+  @include section-padding-sm;
 
   &__content {
     display: grid;
@@ -7,11 +7,19 @@
     grid-template-columns: 30% 1fr;
     grid-template-rows: 1fr 1fr 1fr auto;
     gap: 93px 25px;
-    padding: 85px 0 95px;
+
+    @include lg {
+      gap: 70px 25px;
+    }
 
     @include r(1140) {
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr auto 1fr auto 1fr auto;
+      gap: 55px;
+    }
+
+    @include xs {
+      gap: 40px;
     }
   }
 
@@ -122,8 +130,19 @@
     }
 
     img {
+      display: block;
+
       @include md {
         max-width: 295px;
+      }
+
+      @include sm {
+        aspect-ratio: 0.84;
+      }
+
+      @include xs {
+        max-width: 212px;
+        aspect-ratio: 0.86;
       }
     }
   }

@@ -1,3 +1,94 @@
+// ----- SCROLL ANIMATION -----
+
+gsap.registerPlugin(ScrollTrigger);
+
+const h2_title = gsap.utils.toArray(".h2-title");
+
+h2_title.forEach((title) => {
+  const anim = gsap.from(title, {
+    x: -100,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_heading = gsap.utils.toArray(".expertise-heading");
+expertise_heading.forEach((title) => {
+  const anim = gsap.from(title, {
+    x: -50,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: title,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_picture = gsap.utils.toArray(".expertise-block__picture");
+expertise_picture.forEach((picture) => {
+  const anim = gsap.from(picture, {
+    x: -10,
+    opacity: 0,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: picture,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: picture,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const expertise_block = gsap.utils.toArray(".expertise-block-item");
+expertise_block.forEach((box) => {
+  const anim = gsap.from(box, {
+    y: -20,
+    opacity: 0,
+    delay: 0.4,
+    stagger: 0.2,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "center 70%",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
@@ -10,9 +101,11 @@ window.addEventListener("scroll", function () {
 });
 
 // ----- BURGER MENU -----
+
 const burger = document.querySelector(".header-burger");
 const overlay = document.querySelector(".header__overlay");
 const headerMenuLinks = document.querySelectorAll(".header__menu-link");
+let activeLink;
 
 document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", showHeaderMenu);
@@ -27,6 +120,10 @@ const showHeaderMenu = () => {
 
   nav.classList.toggle("show");
   document.body.classList.toggle("lock");
+
+  if (!nav.classList.contains("show")) {
+    activeLink.classList.remove("active");
+  }
 };
 
 headerMenuLinks.forEach((link) => {
@@ -36,6 +133,7 @@ headerMenuLinks.forEach((link) => {
     );
 
     link.classList.add("active");
+    activeLink = link;
   });
 });
 
@@ -60,7 +158,7 @@ questions.forEach((question) => {
   question.addEventListener("click", showQuestion);
 });
 
-// ----- SLIDER HELP -----
+// ----- FEEDBACK -----
 
 const swiper = new Swiper(".swiper", {
   grabCursor: true,
@@ -109,6 +207,27 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
   speed: 1200,
+});
+
+// ----- BUTTON UP -----
+
+const btnUp = document.querySelector(".button-up");
+
+window.addEventListener("scroll", () => {
+  const scrollY = window.scrollY || document.documentElement.scrollTop;
+  if (scrollY > 400) {
+    btnUp.style.display = "block";
+  } else {
+    btnUp.style.display = "none";
+  }
+});
+
+btnUp.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
 //----------Cookies---------
@@ -534,27 +653,6 @@ const swiper = new Swiper(".swiper", {
 // function validateCheckboxes(checkboxes) {
 //   return [...checkboxes].some((checkbox) => checkbox.checked);
 // }
-
-// ----- BUTTON UP -----
-
-// const btnUp = document.querySelector(".button-up");
-
-// window.addEventListener("scroll", () => {
-//   const scrollY = window.scrollY || document.documentElement.scrollTop;
-//   if (scrollY > 400) {
-//     btnUp.style.display = "block";
-//   } else {
-//     btnUp.style.display = "none";
-//   }
-// });
-
-// btnUp.addEventListener("click", () => {
-//   window.scrollTo({
-//     top: 0,
-//     left: 0,
-//     behavior: "smooth",
-//   });
-// });
 
 // ----- Прокрутка при клике -----
 // const menuLinks = document.querySelectorAll(".menu__link[data-goto]");

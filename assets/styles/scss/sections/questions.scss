@@ -1,17 +1,5 @@
 .questions {
-  padding: 73px 0 145px;
-
-  &__title {
-    margin-bottom: 85px;
-
-    @include lg {
-      margin-bottom: 64px;
-    }
-
-    @include md {
-      margin-bottom: 35px;
-    }
-  }
+  @include section-padding-md;
 
   &__content {
     display: grid;
@@ -94,8 +82,16 @@
     text-transform: var(--paragraph-standard-text-transform);
     text-decoration: var(--paragraph-standard-text-decoration);
     color: $color-blue-dark;
-    padding: 20px;
+    padding: 16px;
     transition: $transition;
+
+    @include sm {
+      padding: 12px;
+    }
+
+    @include sm {
+      padding: 10px 8px;
+    }
 
     &:focus {
       border: 2px solid $color-orange-light;

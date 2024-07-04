@@ -1,0 +1,11 @@
+.title {
+  margin-bottom: 85px;
+
+  @include lg {
+    margin-bottom: 64px;
+  }
+
+  @include md {
+    margin-bottom: 35px;
+  }
+}

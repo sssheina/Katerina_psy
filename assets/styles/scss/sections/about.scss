@@ -1,29 +1,19 @@
 .about {
-  padding: 145px 0 72px;
+  @include section-padding-lg;
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 49%;
     gap: 44px;
     justify-content: space-between;
-    padding: 85px 0 95px;
-
-    @include lg {
-      padding: 65px 0 72px;
-    }
 
     @include r(1250) {
       grid-template-columns: 1fr;
       gap: 34px;
-      padding: 40px 0;
     }
 
     @include sm {
       gap: 30px;
-    }
-
-    @include xs {
-      padding: 35px 0;
     }
   }
 

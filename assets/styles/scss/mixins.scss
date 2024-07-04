@@ -1,11 +1,11 @@
-// width Миксин max-width
+// max-width
 @mixin r($width) {
   @media only screen and (max-width: ($width + "px")) {
     @content;
   }
 }
 
-//------Миксин min-width
+// min-width
 
 @mixin rmin($width) {
   @media only screen and (min-width: ($width + "px")) {
@@ -13,7 +13,7 @@
   }
 }
 
-//------Адаптив для max-width 1919px_______(по макету на 1440px)
+// max-width 1919px (по макету на 1440px)
 
 @mixin lg {
   @include r(1919) {
@@ -21,7 +21,7 @@
   }
 }
 
-//------Адаптив для min-width 1919.1px
+// min-width 1919.1px
 
 @mixin lg-up {
   @include rmin(1919.1) {
@@ -29,7 +29,7 @@
   }
 }
 
-//------Адаптив для max-width 1439px_______(по макету на 768px)
+// max-width 1439px (по макету на 768px)
 
 @mixin md {
   @include r(1439) {
@@ -37,7 +37,7 @@
   }
 }
 
-//------Адаптив для min-width 1439.1px (по макету на 1440px)
+// min-width 1439.1px (по макету на 1440px)
 
 @mixin md-up {
   @include rmin(1439.1) {
@@ -45,7 +45,7 @@
   }
 }
 
-//------Адаптив для max-width 767px_______(по макету на 428px)
+// max-width 767px (по макету на 428px)
 
 @mixin sm {
   @include r(767) {
@@ -53,7 +53,7 @@
   }
 }
 
-//------Адаптив для min-width 767.1px (по макету на 768px)
+// min-width 767.1px (по макету на 768px)
 
 @mixin sm-up {
   @include rmin(767.1) {
@@ -61,7 +61,7 @@
   }
 }
 
-// ------Адаптив для max-width 427px_______(по макету на 320px)
+//  max-width 427px (по макету на 320px)
 
 @mixin xs {
   @include r(427) {
@@ -69,7 +69,7 @@
   }
 }
 
-//------Адаптив для min-width 427.1px (по макету на 428px)
+// min-width 427.1px (по макету на 428px)
 
 @mixin xs-up {
   @include rmin(427.1) {
@@ -80,50 +80,6 @@
 @mixin transform($property, $value) {
   $property: $value;
 }
-
-// @mixin h3-line {
-//   &::after {
-//     position: absolute;
-//     content: "";
-//     left: 28%;
-//     transform: translate(-50%);
-//     top: 24%;
-//     width: 140px;
-//     height: 2px;
-//     background: $color-black;
-
-//     @include lg {
-//       width: 110px;
-//       height: 1px;
-//     }
-
-//     @include md {
-//       width: 85px;
-//       top: 22%;
-//       left: 30%;
-//     }
-
-//     @include xs {
-//       width: 85px;
-//       top: 19%;
-//       left: 32%;
-//     }
-//   }
-// }
-
-// hr
-// @mixin hr($width, $margin) {
-//   width: $width;
-//   margin: $margin;
-//   background-color: $color-black;
-//   height: 2px;
-//   border: none;
-
-//   @include md {
-//     height: 1px;
-//   }
-
-// }
 
 // button focus
 // @mixin btn-focus($color) {
@@ -137,3 +93,119 @@
 //   outline: none;
 //   outline-offset: 0;
 // }
+
+@mixin header() {
+  max-height: 100px;
+
+  @include lg {
+    max-height: 85px;
+  }
+
+  @include md {
+    max-height: 70px;
+  }
+
+  @include sm {
+    max-height: 60px;
+  }
+}
+
+@mixin section-padding-sm {
+  padding-top: 73px;
+  padding-bottom: 72px;
+
+  @include lg {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include md {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @include sm {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
+@mixin section-padding-md {
+  padding-top: 73px;
+  padding-bottom: 145px;
+
+  @include lg {
+    padding-top: 60px;
+    padding-bottom: 108px;
+  }
+
+  @include md {
+    padding-top: 35px;
+    padding-bottom: 66px;
+  }
+
+  @include sm {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+
+  @include sm {
+    padding-top: 35px;
+    padding-bottom: 70px;
+  }
+}
+
+@mixin section-padding-lg {
+  padding-top: 145px;
+  padding-bottom: 72px;
+
+  @include lg {
+    padding-top: 108px;
+    padding-bottom: 60px;
+  }
+
+  @include md {
+    padding-top: 66px;
+    padding-bottom: 35px;
+  }
+
+  @include sm {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+
+  @include sm {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+}
+
+@mixin section-padding-standard {
+  padding-top: 145px;
+  padding-bottom: 145px;
+
+  @include lg {
+    padding-top: 108px;
+    padding-bottom: 108px;
+  }
+
+  @include md {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @include sm {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include sm {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}

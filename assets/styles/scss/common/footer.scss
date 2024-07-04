@@ -3,40 +3,24 @@
 
   &__content {
     display: grid;
-    place-items: center;
-    // grid-template-columns: 45% 55%;
-    padding: 130px 0 161px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
 
-    // @include md {
-    //   grid-template-columns: 1fr;
-    //   justify-items: center;
-    //   gap: 50px;
-    // }
+    @include section-padding-standard;
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
 
     @include sm {
-      // grid-template-columns: 1fr;
-      // justify-items: center;
-      gap: 50px;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 40px;
     }
 
     @include xs {
       gap: 35px;
-    }
-  }
-
-  &__left {
-    max-width: fit-content;
-    display: grid;
-    align-content: space-between;
-    gap: 20px;
-
-    @include sm {
-      gap: 34px;
-    }
-
-    @include xs {
-      gap: 14px;
     }
   }
 
@@ -84,49 +68,85 @@
     max-width: 240px;
   }
 
+  &__subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include lg {
+      gap: 23px;
+    }
+
+    @include md {
+      grid-row: 2 / 3;
+    }
+
+    @include sm {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+
+  &__form {
+    display: flex;
+  }
+
+  &__field {
+    flex: 1;
+    height: 52px;
+    border: 1px solid $color-blue-dark;
+    padding: 12px 19px;
+
+    &::placeholder {
+      color: $color-gray-dark;
+
+      @extend %paragraph-standard;
+    }
+
+    @include sm {
+      height: 43px;
+      padding: 10px;
+    }
+  }
+
+  &__button {
+    max-width: 63px;
+    width: 100%;
+    background: $color-blue-dark;
+    color: $color-white;
+  }
+
+  &__contacts {
+    max-width: 336px;
+    width: 100%;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include lg {
+      max-width: 252px;
+      gap: 23px;
+    }
+
+    @include md {
+      grid-column: 2 / 3;
+    }
+
+    @include sm {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
   &__socials {
     display: flex;
     justify-content: space-between;
 
     @include sm {
       justify-content: space-around;
-    }
-  }
-
-  &__right {
-    display: flex;
-    justify-content: space-between;
-    gap: 33px;
-
-    @include sm {
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-
-    @include xs {
-      gap: 25px;
-    }
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 23px;
-
-    @include sm {
-      gap: 10px;
-      text-align: center;
-    }
-  }
-
-  &__nav {
-    display: grid;
-    gap: 20px;
-
-    @include sm {
-      gap: 8px;
     }
   }
 

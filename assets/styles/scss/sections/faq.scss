@@ -1,8 +1,5 @@
 .faq {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 145px 0 72px;
+  @include section-padding-lg;
 
   &__wrapper {
     display: grid;

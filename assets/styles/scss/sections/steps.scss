@@ -1,17 +1,43 @@
 .steps {
-  padding: 145px 0 72px;
+  @include section-padding-lg;
 
   &__content {
     display: grid;
     grid-template-columns: auto 15% 32% 1fr;
     gap: 25px;
-    margin: 85px 0 95px;
+
+    @include lg {
+      grid-template-columns: auto 10% 32% 1fr;
+    }
+
+    @include r(1110) {
+      grid-template-columns: auto 10% 1fr 10%;
+      grid-template-rows: 8% auto 8% auto 8% auto auto auto;
+      gap: 0 29px;
+    }
+
+    @include sm {
+      grid-template-columns: auto 1fr;
+      grid-template-rows: repeat(8, auto);
+    }
+
+    @include xs {
+      gap: 0 15px;
+    }
   }
 
   &__img {
     max-width: 112px;
     width: 100%;
     grid-row: span 3;
+
+    @include r(1110) {
+      grid-row: span 6;
+    }
+
+    @include sm {
+      display: none;
+    }
 
     img {
       display: block;
@@ -22,7 +48,7 @@
   &__number {
     justify-self: end;
     margin-right: 40px;
-    line-height: 50%;
+    line-height: unset;
     color: $color-orange;
 
     &:nth-of-type(1) {
@@ -40,6 +66,29 @@
     &:nth-of-type(4) {
       grid-column: 2;
     }
+
+    @include r(1110) {
+      justify-self: center;
+      margin-right: unset;
+    }
+
+    @include sm {
+      &:nth-of-type(1) {
+        grid-column: 1;
+      }
+
+      &:nth-of-type(2) {
+        grid-column: 1;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 1;
+      }
+
+      &:nth-of-type(4) {
+        grid-column: 1;
+      }
+    }
   }
 
   &__step {
@@ -47,6 +96,10 @@
     align-items: center;
     height: fit-content;
     gap: 0.5em;
+
+    @include sm {
+      gap: 0.3em;
+    }
   }
 
   &__subtitle {
@@ -59,6 +112,10 @@
     height: 1px;
     background-color: $color-orange;
     margin-left: 1em;
+
+    @include sm {
+      margin-left: 0.3em;
+    }
 
     &::after {
       content: "";
@@ -74,5 +131,43 @@
   }
 
   &__text {
+    @include r(1110) {
+      &:nth-of-type(1) {
+        grid-column: 3 / 5;
+      }
+
+      &:nth-of-type(2) {
+        grid-column: 3 / 5;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 3 / 5;
+      }
+
+      &:nth-of-type(4) {
+        grid-column: 3 / 5;
+      }
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+
+      &:nth-of-type(1) {
+        grid-column: 2;
+      }
+
+      &:nth-of-type(2) {
+        grid-column: 2;
+      }
+
+      &:nth-of-type(3) {
+        grid-column: 2;
+      }
+
+      &:nth-of-type(4) {
+        grid-column: 2;
+        margin-bottom: 0;
+      }
+    }
   }
 }

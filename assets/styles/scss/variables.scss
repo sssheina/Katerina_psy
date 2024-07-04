@@ -13,7 +13,6 @@ $color-gray-light: #d9d9d9;
 $color-white: #fefefe;
 $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
 
-$header-height: 100px;
 $transition: 0.4s ease;
 
 %h1-title {
@@ -82,7 +81,6 @@ $transition: 0.4s ease;
   line-height: var(--h5-title-line-height);
   text-transform: var(--h5-title-text-transform);
   text-decoration: var(--h5-title-text-decoration);
-  // color: $color-blue-dark;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);

@@ -1,23 +1,38 @@
 .methods {
-  padding: 73px 0 72px;
+  @include section-padding-sm;
 
   &__cards {
-    gap: 0 25px;
-    padding: 85px 2px 95px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 15%;
+    gap: 0 25px;
+    padding: 0 2px;
+
+    @include lg {
+      // grid-template-rows: 1fr 20%;
+      gap: 0 20px;
+    }
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      // grid-template-rows: 1fr auto;
+      // grid-template-columns: repeat(auto-fit, minmax(212px, 1fr));
+      gap: 34px 15px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, auto);
+    }
   }
 
-  &__button-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
-
-  &__button {
-    width: 386px;
+  &__text {
+    @include md-up {
+      br {
+        display: none;
+      }
+    }
   }
 }
 
@@ -25,6 +40,16 @@
   display: grid;
   grid-template-rows: 25% 1fr;
   gap: 10px;
+
+  @include lg {
+    grid-template-rows: 20% 1fr;
+    padding-bottom: 15px;
+  }
+
+  @include md {
+    grid-template-rows: 18% 1fr;
+    padding-bottom: unset;
+  }
 
   &:nth-child(odd) {
     .methods-card__title {
@@ -39,5 +64,32 @@
 
   &:nth-child(4) {
     grid-row: span 2;
+
+    @include md {
+      grid-row: 2 / 3;
+    }
+
+    @include sm {
+      grid-row: 4 / 5;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+
+    @include md {
+      object-position: top center;
+      aspect-ratio: 1.59;
+    }
+    @include r(915) {
+      aspect-ratio: 0.83;
+    }
+
+    @include sm {
+      object-position: center top;
+      aspect-ratio: 2.16;
+    }
   }
 }
