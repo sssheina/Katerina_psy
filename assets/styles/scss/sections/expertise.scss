@@ -16,6 +16,7 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto 1fr auto 1fr auto 1fr auto;
       gap: 55px;
+      justify-items: end;
     }
 
     @include xs {
@@ -37,6 +38,14 @@
 .expertise-heading {
   display: flex;
   align-items: center;
+
+  &:nth-child(1),
+  &:nth-child(3),
+  &:nth-child(5) {
+    @include md {
+      width: 93%;
+    }
+  }
 
   &:nth-child(3) {
     grid-row: 2 / 3;
@@ -78,12 +87,21 @@
       border-radius: 50%;
       background-color: $color-blue-dark;
     }
+
+    @include md {
+      width: 20%;
+    }
   }
 }
 
 .expertise-block {
   display: flex;
   gap: 25px;
+
+  @include md {
+    justify-content: flex-end;
+    gap: 42px;
+  }
 
   @include sm {
     flex-direction: column;
@@ -125,24 +143,37 @@
   &__picture {
     display: flex;
 
+    @include md {
+    }
+
     @include sm {
       justify-content: center;
     }
 
+    &:nth-of-type(1),
+    &:nth-of-type(3) {
+      justify-content: flex-end;
+    }
+
+    &:nth-of-type(2) {
+      justify-content: flex-start;
+    }
+
     img {
+      height: 100%;
+      object-fit: cover;
       display: block;
 
-      @include md {
+      @include lg {
         max-width: 295px;
       }
 
-      @include sm {
-        aspect-ratio: 0.84;
+      @include md {
+        max-width: 186px;
       }
 
       @include xs {
         max-width: 212px;
-        aspect-ratio: 0.86;
       }
     }
   }
@@ -150,6 +181,10 @@
   &__text {
     display: grid;
     gap: 30px;
+
+    @include md {
+      flex-basis: 341px;
+    }
   }
 }
 

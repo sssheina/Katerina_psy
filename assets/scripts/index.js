@@ -4,25 +4,25 @@ gsap.registerPlugin(ScrollTrigger);
 
 const h2_title = gsap.utils.toArray(".h2-title");
 
-h2_title.forEach((title) => {
-  const anim = gsap.from(title, {
-    x: -100,
-    opacity: 0,
-    paused: true,
-  });
+// h2_title.forEach((title) => {
+//   const anim = gsap.from(title, {
+//     x: -100,
+//     opacity: 0,
+//     paused: true,
+//   });
 
-  ScrollTrigger.create({
-    trigger: title,
-    start: "center 70%",
-    onEnter: () => anim.play(),
-  });
+//   ScrollTrigger.create({
+//     trigger: title,
+//     start: "center 90%",
+//     onEnter: () => anim.play(),
+//   });
 
-  ScrollTrigger.create({
-    trigger: title,
-    start: "top bottom",
-    onLeaveBack: () => anim.pause(0),
-  });
-});
+//   ScrollTrigger.create({
+//     trigger: title,
+//     start: "top bottom",
+//     onLeaveBack: () => anim.pause(0),
+//   });
+// });
 
 const expertise_heading = gsap.utils.toArray(".expertise-heading");
 expertise_heading.forEach((title) => {
@@ -34,7 +34,7 @@ expertise_heading.forEach((title) => {
 
   ScrollTrigger.create({
     trigger: title,
-    start: "center 70%",
+    start: "top bottom",
     onEnter: () => anim.play(),
   });
 
@@ -48,14 +48,14 @@ expertise_heading.forEach((title) => {
 const expertise_picture = gsap.utils.toArray(".expertise-block__picture");
 expertise_picture.forEach((picture) => {
   const anim = gsap.from(picture, {
-    x: -10,
     opacity: 0,
-    paused: true,
+    delay: 0.5,
+    duration: 3,
   });
 
   ScrollTrigger.create({
     trigger: picture,
-    start: "center 70%",
+    start: "top 10%",
     onEnter: () => anim.play(),
   });
 
@@ -78,7 +78,7 @@ expertise_block.forEach((box) => {
 
   ScrollTrigger.create({
     trigger: box,
-    start: "center 70%",
+    start: "top bottom",
     onEnter: () => anim.play(),
   });
 
