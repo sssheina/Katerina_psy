@@ -24,38 +24,38 @@ const h2_title = gsap.utils.toArray(".h2-title");
 //   });
 // });
 
-gsap.from(".about__video-block", {
+const aboutVideoBlock = gsap.from(".about__video-block", {
   y: 30,
   opacity: 0,
 });
 
 ScrollTrigger.create({
-  trigger: title,
+  trigger: ".about__video-block",
   start: "center 80%",
-  onEnter: () => anim.play(),
+  onEnter: () => aboutVideoBlock.play(),
 });
 
 ScrollTrigger.create({
-  trigger: title,
+  trigger: ".about__video-block",
   start: "top bottom",
-  onLeaveBack: () => anim.pause(0),
+  onLeaveBack: () => aboutVideoBlock.pause(0),
 });
 
-gsap.from(".about__text-block", {
-  y: 10,
+const aboutTextBlock = gsap.from(".about__text-block", {
+  y: 30,
   opacity: 0,
 });
 
 ScrollTrigger.create({
-  trigger: title,
+  trigger: ".about__text-block",
   start: "center 80%",
-  onEnter: () => anim.play(),
+  onEnter: () => aboutTextBlock.play(),
 });
 
 ScrollTrigger.create({
-  trigger: title,
+  trigger: ".about__text-block",
   start: "top bottom",
-  onLeaveBack: () => anim.pause(0),
+  onLeaveBack: () => aboutTextBlock.pause(0),
 });
 
 const expertise_heading = gsap.utils.toArray(".expertise-heading");
@@ -120,6 +120,56 @@ expertise_block.forEach((box) => {
     trigger: box,
     start: "top bottom",
     onLeaveBack: () => anim.pause(0),
+  });
+});
+
+// const clientsCards = gsap.utils.toArray(".clients-card");
+// clientsCards.forEach((picture) => {
+//   const anim = gsap.from(picture, {
+//     y: -20,
+//     opacity: 0.5,
+//     stagger: 0.2,
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: picture,
+//     start: "top bottom",
+//     onEnter: () => anim.play(),
+//   });
+
+//   ScrollTrigger.create({
+//     trigger: picture,
+//     start: "top bottom",
+//     onLeaveBack: () => anim.pause(0),
+//   });
+// });
+
+// gsap.from(".clients-card", {
+//   scrollTrigger: {
+//     trigger: ".clients-card",
+//     // toggleActions: "restart pause resume pause",
+//     toggleActions: "play",
+
+//     // start: "top bottom",
+//     // end: "bottom center",
+//   },
+//   duration: 1,
+//   y: -60,
+//   // opacity: 0,
+//   stagger: 0.8,
+// });
+
+const cards = gsap.utils.toArray(".clients-card");
+
+cards.forEach((card, index) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      toggleActions: "play",
+    },
+    duration: 1,
+    y: -60,
+    stagger: 0.8,
   });
 });
 
