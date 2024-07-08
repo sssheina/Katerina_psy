@@ -2470,7 +2470,7 @@ body.lock {
   justify-content: flex-start;
 }
 .expertise-block__picture:nth-of-type(2) img {
-  object-position: left;
+  object-position: 78%;
 }
 .expertise-block__picture img {
   height: 100%;

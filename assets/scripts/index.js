@@ -24,6 +24,40 @@ const h2_title = gsap.utils.toArray(".h2-title");
 //   });
 // });
 
+gsap.from(".about__video-block", {
+  y: 30,
+  opacity: 0,
+});
+
+ScrollTrigger.create({
+  trigger: title,
+  start: "center 80%",
+  onEnter: () => anim.play(),
+});
+
+ScrollTrigger.create({
+  trigger: title,
+  start: "top bottom",
+  onLeaveBack: () => anim.pause(0),
+});
+
+gsap.from(".about__text-block", {
+  y: 10,
+  opacity: 0,
+});
+
+ScrollTrigger.create({
+  trigger: title,
+  start: "center 80%",
+  onEnter: () => anim.play(),
+});
+
+ScrollTrigger.create({
+  trigger: title,
+  start: "top bottom",
+  onLeaveBack: () => anim.pause(0),
+});
+
 const expertise_heading = gsap.utils.toArray(".expertise-heading");
 expertise_heading.forEach((title) => {
   const anim = gsap.from(title, {
