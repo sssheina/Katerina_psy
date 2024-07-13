@@ -178,7 +178,7 @@ methods.forEach((card, index) => {
   gsap.from(card, {
     scrollTrigger: {
       trigger: card,
-      start: "top center",
+      start: "top 75%",
       end: "bottom top",
       toggleActions: "play none none reverse",
     },
@@ -187,7 +187,33 @@ methods.forEach((card, index) => {
   });
 });
 
-const benefits = gsap.utils.toArray(".benefits-card");
+// let animationFrameId;
+// let currentAnimationIndex = 0;
+
+// const animateCards = () => {
+//   if (currentAnimationIndex >= methods.length) {
+//     cancelAnimationFrame(animationFrameId);
+//     return;
+//   }
+
+//   const card = methods[currentAnimationIndex];
+//   gsap.from(card, {
+//     scrollTrigger: {
+//       trigger: card,
+//       start: "top 75%",
+//       end: "bottom top",
+//       markers: true,
+//     },
+//     y: -30,
+//   });
+
+//   currentAnimationIndex++;
+//   animationFrameId = requestAnimationFrame(animateCards);
+// };
+
+// animationFrameId = requestAnimationFrame(animateCards);
+
+const benefits = gsap.utils.toArray(".methods-card");
 
 benefits.forEach((card, index) => {
   gsap.from(card, {
