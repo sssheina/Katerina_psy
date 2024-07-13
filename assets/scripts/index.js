@@ -228,6 +228,46 @@ benefits.forEach((card, index) => {
   });
 });
 
+const faqBox = gsap.utils.toArray(".faq-box");
+faqBox.forEach((box) => {
+  const anim = gsap.from(box, {
+    y: -20,
+    opacity: 0,
+    delay: 0.4,
+    stagger: 0.2,
+    paused: true,
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "top bottom",
+    onEnter: () => anim.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: box,
+    start: "top bottom",
+    onLeaveBack: () => anim.pause(0),
+  });
+});
+
+const words = gsap.from(".words__content", {
+  y: 30,
+  opacity: 0,
+});
+
+ScrollTrigger.create({
+  trigger: ".words__content",
+  start: "top 75%",
+  onEnter: () => words.play(),
+});
+
+ScrollTrigger.create({
+  trigger: ".words__content",
+  start: "top bottom",
+  onLeaveBack: () => words.pause(0),
+});
+
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {
