@@ -159,16 +159,45 @@ expertise_block.forEach((box) => {
 //   stagger: 0.8,
 // });
 
-const cards = gsap.utils.toArray(".clients-card");
+const clients = gsap.utils.toArray(".clients-card");
 
-cards.forEach((card, index) => {
+clients.forEach((card, index) => {
   gsap.from(card, {
     scrollTrigger: {
       trigger: card,
       toggleActions: "play",
     },
-    duration: 1,
-    y: -60,
+    y: -30,
+    stagger: 0.8,
+  });
+});
+
+const methods = gsap.utils.toArray(".methods-card");
+
+methods.forEach((card, index) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top center",
+      end: "bottom top",
+      toggleActions: "play none none reverse",
+    },
+    y: 30,
+    stagger: 0.8,
+  });
+});
+
+const benefits = gsap.utils.toArray(".benefits-card");
+
+benefits.forEach((card, index) => {
+  gsap.from(card, {
+    scrollTrigger: {
+      trigger: card,
+      start: "top center",
+      end: "bottom top",
+      toggleActions: "play none none reverse",
+    },
+    y: 30,
     stagger: 0.8,
   });
 });

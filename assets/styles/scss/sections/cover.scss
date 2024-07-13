@@ -46,6 +46,8 @@
     display: grid;
     align-items: center;
     grid-template-columns: auto 1fr auto auto;
+    align-self: end;
+    gap: 12px;
     grid-template-areas:
       "subtitle-top subtitle-top subtitle-top subtitle-top"
       "title-top title-top title-top psychotherapy"
@@ -129,7 +131,7 @@
 
   &__action {
     grid-row: 3 / 4;
-    padding-top: 50px;
+    margin-top: 50px;
   }
 
   &__cross {
