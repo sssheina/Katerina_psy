@@ -1249,20 +1249,19 @@
             </p>
           </div>
 
-          <form class="questions__form">
+          <form id="questions__form" class="questions__form">
             <textarea name="text" class="questions__comment"
               placeholder="Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными..."></textarea>
               <div id="errorQuestions" class="questions__errors error"></div>
             <!-- Thanx-message modal window -->
-            <!-- <div class="overlay hidden" id="overlay">
+            <div class="overlay hidden" id="overlay">
               <section class="modal hidden" id="modal_window">
-                <button class="button__primary button-close" id="button__primary button_close_modal">⨉</button>
-
+                <button class="button__primary button-close" id="btn_close_modal">⨉</button>
                 <div class="modal__content" id="modal_window_content"></div>
               </section>
-            </div> -->
+            </div>
           </form>
-          <button class="questions__button button__outline button button-text" type="submit" disabled="true">
+          <button id="questions__button" class="questions__button button__outline button button-text" disabled="true">
             Отправить
           </button>
         </div>
@@ -1350,6 +1349,7 @@
   <!-- <script src="/assets/scripts/localization.js"></script> -->
 <!--   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script> -->
 <!--   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script> -->
+  <script type="module" src="/assets/scripts/sendquestion.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </body>
