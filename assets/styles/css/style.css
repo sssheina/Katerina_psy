@@ -2007,9 +2007,10 @@ body.lock {
   inset: 0;
   min-width: 100%;
   min-height: 100%;
+  object-fit: cover;
   z-index: -1;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .cover__video {
     display: none;
   }
