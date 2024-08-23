@@ -153,16 +153,16 @@
   &__rights {
     display: grid;
     justify-items: center;
-    padding: 47px 0 47px;
+    padding: 32px 0 32px;
     background: $color-blue-dark;
 
     @include lg {
-      padding: 40px 0 40px;
-      font-size: 18px;
+      padding: 24px 0 24px;
+      font-size: 16px;
     }
 
     @include md {
-      font-size: 16px;
+      font-size: 11px;
     }
 
     @include sm {
@@ -172,6 +172,25 @@
     @include xs {
       padding: 30px 0 30px;
       font-size: 11px;
+    }
+  }
+
+&__copyright-container {
+  display: flex;
+  justify-content: space-between;
+
+  @include sm {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+  &__copy {
+    display: flex;
+
+    @include sm {
+      flex-direction: column;
+      align-items: center;
     }
   }
 

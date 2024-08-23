@@ -1623,18 +1623,18 @@ body.lock {
 .footer__rights {
   display: grid;
   justify-items: center;
-  padding: 47px 0 47px;
+  padding: 32px 0 32px;
   background: #010e23;
 }
 @media only screen and (max-width: 1919px) {
   .footer__rights {
-    padding: 40px 0 40px;
-    font-size: 18px;
+    padding: 24px 0 24px;
+    font-size: 16px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .footer__rights {
-    font-size: 16px;
+    font-size: 11px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1646,6 +1646,25 @@ body.lock {
   .footer__rights {
     padding: 30px 0 30px;
     font-size: 11px;
+  }
+}
+.footer__copyright-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 767px) {
+  .footer__copyright-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.footer__copy {
+  display: flex;
+}
+@media only screen and (max-width: 767px) {
+  .footer__copy {
+    flex-direction: column;
+    align-items: center;
   }
 }
 .footer__copyright {
