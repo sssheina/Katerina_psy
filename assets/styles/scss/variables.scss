@@ -154,3 +154,17 @@ $transition: 0.4s ease;
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
 }
+
+%error-text {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--error-text-font-size);
+  font-weight: var(--error-text-font-weight, 500);
+  font-style: var(--error-text-font-style);
+  line-height: var(--error-text-line-height);
+  text-transform: var(--error-text-text-transform);
+  text-decoration: var(--error-text-text-decoration);
+  // color: $color-blue-dark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}

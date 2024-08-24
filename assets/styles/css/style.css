@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -868,6 +869,19 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
+.error-text {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--error-text-font-size);
+  font-weight: var(--error-text-font-weight, 500);
+  font-style: var(--error-text-font-style);
+  line-height: var(--error-text-line-height);
+  text-transform: var(--error-text-text-transform);
+  text-decoration: var(--error-text-text-decoration);
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(/assets/fonts/raleway/Raleway-Medium.ttf);
@@ -986,6 +1000,12 @@ textarea {
   --footnote-standard-line-height: 28px;
   --footnote-standard-text-transform: none;
   --footnote-standard-text-decoration: none;
+  --error-text-font-size: 16px;
+  --error-text-font-weight: 500;
+  --error-text-font-style: normal;
+  --error-text-line-height: 100%;
+  --error-text-text-transform: none;
+  --error-text-text-decoration: none;
   --swiper-navigation-size: 66px;
 }
 @media only screen and (max-width: 1919px) {
@@ -1138,6 +1158,21 @@ textarea {
     --footnote-standard-font-size: 14px;
   }
 }
+@media only screen and (max-width: 1919px) {
+  :root {
+    --error-text-font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  :root {
+    --error-text-font-size: 13px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  :root {
+    --error-text-font-size: 12px;
+  }
+}
 
 * {
   box-sizing: border-box;
@@ -1242,6 +1277,7 @@ body.lock {
   z-index: 10;
   box-shadow: 0px 3px 4px 0px rgb(0, 0, 0);
   overflow-y: auto;
+  overflow-x: hidden;
   transform: translateX(100%);
   transition: transform 0.4s linear;
   padding: 100px 50px 100px 100px;
@@ -1298,7 +1334,7 @@ body.lock {
 @media only screen and (max-width: 1439px) {
   .header__nav {
     width: 50vw;
-    padding: 70px 40px 70px 60px;
+    padding: 50px 40px 50px 60px;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -1317,9 +1353,25 @@ body.lock {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
-  overflow-y: scroll;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
   gap: 30px;
+}
+@media only screen and (max-width: 1439px) {
+  .header__menu {
+    gap: 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .header__menu {
+    gap: 30px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .header__menu {
+    gap: 20px;
+  }
 }
 .header__menu-item {
   height: fit-content;
@@ -1561,6 +1613,10 @@ body.lock {
   }
 }
 .footer__form {
+  display: flex;
+  flex-direction: column;
+}
+.footer__input {
   display: flex;
 }
 .footer__field {
@@ -1902,6 +1958,11 @@ body.lock {
 }
 .link:hover {
   color: #d69961;
+}
+
+.error {
+  color: red;
+  padding-top: 0.5em;
 }
 
 .cover {
@@ -3609,112 +3670,65 @@ body.lock {
 
 .modal {
   display: flex;
-  position: absolute;
+  position: fixed; /* Используем fixed для модального окна */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 450px;
-  width: 100%;
-  max-height: 300px;
-  height: 100%;
-  padding: 1.3rem;
+  width: 90%;
+  max-height: 80%;
+  height: auto; /* Позволяет высоте адаптироваться */
+  padding: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fefefe;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Увеличенный тень для улучшения визуального эффекта */
+  border-radius: 8px; /* Скругление углов */
   z-index: 2000;
+  gap: 30px;
+  /* Мобильная адаптивность */
 }
-@media only screen and (max-width: 767px) {
+@media (max-width: 768px) {
   .modal {
-    height: 200px;
-    max-width: unset;
-    width: 90vw;
+    max-width: 90%;
+    width: 100%;
+    height: auto;
   }
 }
-@media only screen and (max-width: 427px) {
-  .modal {
-    height: 200px;
-    width: 260px;
-  }
-}
+
 .modal__content {
-  display: flex;
-  flex-direction: column;
   font-size: 20px;
   line-height: 150%;
-}
-@media only screen and (max-width: 1919px) {
-  .modal__content {
-    font-size: 18px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .modal__content {
-    width: 275px;
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .modal__content {
-    font-size: 15px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .modal__content {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .modal__content {
-    width: 200px;
-  }
+  text-align: center; /* Центрирование текста */
 }
 
-.btn-close {
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.button-close {
   position: absolute;
-  transform: translate(10px, -20px);
-  padding: 0.5rem 0.75rem;
-  top: 13%;
-  right: 6%;
-  background: #ce6a0e;
+  top: 10px;
+  right: 10px;
   border-radius: 50%;
-  border: none;
-}
-@media only screen and (max-width: 1919px) {
-  .btn-close {
-    padding: 0.3rem 0.67rem;
-    width: 35px;
-    height: 35px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .btn-close {
-    padding: 0.2rem 0.5rem;
-    top: 14%;
-    right: 6%;
-    width: 32px;
-    height: 32px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .btn-close {
-    width: 28px;
-    height: 28px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .btn-close {
-    top: 15%;
-    right: 8%;
-    padding: 0.14rem 0.43rem;
-    width: 25px;
-    height: 25px;
-  }
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
-.btn-close:hover {
-  background: #ce6a0e;
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Усиленный эффект размытия */
+  z-index: 1000;
 }
 
 .hidden {

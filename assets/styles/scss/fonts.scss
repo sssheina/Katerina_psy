@@ -275,6 +275,27 @@
     --footnote-standard-font-size: 14px;
   }
 
+   // error - text
+
+   --error-text-font-size: 16px;
+   --error-text-font-weight: 500;
+   --error-text-font-style: normal;
+   --error-text-line-height: 100%;
+   --error-text-text-transform: none;
+   --error-text-text-decoration: none;
+ 
+   @include lg {
+     --error-text-font-size: 15px;
+   }
+ 
+   @include md {
+     --error-text-font-size: 13px;
+   }
+ 
+   @include xs {
+     --error-text-font-size: 12px;
+   }
+
   // swiper-navigation-size
 
   --swiper-navigation-size: 66px;
@@ -330,4 +351,8 @@
 
 .footnote-standard {
   @extend %footnote-standard;
+}
+
+.error-text {
+  @extend %error-text;
 }

@@ -89,6 +89,11 @@
 
   &__form {
     display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    display: flex;
   }
 
   &__field {
