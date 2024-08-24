@@ -45,8 +45,11 @@
     z-index: 10;
 
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 1);
-    overflow-y: auto;
+    // overflow-y: auto;
     // overflow-y: hidden;
+    overflow-y: auto; 
+    overflow-x: hidden; // предотвращение горизонтальной прокрутки
+    // height: 100vh; // высота меню на весь экран
     transform: translateX(100%);
     transition: transform 0.4s linear;
     padding: 100px 50px 100px 100px;
@@ -75,7 +78,7 @@
 
     @include md {
       width: 50vw;
-      padding: 70px 40px 70px 60px;
+      padding: 50px 40px 50px 60px;
     }
 
     @include sm {
@@ -96,8 +99,11 @@
     flex-direction: column;
     justify-content: center;
     // padding: 100px 50px 100px 100px;
-    height: 100%;
-    overflow-y: scroll;
+    // height: 100%;
+    max-height: 100vh; 
+    overflow-y: auto; // прокрутка только по вертикали
+    overflow-x: hidden; // убираем горизонтальную прокрутку
+    // overflow-y: scroll;
     // overflow: hidden;
     gap: 30px;
 
@@ -105,17 +111,17 @@
     //   padding: 85px 50px 85px 70px;
     // }
 
-    // @include md {
-    //   padding: 70px 40px 70px 60px;
-    // }
+    @include md {
+      gap: 15px;
+    }
 
-    // @include sm {
-    //   padding: 60px 30px 60px 50px;
-    // }
+    @include sm {
+      gap: 30px;
+    }
 
-    // @include xs {
-    //   padding: 60px 20px 60px 30px;
-    // }
+    @include xs {
+      gap: 20px;
+    }
   }
 
   &__menu-item {

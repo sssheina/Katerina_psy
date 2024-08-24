@@ -1,3 +1,323 @@
+ //-----Анонимные вопросы-----
+
+// Список запрещенных слов
+const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+
+// Функция проверки спама
+function validateInput(input) {
+  if (/<|>/.test(input)) {
+    return false; // Наличие угловых скобок
+  }
+  for (let word of profanityList) {
+    if (input.toLowerCase().includes(word)) {
+      return false; // Наличие нецензурных слов
+    }
+  }
+  return true;
+}
+
+// Обработка кнопки отправки формы
+document.getElementById('questions__button').addEventListener('click', async function(event) {
+  event.preventDefault(); // Предотвращаем обычное поведение формы
+
+  const form = document.getElementById('questions__form');
+  const formData = new FormData(form);
+  const modalContent = document.getElementById('modal_window_content');
+  const overlay = document.getElementById('overlay');
+  const modalWindow = document.getElementById('modal_window');
+  const errorDiv = document.getElementById('errorQuestions');
+
+  // Получение значения из поля textarea
+  const userInput = formData.get('message');
+
+  // Проверка ввода на спам
+  if (!validateInput(userInput)) {
+    errorDiv.innerHTML = '<p>Ошибка! Сообщение содержит недопустимые слова или символы.</p>';
+    return; // Прерываем выполнение функции
+  } else {
+    errorDiv.innerHTML = ''; // Очистка сообщения об ошибке
+  }
+
+  try {
+    const response = await fetch('https://formspree.io/f/xvgpvnov', {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      modalContent.innerHTML = '<div class="modal-text"><p>Спасибо!</p><p>Сообщение было успешно отправлено</p></div>';
+      form.reset(); // Очищаем поле textarea
+    } else {
+      modalContent.innerText = 'Произошла ошибка при отправке формы.';
+    }
+
+    // Показ модального окна
+    overlay.classList.remove('hidden');
+    modalWindow.classList.remove('hidden');
+  } catch (error) {
+    console.error('Ошибка:', error);
+    modalContent.innerText = 'Произошла ошибка при отправке формы.';
+    overlay.classList.remove('hidden');
+    modalWindow.classList.remove('hidden');
+  }
+});
+
+// Очистка сообщения об ошибке при изменении значения в textarea
+document.querySelector('.questions__comment').addEventListener('input', function() {
+  const errorDiv = document.getElementById('errorQuestions');
+  errorDiv.innerHTML = ''; // Очистка сообщения об ошибке при вводе текста
+});
+
+// Функции для открытия и закрытия модального окна
+const openModal = function(content) {
+  let modal = document.getElementById('modal_window');
+  let overlay = document.getElementById('overlay');
+  let modalContent = document.getElementById('modal_window_content');
+  
+  document.body.classList.add('no-scroll');
+  
+  modalContent.innerHTML = content;
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+  
+  document.body.style.overflow = 'hidden';
+};
+
+const closeModal = function() {
+  let modal = document.getElementById('modal_window');
+  let overlay = document.getElementById('overlay');
+  
+  document.body.classList.remove('no-scroll');
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+  
+  document.body.style.overflow = '';
+};
+
+// Обработка кнопок закрытия модального окна
+document.getElementById('btn_close_modal').addEventListener('click', closeModal);
+document.getElementById('overlay').addEventListener('click', closeModal);
+
+// Обработка закрытия модального окна клавишей Escape
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && !document.getElementById('modal_window').classList.contains('hidden')) {
+    closeModal();
+  }
+});
+
+
+
+//  // Список запрещенных слов
+// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+
+// // Функция проверки спама
+// function validateInput(input) {
+//   if (/<|>/.test(input)) {
+//     return false; // Наличие угловых скобок
+//   }
+//   for (let word of profanityList) {
+//     if (input.toLowerCase().includes(word)) {
+//       return false; // Наличие нецензурных слов
+//     }
+//   }
+//   return true;
+// }
+
+// // Обработка кнопки отправки формы
+// document.getElementById('questions__button').addEventListener('click', async function(event) {
+//   event.preventDefault(); // Предотвращаем обычное поведение формы
+
+//   const form = document.getElementById('questions__form');
+//   const formData = new FormData(form);
+//   const errorDiv = document.getElementById('errorQuestions');
+//   const modalContent = document.getElementById('modal_window_content');
+//   const overlay = document.getElementById('overlay');
+//   const modalWindow = document.getElementById('modal_window');
+
+//   // Получение значения из поля textarea
+//   const userInput = formData.get('message');
+
+//   // Проверка ввода на спам
+//   if (!validateInput(userInput)) {
+//     errorDiv.innerText = 'Форма содержит недопустимые слова или символы.';
+//     return; // Прерываем выполнение функции
+//   } else {
+//     errorDiv.innerText = ''; // Очистить сообщения об ошибках
+//   }
+
+//   try {
+//     const response = await fetch('https://formspree.io/f/xvgpvnov', {
+//       method: 'POST',
+//       body: formData,
+//       headers: {
+//         'Accept': 'application/json'
+//       }
+//     });
+
+//     if (response.ok) {
+//       modalContent.innerHTML = '<div class="modal-text"><p>Спасибо!</p><p>Форма была успешно отправлена.</p></div>';
+//       form.reset(); // Очищаем поле textarea
+//     } else {
+//       modalContent.innerText = 'Произошла ошибка при отправке формы.';
+//     }
+
+//     // Показ модального окна
+//     overlay.classList.remove('hidden');
+//     modalWindow.classList.remove('hidden');
+//   } catch (error) {
+//     console.error('Ошибка:', error);
+//     modalContent.innerText = 'Произошла ошибка при отправке формы.';
+//     overlay.classList.remove('hidden');
+//     modalWindow.classList.remove('hidden');
+//   }
+// });
+
+// // Функции для открытия и закрытия модального окна
+// const openModal = function(content) {
+//   let modal = document.getElementById('modal_window');
+//   let overlay = document.getElementById('overlay');
+//   let modalContent = document.getElementById('modal_window_content');
+  
+//   document.body.classList.add('no-scroll');
+  
+//   modalContent.innerHTML = content;
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+  
+//   document.body.style.overflow = 'hidden';
+// };
+
+// const closeModal = function() {
+//   let modal = document.getElementById('modal_window');
+//   let overlay = document.getElementById('overlay');
+  
+//   document.body.classList.remove('no-scroll');
+//   modal.classList.add('hidden');
+//   overlay.classList.add('hidden');
+  
+//   document.body.style.overflow = '';
+// };
+
+// // Обработка кнопок закрытия модального окна
+// document.getElementById('btn_close_modal').addEventListener('click', closeModal);
+// document.getElementById('overlay').addEventListener('click', closeModal);
+
+// // Обработка закрытия модального окна клавишей Escape
+// document.addEventListener('keydown', function(e) {
+//   if (e.key === 'Escape' && !document.getElementById('modal_window').classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
+
+
+
+//  //-----Анонимные вопросы-----
+//   // Список запрещенных слов
+// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+
+// // Функция проверки спама
+// function validateInput(input) {
+//   if (/<|>/.test(input)) {
+//     return false; // Наличие угловых скобок
+//   }
+//   for (let word of profanityList) {
+//     if (input.toLowerCase().includes(word)) {
+//       return false; // Наличие нецензурных слов
+//     }
+//   }
+//   return true;
+// }
+
+// // Обработка кнопки отправки формы
+// document.getElementById('questions__button').addEventListener('click', async function(event) {
+//   event.preventDefault(); // Предотвращаем обычное поведение формы
+
+//   const form = document.getElementById('questions__form');
+//   const formData = new FormData(form);
+//   const modalContent = document.getElementById('modal_window_content');
+//   const overlay = document.getElementById('overlay');
+//   const modalWindow = document.getElementById('modal_window');
+
+//   // Получение значения из поля textarea
+//   const userInput = formData.get('message');
+
+//   // Проверка ввода на спам
+//   if (!validateInput(userInput)) {
+//     modalContent.innerHTML = '<div class="modal-text"><p>Ошибка!</p><p>Форма содержит недопустимые слова или символы.</p></div>';
+//     overlay.classList.remove('hidden');
+//     modalWindow.classList.remove('hidden');
+//     return; // Прерываем выполнение функции
+//   }
+
+//   try {
+//     const response = await fetch('https://formspree.io/f/xvgpvnov', {
+//       method: 'POST',
+//       body: formData,
+//       headers: {
+//         'Accept': 'application/json'
+//       }
+//     });
+
+//     if (response.ok) {
+//       modalContent.innerHTML = '<div class="modal-text"><p>Спасибо!</p><p>Форма была успешно отправлена</p></div>';
+//       form.reset(); // Очищаем поле textarea
+//     } else {
+//       modalContent.innerText = 'Произошла ошибка при отправке формы.';
+//     }
+
+//     // Показ модального окна
+//     overlay.classList.remove('hidden');
+//     modalWindow.classList.remove('hidden');
+//   } catch (error) {
+//     console.error('Ошибка:', error);
+//     modalContent.innerText = 'Произошла ошибка при отправке формы.';
+//     overlay.classList.remove('hidden');
+//     modalWindow.classList.remove('hidden');
+//   }
+// });
+
+// // Функции для открытия и закрытия модального окна
+// const openModal = function(content) {
+//   let modal = document.getElementById('modal_window');
+//   let overlay = document.getElementById('overlay');
+//   let modalContent = document.getElementById('modal_window_content');
+  
+//   document.body.classList.add('no-scroll');
+  
+//   modalContent.innerHTML = content;
+//   modal.classList.remove('hidden');
+//   overlay.classList.remove('hidden');
+  
+//   document.body.style.overflow = 'hidden';
+// };
+
+// const closeModal = function() {
+//   let modal = document.getElementById('modal_window');
+//   let overlay = document.getElementById('overlay');
+  
+//   document.body.classList.remove('no-scroll');
+//   modal.classList.add('hidden');
+//   overlay.classList.add('hidden');
+  
+//   document.body.style.overflow = '';
+// };
+
+// // Обработка кнопок закрытия модального окна
+// document.getElementById('btn_close_modal').addEventListener('click', closeModal);
+// document.getElementById('overlay').addEventListener('click', closeModal);
+
+// // Обработка закрытия модального окна клавишей Escape
+// document.addEventListener('keydown', function(e) {
+//   if (e.key === 'Escape' && !document.getElementById('modal_window').classList.contains('hidden')) {
+//     closeModal();
+//   }
+// });
+
+
+
 // ----- SCROLL ANIMATION -----
 
 gsap.registerPlugin(ScrollTrigger);
@@ -281,10 +601,12 @@ window.addEventListener("scroll", function () {
 
 // ----- BURGER MENU -----
 
+// ----- BURGER MENU -----
+
 const burger = document.querySelector(".header-burger");
 const overlay = document.querySelector(".header__overlay");
 const headerMenuLinks = document.querySelectorAll(".header__menu-link");
-let activeLink;
+let activeLink = null;
 
 document.addEventListener("DOMContentLoaded", function () {
   burger.addEventListener("click", showHeaderMenu);
@@ -300,8 +622,9 @@ const showHeaderMenu = () => {
   nav.classList.toggle("show");
   document.body.classList.toggle("lock");
 
-  if (!nav.classList.contains("show")) {
+  if (!nav.classList.contains("show") && activeLink) {
     activeLink.classList.remove("active");
+    activeLink = null; // Сбросить activeLink после удаления класса
   }
 };
 
@@ -315,6 +638,42 @@ headerMenuLinks.forEach((link) => {
     activeLink = link;
   });
 });
+
+
+// const burger = document.querySelector(".header-burger");
+// const overlay = document.querySelector(".header__overlay");
+// const headerMenuLinks = document.querySelectorAll(".header__menu-link");
+// let activeLink;
+
+// document.addEventListener("DOMContentLoaded", function () {
+//   burger.addEventListener("click", showHeaderMenu);
+//   overlay.addEventListener("click", showHeaderMenu);
+// });
+
+// const showHeaderMenu = () => {
+//   burger.classList.toggle("active");
+//   overlay.classList.toggle("show");
+
+//   const nav = document.querySelector(".header__nav");
+
+//   nav.classList.toggle("show");
+//   document.body.classList.toggle("lock");
+
+//   if (!nav.classList.contains("show")) {
+//     activeLink.classList.remove("active");
+//   }
+// };
+
+// headerMenuLinks.forEach((link) => {
+//   link.addEventListener("click", function () {
+//     headerMenuLinks.forEach((otherLink) =>
+//       otherLink.classList.remove("active")
+//     );
+
+//     link.classList.add("active");
+//     activeLink = link;
+//   });
+// });
 
 // FAQ
 
@@ -408,393 +767,3 @@ btnUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
-//----------Cookies---------
-
-// function acceptCookies() {
-//   document.getElementById("cookieConsent").style.display = "none";
-//   // Дополнительные действия, которые вы хотите выполнить при согласии с куками
-//   // Активация кода отслеживания Google Analytics
-//   gtag("config", "GTM-5M7R6KBB");
-// }
-
-// ----- SWITCHING CLASSES to show or hide the burger menu (mobile or PC version) -----
-
-// const isMobile = {
-//   Android: function () {
-//     return navigator.userAgent.match(/Android/i);
-//   },
-//   BlackBerry: function () {
-//     return navigator.userAgent.match(/BlackBerry/i);
-//   },
-//   iOS: function () {
-//     return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-//   },
-//   Opera: function () {
-//     return navigator.userAgent.match(/Opera Mini/i);
-//   },
-//   Windows: function () {
-//     return navigator.userAgent.match(/IEMobile/i);
-//   },
-//   any: function () {
-//     return (
-//       isMobile.Android() ||
-//       isMobile.BlackBerry() ||
-//       isMobile.iOS() ||
-//       isMobile.Opera() ||
-//       isMobile.Windows()
-//     );
-//   },
-// };
-
-// if (isMobile.any()) {
-//   document.body.classList.add("_touch");
-
-//   let menuArrow = document.querySelector(".menu__arrow");
-
-//   menuArrow.addEventListener("click", function () {
-//     menuArrow.parentElement.classList.toggle("_active");
-//     console.log(menuArrow.parentElement);
-//   });
-// } else {
-//   document.body.classList.add("_pc");
-// }
-
-// ----- Privacy Policy -----
-
-// const modalPrivacy = document.querySelector(".privacy-policy__concent");
-// const overlayPrivacy = document.querySelector(".privacy-policy");
-// const openModalBtnPrivacy = document.querySelector(".privacy-policy__link");
-// const closeModalBtnPrivacy = document.querySelector(
-//   ".privacy-policy__btn-close"
-// );
-
-// const openModalPrivacy = function () {
-//   modalPrivacy.classList.remove("hidden");
-//   overlayPrivacy.classList.remove("hidden");
-//   document.body.style.overflow = "hidden";
-// };
-
-// openModalBtnPrivacy.addEventListener("click", openModalPrivacy);
-
-// const closeModalPrivacy = function () {
-//   modalPrivacy.classList.add("hidden");
-//   overlayPrivacy.classList.add("hidden");
-//   document.body.style.overflow = ""; // Разблокируем прокрутку
-// };
-
-// closeModalBtnPrivacy.addEventListener("click", closeModalPrivacy);
-
-// overlayPrivacy.addEventListener("click", closeModalPrivacy);
-
-// modalPrivacy.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape" && !modalPrivacy.classList.contains("hidden")) {
-//     closeModalPrivacy();
-//   }
-// });
-
-// document
-//   .querySelector(".privacy-policy__concent")
-//   .addEventListener("show.bs.modal", function () {
-//     document.body.style.overflow = "hidden";
-//   });
-
-// document
-//   .querySelector(".privacy-policy__concent")
-//   .addEventListener("hide.bs.modal", function () {
-//     document.body.style.overflow = "";
-//   });
-
-// ----- DOWNLOAD FILE -----
-
-// function downloadPDF() {
-//   const link = document.createElement("a");
-//   link.href = "./assets/docs/guide.pdf";
-//   link.download = "guide.pdf";
-//   document.body.appendChild(link);
-//   link.click();
-//   document.body.removeChild(link);
-// }
-
-// function downloadPdfEn() {
-//   const linkEn = document.createElement("a");
-//   linkEn.href = "./assets/docs/guide_en.pdf";
-//   linkEn.download = "guide_en.pdf";
-//   document.body.appendChild(linkEn);
-//   linkEn.click();
-//   document.body.removeChild(linkEn);
-// }
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const downloadBtn = document.getElementById("downloadBtn");
-//   downloadBtn.addEventListener("click", function () {
-//     const language = navigator.language || navigator.userLanguage;
-//     if (language.startsWith("en")) {
-//       downloadPdfEn();
-//     } else {
-//       downloadPDF();
-//     }
-//   });
-// });
-
-// _______________________________________________________
-
-// function scrollToRegistration() {
-//   const targetBlock = document.getElementById("registration");
-//   targetBlock.scrollIntoView({ behavior: "smooth" });
-// }
-
-
-
-
-// function showThankYouMessage() {
-//   modal.style.display = "block";
-// }
-
-//___________Registration form______________________________
-
-// const form = document.querySelector(".formWithValidation");
-// //const email = document.querySelector("#email");
-// const checkboxAdult = document.querySelectorAll(".checkbox_18");
-// const checkboxPrivat = document.querySelectorAll(".checkboxPrivat");
-// const errorsInfo = document.querySelector("#errorsInfo");
-// const whatsappInput = document.querySelector("#whatsApp");
-
-// let submitted = false;
-
-// const profanityList = [
-//   "xxx",
-//   "viagra",
-//   "bitch",
-//   "slut",
-//   "whore",
-//   "cum",
-//   "fuck",
-//   "виагра",
-//   "сучка",
-//   "сука",
-//   "хуй",
-//   "тварь",
-//   "потаскуха",
-//   "блядина",
-//   "шалава",
-//   "трахать",
-//   "трахал",
-//   "трахаю",
-//   "шлюха",
-//   "сперма",
-//   "блядь",
-// ]; // Add more words as needed
-
-// // Function to check for angle brackets and profanity
-// function validateInput(input) {
-//   if (/<|>/.test(input)) {
-//     return false; // Found angle brackets
-//   }
-//   for (let word of profanityList) {
-//     if (input.toLowerCase().includes(word)) {
-//       return false; // Found profanity
-//     }
-//   }
-//   return true;
-// }
-
-// // Function to clear form fields
-// function clearFormFields() {
-//   document.getElementById("userName").value = "";
-//   document.getElementById("email").value = "";
-//   document.getElementById("whatsApp").value = "";
-//   document.getElementById("telegram").value = "";
-//   document.getElementById("comment").value = "";
-// }
-
-// Registration form validation functions
-//----------------------------------------
-
-//If needShowMessages = true, the validation messages will be displayed beneath the name field
-//Return true if validation is ok, false otherwise
-// function validateRegFormName(needShowMessages) {
-//   //Doing the basic validation - the name field should not be empty
-//   let result = true;
-//   let el = document.getElementById("userName");
-//   let elError = document.getElementById("errorUserName");
-
-//   if (el.value === null || el.value === "" || !validateInput(el.value)) {
-//     result = false;
-//   }
-
-//   if (needShowMessages) {
-//     elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_NAME;
-//   }
-
-//   return result;
-// }
-
-// function validateRegFormEmail(needShowMessages) {
-//   const re =
-//     /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
-
-//   let result = true;
-//   let el = document.getElementById("email");
-//   let elError = document.getElementById("errorEmail");
-
-//   if (el.value === null || el.value === "") {
-//     result = false;
-
-//     if (needShowMessages) {
-//       elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL;
-//     }
-//   } else if (!re.test(el.value)) {
-//     result = false;
-
-//     if (needShowMessages) {
-//       elError.innerText = REG_FORM_VALIDATION_MESSAGE_EMAIL_SYNTAX;
-//     }
-//   } else {
-//     elError.innerText = "";
-//   }
-
-//   return result;
-// }
-
-// function validateRegFormAge(needShowMessages) {
-//   let result = true;
-//   let el = document.getElementById("checkbox_18");
-//   let elError = document.getElementById("errorAge");
-
-//   if (el.value === null || el.value === "" || !el.checked) {
-//     result = false;
-//   }
-
-//   if (needShowMessages) {
-//     elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_AGE;
-//   }
-
-//   return result;
-// }
-
-// function validateRegFormPrivacy(needShowMessages) {
-//   let result = true;
-//   let el = document.getElementById("checkboxPrivat");
-//   let elError = document.getElementById("errorPrivacy");
-
-//   if (el.value === null || el.value === "" || !el.checked) {
-//     result = false;
-//   }
-
-//   if (needShowMessages) {
-//     elError.innerText = result ? "" : REG_FORM_VALIDATION_MESSAGE_PRIVACY;
-//   }
-
-//   return result;
-// }
-
-// function validateRegForm(needShowMessages) {
-//   let result = true;
-
-//   result = validateRegFormName(needShowMessages);
-
-//   if (result) {
-//     result = validateRegFormEmail(needShowMessages);
-//   }
-
-//   if (result) {
-//     result = validateRegFormAge(needShowMessages);
-//   }
-
-//   if (result) {
-//     result = validateRegFormPrivacy(needShowMessages);
-//   }
-
-//   let button_element = document.getElementById("registration_button");
-//   button_element.disabled = !result;
-
-//   return result;
-// }
-
-// document.getElementById("userName").addEventListener("blur", (event) => {
-//   validateRegFormName(true);
-// });
-// document.getElementById("userName").addEventListener("keyup", (event) => {
-//   validateRegForm(true);
-// });
-// document.getElementById("email").addEventListener("blur", (event) => {
-//   validateRegFormEmail(true);
-// });
-// document.getElementById("email").addEventListener("keyup", (event) => {
-//   validateRegForm(true);
-// });
-// document.getElementById("checkbox_18").addEventListener("click", (event) => {
-//   validateRegForm(true);
-// });
-// document.getElementById("checkboxPrivat").addEventListener("click", (event) => {
-//   validateRegForm(true);
-// });
-
-// function validateCheckboxes(checkboxes) {
-//   return [...checkboxes].some((checkbox) => checkbox.checked);
-// }
-
-// ----- Прокрутка при клике -----
-// const menuLinks = document.querySelectorAll(".menu__link[data-goto]");
-// if (menuLinks.length > 0) {
-//   menuLinks.forEach((menuLink) => {
-//     menuLink.addEventListener("click", onMenuLinkClick);
-//   });
-
-//   function onMenuLinkClick(e) {
-//     const menuLink = e.target;
-//     if (
-//       menuLink.dataset.goto &&
-//       document.querySelector(menuLink.dataset.goto)
-//     ) {
-//       const gotoBlock = document.querySelector(menuLink.dataset.goto);
-//       const gotoBlockValue =
-//         gotoBlock.getBoundingClientRect().top +
-//         pageYOffset -
-//         document.querySelector("header").offsetHeight;
-
-//       if (iconMenu.classList.contains("_active")) {
-//         document.body.classList.remove("_lock");
-//         iconMenu.classList.remove("_active");
-//         menuBody.classList.remove("_active");
-//       }
-
-//       window.scrollTo({
-//         top: gotoBlockValue,
-//         behavior: "smooth",
-//       });
-//       e.preventDefault();
-//     }
-//   }
-// }
-
-//  ----- BUTTON GLOW EFFECT -----
-
-// (function setGlowEffectRx() {
-//   const glowEffects = document.querySelectorAll(".glow-effect");
-
-//   glowEffects.forEach((glowEffect) => {
-//     const glowLines = glowEffect.querySelectorAll("rect");
-//     const rx = getComputedStyle(glowEffect).borderRadius;
-
-//     glowLines.forEach((line) => {
-//       line.setAttribute("rx", rx);
-//     });
-//   });
-// })();
-
-// ---------Cookie------
-// function acceptCookies() {
-// document.getElementById("cookieConsent").style.display = "none";
-// Дополнительные действия, которые вы хотите выполнить при согласии с куками
-// Активация кода отслеживания Google Analytics
-// gtag("config", "GTM-5M7R6KBB");
-// }
-
-// function acceptCookies1() {
-// document.getElementById("cookieConsent").style.display = "none";
-// Дополнительные действия, которые вы хотите выполнить при согласии с куками
-// Активация кода отслеживания Google Analytics
-// gtag("config", "GTM-5M7R6KBB");
-// }

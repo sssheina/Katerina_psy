@@ -1,128 +1,206 @@
 .modal {
   display: flex;
-  position: absolute;
+  position: fixed; /* Используем fixed для модального окна */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 450px;
-  width: 100%;
-  max-height: 300px;
-  height: 100%;
-  // max-height: calc(95vh - 50px);
-  padding: 1.3rem;
-  // top: 55%;
-  // left: 22%;
+  width: 90%;
+  max-height: 80%;
+  height: auto; /* Позволяет высоте адаптироваться */
+  padding: 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: $color-white;
-  box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Увеличенный тень для улучшения визуального эффекта */
+  border-radius: 8px; /* Скругление углов */
   z-index: 2000;
+  gap: 30px;
 
-  @include lg {
-    // height: 275px;
-    // width: 420px;
-    // top: 52%;
-    // left: 16%;
-  }
-
-  @include md {
-    // height: 250px;
-    // width: 400px;
-    // top: 51%;
-    // left: -12%;
-  }
-
-  @include sm {
-    // top: 57%;
-    // left: -3%;
-    height: 200px;
-    max-width: unset;
-    width: 90vw;
-  }
-
-  @include xs {
-    // top: 57%;
-    // left: 0;
-    height: 200px;
-    width: 260px;
-  }
-
-  &__content {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    // width: 300px;
-    font-size: 20px;
-    line-height: 150%;
-
-    @include lg {
-      font-size: 18px;
-    }
-
-    @include md {
-      width: 275px;
-      font-size: 16px;
-    }
-
-    @include sm {
-      font-size: 15px;
-    }
-
-    @include xs {
-      font-size: 14px;
-    }
-
-    @include xs {
-      width: 200px;
-    }
+  /* Мобильная адаптивность */
+  @media (max-width: 768px) {
+    max-width: 90%;
+    width: 100%;
+    height: auto;
   }
 }
 
-.btn-close {
+.modal__content {
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center; /* Центрирование текста */
+}
+
+.modal-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.button-close {
   position: absolute;
-  transform: translate(10px, -20px);
-  padding: 0.5rem 0.75rem;
-  top: 13%;
-  right: 6%;
-  background: $color-orange;
+  top: 10px;
+  right: 10px;
+  // background: #f56c6c; /* Цвет кнопки */
   border-radius: 50%;
-  border: none;
-
-  @include lg {
-    padding: 0.3rem 0.67rem;
-    width: 35px;
-    height: 35px;
-  }
-
-  @include md {
-    padding: 0.2rem 0.5rem;
-    top: 14%;
-    right: 6%;
-    width: 32px;
-    height: 32px;
-  }
-
-  @include sm {
-    width: 28px;
-    height: 28px;
-  }
-
-  @include xs {
-    top: 15%;
-    right: 8%;
-    padding: 0.14rem 0.43rem;
-    width: 25px;
-    height: 25px;
-  }
+  // border: none;
+  // color: white;
+  width: 30px;
+  height: 30px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  cursor: pointer;
 }
 
-.btn-close:hover {
-  background: $color-orange;
+// .btn-close:hover {
+  // background: #f43f3f; /* Цвет при наведении */
+// }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px); /* Усиленный эффект размытия */
+  z-index: 1000;
 }
+
+.hidden {
+  display: none;
+}
+
+
+
+// .modal {
+//   display: flex;
+//   position: absolute;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   max-width: 450px;
+//   width: 100%;
+//   max-height: 300px;
+//   height: 100%;
+//   // max-height: calc(95vh - 50px);
+//   padding: 1.3rem;
+//   // top: 55%;
+//   // left: 22%;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   background-color: $color-white;
+//   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
+//   z-index: 2000;
+
+//   @include lg {
+//     // height: 275px;
+//     // width: 420px;
+//     // top: 52%;
+//     // left: 16%;
+//   }
+
+//   @include md {
+//     // height: 250px;
+//     // width: 400px;
+//     // top: 51%;
+//     // left: -12%;
+//   }
+
+//   @include sm {
+//     // top: 57%;
+//     // left: -3%;
+//     height: 200px;
+//     max-width: unset;
+//     width: 90vw;
+//   }
+
+//   @include xs {
+//     // top: 57%;
+//     // left: 0;
+//     height: 200px;
+//     width: 260px;
+//   }
+
+//   &__content {
+//     // position: absolute;
+//     // top: 50%;
+//     // left: 50%;
+//     // transform: translate(-50%, -50%);
+//     display: flex;
+//     flex-direction: column;
+//     // width: 300px;
+//     font-size: 20px;
+//     line-height: 150%;
+
+//     @include lg {
+//       font-size: 18px;
+//     }
+
+//     @include md {
+//       width: 275px;
+//       font-size: 16px;
+//     }
+
+//     @include sm {
+//       font-size: 15px;
+//     }
+
+//     @include xs {
+//       font-size: 14px;
+//     }
+
+//     @include xs {
+//       width: 200px;
+//     }
+//   }
+// }
+
+// .btn-close {
+//   position: absolute;
+//   transform: translate(10px, -20px);
+//   padding: 0.5rem 0.75rem;
+//   top: 13%;
+//   right: 6%;
+//   background: $color-orange;
+//   border-radius: 50%;
+//   border: none;
+
+//   @include lg {
+//     padding: 0.3rem 0.67rem;
+//     width: 35px;
+//     height: 35px;
+//   }
+
+//   @include md {
+//     padding: 0.2rem 0.5rem;
+//     top: 14%;
+//     right: 6%;
+//     width: 32px;
+//     height: 32px;
+//   }
+
+//   @include sm {
+//     width: 28px;
+//     height: 28px;
+//   }
+
+//   @include xs {
+//     top: 15%;
+//     right: 8%;
+//     padding: 0.14rem 0.43rem;
+//     width: 25px;
+//     height: 25px;
+//   }
+// }
+
+// .btn-close:hover {
+//   background: $color-orange;
+// }
 
 // .overlay {
 //   position: fixed;
@@ -138,6 +216,6 @@
 
 // }
 
-.hidden {
-  display: none;
-}
+// .hidden {
+//   display: none;
+// }
