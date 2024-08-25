@@ -1534,7 +1534,7 @@ body.lock {
     padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .footer__content {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -2118,7 +2118,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .about {
     padding-top: 70px;
     padding-bottom: 35px;
@@ -2160,7 +2160,7 @@ body.lock {
 }
 
 .clients {
-  padding-top: 73px;
+  padding-top: 72px;
   padding-bottom: 72px;
 }
 @media only screen and (max-width: 1919px) {
@@ -2181,7 +2181,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .clients {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -2259,7 +2259,7 @@ body.lock {
 }
 
 .methods {
-  padding-top: 73px;
+  padding-top: 72px;
   padding-bottom: 72px;
 }
 @media only screen and (max-width: 1919px) {
@@ -2280,7 +2280,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .methods {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -2377,7 +2377,7 @@ body.lock {
 }
 
 .expertise {
-  padding-top: 73px;
+  padding-top: 72px;
   padding-bottom: 72px;
 }
 @media only screen and (max-width: 1919px) {
@@ -2398,7 +2398,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .expertise {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -2676,7 +2676,7 @@ body.lock {
     padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .benefits {
     padding-top: 35px;
     padding-bottom: 70px;
@@ -2826,7 +2826,7 @@ body.lock {
     padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .feedback {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -3003,7 +3003,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .steps {
     padding-top: 70px;
     padding-bottom: 35px;
@@ -3166,30 +3166,30 @@ body.lock {
 
 .price {
   padding-top: 73px;
-  padding-bottom: 72px;
+  padding-bottom: 145px;
 }
 @media only screen and (max-width: 1919px) {
   .price {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 108px;
   }
 }
 @media only screen and (max-width: 1439px) {
   .price {
-    padding-top: 33px;
-    padding-bottom: 33px;
+    padding-top: 35px;
+    padding-bottom: 66px;
   }
 }
 @media only screen and (max-width: 767px) {
   .price {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .price {
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 70px;
   }
 }
 .price__cards {
@@ -3319,7 +3319,7 @@ body.lock {
     padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .registration {
     padding-top: 35px;
     padding-bottom: 70px;
@@ -3396,7 +3396,7 @@ body.lock {
     padding-bottom: 40px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .faq {
     padding-top: 70px;
     padding-bottom: 35px;
@@ -3561,7 +3561,7 @@ body.lock {
     padding-bottom: 80px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .questions {
     padding-top: 35px;
     padding-bottom: 70px;
