@@ -60,7 +60,7 @@
   </header>
 
   <main class="main">
-    <!-- ГЛАВНАЯ -->
+    <!-- MAIN -->
     <section class="cover" id="main">
       <div class="cover__wrapper container">
         <div class="cover__content">
@@ -174,45 +174,7 @@
     <section class="clients" id="clients">
       <div class="clients__wrapper container">
         <h2 class="clients__title h2-title title">Кто может обратиться ко мне</h2>
-        <div class="clients__cards">
-          <!-- 1 -->
-          <div class="clients-card hover-filter hover-transform">
-            <img class="clients-card__img" src="/assets/images/clients-individual.png"
-              alt="Девушка с закрытыми глазами">
-            <div class="clients-card__text">
-              <h4 class="clients-card__title h4-title">Индивидуально</h4>
-              <p class="clients-card__info paragraph-standard">Любой взрослый человек</p>
-            </div>
-          </div>
-
-          <!-- 2 -->
-          <div class="clients-card hover-filter hover-transform">
-            <img class="clients-card__img" src="/assets/images/clients-pair.png" alt="Поцелуй">
-            <div class="clients-card__text">
-              <h4 class="clients-card__title h4-title">Пары и союзы</h4>
-              <p class="clients-card__info paragraph-standard">Моногамные и немоногамные</p>
-            </div>
-          </div>
-
-          <!-- 3 -->
-          <div class="clients-card hover-filter hover-transform">
-            <img class="clients-card__img" src="/assets/images/clients-family.png" alt="Мать с дочерью">
-            <div class="clients-card__text">
-              <h4 class="clients-card__title h4-title">Семьи</h4>
-              <p class="clients-card__info paragraph-standard">Взрослые родственники</p>
-            </div>
-          </div>
-
-          <!-- 4 -->
-          <div class="clients-card hover-filter hover-transform">
-            <img class="clients-card__img" src="/assets/images/clients-group.png" alt="Группа людей">
-            <div class="clients-card__text">
-              <h4 class="clients-card__title h4-title">Группы</h4>
-              <p class="clients-card__info paragraph-standard">Друзья, коллеги</p>
-            </div>
-          </div>
-        </div>
-
+        <div class="clients__cards" id="clientsCards"></div>
         <div class="clients__action button-block">
           <svg class="clients__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
@@ -226,72 +188,12 @@
     <section class="methods" id="methods">
       <div class="methods__wrapper container">
         <h2 class="methods__title h2-title title">Я применяю эти методы</h2>
-
-        <div class="methods__cards">
-          <!-- 1 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">Секс-терапия</h3>
-            <p class="methods__text paragraph-standard">
-              Терапия эмоциональных и&nbsp;психологических аспектов
-              сексуальных проблем. <br> Помогает решить проблемы, связанные
-              с&nbsp;интимностью
-            </p>
-          </div>
-
-          <!-- 2 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">АСТ</h3>
-            <p class="methods__text paragraph-standard">
-              Метод помогает оставаться в&nbsp;контакте с&nbsp;неудобными
-              чувствами и&nbsp;мыслями, принимать осознанные решения,
-              основанные на&nbsp;ваших ценностях
-            </p>
-          </div>
-
-          <!-- 3 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">ЭФТ</h3>
-            <p class="methods__text paragraph-standard">
-              Метод работает с&nbsp;эмоциональными реакциями
-              и&nbsp;поведением, помогает наладить коммуникацию в&nbsp;союзе,
-              раскрыть истинные потребности
-            </p>
-          </div>
-
-          <!-- 4 card -->
-          <div class="methods-card methods__card">
-            <img class="methods-card__img" src="/assets/images/method_pic-card_1.png" alt="абстратные линии">
-          </div>
-
-          <!-- 5 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">
-              IFS при травме насилия
-            </h3>
-            <p class="methods__text paragraph-standard">
-              Модель внутренних семейных систем, чтобы восстановиться после
-              опыта насилия, абъюзивных отношений. <br>
-              Работа с авторами абьюза
-            </p>
-          </div>
-
-          <!-- 6 card -->
-          <div class="methods-card methods__card">
-            <h3 class="methods-card__title h3-title">Арт-терапия</h3>
-            <p class="methods__text paragraph-standard">
-              Метод использует творчество для работы с&nbsp;бессознательным,
-              помогает выразить и&nbsp;осознать свои чувства через искусство
-            </p>
-          </div>
-        </div>
-
+        <div class="methods__cards" id="methodsCards"></div>
         <div class="methods__button-block button-block">
           <svg class="methods__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
-          <button class="methods__button button__primary button button-text">
-            Запись на сессию
-          </button>
+          <button class="methods__button button__primary button button-text">Запись на сессию</button>
         </div>
       </div>
     </section>
@@ -300,125 +202,12 @@
     <section class="benefits" id="benefits">
       <div class="benefits__wrapper container">
         <h2 class="benefits__title h2-title title">Почему выбирают меня</h2>
-
-        <div class="benefits__content">
-          <!-- 1 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">научный подход</h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я использую научно доказанные методы. Сочетаю инструменты
-              из&nbsp;ACT, EFT, IFS, биопсихосоциальной модели
-              в&nbsp;секс-терапии и&nbsp;других подходов
-            </p>
-          </div>
-
-          <!-- 2 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">ФЕМИНИСТСКАЯ ОПТИКА</h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я учитываю в работе социо-культурный контекст вашей жизни,
-              предрассудки и&nbsp;дискриминацию, которые вызывают стресс
-              и&nbsp;давят на&nbsp;вас
-            </p>
-          </div>
-
-          <!-- 3 -->
-          <div class="benefits-card benefits__card"></div>
-
-          <!-- 4 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">Поддержка ЛГБТК+</h3>
-            <p class="benefits-card__text paragraph-standard">
-              Поддержка ЛГБТК+ сообщества отражает мои глубинные ценности.
-              Я&nbsp;помогу вам почувствовать себя принятым и&nbsp;услышанным,
-              выстроить личные отношения
-            </p>
-          </div>
-
-          <!-- 5 -->
-          <div class="benefits-card benefits__card">
-            <svg class="benefits__cross icon-cross">
-              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-            </svg>
-          </div>
-
-          <!-- 6 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Немоногамные отношения
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я знаю, как&nbsp;работать с&nbsp;особенностями создания
-              эмоциональной близости и&nbsp;сложностями в&nbsp;немоногамных
-              отношениях
-            </p>
-          </div>
-
-          <!-- 7 -->
-          <div class="benefits-card benefits__card">
-            <img class="benefits-card__img hover-filter" src="/assets/images/benefits.png"
-              alt="Женщина нежно обнимает партнёршу">
-          </div>
-
-          <!-- 8 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Работа с травмой насилия
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я помогаю в ситуациях психического и&nbsp;физического насилия.
-              Я&nbsp;работаю как с&nbsp;теми, кто пережил насилие, так
-              и&nbsp;с&nbsp;его авторами
-            </p>
-          </div>
-
-          <!-- 9 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Информированность о нейроотличиях
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              У меня есть навыки работы с&nbsp;СДВГ, РАС, БАР и&nbsp;другими
-              нейроотличиями. Я&nbsp;создаю безопасную обстановку, учитывающую
-              ваши особенности
-            </p>
-          </div>
-
-          <!-- 10 -->
-          <div class="benefits-card benefits__card"></div>
-
-          <!-- 11 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Повышение квалификации
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Я постоянно развиваю и&nbsp;совершенствую свои навыки благодаря
-              личной терапии, регулярной супервизии, обучению и&nbsp;общению
-              с&nbsp;коллегами
-            </p>
-          </div>
-
-          <!-- 12 -->
-          <div class="benefits-card benefits__card">
-            <h3 class="benefits-card__title h3-title">
-              Мультикультурный опыт
-            </h3>
-            <p class="benefits-card__text paragraph-standard">
-              Личная история эмиграции помогает мне понимать и&nbsp;учитывать
-              культурные особенности клиентов из&nbsp;разных стран
-            </p>
-          </div>
-        </div>
-
+        <div class="benefits__content" id="benefitsContent"></div>
         <div class="benefits__button-block button-block">
           <svg class="benefits__cross icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
-
-          <button class="benefits__button button__primary button button-text wave-button">
-            Запись на сессию
-          </button>
+          <button class="benefits__button button__primary button button-text wave-button">Запись на сессию</button>
         </div>
       </div>
     </section>
@@ -1100,6 +889,9 @@
   <!-- <script type="module" src="/assets/scripts/sendquestion.js"></script> -->
   <script type="module" src="/assets/scripts/menu.js"></script>
   <script type="module" src="/assets/scripts/expertise.js"></script>
+  <script type="module" src="/assets/scripts/clients.js"></script>
+  <script type="module" src="/assets/scripts/methods.js"></script>
+  <script type="module" src="/assets/scripts/benefits.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
