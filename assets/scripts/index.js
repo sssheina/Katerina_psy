@@ -1,7 +1,29 @@
- //-----Анонимные вопросы-----
+//-----Анонимные вопросы-----
 
 // Список запрещенных слов
-const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+const profanityList = [
+  "xxx",
+  "viagra",
+  "bitch",
+  "slut",
+  "whore",
+  "cum",
+  "fuck",
+  "виагра",
+  "сучка",
+  "сука",
+  "хуй",
+  "тварь",
+  "потаскуха",
+  "блядина",
+  "шалава",
+  "трахать",
+  "трахал",
+  "трахаю",
+  "шлюха",
+  "сперма",
+  "блядь",
+];
 
 // Функция проверки спама
 function validateInput(input) {
@@ -17,101 +39,110 @@ function validateInput(input) {
 }
 
 // Обработка кнопки отправки формы
-document.getElementById('questions__button').addEventListener('click', async function(event) {
-  event.preventDefault(); // Предотвращаем обычное поведение формы
+document
+  .getElementById("questions__button")
+  .addEventListener("click", async function (event) {
+    event.preventDefault(); // Предотвращаем обычное поведение формы
 
-  const form = document.getElementById('questions__form');
-  const formData = new FormData(form);
-  const modalContent = document.getElementById('modal_window_content');
-  const overlay = document.getElementById('overlay');
-  const modalWindow = document.getElementById('modal_window');
-  const errorDiv = document.getElementById('errorQuestions');
+    const form = document.getElementById("questions__form");
+    const formData = new FormData(form);
+    const modalContent = document.getElementById("modal_window_content");
+    const overlay = document.getElementById("overlay");
+    const modalWindow = document.getElementById("modal_window");
+    const errorDiv = document.getElementById("errorQuestions");
 
-  // Получение значения из поля textarea
-  const userInput = formData.get('message');
+    // Получение значения из поля textarea
+    const userInput = formData.get("message");
 
-  // Проверка ввода на спам
-  if (!validateInput(userInput)) {
-    errorDiv.innerHTML = '<p>Ошибка! Сообщение содержит недопустимые слова или символы.</p>';
-    return; // Прерываем выполнение функции
-  } else {
-    errorDiv.innerHTML = ''; // Очистка сообщения об ошибке
-  }
-
-  try {
-    const response = await fetch('https://formspree.io/f/xvgpvnov', {
-      method: 'POST',
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    if (response.ok) {
-      modalContent.innerHTML = '<div class="modal-text"><p>Спасибо!</p><p>Сообщение было успешно отправлено</p></div>';
-      form.reset(); // Очищаем поле textarea
+    // Проверка ввода на спам
+    if (!validateInput(userInput)) {
+      errorDiv.innerHTML =
+        "<p>Ошибка! Сообщение содержит недопустимые слова или символы.</p>";
+      return; // Прерываем выполнение функции
     } else {
-      modalContent.innerText = 'Произошла ошибка при отправке формы.';
+      errorDiv.innerHTML = ""; // Очистка сообщения об ошибке
     }
 
-    // Показ модального окна
-    overlay.classList.remove('hidden');
-    modalWindow.classList.remove('hidden');
-  } catch (error) {
-    console.error('Ошибка:', error);
-    modalContent.innerText = 'Произошла ошибка при отправке формы.';
-    overlay.classList.remove('hidden');
-    modalWindow.classList.remove('hidden');
-  }
-});
+    try {
+      const response = await fetch("https://formspree.io/f/xvgpvnov", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        modalContent.innerHTML =
+          '<div class="modal-text"><p>Спасибо!</p><p>Сообщение было успешно отправлено</p></div>';
+        form.reset(); // Очищаем поле textarea
+      } else {
+        modalContent.innerText = "Произошла ошибка при отправке формы.";
+      }
+
+      // Показ модального окна
+      overlay.classList.remove("hidden");
+      modalWindow.classList.remove("hidden");
+    } catch (error) {
+      console.error("Ошибка:", error);
+      modalContent.innerText = "Произошла ошибка при отправке формы.";
+      overlay.classList.remove("hidden");
+      modalWindow.classList.remove("hidden");
+    }
+  });
 
 // Очистка сообщения об ошибке при изменении значения в textarea
-document.querySelector('.questions__comment').addEventListener('input', function() {
-  const errorDiv = document.getElementById('errorQuestions');
-  errorDiv.innerHTML = ''; // Очистка сообщения об ошибке при вводе текста
-});
+document
+  .querySelector(".questions__comment")
+  .addEventListener("input", function () {
+    const errorDiv = document.getElementById("errorQuestions");
+    errorDiv.innerHTML = ""; // Очистка сообщения об ошибке при вводе текста
+  });
 
 // Функции для открытия и закрытия модального окна
-const openModal = function(content) {
-  let modal = document.getElementById('modal_window');
-  let overlay = document.getElementById('overlay');
-  let modalContent = document.getElementById('modal_window_content');
-  
-  document.body.classList.add('no-scroll');
-  
+const openModal = function (content) {
+  let modal = document.getElementById("modal_window");
+  let overlay = document.getElementById("overlay");
+  let modalContent = document.getElementById("modal_window_content");
+
+  document.body.classList.add("no-scroll");
+
   modalContent.innerHTML = content;
-  modal.classList.remove('hidden');
-  overlay.classList.remove('hidden');
-  
-  document.body.style.overflow = 'hidden';
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+
+  document.body.style.overflow = "hidden";
 };
 
-const closeModal = function() {
-  let modal = document.getElementById('modal_window');
-  let overlay = document.getElementById('overlay');
-  
-  document.body.classList.remove('no-scroll');
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-  
-  document.body.style.overflow = '';
+const closeModal = function () {
+  let modal = document.getElementById("modal_window");
+  let overlay = document.getElementById("overlay");
+
+  document.body.classList.remove("no-scroll");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+
+  document.body.style.overflow = "";
 };
 
 // Обработка кнопок закрытия модального окна
-document.getElementById('btn_close_modal').addEventListener('click', closeModal);
-document.getElementById('overlay').addEventListener('click', closeModal);
+document
+  .getElementById("btn_close_modal")
+  .addEventListener("click", closeModal);
+document.getElementById("overlay").addEventListener("click", closeModal);
 
 // Обработка закрытия модального окна клавишей Escape
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Escape' && !document.getElementById('modal_window').classList.contains('hidden')) {
+document.addEventListener("keydown", function (e) {
+  if (
+    e.key === "Escape" &&
+    !document.getElementById("modal_window").classList.contains("hidden")
+  ) {
     closeModal();
   }
 });
 
-
-
 //  // Список запрещенных слов
-// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь'];
 
 // // Функция проверки спама
 // function validateInput(input) {
@@ -180,24 +211,24 @@ document.addEventListener('keydown', function(e) {
 //   let modal = document.getElementById('modal_window');
 //   let overlay = document.getElementById('overlay');
 //   let modalContent = document.getElementById('modal_window_content');
-  
+
 //   document.body.classList.add('no-scroll');
-  
+
 //   modalContent.innerHTML = content;
 //   modal.classList.remove('hidden');
 //   overlay.classList.remove('hidden');
-  
+
 //   document.body.style.overflow = 'hidden';
 // };
 
 // const closeModal = function() {
 //   let modal = document.getElementById('modal_window');
 //   let overlay = document.getElementById('overlay');
-  
+
 //   document.body.classList.remove('no-scroll');
 //   modal.classList.add('hidden');
 //   overlay.classList.add('hidden');
-  
+
 //   document.body.style.overflow = '';
 // };
 
@@ -212,11 +243,9 @@ document.addEventListener('keydown', function(e) {
 //   }
 // });
 
-
-
 //  //-----Анонимные вопросы-----
 //   // Список запрещенных слов
-// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь']; 
+// const profanityList = ['xxx', 'viagra', 'bitch', 'slut', 'whore', 'cum', 'fuck', 'виагра', 'сучка', 'сука', 'хуй', 'тварь', 'потаскуха', 'блядина', 'шалава', 'трахать', 'трахал', 'трахаю', 'шлюха', 'сперма', 'блядь'];
 
 // // Функция проверки спама
 // function validateInput(input) {
@@ -284,24 +313,24 @@ document.addEventListener('keydown', function(e) {
 //   let modal = document.getElementById('modal_window');
 //   let overlay = document.getElementById('overlay');
 //   let modalContent = document.getElementById('modal_window_content');
-  
+
 //   document.body.classList.add('no-scroll');
-  
+
 //   modalContent.innerHTML = content;
 //   modal.classList.remove('hidden');
 //   overlay.classList.remove('hidden');
-  
+
 //   document.body.style.overflow = 'hidden';
 // };
 
 // const closeModal = function() {
 //   let modal = document.getElementById('modal_window');
 //   let overlay = document.getElementById('overlay');
-  
+
 //   document.body.classList.remove('no-scroll');
 //   modal.classList.add('hidden');
 //   overlay.classList.add('hidden');
-  
+
 //   document.body.style.overflow = '';
 // };
 
@@ -315,8 +344,6 @@ document.addEventListener('keydown', function(e) {
 //     closeModal();
 //   }
 // });
-
-
 
 // ----- SCROLL ANIMATION -----
 
@@ -639,7 +666,6 @@ headerMenuLinks.forEach((link) => {
   });
 });
 
-
 // const burger = document.querySelector(".header-burger");
 // const overlay = document.querySelector(".header__overlay");
 // const headerMenuLinks = document.querySelectorAll(".header__menu-link");
@@ -674,27 +700,6 @@ headerMenuLinks.forEach((link) => {
 //     activeLink = link;
 //   });
 // });
-
-// FAQ
-
-const questions = Array.from(document.querySelectorAll(".faq-box"));
-
-const showQuestion = (e) => {
-  let currentQuestion = e.target.closest(".faq-box");
-  let currentAnswer = currentQuestion.querySelector(".faq-box__answer");
-
-  currentQuestion.classList.toggle("active");
-
-  if (currentQuestion.classList.contains("active")) {
-    currentAnswer.style.maxHeight = currentAnswer.scrollHeight + "px";
-  } else {
-    currentAnswer.style.maxHeight = 0;
-  }
-};
-
-questions.forEach((question) => {
-  question.addEventListener("click", showQuestion);
-});
 
 // ----- FEEDBACK -----
 

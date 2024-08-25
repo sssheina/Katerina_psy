@@ -223,112 +223,7 @@
           <div class="feedback__next swiper-button-next"></div>
 
           <div class="feedback__swiper swiper">
-            <div class="feedback__pagination swiper-pagination"></div>
-
             <div class="feedback__swiper-wrapper swiper-wrapper">
-              <!-- 1 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
-                </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Мне было комфортно с&nbsp;Катериной, я&nbsp;могла быть
-                  открытой. Здорово, что&nbsp;была обратная связь
-                  по&nbsp;дополнительным заданиям, которые она мне давала,
-                  и&nbsp;это было использовано в&nbsp;дальнейшей работе
-                  <br><br>
-                </p>
-                <hr class="feedback__line">
-                <p class="feedback__client h5-title">МАРИЯ</p>
-                <p class="feedback__client-info paragraph-standard">
-                  23 года, Франция
-                </p>
-              </div>
-
-              <!-- 2 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
-                </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Екатерина, я хочу поблагодарить тебя за&nbsp;такую бережную
-                  и&nbsp;глубокую работу со&nbsp;мной. Ты&nbsp;не&nbsp;только
-                  помогла разобраться в&nbsp;проблеме,
-                  но&nbsp;и&nbsp;показала, какие инструменты можно
-                  использовать для ее&nbsp;решения. Я&nbsp;ухожу от&nbsp;тебя
-                  реальным планом действий. Спасибо тебе большое!
-                </p>
-                <hr class="feedback__line">
-                <p class="feedback__client h5-title">АНАСТАСИЯ</p>
-                <p class="feedback__client-info paragraph-standard">
-                  36 лет, Россия
-                </p>
-              </div>
-
-              <!-- 3 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
-                </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Катерина была внимательна, заботлива и&nbsp;я&nbsp;сразу
-                  почувствовал себя в&nbsp;безопасности. Она помогла мне
-                  развернуть нить моих мыслей и&nbsp;посмотреть
-                  со&nbsp;стороны на&nbsp;мои действия. Спустя несколько
-                  месяцев я&nbsp;до&nbsp;сих&nbsp;пор использую этот анализ.
-                </p>
-                <hr class="feedback__line">
-                <p class="feedback__client h5-title">А.</p>
-                <p class="feedback__client-info paragraph-standard">
-                  31 год, Франция
-                </p>
-              </div>
-
-              <!-- 4 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
-                </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Обратились к&nbsp;тебе, уже&nbsp;буквально находясь
-                  на&nbsp;грани разрыва наших отношений. И&nbsp;тебе удалось
-                  с&nbsp;первой сессии понизить градус наших дискуссий,
-                  а&nbsp;некоторые вопросы вообще убрать из&nbsp;обсуждения
-                  как&nbsp;решённые. Мы&nbsp;начали друг друга слушать
-                  и&nbsp;понимать, а&nbsp;с&nbsp;пониманием пришло сочувствие
-                  друг к&nbsp;другу.
-                </p>
-                <hr class="feedback__line">
-                <p class="feedback__client h5-title">Е. Б.</p>
-                <p class="feedback__client-info paragraph-standard">
-                  60 и 30 лет, Грузия
-                </p>
-              </div>
-
-              <!-- 5 -->
-              <div class="feedback__slide swiper-slide">
-                <svg class="feedback__quote icon-quote">
-                  <use xlink:href="/assets/images/figures/sprite.svg#quote"></use>
-                </svg>
-
-                <p class="feedback__text paragraph-standard">
-                  Я с трудом справлялась в тяжёлый период моей жизни. Мне
-                  не&nbsp;хватало поддержки из-за&nbsp;того, что&nbsp;близких
-                  людей уже нет на&nbsp;свете. Я&nbsp;скептически отнеслась
-                  к&nbsp;упражнениям и&nbsp;очень удивилась, когда прямо
-                  на&nbsp;сессии получила облегчение. Феноменально! Катя,
-                  спасибо за&nbsp;мою команду поддержки!
-                </p>
-                <hr class="feedback__line">
-                <p class="feedback__client h5-title">СВЕТЛАНА</p>
-                <p class="feedback__client-info paragraph-standard">
-                  46 лет, Беларусь
-                </p>
-              </div>
             </div>
           </div>
         </div>
@@ -418,6 +313,42 @@
         </div>
       </div>
     </section>
+
+
+    <!-- TODO: fix scss so we can use refactored code + steps.js -->
+    <!-- <section class="steps" id="steps">
+      <div class="steps__wrapper container">
+        <h2 class="steps__title h2-title title">Этапы работы</h2>
+
+        <div class="steps__content">
+          <div class="steps__img">
+            <img src="/assets/images/steps__img.png" alt="Абстрактные линии">
+          </div>
+
+    <div class="steps__items">
+      <template id="step-template">
+        <div class="steps__step-item">
+          <h2 class="steps__number h2-title"></h2>
+          <div class="steps__step">
+            <h3 class="steps__subtitle h3-title"></h3>
+            <div class="steps__line"></div>
+            <p class="steps__text paragraph-standard"></p>
+          </div>
+        </div>
+      </template>
+    </div>
+    </div>
+
+    <div class="steps__button-block button-block">
+      <svg class="steps__cross icon-cross">
+        <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+      </svg>
+      <button class="steps__button button__primary button button-text">
+        Запись на сессию
+      </button>
+    </div>
+    </div>
+    </section> -->
 
     <!-- PRICE -->
     <section class="price" id="price">
@@ -569,146 +500,7 @@
       <div class="faq__wrapper container">
         <h2 class="faq__title h2-title">FAQ</h2>
 
-        <div class="faq__content">
-          <!-- Как работает секс-терапия? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Как работает секс-терапия?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Секс-терапия работает с&nbsp;мыслями, эмоциями
-                и&nbsp;действиями, помогает достичь гармоничных сексуальных
-                отношений. Важно отметить, что секс-терапия -
-                не&nbsp;медицинская помощь, это не&nbsp;заменяет консультацию
-                эндокринолога, гинеколога или&nbsp;психиатра.
-              </p>
-            </div>
-          </div>
-
-          <!-- Сколько сессий нужно для результата и как часто? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Сколько сессий нужно для результата и&nbsp;как часто?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Количество сессий и&nbsp;их&nbsp;частота зависят от&nbsp;ваших
-                потребностей и&nbsp;целей. Это может быть несколько сеансов
-                или&nbsp;несколько месяцев со&nbsp;встречами раз в&nbsp;неделю
-                или&nbsp;раз в&nbsp;две недели. Мы подберем график, который
-                подходит именно вам
-              </p>
-            </div>
-          </div>
-
-          <!-- Конфиденциальны ли эти консультации? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Конфиденциальны ли эти консультации?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Да, все консультации проводятся строго конфиденциально. Ваши
-                личные данные и&nbsp;содержание сессий будут защищены
-                и&nbsp;не&nbsp;будут разглашаться, за&nbsp;исключением
-                случаев, когда это требуется законом или&nbsp;существует
-                потенциальная угроза вашей безопасности или&nbsp;безопасности
-                других
-              </p>
-            </div>
-          </div>
-
-          <!-- Какие есть условия и способы оплаты? а переноса сессии? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Какие есть условия и&nbsp;способы оплаты? А переноса сессии?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Перенос или&nbsp;отмена сессии — бесплатно, если уведомите
-                об&nbsp;этом не&nbsp;позднее, чем&nbsp;за&nbsp;24&nbsp;часа
-                до&nbsp;начала. В&nbsp;таком случае оплаченная сумма
-                сохранится для&nbsp;следующей консультации. Отмена сессии
-                менее, чем&nbsp;за&nbsp;сутки — стоимость консультации
-                не&nbsp;возвращается. Оплата принимается через банковский
-                перевод в&nbsp;евро или&nbsp;с&nbsp;помощью приложения PayPal.
-                Если у&nbsp;вас возникли вопросы или&nbsp;трудности,
-                не&nbsp;стесняйтесь связаться со&nbsp;мной
-              </p>
-            </div>
-          </div>
-
-          <!-- Как понять, когда записаться индивидуально, а когда вместе? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Как понять, когда записаться индивидуально, а&nbsp;когда вместе?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Если проблемы касаются секса, общения или&nbsp;отношений,
-                которые затрагивают всех в&nbsp;союзе, совместная консультация
-                будет логичным выбором. Если вопросы скорее личные
-                и&nbsp;требуют отдельного внимания, то&nbsp;индивидуальная
-                сессия будет предпочтительнее. Если у&nbsp;вас есть сомнения,
-                обсудите это со&nbsp;мной
-              </p>
-            </div>
-          </div>
-
-          <!-- Не нашли ответ на ваш вопрос? -->
-          <div class="faq-box faq__box">
-            <div class="faq-box__question">
-              <h4 class="faq-box__title h4-title">
-                Не нашли ответ на ваш вопрос?
-              </h4>
-              <svg class="faq-box__cross icon-cross">
-                <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-              </svg>
-            </div>
-
-            <div class="faq-box__answer">
-              <p class="faq-box__text paragraph-standard">
-                Если у вас остались вопросы, просто напишите мне
-                на&nbsp;электронную почту
-                <a href="mailto:kat.tartary@gmail.com" target="_blank"
-                  class="faq-box__link link">kat.tartary@gmail.com</a>
-                или&nbsp;найдите меня в&nbsp;Telegram:
-                <a href="https://t.me/Sartari" target="_blank" class="faq-box__link">@Sartari</a>&nbsp;/ WhatsApp
-                <a href="https://wa.me/+33646811834" target="_blank" class="faq-box__link">+33 6 46 81 18 34</a>
-              </p>
-            </div>
-          </div>
+        <div class="faq__content" id="faq-content">
         </div>
 
         <div class="faq__action button-block">
@@ -892,6 +684,11 @@
   <script type="module" src="/assets/scripts/clients.js"></script>
   <script type="module" src="/assets/scripts/methods.js"></script>
   <script type="module" src="/assets/scripts/benefits.js"></script>
+  <script type="module" src="/assets/scripts/feedback.js"></script>
+  <script type="module" src="/assets/scripts/steps.js"></script>
+  <script type="module" src="/assets/scripts/faq.js"></script>
+
+
   <script type="module" src="/assets/scripts/index.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
