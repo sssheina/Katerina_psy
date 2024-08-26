@@ -345,6 +345,7 @@ document.addEventListener("keydown", function (e) {
 //   }
 // });
 
+
 // ----- SCROLL ANIMATION -----
 
 gsap.registerPlugin(ScrollTrigger);
@@ -626,7 +627,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// ----- BURGER MENU -----
 
 // ----- BURGER MENU -----
 
