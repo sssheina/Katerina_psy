@@ -39,15 +39,13 @@
             </svg>
           </a>
 
-          <a class="header__link paragraph-standard language">RU</a>
-          <!-- <ul class="header__sub-list">
-            <li>
-              <a href="en.html" class="header__menu-link">EN</a>
-            </li>
-            <li>
-              <a href="fr.html" class="header__menu-link">FR</a>
-            </li>
-          </ul> -->
+          <div class="language-selector">
+            <select id="language-dropdown" class="language-dropdown">
+              <option value="RU" class="header__link paragraph-standard language">RU</option>
+              <option value="EN" class="header__link paragraph-standard language">EN</option>
+              <option value="FR" class="header__link paragraph-standard language">FR</option>
+            </select>
+          </div>
         </div>
 
         <div class="header-burger header__burger">
@@ -154,7 +152,7 @@
     <!-- EXPERTISE -->
     <section class="expertise" id="expertise">
       <div class="expertise__wrapper container">
-        <h2 class="expertise__title h2-title title">С чем я работаю</h2>
+        <h2 class="expertise__title h2-title title"></h2>
 
         <div class="expertise__content" id="expertiseContent">
         </div>
@@ -164,7 +162,6 @@
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
           <button class="expertise__button button__primary button button-text">
-            Запись на сессию
           </button>
         </div>
       </div>

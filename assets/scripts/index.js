@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.getElementById("language-dropdown");
+
+  // Get saved language from localStorage
+  const savedLanguage = localStorage.getItem("selectedLanguage");
+  if (savedLanguage) {
+    dropdown.value = savedLanguage;
+  }
+
+  // Save the selected language
+  dropdown.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem("selectedLanguage", selectedLanguage);
+  });
+});
+
 //-----Анонимные вопросы-----
 
 // Список запрещенных слов
@@ -345,7 +361,6 @@ document.addEventListener("keydown", function (e) {
 //   }
 // });
 
-
 // ----- SCROLL ANIMATION -----
 
 gsap.registerPlugin(ScrollTrigger);
@@ -626,7 +641,6 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("scrolled", false);
   }
 });
-
 
 // ----- BURGER MENU -----
 
