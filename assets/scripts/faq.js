@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  const faqContent = document.getElementById("faq-content");
+  const faqContent = document.querySelector(".faq__content");
 
   faqDataRu.forEach((faq) => {
     const faqBox = document.createElement("div");
