@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const stepsData = [
+  const stepsDataRu = [
     {
       number: "01",
       subtitle: "Запись",
@@ -22,10 +22,56 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  const stepsDataEn = [
+    {
+      number: "01",
+      subtitle: "Scheduling",
+      text: `Select a convenient time in the consultation calendar for your first free 30-minute session`,
+    },
+    {
+      number: "02",
+      subtitle: "Confirmation",
+      text: `You will receive an email with the consultation date and a Google Meet link - confirm your participation and add it to your calendar. The second letter contains a document of informed consent for therapy`,
+    },
+    {
+      number: "03",
+      subtitle: "First session",
+      text: `Follow the Google Meet link in your invitation email or your calendar to connect. If you have lost the link, write to me on WhatsApp or Telegram`,
+    },
+    {
+      number: "04",
+      subtitle: "Following sessions",
+      text: `We will have as many sessions as you need. Information about payment methods is sent in a separate email. Payment for the session must be made no later than 24 hours before the start. A full session lasts 50 - 70 minutes`,
+    },
+  ];
+
+  const stepsDataFr = [
+    {
+      number: "01",
+      subtitle: "Inscription",
+      text: `Sélectionnez un créneau qui vous convient dans le calendrier de consultations pour votre première session gratuite de 30 minutes`,
+    },
+    {
+      number: "02",
+      subtitle: "Confirmation",
+      text: `Vous recevrez un email avec la date de la consultation et un lien Google Meet. Confirmez votre participation et ajoutez-le à votre calendrier. Un deuxième email contiendra le document de consentement pour la session.`,
+    },
+    {
+      number: "03",
+      subtitle: "Première session",
+      text: `Connectez-vous grâe au lien Google Meet depuis votre e-mail d'invitation ou depuis votre calendrier. Si vous ne trouvez plus le lien, écrivez-moi sur WhatsApp ou Telegram`,
+    },
+    {
+      number: "04",
+      subtitle: "Sessions suivantes",
+      text: `Il y aura autant de séances que vous le souhaitez. Les informations sur les modes de paiement seront envoyées par e-mail. Effectuez le payment au plus tard 24 heures avant le début. Une consultation complète dure 50 à 70 minutes`,
+    },
+  ];
+
   const stepTemplate = document.getElementById("step-template").content;
   const stepsContainer = document.querySelector(".steps__items");
 
-  stepsData.forEach((step) => {
+  stepsDataRu.forEach((step) => {
     const stepClone = document.importNode(stepTemplate, true);
     stepClone.querySelector(".steps__number").textContent = step.number;
     stepClone.querySelector(".steps__subtitle").textContent = step.subtitle;
