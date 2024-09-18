@@ -1,3 +1,9 @@
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
+
 const aboutContent = {
   RU: {
     title: "Обо мне",
@@ -92,26 +98,5 @@ const updateAboutSection = (language) => {
   }
 };
 
-// Handle language change
-const handleLanguageChange = () => {
-  const dropdown = document.getElementById("language-dropdown");
-  const selectedLanguage = dropdown.value;
-  localStorage.setItem("selectedLanguage", selectedLanguage);
-
-  // Update About section content
-  updateAboutSection(selectedLanguage);
-};
-
-// Load saved language on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("selectedLanguage") || "EN"; // Default to 'EN'
-  document.getElementById("language-dropdown").value = savedLanguage;
-
-  // Update About section content
-  updateAboutSection(savedLanguage);
-});
-
-// Add event listener to dropdown
-document
-  .getElementById("language-dropdown")
-  .addEventListener("change", handleLanguageChange);
+loadLanguage(updateAboutSection);
+dropdown.addEventListener("change", changeLanguage(updateAboutSection));

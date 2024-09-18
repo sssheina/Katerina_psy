@@ -1,3 +1,9 @@
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
+
 const expertiseDataRu = [
   {
     heading: "Сексуальность",
@@ -287,7 +293,6 @@ const expertiseDataMap = {
   },
 };
 
-// Render expertise content
 const renderExpertise = (data, title, buttonText) => {
   const expertiseContainer = document.getElementById("expertiseContent");
   const expertiseTitle = document.querySelector(".expertise__title");
@@ -344,28 +349,31 @@ const renderExpertise = (data, title, buttonText) => {
   });
 };
 
-// Function to handle language change
-const handleLanguageChange = () => {
-  const dropdown = document.getElementById("language-dropdown");
-  const selectedLanguage = dropdown.value;
-  localStorage.setItem("selectedLanguage", selectedLanguage);
+loadLanguage(renderExpertise);
+dropdown.addEventListener("change", changeLanguage(renderExpertise));
 
-  const { data, title, buttonText } =
-    expertiseDataMap[selectedLanguage] || expertiseDataMap.EN;
-  renderExpertise(data, title, buttonText);
-};
+// Function to handle language change
+// const handleLanguageChange = () => {
+//   const dropdown = document.getElementById("language-dropdown");
+//   const selectedLanguage = dropdown.value;
+//   localStorage.setItem("selectedLanguage", selectedLanguage);
+
+//   const { data, title, buttonText } =
+//     expertiseDataMap[selectedLanguage] || expertiseDataMap.EN;
+//   renderExpertise(data, title, buttonText);
+// };
 
 // Load saved language on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("selectedLanguage") || "EN"; // Default to 'EN'
-  document.getElementById("language-dropdown").value = savedLanguage;
+// document.addEventListener("DOMContentLoaded", () => {
+//   const savedLanguage = localStorage.getItem("selectedLanguage") || "EN"; // Default to 'EN'
+//   document.getElementById("language-dropdown").value = savedLanguage;
 
-  const { data, title, buttonText } =
-    expertiseDataMap[savedLanguage] || expertiseDataMap.EN;
-  renderExpertise(data, title, buttonText);
-});
+//   const { data, title, buttonText } =
+//     expertiseDataMap[savedLanguage] || expertiseDataMap.EN;
+//   renderExpertise(data, title, buttonText);
+// });
 
 // Add event listener to dropdown
-document
-  .getElementById("language-dropdown")
-  .addEventListener("change", handleLanguageChange);
+// document
+//   .getElementById("language-dropdown")
+//   .addEventListener("change", handleLanguageChange);

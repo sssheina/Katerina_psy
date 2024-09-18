@@ -1,38 +1,9 @@
-const coverContent = {
-  RU: {
-    titleTop: "Онлайн консультации",
-    titleBottom: "Катерины Тартари",
-    subtitleTop: "Начните с бесплатной сессии",
-    subtitleBottom: "Индивидуально, для пар, полиаморных союзов и семей",
-    therapyPsychotherapy: "психотерапия",
-    therapySextherapy: "секс-терапия",
-    buttonText: "Записаться",
-    videoSrc: "/assets/video/video_5.mp4",
-  },
-  EN: {
-    titleTop: "Online Counseling",
-    titleBottom: "Katerina Tartari",
-    subtitleTop: "Get started with a free session",
-    subtitleBottom: "For Individual, couples, polyamorous unions and families",
-    therapyPsychotherapy: "psychotherapy",
-    therapySextherapy: "sex therapy",
-    buttonText: "Let’s talk!",
-    videoSrc: "/assets/video/video_5.mp4",
-  },
-  FR: {
-    titleTop: "thérapie en ligne",
-    titleBottom: "par Katerina Tartary",
-    subtitleTop: "Commence avec une consultation gratuite",
-    subtitleBottom:
-      "En individuel, pour couples, unions polyamoureuses et familles",
-    therapyPsychotherapy: "psychothérapie",
-    therapySextherapy: "Sexothérapie",
-    buttonText: "Inscription",
-    videoSrc: "/assets/video/video_5.mp4",
-  },
-};
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
 
-// Localization data for clients section
 const clientsSectionContent = {
   RU: {
     title: "Кто может обратиться ко мне",
@@ -126,55 +97,6 @@ const clientsSectionContent = {
   },
 };
 
-// update the cover section
-const updateCoverSection = (language) => {
-  const content = coverContent[language] || coverContent.EN;
-
-  // Update titles and subtitles
-  const titleTopElement = document.querySelector(".cover__title.top");
-  const titleBottomElement = document.querySelector(".cover__title.bottom");
-  const subtitleTopElement = document.querySelector(".cover__subtitle.top");
-  const subtitleBottomElement = document.querySelector(
-    ".cover__subtitle.bottom"
-  );
-  if (
-    titleTopElement &&
-    titleBottomElement &&
-    subtitleTopElement &&
-    subtitleBottomElement
-  ) {
-    titleTopElement.textContent = content.titleTop;
-    titleBottomElement.textContent = content.titleBottom;
-    subtitleTopElement.textContent = content.subtitleTop;
-    subtitleBottomElement.textContent = content.subtitleBottom;
-  } else {
-    console.error("One or more title/subtitle elements not found");
-  }
-
-  // Update therapy types
-  const therapyPsychotherapyElement = document.querySelector(
-    ".cover__therapy.psychotherapy"
-  );
-  const therapySextherapyElement = document.querySelector(
-    ".cover__therapy.sextherapy"
-  );
-  if (therapyPsychotherapyElement && therapySextherapyElement) {
-    therapyPsychotherapyElement.textContent = content.therapyPsychotherapy;
-    therapySextherapyElement.textContent = content.therapySextherapy;
-  } else {
-    console.error("One or more therapy elements not found");
-  }
-
-  // Update button text
-  const button = document.querySelector(".cover__button");
-  if (button) {
-    button.textContent = content.buttonText;
-  } else {
-    console.error("Button element not found");
-  }
-};
-
-// generate a client card
 const generateClientCard = ({ image, alt, title, info }) => {
   return `
       <div class="clients-card hover-filter hover-transform">
@@ -187,7 +109,6 @@ const generateClientCard = ({ image, alt, title, info }) => {
     `;
 };
 
-// update the clients section
 const updateClientsSection = (language) => {
   const content = clientsSectionContent[language] || clientsSectionContent.EN;
 
@@ -208,29 +129,9 @@ const updateClientsSection = (language) => {
   }
 
   // Update client cards
-  const clientsContainer = document.getElementById("clientsCards");
+  const clientsContainer = document.querySelector(".clients__cards");
   clientsContainer.innerHTML = content.clients.map(generateClientCard).join("");
 };
 
-// handle language change
-const handleLanguageChange = () => {
-  const dropdown = document.getElementById("language-dropdown");
-  const selectedLanguage = dropdown.value;
-  localStorage.setItem("selectedLanguage", selectedLanguage);
-
-  // Update sections content
-  updateClientsSection(selectedLanguage);
-};
-
-// Load saved language on page load
-document.addEventListener("DOMContentLoaded", () => {
-  const savedLanguage = localStorage.getItem("selectedLanguage") || "EN"; // Default to 'EN'
-  document.getElementById("language-dropdown").value = savedLanguage;
-
-  updateClientsSection(savedLanguage);
-});
-
-// Add event listener to dropdown
-document
-  .getElementById("language-dropdown")
-  .addEventListener("change", handleLanguageChange);
+loadLanguage(updateClientsSection);
+dropdown.addEventListener("change", changeLanguage(updateClientsSection));
