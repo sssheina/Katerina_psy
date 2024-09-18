@@ -39,15 +39,28 @@
             </svg>
           </a>
 
-          <a class="header__link paragraph-standard language">RU</a>
-          <!-- <ul class="header__sub-list">
-            <li>
-              <a href="en.html" class="header__menu-link">EN</a>
-            </li>
-            <li>
-              <a href="fr.html" class="header__menu-link">FR</a>
-            </li>
-          </ul> -->
+          <div class="language-selector">
+            <select id="language-dropdown" class="language-dropdown">
+              <option
+                value="RU"
+                class="header__link paragraph-standard language"
+              >
+                RU
+              </option>
+              <option
+                value="EN"
+                class="header__link paragraph-standard language"
+              >
+                EN
+              </option>
+              <option
+                value="FR"
+                class="header__link paragraph-standard language"
+              >
+                FR
+              </option>
+            </select>
+          </div>
         </div>
 
         <div class="header-burger header__burger">
@@ -64,17 +77,15 @@
     <section class="cover" id="main">
       <div class="cover__wrapper container">
         <div class="cover__content">
-          <h1 class="cover__title top h1-title">Онлайн консультации</h1>
-          <h2 class="cover__title bottom h1-title">Катерины Тартари</h2>
-          <h3 class="cover__subtitle top h3-title">
-            Начните с бесплатной сессии
-          </h3>
-          <h3 class="cover__subtitle bottom h3-title">
-            Индивидуально, для пар, полиаморных союзов и&nbsp;семей
-          </h3>
-          <p class="cover__therapy psychotherapy">психотерапия</p>
-          <p class="cover__therapy sextherapy">секс-терапия</p>
+          <h1 class="cover__title top h1-title"></h1>
 
+            <h2 class="cover__title bottom h1-title"></h2>
+            <h3 class="cover__subtitle top h3-title"></h3>
+            <h3 class="cover__subtitle bottom h3-title"></h3>
+            <p class="cover__therapy psychotherapy"></p>
+            <p class="cover__therapy sextherapy"></p>
+
+            <!-- Контейнер для крестиков, будет виден только в русскоязычной версии -->
           <div class="cover__icons-container">
             <svg class="cover__cross icon-cross">
               <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
@@ -83,13 +94,21 @@
               <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
             </svg>
           </div>
+
+          <!-- Предлог будет добавляться только в англоязычной и франкоязычной версиях -->
+          <div class="cover__preposition-container">
+            <p class="cover__preposition h1-title"></p>
+          </div>
+
         </div>
 
         <div class="cover__action button-block">
-          <svg class="cover__cross icon-cross">
+          <svg class="cover__cross icon-cross corner-icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
-          <button class="cover__button button__primary button button-text">Записаться</button>
+          <button
+              class="cover__button button__primary button button-text"
+            ></button>
         </div>
       </div>
       <video class="cover__video" autoplay muted loop>
@@ -100,37 +119,17 @@
     <!-- ABOUT -->
     <section class="about" id="about">
       <div class="about__wrapper container">
-        <h2 class="about__title h2-title title">Обо мне</h2>
+        <h2 class="about__title h2-title title"></h2>
         <div class="about__content">
           <div class="about__text-block">
-            <p class="paragraph-standard">
-              Привет! Меня зовут Катерина Тартари.
-            </p>
-            <p class="paragraph-standard">
-              Я секс-терапевтка, ACT* и&nbsp;EFT** консультантка, обучалась
-              психологической помощи при травме насилия. С 2022 года помогаю
-              клиентам из&nbsp;15 стран: провожу консультации, организую
-              терапевтические ретриты и&nbsp;арт-терапию для&nbsp;групп.
-            </p>
+            <p class="paragraph-standard"></p>
+              <p class="paragraph-standard"></p>
 
-            <p class="paragraph-standard">
-              Как полиаморка, феминистка и квир-персона, я&nbsp;работаю
-              с&nbsp;людьми различных гендерных идентичностей, находящихся
-              в&nbsp;разных форматах отношений, включая полиаморные союзы.
-            </p>
-            <p class="paragraph-standard">
-              Помогаю людям осознавать свои ценности, искать себя
-              и&nbsp;выстраивать близкие отношения.
-            </p>
-            <hr class="about__line">
-            <p class="footnote-standard">
-              * Терапия принятия и ответственности (Acceptance
-              &&nbsp;Commitment Therapy ACT)
-            </p>
-            <p class="footnote-standard">
-              ** Эмоционально фокусированная терапия для&nbsp;союзов
-              (Emotionally Focused Therapy EFT)
-            </p>
+              <p class="paragraph-standard"></p>
+              <p class="paragraph-standard"></p>
+              <hr class="about__line" />
+              <p class="footnote-standard"></p>
+              <p class="footnote-standard"></p>
           </div>
 
           <div class="about__video-block">
@@ -141,12 +140,10 @@
         </div>
 
         <div class="about__action button-block">
-          <svg class="about__cross icon-cross">
+          <svg class="about__cross icon-cross corner-icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
-          <button class="about__button button__primary button button-text">
-            Запись на сессию
-          </button>
+          <button class="about__button button__primary button button-text"></button>
         </div>
       </div>
     </section>
@@ -154,33 +151,34 @@
     <!-- EXPERTISE -->
     <section class="expertise" id="expertise">
       <div class="expertise__wrapper container">
-        <h2 class="expertise__title h2-title title">С чем я работаю</h2>
+        <h2 class="expertise__title h2-title title"></h2>
 
-        <div class="expertise__content" id="expertiseContent">
-        </div>
+          <div class="expertise__content" id="expertiseContent"></div>
 
-        <div class="expertise__button-block button-block">
-          <svg class="expertise__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="expertise__button button__primary button button-text">
-            Запись на сессию
-          </button>
-        </div>
+          <div class="expertise__button-block button-block">
+            <svg class="expertise__cross icon-cross corner-icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button
+              class="expertise__button button__primary button button-text"
+            ></button>
+          </div>
       </div>
     </section>
 
     <!-- CLIENTS -->
     <section class="clients" id="clients">
       <div class="clients__wrapper container">
-        <h2 class="clients__title h2-title title">Кто может обратиться ко мне</h2>
-        <div class="clients__cards" id="clientsCards"></div>
-        <div class="clients__action button-block">
-          <svg class="clients__cross icon-cross">
-            <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-          </svg>
-          <button class="clients__button button__primary button button-text">Запись</button>
-        </div>
+        <h2 class="clients__title h2-title title"></h2>
+          <div class="clients__cards" id="clientsCards"></div>
+          <div class="clients__action button-block">
+            <svg class="clients__cross icon-cross corner-icon-cross">
+              <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
+            </svg>
+            <button
+              class="clients__button button__primary button button-text"
+            ></button>
+          </div>
       </div>
     </section>
 
@@ -229,7 +227,7 @@
         </div>
 
         <div class="feedback__button-block button-block">
-          <svg class="feedback__cross icon-cross">
+          <svg class="feedback__cross icon-cross corner-icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
 
@@ -313,42 +311,6 @@
         </div>
       </div>
     </section>
-
-
-    <!-- TODO: fix scss so we can use refactored code + steps.js -->
-    <!-- <section class="steps" id="steps">
-      <div class="steps__wrapper container">
-        <h2 class="steps__title h2-title title">Этапы работы</h2>
-
-        <div class="steps__content">
-          <div class="steps__img">
-            <img src="/assets/images/steps__img.png" alt="Абстрактные линии">
-          </div>
-
-    <div class="steps__items">
-      <template id="step-template">
-        <div class="steps__step-item">
-          <h2 class="steps__number h2-title"></h2>
-          <div class="steps__step">
-            <h3 class="steps__subtitle h3-title"></h3>
-            <div class="steps__line"></div>
-            <p class="steps__text paragraph-standard"></p>
-          </div>
-        </div>
-      </template>
-    </div>
-    </div>
-
-    <div class="steps__button-block button-block">
-      <svg class="steps__cross icon-cross">
-        <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
-      </svg>
-      <button class="steps__button button__primary button button-text">
-        Запись на сессию
-      </button>
-    </div>
-    </div>
-    </section> -->
 
     <!-- PRICE -->
     <section class="price" id="price">
@@ -465,7 +427,7 @@
         </div>
 
         <div class="price__action button-block">
-          <svg class="price__cross icon-cross">
+          <svg class="price__cross icon-cross corner-icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
           <button class="price__button button__primary button button-text">
@@ -500,11 +462,11 @@
       <div class="faq__wrapper container">
         <h2 class="faq__title h2-title">FAQ</h2>
 
-        <div class="faq__content">
+        <div class="faq__content" id="faq-content"></div>
         </div>
 
         <div class="faq__action button-block">
-          <svg class="faq__cross icon-cross">
+          <svg class="faq__cross icon-cross corner-icon-cross">
             <use xlink:href="/assets/images/figures/sprite.svg#cross"></use>
           </svg>
           <button class="faq__button button__primary button button-text">
@@ -680,6 +642,8 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <!-- <script type="module" src="/assets/scripts/sendquestion.js"></script> -->
   <script type="module" src="/assets/scripts/menu.js"></script>
+  <script type="module" src="/assets/scripts/main.js"></script>
+  <script type="module" src="/assets/scripts/about.js"></script>
   <script type="module" src="/assets/scripts/expertise.js"></script>
   <script type="module" src="/assets/scripts/clients.js"></script>
   <script type="module" src="/assets/scripts/methods.js"></script>

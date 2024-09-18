@@ -18,7 +18,7 @@ $transition: 0.4s ease;
 %h1-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h1-title-font-size);
-  font-weight: var(--h1-title-font-weight, 500);
+  font-weight: var(--h1-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h1-title-line-height);
   text-transform: var(--h1-title-text-transform);
@@ -29,17 +29,25 @@ $transition: 0.4s ease;
   text-rendering: var(--text-rendering);
 }
 
+// Применение стилей для разных языков
+[lang="ru"] .h1-title {
+  font-size: var(--h1-title-font-size);
+}
+
+[lang="en"] .h1-title , [lang="fr"] .h1-title {
+  font-size: var(--h1-title-font-size-en-fr);
+}
+
 %h2-title {
   position: relative;
   font-family: var(--raleway-font-family);
   font-size: var(--h2-title-font-size);
-  font-weight: var(--h2-title-font-weight, 500);
+  font-weight: var(--h2-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h2-title-line-height);
   text-transform: var(--h2-title-text-transform);
   text-decoration: var(--h2-title-text-decoration);
   text-align: var(--h2-title-text-align);
-  // color: $color-blue-dark;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -48,7 +56,7 @@ $transition: 0.4s ease;
 %h3-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h3-title-font-size);
-  font-weight: var(--h3-title-font-weight, 500);
+  font-weight: var(--h3-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h3-title-line-height);
   text-transform: var(--h3-title-text-transform);
@@ -62,7 +70,7 @@ $transition: 0.4s ease;
 %h4-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h4-title-font-size);
-  font-weight: var(--h4-title-font-weight, 500);
+  font-weight: var(--h4-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h4-title-line-height);
   text-transform: var(--h4-title-text-transform);
@@ -76,7 +84,7 @@ $transition: 0.4s ease;
 %h5-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h5-title-font-size);
-  font-weight: var(--h5-title-font-weight, 500);
+  font-weight: var(--h5-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h5-title-line-height);
   text-transform: var(--h5-title-text-transform);
@@ -89,7 +97,7 @@ $transition: 0.4s ease;
 %paragraph-large {
   font-family: var(--raleway-font-family);
   font-size: var(--paragraph-large-font-size);
-  font-weight: var(--paragraph-large-font-weight, 500);
+  font-weight: var(--paragraph-large-font-weight, 400);
   font-style: normal;
   line-height: var(--paragraph-large-line-height);
   text-transform: var(--paragraph-large-text-transform);
@@ -163,7 +171,6 @@ $transition: 0.4s ease;
   line-height: var(--error-text-line-height);
   text-transform: var(--error-text-text-transform);
   text-decoration: var(--error-text-text-decoration);
-  // color: $color-blue-dark;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
