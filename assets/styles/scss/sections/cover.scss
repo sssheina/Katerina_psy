@@ -41,30 +41,30 @@
     grid-template-rows: 1fr 1fr auto;
   }
 
-  &__content {
-    grid-row: 2 / 3;
-    display: grid;
-    align-items: center;
-    grid-template-columns: auto 1fr auto auto;
-    align-self: end;
-    gap: 12px;
-    grid-template-areas:
-      "subtitle-top subtitle-top subtitle-top subtitle-top"
-      "title-top title-top title-top psychotherapy"
-      "sextherapy icons title-bottom title-bottom"
-      "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+  // &__content {
+  //   grid-row: 2 / 3;
+  //   display: grid;
+  //   align-items: center;
+  //   grid-template-columns: auto 1fr auto auto;
+  //   align-self: end;
+  //   gap: 12px;
+  //   grid-template-areas:
+  //     "subtitle-top subtitle-top subtitle-top subtitle-top"
+  //     "title-top title-top title-top psychotherapy"
+  //     "sextherapy icons title-bottom title-bottom"
+  //     "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
 
-    @include sm {
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 20px;
-      grid-template-areas:
-        "subtitle-top subtitle-top subtitle-top"
-        "title-top title-top title-top"
-        "sextherapy icons psychotherapy"
-        "title-bottom title-bottom title-bottom"
-        "subtitle-bottom subtitle-bottom subtitle-bottom";
-    }
-  }
+  //   @include sm {
+  //     grid-template-columns: repeat(3, 1fr);
+  //     row-gap: 20px;
+  //     grid-template-areas:
+  //       "subtitle-top subtitle-top subtitle-top"
+  //       "title-top title-top title-top"
+  //       "sextherapy icons psychotherapy"
+  //       "title-bottom title-bottom title-bottom"
+  //       "subtitle-bottom subtitle-bottom subtitle-bottom";
+  //   }
+  // }
 
   &__title {
     &.top {
@@ -98,7 +98,7 @@
   &__therapy {
     font-family: var(--raleway-font-family);
     font-size: 35px;
-    font-weight: var(--h2-title-font-weight, 500);
+    font-weight: var(--h2-title-font-weight, 400);
     font-style: italic;
 
     @include lg {
@@ -122,19 +122,17 @@
     }
   }
 
-  &__preposition {
-    grid-area: icons;
-    font-style: italic;
-    text-transform: lowercase;
+  &__preposition-container {
     display: none; /* по умолчанию скрываем */
-    text-align: center;
+    grid-area: preposition;
   }
 
-  &__icons-container {
-    grid-area: icons;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  &__preposition {
+    // grid-area: preposition;
+    font-style: italic;
+    text-transform: lowercase;
+    // display: none; /* по умолчанию скрываем */
+    text-align: center;
   }
 
   &__action {
@@ -159,4 +157,79 @@
     }
 
   }
+}
+
+/* Стили для русскоязычной версии */
+[lang="ru"] .cover__content {
+  grid-row: 2 / 3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto;
+  align-self: end;
+  gap: 12px;
+  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top"
+                       "title-top title-top title-top psychotherapy"
+                       "sextherapy icons title-bottom title-bottom"
+                       "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+
+                       @include sm {
+                            grid-template-columns: repeat(3, 1fr);
+                            row-gap: 20px;
+                            grid-template-areas:
+                              "subtitle-top subtitle-top subtitle-top"
+                              "title-top title-top title-top"
+                              "sextherapy icons psychotherapy"
+                              "title-bottom title-bottom title-bottom"
+                              "subtitle-bottom subtitle-bottom subtitle-bottom";
+                          }
+}
+
+/* Стили для англоязычной и франкоязычной версий */
+[lang="en"] .cover__content,
+[lang="fr"] .cover__content {
+  grid-row: 2 / 3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-self: end;
+  gap: 12px;
+  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top"
+                       "title-top title-top title-top icon psychotherapy"
+                       "sextherapy preposition title-bottom title-bottom title-bottom"
+                       "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+
+                       @include sm {
+                            // grid-template-columns: repeat(4, 1fr);
+                            // row-gap: 20px;
+                            // grid-template-areas:
+                            //   "subtitle-top subtitle-top subtitle-top subtitle-top"
+                            //   "subtitle-top subtitle-top subtitle-top subtitle-top"
+                            //   "title-top title-top title-top title-top"
+                            //   "sextherapy icons icons psychotherapy"
+                            //   "empty preposition title-bottom title-bottom "
+                            //   "empty empty title-bottom title-bottom"
+                            //   "empty subtitle-bottom subtitle-bottom subtitle-bottom"
+                            //   "empty subtitle-bottom subtitle-bottom subtitle-bottom";
+                          }
+}
+
+[lang="ru"] .cover__icons-container_ru {
+  grid-area: icons;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// [lang="en"] .cover__icons-container_ru,
+// [lang="fr"] .cover__icons-container_ru {
+//   grid-area: icons;
+//   display: flex;
+//   justify-content: space-evenly;
+//   align-items: center;
+// }
+
+
+[lang="en"] .icon-cross_ru,
+[lang="fr"] .icon-cross_ru {
+  display: none;
 }
