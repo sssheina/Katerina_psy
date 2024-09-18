@@ -733,7 +733,7 @@ textarea {
 .h1-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h1-title-font-size);
-  font-weight: var(--h1-title-font-weight, 500);
+  font-weight: var(--h1-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h1-title-line-height);
   text-transform: var(--h1-title-text-transform);
@@ -744,11 +744,19 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
+[lang=ru] .h1-title {
+  font-size: var(--h1-title-font-size);
+}
+
+[lang=en] .h1-title, [lang=fr] .h1-title {
+  font-size: var(--h1-title-font-size-en-fr);
+}
+
 .h2-title {
   position: relative;
   font-family: var(--raleway-font-family);
   font-size: var(--h2-title-font-size);
-  font-weight: var(--h2-title-font-weight, 500);
+  font-weight: var(--h2-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h2-title-line-height);
   text-transform: var(--h2-title-text-transform);
@@ -762,7 +770,7 @@ textarea {
 .h3-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h3-title-font-size);
-  font-weight: var(--h3-title-font-weight, 500);
+  font-weight: var(--h3-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h3-title-line-height);
   text-transform: var(--h3-title-text-transform);
@@ -776,7 +784,7 @@ textarea {
 .h4-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h4-title-font-size);
-  font-weight: var(--h4-title-font-weight, 500);
+  font-weight: var(--h4-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h4-title-line-height);
   text-transform: var(--h4-title-text-transform);
@@ -790,7 +798,7 @@ textarea {
 .h5-title {
   font-family: var(--raleway-font-family);
   font-size: var(--h5-title-font-size);
-  font-weight: var(--h5-title-font-weight, 500);
+  font-weight: var(--h5-title-font-weight, 400);
   font-style: normal;
   line-height: var(--h5-title-line-height);
   text-transform: var(--h5-title-text-transform);
@@ -803,7 +811,7 @@ textarea {
 .paragraph-large {
   font-family: var(--raleway-font-family);
   font-size: var(--paragraph-large-font-size);
-  font-weight: var(--paragraph-large-font-weight, 500);
+  font-weight: var(--paragraph-large-font-weight, 400);
   font-style: normal;
   line-height: var(--paragraph-large-line-height);
   text-transform: var(--paragraph-large-text-transform);
@@ -943,38 +951,39 @@ textarea {
   --raleway-font-family: "Raleway", sans-serif;
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
-  --h1-title-font-weight: 500;
+  --h1-title-font-weight: 400;
   --h1-title-line-height: 100%;
   --h1-title-text-transform: uppercase;
   --h1-title-text-decoration: none;
+  --h1-title-font-size-en-fr: 120px;
   --h2-title-font-family: var(--raleway-font-family);
   --h2-title-font-size: 64px;
-  --h2-title-font-weight: 500;
+  --h2-title-font-weight: 400;
   --h2-title-line-height: 150%;
   --h2-title-text-transform: uppercase;
   --h2-title-text-decoration: none;
   --h2-title-text-align: left;
   --h3-title-font-family: var(--raleway-font-family);
   --h3-title-font-size: 30px;
-  --h3-title-font-weight: 500;
+  --h3-title-font-weight: 400;
   --h3-title-line-height: 130%;
   --h3-title-text-transform: uppercase;
   --h3-title-text-decoration: none;
   --h4-title-font-family: var(--raleway-font-family);
   --h4-title-font-size: 25px;
-  --h4-title-font-weight: 500;
+  --h4-title-font-weight: 400;
   --h4-title-line-height: 130%;
   --h4-title-text-transform: uppercase;
   --h4-title-text-decoration: none;
   --h5-title-font-family: var(--raleway-font-family);
   --h5-title-font-size: 20px;
-  --h5-title-font-weight: 500;
+  --h5-title-font-weight: 400;
   --h5-title-line-height: 130%;
   --h5-title-text-transform: uppercase;
   --h5-title-text-decoration: none;
   --paragraph-large-font-family: var(--raleway-font-family);
   --paragraph-large-font-size: 48px;
-  --paragraph-large-font-weight: 500;
+  --paragraph-large-font-weight: 400;
   --paragraph-large-line-height: 1.5;
   --paragraph-large-text-transform: uppercase;
   --paragraph-medium-font-family: var(--raleway-font-family);
@@ -1011,16 +1020,25 @@ textarea {
 @media only screen and (max-width: 1919px) {
   :root {
     --h1-title-font-size: 78px;
+    --h1-title-font-size-en-fr: 90px;
   }
 }
 @media only screen and (max-width: 1439px) {
   :root {
     --h1-title-font-size: 41px;
+    --h1-title-font-size-en-fr: 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    --h1-title-font-size: 41px;
+    --h1-title-font-size-en-fr: 41px;
   }
 }
 @media only screen and (max-width: 427px) {
   :root {
     --h1-title-font-size: 31px;
+    --h1-title-font-size-en-fr: 30px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -1926,7 +1944,7 @@ body.lock {
     justify-content: center;
     align-items: center;
   }
-  .button-block .icon-cross {
+  .button-block .corner-icon-cross {
     display: none;
   }
 }
@@ -2068,6 +2086,13 @@ body.lock {
 }
 .cover__therapy.sextherapy {
   grid-area: sextherapy;
+}
+.cover__preposition {
+  grid-area: icons;
+  font-style: italic;
+  text-transform: lowercase;
+  display: none; /* по умолчанию скрываем */
+  text-align: center;
 }
 .cover__icons-container {
   grid-area: icons;

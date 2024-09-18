@@ -1,3 +1,40 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const dropdown = document.getElementById("language-dropdown");
+
+  // update url
+  const updateURL = (language) => {
+    const currentPath = window.location.pathname;
+    let newPath = currentPath.replace(/\/(ru|fr)?$/, "");
+    if (language === "RU") {
+      newPath += "/ru";
+    } else if (language === "FR") {
+      newPath += "/fr";
+    }
+    window.history.replaceState(null, "", newPath);
+  };
+
+  // Функция для обновления атрибута lang в теге <html>
+  const updateLanguageAttribute = (language) => {
+    document.documentElement.lang = language.toLowerCase();
+  };
+
+  // Get saved language from localStorage
+  const savedLanguage = localStorage.getItem("selectedLanguage");
+  if (savedLanguage) {
+    dropdown.value = savedLanguage;
+    updateURL(savedLanguage);
+    updateLanguageAttribute(savedLanguage);
+  }
+
+  // Save the selected language
+  dropdown.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem("selectedLanguage", selectedLanguage);
+    updateURL(selectedLanguage);
+    updateLanguageAttribute(selectedLanguage);
+  });
+});
+
 //-----Анонимные вопросы-----
 
 // Список запрещенных слов
@@ -345,7 +382,6 @@ document.addEventListener("keydown", function (e) {
 //   }
 // });
 
-
 // ----- SCROLL ANIMATION -----
 
 gsap.registerPlugin(ScrollTrigger);
@@ -626,7 +662,6 @@ window.addEventListener("scroll", function () {
     header.classList.toggle("scrolled", false);
   }
 });
-
 
 // ----- BURGER MENU -----
 

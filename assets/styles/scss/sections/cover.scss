@@ -122,6 +122,14 @@
     }
   }
 
+  &__preposition {
+    grid-area: icons;
+    font-style: italic;
+    text-transform: lowercase;
+    display: none; /* по умолчанию скрываем */
+    text-align: center;
+  }
+
   &__icons-container {
     grid-area: icons;
     display: flex;

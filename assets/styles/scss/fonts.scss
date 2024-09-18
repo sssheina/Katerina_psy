@@ -70,28 +70,37 @@
 
   --h1-title-font-family: var(--raleway-font-family);
   --h1-title-font-size: 102px;
-  --h1-title-font-weight: 500;
+  --h1-title-font-weight: 400;
   --h1-title-line-height: 100%;
   --h1-title-text-transform: uppercase;
   --h1-title-text-decoration: none;
+  --h1-title-font-size-en-fr: 120px; // размер для английского и французского
 
   @include lg {
     --h1-title-font-size: 78px;
+    --h1-title-font-size-en-fr: 90px;
   }
 
   @include md {
     --h1-title-font-size: 41px;
+    --h1-title-font-size-en-fr: 48px;
+  }
+
+  @include sm {
+    --h1-title-font-size: 41px;
+    --h1-title-font-size-en-fr: 41px;
   }
 
   @include xs {
     --h1-title-font-size: 31px;
+    --h1-title-font-size-en-fr: 30px;
   }
 
   // h2 - title
 
   --h2-title-font-family: var(--raleway-font-family);
   --h2-title-font-size: 64px;
-  --h2-title-font-weight: 500;
+  --h2-title-font-weight: 400;
   --h2-title-line-height: 150%;
   --h2-title-text-transform: uppercase;
   --h2-title-text-decoration: none;
@@ -113,7 +122,7 @@
 
   --h3-title-font-family: var(--raleway-font-family);
   --h3-title-font-size: 30px;
-  --h3-title-font-weight: 500;
+  --h3-title-font-weight: 400;
   --h3-title-line-height: 130%;
   --h3-title-text-transform: uppercase;
   --h3-title-text-decoration: none;
@@ -134,7 +143,7 @@
 
   --h4-title-font-family: var(--raleway-font-family);
   --h4-title-font-size: 25px;
-  --h4-title-font-weight: 500;
+  --h4-title-font-weight: 400;
   --h4-title-line-height: 130%;
   --h4-title-text-transform: uppercase;
   --h4-title-text-decoration: none;
@@ -155,7 +164,7 @@
 
   --h5-title-font-family: var(--raleway-font-family);
   --h5-title-font-size: 20px;
-  --h5-title-font-weight: 500;
+  --h5-title-font-weight: 400;
   --h5-title-line-height: 130%;
   --h5-title-text-transform: uppercase;
   --h5-title-text-decoration: none;
@@ -176,7 +185,7 @@
 
   --paragraph-large-font-family: var(--raleway-font-family);
   --paragraph-large-font-size: 48px;
-  --paragraph-large-font-weight: 500;
+  --paragraph-large-font-weight: 400;
   --paragraph-large-line-height: 1.5;
   --paragraph-large-text-transform: uppercase;
 
@@ -275,26 +284,26 @@
     --footnote-standard-font-size: 14px;
   }
 
-   // error - text
+  // error - text
 
-   --error-text-font-size: 16px;
-   --error-text-font-weight: 500;
-   --error-text-font-style: normal;
-   --error-text-line-height: 100%;
-   --error-text-text-transform: none;
-   --error-text-text-decoration: none;
- 
-   @include lg {
-     --error-text-font-size: 15px;
-   }
- 
-   @include md {
-     --error-text-font-size: 13px;
-   }
- 
-   @include xs {
-     --error-text-font-size: 12px;
-   }
+  --error-text-font-size: 16px;
+  --error-text-font-weight: 500;
+  --error-text-font-style: normal;
+  --error-text-line-height: 100%;
+  --error-text-text-transform: none;
+  --error-text-text-decoration: none;
+
+  @include lg {
+    --error-text-font-size: 15px;
+  }
+
+  @include md {
+    --error-text-font-size: 13px;
+  }
+
+  @include xs {
+    --error-text-font-size: 12px;
+  }
 
   // swiper-navigation-size
 
