@@ -175,3 +175,31 @@ $transition: 0.4s ease;
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
 }
+
+%span-text {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--span-text-font-size);
+  font-weight: var(--span-text-font-weight, 400);
+  font-style: italic;
+  font-style: var(--span-text-font-style);
+  line-height: var(--span-text-line-height);
+  text-transform: var(--span-text-text-transform);
+  text-decoration: var(--spantext-text-decoration);
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}
+
+
+// Применение стилей для разных языков
+[lang="ru"] .span-text {
+  font-size: var(--span-text-font-size-ru);
+}
+
+[lang="en"] .span-text {
+  font-size: var(--span-text-font-size-en);
+}
+
+[lang="fr"] .span-text{
+  font-size: var(--span-text-font-size-fr);
+}

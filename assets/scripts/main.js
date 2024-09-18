@@ -26,7 +26,7 @@ const coverContent = {
     subtitleBottom:
       "En individuel, pour couples, unions polyamoureuses et familles",
     therapyPsychotherapy: "psychothérapie",
-    therapySextherapy: "Sexothérapie",
+    therapySextherapy: "sexothérapie",
     buttonText: "Inscription",
     videoSrc: "/assets/video/video_5.mp4",
   },

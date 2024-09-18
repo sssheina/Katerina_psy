@@ -890,6 +890,32 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
+.span-text {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--span-text-font-size);
+  font-weight: var(--span-text-font-weight, 400);
+  font-style: italic;
+  font-style: var(--span-text-font-style);
+  line-height: var(--span-text-line-height);
+  text-transform: var(--span-text-text-transform);
+  text-decoration: var(--spantext-text-decoration);
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}
+
+[lang=ru] .span-text {
+  font-size: var(--span-text-font-size-ru);
+}
+
+[lang=en] .span-text {
+  font-size: var(--span-text-font-size-en);
+}
+
+[lang=fr] .span-text {
+  font-size: var(--span-text-font-size-fr);
+}
+
 @font-face {
   font-family: "Raleway";
   src: url(/assets/fonts/raleway/Raleway-Medium.ttf);
@@ -1015,6 +1041,14 @@ textarea {
   --error-text-line-height: 100%;
   --error-text-text-transform: none;
   --error-text-text-decoration: none;
+  --span-text-font-size-ru: 35px;
+  --span-text-font-size-en: 40px;
+  --span-text-font-size-fr: 42px;
+  --span-text-font-weight: 400;
+  --span-text-font-style: italic;
+  --span-text-line-height: 100%;
+  --span-text-text-transform: none;
+  --span-text-text-decoration: none;
   --swiper-navigation-size: 66px;
 }
 @media only screen and (max-width: 1919px) {
@@ -1189,6 +1223,27 @@ textarea {
 @media only screen and (max-width: 427px) {
   :root {
     --error-text-font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  :root {
+    --span-text-font-size-ru: 26px;
+    --span-text-font-size-en: 30px;
+    --span-text-font-size-fr: 31px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  :root {
+    --span-text-font-size-ru: 16px;
+    --span-text-font-size-en: 16px;
+    --span-text-font-size-fr: 16px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  :root {
+    --span-text-font-size-ru: 14px;
+    --span-text-font-size-en: 14px;
+    --span-text-font-size-fr: 14px;
   }
 }
 
@@ -2021,22 +2076,6 @@ body.lock {
   display: grid;
   grid-template-rows: 1fr 1fr auto;
 }
-.cover__content {
-  grid-row: 2/3;
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto 1fr auto auto;
-  align-self: end;
-  gap: 12px;
-  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top psychotherapy" "sextherapy icons title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
-}
-@media only screen and (max-width: 767px) {
-  .cover__content {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    grid-template-areas: "subtitle-top subtitle-top subtitle-top" "title-top title-top title-top" "sextherapy icons psychotherapy" "title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom";
-  }
-}
 .cover__title.top {
   grid-area: title-top;
 }
@@ -2063,7 +2102,7 @@ body.lock {
 .cover__therapy {
   font-family: var(--raleway-font-family);
   font-size: 35px;
-  font-weight: var(--h2-title-font-weight, 500);
+  font-weight: var(--h2-title-font-weight, 400);
   font-style: italic;
 }
 @media only screen and (max-width: 1919px) {
@@ -2087,18 +2126,14 @@ body.lock {
 .cover__therapy.sextherapy {
   grid-area: sextherapy;
 }
+.cover__preposition-container {
+  display: none; /* по умолчанию скрываем */
+  grid-area: preposition;
+}
 .cover__preposition {
-  grid-area: icons;
   font-style: italic;
   text-transform: lowercase;
-  display: none; /* по умолчанию скрываем */
   text-align: center;
-}
-.cover__icons-container {
-  grid-area: icons;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
 }
 .cover__action {
   grid-row: 3/4;
@@ -2119,6 +2154,47 @@ body.lock {
   .cover__video {
     display: none;
   }
+}
+
+/* Стили для русскоязычной версии */
+[lang=ru] .cover__content {
+  grid-row: 2/3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto;
+  align-self: end;
+  gap: 12px;
+  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top psychotherapy" "sextherapy icons title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+}
+@media only screen and (max-width: 767px) {
+  [lang=ru] .cover__content {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    grid-template-areas: "subtitle-top subtitle-top subtitle-top" "title-top title-top title-top" "sextherapy icons psychotherapy" "title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom";
+  }
+}
+
+/* Стили для англоязычной и франкоязычной версий */
+[lang=en] .cover__content,
+[lang=fr] .cover__content {
+  grid-row: 2/3;
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto auto auto;
+  align-self: end;
+  gap: 12px;
+  grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top icon psychotherapy" "sextherapy preposition title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+}
+[lang=ru] .cover__icons-container_ru {
+  grid-area: icons;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+[lang=en] .icon-cross_ru,
+[lang=fr] .icon-cross_ru {
+  display: none;
 }
 
 .about {
