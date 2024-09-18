@@ -68,6 +68,24 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  const stepsDataMap = {
+    RU: {
+      title: "Этапы работы",
+      data: stepsDataRu,
+      buttonText: "Запись",
+    },
+    EN: {
+      title: "Process steps",
+      data: stepsDataEn,
+      buttonText: "Book First Session",
+    },
+    FR: {
+      title: "Les étapes de thérapie",
+      data: stepsDataFr,
+      buttonText: "Prendre RDV",
+    },
+  };
+
   const stepTemplate = document.getElementById("step-template").content;
   const stepsContainer = document.querySelector(".steps__items");
 
