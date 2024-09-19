@@ -293,7 +293,7 @@ const expertiseDataMap = {
   },
 };
 
-const renderExpertise = (language) => {
+const updateExpertiseSection = (language) => {
   const expertiseContainer = document.querySelector(".expertise__content");
   const expertiseTitle = document.querySelector(".expertise__title");
   const expertiseButton = document.querySelector(".expertise__button");
@@ -347,5 +347,5 @@ const renderExpertise = (language) => {
   });
 };
 
-loadLanguage(renderExpertise);
-dropdown.addEventListener("change", changeLanguage(renderExpertise));
+loadLanguage(updateExpertiseSection);
+dropdown.addEventListener("change", changeLanguage(updateExpertiseSection));

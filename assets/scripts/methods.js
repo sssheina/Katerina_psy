@@ -1,3 +1,9 @@
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
+
 const methodsDataRu = [
   {
     title: "Секс-терапия",
@@ -97,7 +103,7 @@ const methodsDataMap = {
   },
 };
 
-const handleGenerateMethodCard = ({ title, text, image, alt }) => {
+const generateCard = ({ title, text, image, alt }) => {
   if (image) {
     return `
         <div class="methods-card methods__card">
@@ -113,7 +119,20 @@ const handleGenerateMethodCard = ({ title, text, image, alt }) => {
     `;
 };
 
-const methodsContainer = document.querySelector(".methods__cards");
-methodsContainer.innerHTML = methodsDataRu
-  .map(handleGenerateMethodCard)
-  .join("");
+const updateMethodsSection = (language) => {
+  const methodsContainer = document.querySelector(".methods__cards");
+  const sectionTitle = document.querySelector(".methods__title");
+  const button = document.querySelector(".methods__button");
+
+  methodsContainer.innerHTML = "";
+  sectionTitle.textContent = methodsDataMap[language].title;
+  button.textContent = methodsDataMap[language].buttonText;
+
+  methodsDataMap[language].data.map((card) => {
+    const { title, text, image, alt } = card;
+    methodsContainer.innerHTML += generateCard({ title, text, image, alt });
+  });
+};
+
+loadLanguage(updateMethodsSection);
+dropdown.addEventListener("change", changeLanguage(updateMethodsSection));
