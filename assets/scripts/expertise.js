@@ -293,17 +293,16 @@ const expertiseDataMap = {
   },
 };
 
-const renderExpertise = (data, title, buttonText) => {
-  const expertiseContainer = document.getElementById("expertiseContent");
+const renderExpertise = (language) => {
+  const expertiseContainer = document.querySelector(".expertise__content");
   const expertiseTitle = document.querySelector(".expertise__title");
   const expertiseButton = document.querySelector(".expertise__button");
 
   expertiseContainer.innerHTML = "";
-  expertiseTitle.textContent = title;
-  expertiseButton.textContent = buttonText;
+  expertiseTitle.textContent = expertiseDataMap[language].title;
+  expertiseButton.textContent = expertiseDataMap[language].buttonText;
 
-  data.forEach((category) => {
-    // Category
+  expertiseDataMap[language].data.forEach((category) => {
     const headingHTML = `
         <div class="expertise-heading expertise__heading">
             <h3 class="expertise-heading__title h3-title">${category.heading}</h3>
@@ -311,7 +310,6 @@ const renderExpertise = (data, title, buttonText) => {
         </div>
     `;
 
-    // Expertise
     const itemsHTML = category.items
       .map(
         (item) => `
@@ -351,29 +349,3 @@ const renderExpertise = (data, title, buttonText) => {
 
 loadLanguage(renderExpertise);
 dropdown.addEventListener("change", changeLanguage(renderExpertise));
-
-// Function to handle language change
-// const handleLanguageChange = () => {
-//   const dropdown = document.getElementById("language-dropdown");
-//   const selectedLanguage = dropdown.value;
-//   localStorage.setItem("selectedLanguage", selectedLanguage);
-
-//   const { data, title, buttonText } =
-//     expertiseDataMap[selectedLanguage] || expertiseDataMap.EN;
-//   renderExpertise(data, title, buttonText);
-// };
-
-// Load saved language on page load
-// document.addEventListener("DOMContentLoaded", () => {
-//   const savedLanguage = localStorage.getItem("selectedLanguage") || "EN"; // Default to 'EN'
-//   document.getElementById("language-dropdown").value = savedLanguage;
-
-//   const { data, title, buttonText } =
-//     expertiseDataMap[savedLanguage] || expertiseDataMap.EN;
-//   renderExpertise(data, title, buttonText);
-// });
-
-// Add event listener to dropdown
-// document
-//   .getElementById("language-dropdown")
-//   .addEventListener("change", handleLanguageChange);
