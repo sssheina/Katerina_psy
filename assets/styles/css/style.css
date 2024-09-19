@@ -1585,6 +1585,7 @@ body.lock {
 .footer__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   gap: 50px;
   padding-top: 145px;
   padding-bottom: 145px;
@@ -1804,6 +1805,20 @@ body.lock {
 }
 .footer__link-studio:hover {
   color: #ce6a0e;
+}
+.footer__politics {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1em;
+}
+.footer__politics-block {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.5em;
+}
+.footer__error-politics {
+  padding-left: 1.3em;
 }
 
 .title {
@@ -3727,7 +3742,7 @@ body.lock {
 }
 .questions__comment {
   width: 100%;
-  height: 100%;
+  min-height: 127px;
   border: 1px solid #b1b1b1;
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
@@ -3739,6 +3754,8 @@ body.lock {
   text-decoration: var(--paragraph-standard-text-decoration);
   color: #010e23;
   padding: 16px;
+  resize: vertical;
+  overflow: auto;
   transition: 0.4s ease;
 }
 @media only screen and (max-width: 767px) {
@@ -3746,7 +3763,7 @@ body.lock {
     padding: 12px;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 427px) {
   .questions__comment {
     padding: 10px 8px;
   }
@@ -3761,12 +3778,34 @@ body.lock {
   grid-area: button;
   justify-self: end;
   align-self: end;
+  margin-top: 1rem;
 }
 @media only screen and (max-width: 740px) {
   .questions__button {
     justify-self: center;
     margin-top: 20px;
   }
+}
+.questions__politics {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em 0;
+}
+.questions__politics-block {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 0.5em;
+}
+@media only screen and (max-width: 1439px) {
+  .questions__politics-block {
+    align-items: flex-start;
+  }
+}
+.questions__error-politics {
+  position: absolute;
+  top: 110%;
 }
 
 .modal {

@@ -452,28 +452,19 @@
               Давайте будем бережны друг к&nbsp;другу!
             </p>
           </div>
-
-          <!-- <form id="questions__form" class="questions__form">
-            <textarea name="text" class="questions__comment"
-              placeholder="Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными..."></textarea>
-              <div id="errorQuestions" class="questions__errors error"></div> -->
-          <!-- Thanx-message modal window -->
-          <!-- <div class="overlay hidden" id="overlay">
-              <section class="modal hidden" id="modal_window">
-                <button class="button__primary button-close" id="btn_close_modal">⨉</button>
-                <div class="modal__content" id="modal_window_content"></div>
-              </section>
-            </div>
-          
-          <button id="questions__button" class="questions__button button__outline button button-text" disabled="true">
-            Отправить
-          </button> -->
-          <!-- </form> -->
-
           <form id="questions__form" class="questions__form">
             <textarea name="message" class="questions__comment"
               placeholder="Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными..."></textarea>
             <div id="errorQuestions" class="questions__errors error error-text"></div>
+            <!-- Чек-бокс Политики Конфиденциальности -->
+            <label class="questions__politics">
+              <div class="questions__politics-block">
+                <input type="checkbox" name="consent" id="consentQuestionsCheckbox">
+              <p class="questions__error-text error-text">Cогласие с <a href="/privacy-policy" target="_blank" class="link">Политикой конфиденциальности</a></p>
+            </div>
+            <!-- Сообщение об ошибке согласия -->
+              <div id="errorQuestionsPolitics" class="footer__error-politics error error-text"></div>
+            </label>
           </form>
 
           <button id="questions__button" class="questions__button button__outline button button-text">
@@ -520,14 +511,25 @@
             <div class="footer__input">
               <input class="footer__field paragraph-standard" type="text" name="subscribe" id="subscribe"
                 placeholder="Ваш e-mail">
+                
               <button class="footer__button">
                 <svg class="icon-arrow-right">
                   <use xlink:href="/assets/images/figures/sprite.svg#icon-arrow-right-flat"></use>
                 </svg>
               </button>
             </div>
+             <!-- Сообщение об ошибке e-mail -->
             <div id="errorEmail" class="footer__error-message error error-text"></div>
-            <!-- Добавлен для сообщений об ошибках -->
+            
+            <!-- Чек-бокс Политики Конфиденциальности -->
+            <label class="footer__politics">
+              <div class="footer__politics-block">
+                <input type="checkbox" name="consent" id="consentCheckbox">
+              <p class="footer__error-text error-text">Cогласие с <a href="/privacy-policy" target="_blank" class="link">Политикой конфиденциальности</a></p>
+            </div>
+            <!-- Сообщение об ошибке согласия -->
+              <div id="errorPolitics" class="footer__error-politics error error-text"></div>
+            </label>
           </form>
 
           <div class="overlay hidden" id="overlay">
@@ -600,6 +602,7 @@
   <script type="module" src="/assets/scripts/steps.js"></script>
   <script type="module" src="/assets/scripts/faq.js"></script>
   <script type="module" src="/assets/scripts/sendemail.js"></script>
+  <script type="module" src="/assets/scripts/sendquestions.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
 </body>

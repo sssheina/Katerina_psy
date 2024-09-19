@@ -71,7 +71,8 @@
 
   &__comment {
     width: 100%;
-    height: 100%;
+    // height: 100%;
+    min-height: 127px;
     border: 1px solid $color-gray-dark;
     font-family: var(--montserrat-font-family);
     font-size: var(--paragraph-standard-font-size);
@@ -83,13 +84,15 @@
     text-decoration: var(--paragraph-standard-text-decoration);
     color: $color-blue-dark;
     padding: 16px;
+    resize: vertical; // Позволяет изменять высоту только вертикально
+    overflow: auto; // Добавляем полосы прокрутки при необходимости
     transition: $transition;
 
     @include sm {
       padding: 12px;
     }
 
-    @include sm {
+    @include xs {
       padding: 10px 8px;
     }
 
@@ -108,10 +111,35 @@
     grid-area: button;
     justify-self: end;
     align-self: end;
+    margin-top: 1rem; // Отступ 1rem между полем и кнопкой
 
     @include r(740) {
       justify-self: center;
       margin-top: 20px;
     }
+  }
+
+  &__politics {
+    position: relative; 
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em 0;
+  }
+
+  &__politics-block {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5em;
+
+    @include md {
+      align-items: flex-start;
+    }
+  }
+
+  &__error-politics {
+    // padding-left: 1.3em;
+    position: absolute;
+    top: 110%;
   }
 }

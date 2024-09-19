@@ -4,6 +4,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    align-items: start;
     gap: 50px;
 
     @include section-padding-standard;
@@ -209,5 +210,23 @@
     &:hover {
       color: $color-orange;
     }
+  }
+  &__politics {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+  }
+
+  &__politics-block {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.5em;
+  }
+
+  &__error-politics {
+    padding-left: 1.3em;
+    // position: absolute;
+    // top: 110%;
   }
 }
