@@ -51,9 +51,98 @@ const priceDataRu = [
   },
 ];
 
-const priceDataEn = [];
+const priceDataEn = [
+  {
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
+    title: "First session",
+    list: [
+      "you will check if you are comfortable with me",
+      "ask your questions",
+      "we will explore your needs and expectations",
+      "choose the direction of therapy",
+    ],
+    duration: "Duration 30 minutes",
+    price: "Free",
+  },
+  {
+    svg: ["/assets/images/figures/sprite.svg#cross"],
+    title: "Individual sessions",
+    list: [
+      "we’ll cover topics that are important to you",
+      "determine the results you want",
+      "go at your pace",
+      "you will gain new skills and do some exercises",
+    ],
+    duration: "Duration 50 minutes",
+    price: "100 €",
+  },
+  {
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
+    title: "Couple or group sessions",
+    list: [
+      "we’ll assess the situation in your relationship",
+      "prioritise the therapy steps",
+      "you’ll agree on common values",
+      "and work on communication and empathy skills",
+    ],
+    duration: "Duration 70 minutes",
+    price: "From 180 €",
+  },
+];
 
-const priceDataFr = [];
+const priceDataFr = [
+  {
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
+    title: "La première session",
+    list: [
+      "vous comprendrez si vous êtes à l'aise avec moi",
+      "et poserez vos question",
+      "on étudiera vos besoins et vos attentes",
+      "et choisira la direction de la thérapie",
+    ],
+    duration: "Durée 30 minutes",
+    price: "Gratuit",
+  },
+  {
+    svg: ["/assets/images/figures/sprite.svg#cross"],
+    title: "La session en individuel",
+    list: [
+      "on abordera des sujets qui sont importants pour vous",
+      "déterminera les résultats qui vous conviendront",
+      "tout sera à votre rythme",
+      "vous acquerrez de nouvelles compétences",
+      "ferez des exercices",
+    ],
+    duration: "Durée 50 minutes",
+    price: "100 €",
+  },
+  {
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
+    title: "La session en couple ou en groupe",
+    list: [
+      "on analysera la situation dans votre relation",
+      "priorisera les étapes de notre travail",
+      "vous vous entendrez sur des valeurs communes",
+      "travaillerez les compétences de communication et d'empathie",
+    ],
+    duration: "Durée 70 minutes",
+    price: "180 €+",
+  },
+];
 
 const priceDataMap = {
   RU: {
@@ -73,39 +162,46 @@ const priceDataMap = {
   },
 };
 
-const stepTemplate = document.querySelector(".step-template").content;
-const stepsContainer = document.querySelector(".steps__content");
+const generateCard = (svg, title, list, duration, price) => {
+  const svgString = svg
+    .map(
+      (icon) => `<svg class="price-card__cross icon-cross">
+    <use xlink:href="${icon}"></use>
+  </svg>`
+    )
+    .join("");
 
-const generateCard = (language) => {
-  //   while (stepsContainer.firstChild) {
-  //     stepsContainer.removeChild(stepsContainer.firstChild);
-  //   }
-  const card = document.querySelector(".price-card");
-  const svg = document.querySelector(".price-card__cross");
-  const title = document.querySelector(".price-card__title");
-  const list = document.querySelector(".price-card__list");
-  const duration = document.querySelector(".price-card__duration");
-  const price = document.querySelector(".price-card");
+  const listItem = list
+    .map(
+      (item) =>
+        `<li class="price-card__list-item paragraph-standard">${item}</li>`
+    )
+    .join("");
 
-  priceDataMap[language].data.forEach((step) => {
-    const stepClone = document.importNode(stepTemplate, true);
-
-    stepClone.querySelector(".steps__number").textContent = step.number;
-    stepClone.querySelector(".steps__subtitle").textContent = step.subtitle;
-    stepClone.querySelector(".steps__text").textContent = step.text;
-
-    stepsContainer.appendChild(stepClone);
-  });
+  return `<div class="price-card price__card hover-transform hover-orange">
+            <div class="price-card__cross-container">${svgString}</div>
+            <h3 class="price-card__title h3-title">${title}</h3>
+            <ul class="price-card__list">${listItem}</ul>
+            <h5 class="price-card__duration h5-title">${duration}</h5>
+            <p class="price-card__price paragraph-large">${price}</p>
+          </div>`;
 };
 
 const updatePriceContent = (language) => {
+  const priceContainer = document.querySelector(".price__cards");
   const sectionTitle = document.querySelector(".price__title");
   const button = document.querySelector(".price__button");
 
+  priceContainer.innerHTML = "";
   sectionTitle.textContent = priceDataMap[language].title;
   button.textContent = priceDataMap[language].buttonText;
 
-  generateCard(language);
+  priceDataMap[language].data.map((card) => {
+    const { svg, title, list, duration, price } = card;
+
+    const priceCard = generateCard(svg, title, list, duration, price);
+    priceContainer.innerHTML += priceCard;
+  });
 };
 
 loadLanguage(updatePriceContent);
