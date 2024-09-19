@@ -10,12 +10,12 @@ function validateRegFormEmail(needShowMessages) {
   if (el.value === null || el.value === "") {
     result = false;
     if (needShowMessages) {
-      elError.innerText = "Email не может быть пустым.";
+      elError.innerText = "Email не может быть пустым";
     }
   } else if (!re.test(el.value)) {
     result = false;
     if (needShowMessages) {
-      elError.innerText = "Введите корректный адрес электронной почты.";
+      elError.innerText = "Неправильный адрес электронной почты";
     }
   } else {
     if (needShowMessages) {
@@ -44,6 +44,15 @@ document
       return;
     }
 
+    // Проверка согласия с политикой
+    const consentCheckbox = document.getElementById("consentCheckbox");
+    const errorPolitics = document.getElementById("errorPolitics");
+
+    if (!consentCheckbox.checked) {
+      errorPolitics.innerText = "Прочтите и подтвердите согласие";
+      return;
+    }
+    
     try {
       const response = await fetch("https://formspree.io/f/xblrpeez", {
         method: "POST",
@@ -76,6 +85,14 @@ document
 document.getElementById("subscribe").addEventListener("input", function () {
   const errorDiv = document.getElementById("errorEmail");
   errorDiv.innerText = ""; // Очистка сообщения об ошибке при вводе текста
+});
+
+// Очистка сообщения об ошибке при изменении состояния чекбокса
+document.getElementById("consentCheckbox").addEventListener("change", function () {
+  const errorPolitics = document.getElementById("errorPolitics");
+  if (this.checked) {
+    errorPolitics.innerText = ""; // Очистка сообщения об ошибке
+  }
 });
 
 // Функции для открытия и закрытия модального окна
