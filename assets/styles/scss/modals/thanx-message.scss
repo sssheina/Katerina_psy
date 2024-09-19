@@ -1,35 +1,51 @@
 .modal {
   display: flex;
-  position: fixed; /* Используем fixed для модального окна */
+  position: fixed;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Меняем центрирование на начало */
   align-items: center;
-  max-width: 450px;
-  width: 90%;
-  max-height: 80%;
-  height: auto; /* Позволяет высоте адаптироваться */
-  padding: 3rem;
-  top: 50%;
+  height: auto;
+  padding: 4rem;
+  top: 5%; /* Убираем 50%, чтобы окно начиналось сверху */
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%); /* Сместим только по оси X */
   background-color: white;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); /* Увеличенный тень для улучшения визуального эффекта */
-  border-radius: 8px; /* Скругление углов */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   z-index: 2000;
   gap: 30px;
+  overflow: hidden; 
+
 
   /* Мобильная адаптивность */
-  @media (max-width: 768px) {
+  @include md {
     max-width: 90%;
     width: 100%;
     height: auto;
+    top: 5%; 
   }
 }
+
+/* Стиль для модального окна Политики конфиденциальности */
+.modal--privacy-policy {
+  height: auto;
+  text-align: left; 
+}
+
+/* Стиль для модального окна благодарности */
+.modal--thank-you {
+  height: auto;
+  max-height: 200px;
+  padding: 20px;
+}
+
 
 .modal__content {
   font-size: 20px;
   line-height: 150%;
-  text-align: center; /* Центрирование текста */
+  overflow-y: auto;
+  max-height: 90vh;
+  padding: 2rem; 
 }
 
 .modal-text {
@@ -43,21 +59,10 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  // background: #f56c6c; /* Цвет кнопки */
   border-radius: 50%;
-  // border: none;
-  // color: white;
-  width: 30px;
   height: 30px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   cursor: pointer;
 }
-
-// .btn-close:hover {
-  // background: #f43f3f; /* Цвет при наведении */
-// }
 
 .overlay {
   position: fixed;
