@@ -1,3 +1,9 @@
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
+
 const benefitsDataRu = [
   {
     title: "Научный подход",
@@ -169,7 +175,7 @@ const benefitsDataMap = {
   },
 };
 
-const handleGenerateBenefitCard = ({ title, text, image, alt, svg }) => {
+const generateCard = ({ title, text, image, alt, svg }) => {
   if (svg) {
     return `
         <div class="benefits-card benefits__card">
@@ -178,17 +184,14 @@ const handleGenerateBenefitCard = ({ title, text, image, alt, svg }) => {
           </svg>
         </div>
       `;
-  }
-
-  if (image) {
+  } else if (image) {
     return `
         <div class="benefits-card benefits__card">
           <img class="benefits-card__img hover-filter" src="${image}" alt="${alt}">
         </div>
       `;
-  }
-
-  return `
+  } else
+    return `
       <div class="benefits-card benefits__card">
         <h3 class="benefits-card__title h3-title">${title}</h3>
         <p class="benefits-card__text paragraph-standard">${text}</p>
@@ -196,7 +199,29 @@ const handleGenerateBenefitCard = ({ title, text, image, alt, svg }) => {
     `;
 };
 
+const updateBenefitsSection = (language) => {
+  const benefitsContainer = document.querySelector(".benefits__content");
+  const sectionTitle = document.querySelector(".benefits__title");
+  const button = document.querySelector(".benefits__button");
+
+  benefitsContainer.innerHTML = "";
+  sectionTitle.textContent = benefitsDataMap[language].title;
+  button.textContent = benefitsDataMap[language].buttonText;
+
+  benefitsDataMap[language].data.map((card) => {
+    const { title, text, image, alt, svg } = card;
+    benefitsContainer.innerHTML += generateCard({
+      title,
+      text,
+      image,
+      alt,
+      svg,
+    });
+  });
+};
+
 const benefitsContainer = document.querySelector(".benefits__content");
-benefitsContainer.innerHTML = benefitsDataRu
-  .map(handleGenerateBenefitCard)
-  .join("");
+benefitsContainer.innerHTML = benefitsDataRu.map(generateCard).join("");
+
+loadLanguage(updateBenefitsSection);
+dropdown.addEventListener("change", changeLanguage(updateBenefitsSection));
