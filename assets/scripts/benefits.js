@@ -210,6 +210,7 @@ const updateBenefitsSection = (language) => {
 
   benefitsDataMap[language].data.map((card) => {
     const { title, text, image, alt, svg } = card;
+
     benefitsContainer.innerHTML += generateCard({
       title,
       text,
@@ -219,9 +220,6 @@ const updateBenefitsSection = (language) => {
     });
   });
 };
-
-const benefitsContainer = document.querySelector(".benefits__content");
-benefitsContainer.innerHTML = benefitsDataRu.map(generateCard).join("");
 
 loadLanguage(updateBenefitsSection);
 dropdown.addEventListener("change", changeLanguage(updateBenefitsSection));
