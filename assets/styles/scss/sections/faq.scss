@@ -83,6 +83,7 @@
     padding: 35px;
     gap: 10px;
     background: $color-blue-light-gradient;
+    cursor: pointer;
 
     @include lg {
       padding: 25px;
@@ -126,6 +127,7 @@
 
   &__cross {
     transition: $transition;
+    cursor: pointer;
   }
 
   &.active {

@@ -3607,6 +3607,7 @@ body.lock {
   padding: 35px;
   gap: 10px;
   background: linear-gradient(#fefefe, #d9e9ff);
+  cursor: pointer;
 }
 @media only screen and (max-width: 1919px) {
   .faq-box__question {
@@ -3650,6 +3651,7 @@ body.lock {
 }
 .faq-box__cross {
   transition: 0.4s ease;
+  cursor: pointer;
 }
 .faq-box.active .faq-box__cross {
   transform: rotate(45deg);
