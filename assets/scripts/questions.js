@@ -14,6 +14,7 @@ const questionsDataMap = {
     ],
     placeholder:
       "Задавайте здесь анонимные вопросы о сексуальности и отношениях, даже те, которые кажутся вам неуместными, глупыми или стыдными...",
+    consent: "Cогласие с",
     buttonText: "Отправить",
   },
   EN: {
@@ -25,6 +26,7 @@ const questionsDataMap = {
     ],
     placeholder:
       "Ask anonymous questions about sexuality and relationships here, even if they seem inappropriate, stupid or embarrassing...",
+    consent: "Privacy policy agreement",
     buttonText: "Send",
   },
   FR: {
@@ -36,18 +38,33 @@ const questionsDataMap = {
     ],
     placeholder:
       "Posez ici des questions anonymes sur la sexualité et les relations, même celles qui semblent inappropriées, stupides ou embarrassantes...",
+    consent: "Consentement à la politique de confidentialité",
     buttonText: "Envoyer",
   },
+};
+
+const generateContent = (text) => {
+  const textContent = text
+    .map((txt) => `<p class="paragraph-standard">${txt}</p>`)
+    .join("");
+
+  return textContent;
 };
 
 const updateQuestionsContent = (language) => {
   const questionsContent = document.querySelector(".questions__text");
   const sectionTitle = document.querySelector(".questions__title");
+  const sectionText = questionsDataMap[language].text;
+  const textArea = document.querySelector(".questions__comment");
   const button = document.querySelector(".questions__button");
+  const consent = document.querySelector(".questions__consent-text");
 
+  questionsContent.innerHTML = "";
   sectionTitle.textContent = questionsDataMap[language].title;
+  textArea.placeholder = questionsDataMap[language].placeholder;
+  consent.textContent = questionsDataMap[language].consent;
   button.textContent = questionsDataMap[language].buttonText;
-  questionsContent.innerHTML = questionsDataMap[language].text;
+  questionsContent.innerHTML = generateContent(sectionText);
 };
 
 loadLanguage(updateQuestionsContent);

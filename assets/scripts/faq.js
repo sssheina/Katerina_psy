@@ -135,8 +135,6 @@ const faqDataMap = {
 };
 
 const toggleAnswer = (e) => {
-  console.log("toggleAnswer");
-
   const faqBox = e.target.closest(".faq-box");
 
   if (!faqBox) return;
