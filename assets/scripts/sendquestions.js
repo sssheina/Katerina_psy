@@ -29,11 +29,11 @@ function validateInput(input) {
 
 // Обработка отправки формы
 document
-  .getElementById("questions__button")
+  .querySelector(".questions__button")
   .addEventListener("click", async function (event) {
     event.preventDefault();
 
-    const form = document.getElementById("questions__form");
+    const form = document.querySelector(".questions__form");
     const formData = new FormData(form);
     const modalContent = document.getElementById("modal_window_content");
     const overlay = document.getElementById("overlay");

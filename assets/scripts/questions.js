@@ -9,7 +9,7 @@ const questionsDataMap = {
     title: "Анонимные вопросы",
     text: [
       "У вас возник вопрос, но вы стесняетесь его задать?",
-      "Спросите анонимно.<br> Я&nbsp;буду выборочно отвечать на&nbsp;вопросы в&nbsp;<a class='questions__link link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>instagram-блоге</a>.",
+      "Спросите анонимно.<br> Я&nbsp;буду выборочно отвечать на&nbsp;вопросы в&nbsp;<a class='link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>instagram-блоге</a>.",
       "Другим людям тоже важно услышать ответ на ваш вопрос. ",
       "Давайте будем бережны друг к другу!",
     ],
@@ -22,7 +22,7 @@ const questionsDataMap = {
   EN: {
     title: "Anonymous questions",
     text: [
-      "Do you have a question but are shy to ask? Send it anonymously. I will selectively answer questions in my <a class='questions__link link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>Instagram blog</a>.",
+      "Do you have a question but are shy to ask? Send it anonymously. I will selectively answer questions in my <a class='link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>Instagram blog</a>.",
       "Finding the answer to your question may be also important for others.",
       "Let's be kind and caring with each other!",
     ],
@@ -35,7 +35,7 @@ const questionsDataMap = {
   FR: {
     title: "Questions anonymes",
     text: [
-      "Vous avez une question mais vous êtes gêné de la poser ? Demander anonymement. Je répondrai de manière sélective aux questions sur mon <a class='questions__link link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>blog Instagram</a>.",
+      "Vous avez une question mais vous êtes gêné de la poser ? Demander anonymement. Je répondrai de manière sélective aux questions sur mon <a class='link' target='_blank' href='https://www.instagram.com/inspired.intimacy/'>blog Instagram</a>.",
       "Il y a une forte chance qu’il y a d’autres personnes pour lesquelles il sera important d’avoir la réponse à votre question.",
       "Soyons bienveillant.e les un.es envers les autres!",
     ],

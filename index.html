@@ -289,28 +289,11 @@
               alt="Девушки прикрывают друг другу глаза руками">
           </div>
 
-          <div class="questions__text">
-            <p class="paragraph-standard">
-              У вас возник вопрос о&nbsp;сексуальности и&nbsp;отношениях,
-              но&nbsp;вы стесняетесь его задать?
-            </p>
-            <p class="paragraph-standard">
-              Спросите анонимно.<br>
-              Я&nbsp;буду выборочно отвечать на&nbsp;вопросы
-              в&nbsp;<a class="questions__link link" target="_blank"
-                href="https://www.instagram.com/inspired.intimacy/">instagram-блоге</a>.
-            </p>
-            <p class="paragraph-standard">
-              Многим людям важно узнать ответ на&nbsp;ваш вопрос.
-            </p>
-            <p class="paragraph-standard">
-              Давайте будем бережны друг к&nbsp;другу!
-            </p>
-          </div>
-          <form id="questions__form" class="questions__form" method="POST">
-            <textarea name="message" class="questions__comment"
-              placeholder="Задавайте здесь анонимные вопросы, даже&nbsp;те, которые кажутся вам неуместными, глупыми или&nbsp;стыдными..."></textarea>
-            <div id="errorQuestions" class="questions__errors error error-text"></div>
+          <div class="questions__text"></div>
+
+          <form class="questions__form" method="POST">
+            <textarea name="message" class="questions__comment" placeholder=""></textarea>
+            <div class="questions__errors error error-text"></div>
 
             <div class="questions__policy policy">
               <div class="questions__policy-block policy__block">
@@ -325,9 +308,7 @@
             </div>
           </form>
 
-          <button id="questions__button" class="questions__button button__outline button button-text">
-            Отправить
-          </button>
+          <button class="questions__button button__outline button button-text"></button>
 
           <div class="overlay hidden" id="overlay">
             <section class="modal hidden paragraph-standard" id="modal_window">
