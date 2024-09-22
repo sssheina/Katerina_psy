@@ -6,7 +6,7 @@ import {
 
 const coverContent = {
   RU: {
-    titleTop: "Онлайн консультации",
+    titleTop: "Онлайн-консультации",
     titleBottom: "Катерины Тартари",
     subtitleTop: "Начните с бесплатной сессии",
     subtitleBottom: "Индивидуально, для пар, полиаморных союзов и семей",
@@ -23,10 +23,14 @@ const coverContent = {
     titleTop: "Online Counseling",
     titleBottom: "Katerina Tartari",
     subtitleTop: "Get started with a free session",
-    subtitleBottom: "For Individual, couples, polyamorous unions and families",
+    subtitleBottom:
+      "For Individual, couples, <br> polyamorous unions and families",
     therapyPsychotherapy: "psychotherapy",
     therapySextherapy: "sex therapy",
-    svg: ["/assets/images/figures/sprite.svg#cross"],
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
     preposition: "with",
     buttonText: "Let’s talk!",
     videoSrc: "/assets/video/video_5.mp4",
@@ -39,7 +43,10 @@ const coverContent = {
       "En individuel, pour couples, unions polyamoureuses et familles",
     therapyPsychotherapy: "psychothérapie",
     therapySextherapy: "sexothérapie",
-    svg: ["/assets/images/figures/sprite.svg#cross"],
+    svg: [
+      "/assets/images/figures/sprite.svg#cross",
+      "/assets/images/figures/sprite.svg#cross",
+    ],
     preposition: "par",
     buttonText: "Inscription",
     videoSrc: "/assets/video/video_5.mp4",
@@ -82,12 +89,12 @@ const updateCoverSection = (language) => {
   titleTopElement.textContent = content.titleTop;
   titleBottomElement.textContent = content.titleBottom;
   subtitleTopElement.textContent = content.subtitleTop;
-  subtitleBottomElement.textContent = content.subtitleBottom;
+  subtitleBottomElement.innerHTML = content.subtitleBottom;
   therapyPsychotherapyElement.textContent = content.therapyPsychotherapy;
   therapySextherapyElement.textContent = content.therapySextherapy;
   button.textContent = content.buttonText;
   videoElement.src = content.videoSrc;
-  prepositionElement.textContent = content.preposition || "";
+  prepositionElement.textContent = content.preposition;
   iconsContainer.innerHTML = generateSvgs(content.svg);
 };
 
