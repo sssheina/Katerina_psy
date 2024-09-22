@@ -243,6 +243,27 @@
     --paragraph-standard-font-size: 14px;
   }
 
+  // paragraph - small
+
+  --paragraph-small-font-family: var(--montserrat-font-family);
+  --paragraph-small-font-size: 15px;
+  --paragraph-small-font-weight: 500;
+  --paragraph-small-line-height: 100%;
+  --paragraph-small-text-transform: none;
+  --paragraph-small-text-decoration: none;
+
+  @include lg {
+    --paragraph-small-font-size: 15px;
+  }
+
+  @include md {
+    --paragraph-small-font-size: 12px;
+  }
+
+  @include xs {
+    --paragraph-small-font-size: 10px;
+  }
+
   // button - text
 
   --button-text-font-family: var(--montserrat-font-family);
@@ -305,35 +326,34 @@
     --error-text-font-size: 12px;
   }
 
-    // span - text
+  // span - text
 
-    
-    --span-text-font-size-ru: 35px;
-    --span-text-font-size-en: 40px;
-    --span-text-font-size-fr: 42px;
-    --span-text-font-weight: 400;
-    --span-text-font-style: italic;
-    --span-text-line-height: 100%;
-    --span-text-text-transform: none;
-    --span-text-text-decoration: none;
-  
-    @include lg {
-      --span-text-font-size-ru: 26px;
+  --span-text-font-size-ru: 35px;
+  --span-text-font-size-en: 40px;
+  --span-text-font-size-fr: 42px;
+  --span-text-font-weight: 400;
+  --span-text-font-style: italic;
+  --span-text-line-height: 100%;
+  --span-text-text-transform: none;
+  --span-text-text-decoration: none;
+
+  @include lg {
+    --span-text-font-size-ru: 26px;
     --span-text-font-size-en: 30px;
     --span-text-font-size-fr: 31px;
-    }
-  
-    @include md {
-      --span-text-font-size-ru: 16px;
+  }
+
+  @include md {
+    --span-text-font-size-ru: 16px;
     --span-text-font-size-en: 16px;
     --span-text-font-size-fr: 16px;
-    }
-  
-    @include xs {
-      --span-text-font-size-ru: 14px;
+  }
+
+  @include xs {
+    --span-text-font-size-ru: 14px;
     --span-text-font-size-en: 14px;
     --span-text-font-size-fr: 14px;
-    }
+  }
 
   // swiper-navigation-size
 
@@ -350,7 +370,6 @@
   // @include xs {
   //   --swiper-navigation-size: 20px;
   // }
-
 }
 
 .h1-title {
@@ -383,6 +402,10 @@
 
 .paragraph-standard {
   @extend %paragraph-standard;
+}
+
+.paragraph-small {
+  @extend %paragraph-small;
 }
 
 .button-text {

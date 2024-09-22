@@ -748,7 +748,8 @@ textarea {
   font-size: var(--h1-title-font-size);
 }
 
-[lang=en] .h1-title, [lang=fr] .h1-title {
+[lang=en] .h1-title,
+[lang=fr] .h1-title {
   font-size: var(--h1-title-font-size-en-fr);
 }
 
@@ -849,6 +850,20 @@ textarea {
   text-rendering: var(--text-rendering);
 }
 
+.paragraph-small {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--paragraph-small-font-size);
+  font-weight: var(--paragraph-small-font-weight, 400);
+  font-style: normal;
+  line-height: var(--paragraph-small-line-height);
+  text-transform: var(--paragraph-small-text-transform);
+  text-decoration: var(--paragraph-small-text-decoration);
+  color: #010e23;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}
+
 .button-text {
   font-family: var(--montserrat-font-family);
   font-size: var(--button-text-font-size);
@@ -885,6 +900,7 @@ textarea {
   line-height: var(--error-text-line-height);
   text-transform: var(--error-text-text-transform);
   text-decoration: var(--error-text-text-decoration);
+  color: red;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -1024,6 +1040,12 @@ textarea {
   --paragraph-standard-line-height: 140%;
   --paragraph-standard-text-transform: none;
   --paragraph-standard-text-decoration: none;
+  --paragraph-small-font-family: var(--montserrat-font-family);
+  --paragraph-small-font-size: 15px;
+  --paragraph-small-font-weight: 500;
+  --paragraph-small-line-height: 100%;
+  --paragraph-small-text-transform: none;
+  --paragraph-small-text-decoration: none;
   --button-text-font-family: var(--montserrat-font-family);
   --button-text-font-size: 32px;
   --button-text-font-weight: 400;
@@ -1178,6 +1200,21 @@ textarea {
 @media only screen and (max-width: 427px) {
   :root {
     --paragraph-standard-font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1919px) {
+  :root {
+    --paragraph-small-font-size: 15px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  :root {
+    --paragraph-small-font-size: 12px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  :root {
+    --paragraph-small-font-size: 10px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -1906,6 +1943,32 @@ body.lock {
   max-height: 20px;
 }
 
+.policy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5em 0;
+}
+.policy__block {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.policy__consent {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.policy__consent-text {
+  white-space: nowrap;
+}
+.policy__link {
+  white-space: nowrap;
+}
+[lang=en] .policy__consent {
+  flex-direction: row-reverse;
+}
+
 .button {
   max-width: 386px;
   width: 100%;
@@ -2049,7 +2112,6 @@ body.lock {
 }
 
 .error {
-  color: red;
   padding-top: 0.5em;
 }
 
@@ -3963,27 +4025,6 @@ body.lock {
     justify-self: center;
     margin-top: 20px;
   }
-}
-.questions__politics {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 0.5em 0;
-}
-.questions__politics-block {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  gap: 0.5em;
-}
-@media only screen and (max-width: 1439px) {
-  .questions__politics-block {
-    align-items: flex-start;
-  }
-}
-.questions__error-politics {
-  position: absolute;
-  top: 110%;
 }
 
 .modal {

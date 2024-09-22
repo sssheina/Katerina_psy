@@ -12,6 +12,7 @@ $color-gray-light: #d9d9d9;
 
 $color-white: #fefefe;
 $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
+$color-red: red;
 
 $transition: 0.4s ease;
 
@@ -34,7 +35,8 @@ $transition: 0.4s ease;
   font-size: var(--h1-title-font-size);
 }
 
-[lang="en"] .h1-title , [lang="fr"] .h1-title {
+[lang="en"] .h1-title,
+[lang="fr"] .h1-title {
   font-size: var(--h1-title-font-size-en-fr);
 }
 
@@ -135,6 +137,20 @@ $transition: 0.4s ease;
   text-rendering: var(--text-rendering);
 }
 
+%paragraph-small {
+  font-family: var(--montserrat-font-family);
+  font-size: var(--paragraph-small-font-size);
+  font-weight: var(--paragraph-small-font-weight, 400);
+  font-style: normal;
+  line-height: var(--paragraph-small-line-height);
+  text-transform: var(--paragraph-small-text-transform);
+  text-decoration: var(--paragraph-small-text-decoration);
+  color: $color-blue-dark;
+  -webkit-font-smoothing: var(--font-smoothing);
+  -moz-osx-font-smoothing: var(--font-smoothing);
+  text-rendering: var(--text-rendering);
+}
+
 %button-text {
   font-family: var(--montserrat-font-family);
   font-size: var(--button-text-font-size);
@@ -171,6 +187,7 @@ $transition: 0.4s ease;
   line-height: var(--error-text-line-height);
   text-transform: var(--error-text-text-transform);
   text-decoration: var(--error-text-text-decoration);
+  color: $color-red;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);
@@ -190,7 +207,6 @@ $transition: 0.4s ease;
   text-rendering: var(--text-rendering);
 }
 
-
 // Применение стилей для разных языков
 [lang="ru"] .span-text {
   font-size: var(--span-text-font-size-ru);
@@ -200,6 +216,6 @@ $transition: 0.4s ease;
   font-size: var(--span-text-font-size-en);
 }
 
-[lang="fr"] .span-text{
+[lang="fr"] .span-text {
   font-size: var(--span-text-font-size-fr);
 }

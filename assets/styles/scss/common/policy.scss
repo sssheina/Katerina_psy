@@ -1,0 +1,35 @@
+.policy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0.5em 0;
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  &__consent {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__consent-text {
+    white-space: nowrap;
+  }
+
+  &__link {
+    white-space: nowrap;
+  }
+
+  &__error {
+  }
+}
+
+[lang="en"] .policy {
+  &__consent {
+    flex-direction: row-reverse;
+  }
+}

@@ -118,28 +118,4 @@
       margin-top: 20px;
     }
   }
-
-  &__politics {
-    position: relative; 
-    display: flex;
-    flex-direction: column;
-    padding: 0.5em 0;
-  }
-
-  &__politics-block {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    gap: 0.5em;
-
-    @include md {
-      align-items: flex-start;
-    }
-  }
-
-  &__error-politics {
-    // padding-left: 1.3em;
-    position: absolute;
-    top: 110%;
-  }
 }

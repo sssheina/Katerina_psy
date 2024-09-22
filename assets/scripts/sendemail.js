@@ -52,7 +52,7 @@ document
       errorPolitics.innerText = "Прочтите и подтвердите согласие";
       return;
     }
-    
+
     try {
       const response = await fetch("https://formspree.io/f/xblrpeez", {
         method: "POST",
@@ -88,12 +88,14 @@ document.getElementById("subscribe").addEventListener("input", function () {
 });
 
 // Очистка сообщения об ошибке при изменении состояния чекбокса
-document.getElementById("consentCheckbox").addEventListener("change", function () {
-  const errorPolitics = document.getElementById("errorPolitics");
-  if (this.checked) {
-    errorPolitics.innerText = ""; // Очистка сообщения об ошибке
-  }
-});
+document
+  .querySelector(".footer__checkbox")
+  .addEventListener("change", function () {
+    const errorPolitics = document.querySelector(".footer__error");
+    if (this.checked) {
+      errorPolitics.innerText = ""; // Очистка сообщения об ошибке
+    }
+  });
 
 // Функции для открытия и закрытия модального окна
 const openModal = function (content) {
