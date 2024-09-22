@@ -1119,12 +1119,12 @@ textarea {
 }
 @media only screen and (max-width: 1439px) {
   :root {
-    --h3-title-font-size: 19px;
+    --h3-title-font-size: 16px;
   }
 }
 @media only screen and (max-width: 427px) {
   :root {
-    --h3-title-font-size: 16px;
+    --h3-title-font-size: 14px;
   }
 }
 @media only screen and (max-width: 1919px) {
@@ -2171,12 +2171,6 @@ body.lock {
   grid-area: title-bottom;
   text-align: right;
 }
-@media only screen and (max-width: 767px) {
-  .cover__title.bottom {
-    max-width: 70%;
-    justify-self: end;
-  }
-}
 .cover__subtitle {
   color: #fefefe;
 }
@@ -2186,27 +2180,6 @@ body.lock {
 .cover__subtitle.bottom {
   grid-area: subtitle-bottom;
   text-align: right;
-}
-.cover__therapy {
-  font-family: var(--raleway-font-family);
-  font-size: 35px;
-  font-weight: var(--h2-title-font-weight, 400);
-  font-style: italic;
-}
-@media only screen and (max-width: 1919px) {
-  .cover__therapy {
-    font-size: 26px;
-  }
-}
-@media only screen and (max-width: 1439px) {
-  .cover__therapy {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .cover__therapy {
-    font-size: 14px;
-  }
 }
 .cover__therapy.psychotherapy {
   grid-area: psychotherapy;
@@ -2275,61 +2248,37 @@ body.lock {
     grid-template-columns: 1fr auto 1fr;
   }
 }
-@media only screen and (max-width: 767px) {
-  [lang=ru] .cover__subtitle {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  [lang=ru] .cover__subtitle {
-    font-size: 14px;
-  }
-}
 [lang=ru] .cover__preposition {
   display: none;
 }
 
 [lang=en] .cover__content {
   grid-template-columns: auto 16% 1fr 2% auto;
-  gap: 12px 35px;
+  gap: 12px;
   grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top icons psychotherapy" "sextherapy preposition title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+}
+@media only screen and (max-width: 1919px) {
+  [lang=en] .cover__content {
+    gap: 12px 25px;
+  }
 }
 @media only screen and (max-width: 1439px) {
   [lang=en] .cover__content {
-    grid-template-columns: auto 20% 1fr 5% auto;
+    grid-template-columns: auto 20% 1fr 4% auto;
     gap: 12px;
   }
 }
 @media only screen and (max-width: 767px) {
   [lang=en] .cover__content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 1fr auto;
     grid-template-areas: "subtitle-top subtitle-top subtitle-top" "title-top title-top title-top" "sextherapy icons psychotherapy" "preposition title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom";
   }
 }
-@media only screen and (max-width: 427px) {
-  [lang=en] .cover__content {
-    grid-template-columns: 1fr auto 1fr;
-  }
-}
-[lang=en] .cover__title.top {
+[lang=en] .cover__title.top, [lang=en] .cover__title.bottom {
   white-space: nowrap;
 }
 @media only screen and (max-width: 767px) {
-  [lang=en] .cover__title.top {
-    font-size: 34px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  [lang=en] .cover__title.top {
-    white-space: normal;
-  }
-}
-[lang=en] .cover__title.bottom {
-  white-space: nowrap;
-}
-@media only screen and (max-width: 767px) {
-  [lang=en] .cover__title.bottom {
-    font-size: 34px;
+  [lang=en] .cover__title.top, [lang=en] .cover__title.bottom {
     white-space: normal;
   }
 }
@@ -2339,16 +2288,6 @@ body.lock {
 @media only screen and (max-width: 767px) {
   [lang=en] .cover__subtitle br {
     display: block;
-  }
-}
-@media only screen and (max-width: 767px) {
-  [lang=en] .cover__subtitle {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  [lang=en] .cover__subtitle {
-    font-size: 12px;
   }
 }
 [lang=en] .cover__preposition {
@@ -2371,7 +2310,7 @@ body.lock {
 }
 
 [lang=fr] .cover__content {
-  grid-template-columns: auto auto 1fr 7% auto;
+  grid-template-columns: auto auto 1fr 4% auto;
   gap: 12px 35px;
   grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top icons psychotherapy" "sextherapy preposition title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
 }
@@ -2383,34 +2322,15 @@ body.lock {
 }
 @media only screen and (max-width: 767px) {
   [lang=fr] .cover__content {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: auto 1fr auto;
     grid-template-areas: "subtitle-top subtitle-top subtitle-top" "title-top title-top title-top" "sextherapy icons psychotherapy" "preposition title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom";
   }
 }
-@media only screen and (max-width: 427px) {
-  [lang=fr] .cover__content {
-    grid-template-columns: 1fr auto 1fr;
-  }
-}
-[lang=fr] .cover__title.top {
+[lang=fr] .cover__title.top, [lang=fr] .cover__title.bottom {
   white-space: nowrap;
 }
 @media only screen and (max-width: 767px) {
-  [lang=fr] .cover__title.top {
-    font-size: 34px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  [lang=fr] .cover__title.top {
-    white-space: normal;
-  }
-}
-[lang=fr] .cover__title.bottom {
-  white-space: nowrap;
-}
-@media only screen and (max-width: 767px) {
-  [lang=fr] .cover__title.bottom {
-    font-size: 34px;
+  [lang=fr] .cover__title.top, [lang=fr] .cover__title.bottom {
     white-space: normal;
   }
 }
@@ -2422,24 +2342,15 @@ body.lock {
     display: block;
   }
 }
-@media only screen and (max-width: 1439px) {
-  [lang=fr] .cover__subtitle {
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  [lang=fr] .cover__subtitle {
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 427px) {
-  [lang=fr] .cover__subtitle {
-    font-size: 12px;
-  }
-}
 [lang=fr] .cover__preposition {
   grid-area: preposition;
   display: block;
+}
+@media only screen and (max-width: 767px) {
+  [lang=fr] .cover__preposition {
+    align-self: start;
+    text-align: right;
+  }
 }
 [lang=fr] .cover__cross:last-child {
   display: none;

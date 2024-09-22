@@ -71,7 +71,6 @@ const updateQuestionsContent = (language) => {
   textArea.placeholder = content.placeholder;
   consent.textContent = content.consent;
   consentLink.textContent = content.consentLink;
-  console.log(consentLink);
 
   button.textContent = content.buttonText;
   questionsContent.innerHTML = generateContent(sectionText);

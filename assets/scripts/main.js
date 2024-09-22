@@ -38,9 +38,9 @@ const coverContent = {
   FR: {
     titleTop: "Thérapie en ligne",
     titleBottom: "Katerina Tartary",
-    subtitleTop: "Commence avec une consultation gratuite",
+    subtitleTop: "Commence avec <br> une consultation gratuite",
     subtitleBottom:
-      "En individuel, pour couples, unions polyamoureuses et familles",
+      "En individuel, pour couples, <br> unions polyamoureuses et familles",
     therapyPsychotherapy: "psychothérapie",
     therapySextherapy: "sexothérapie",
     svg: [
@@ -88,7 +88,7 @@ const updateCoverSection = (language) => {
 
   titleTopElement.textContent = content.titleTop;
   titleBottomElement.textContent = content.titleBottom;
-  subtitleTopElement.textContent = content.subtitleTop;
+  subtitleTopElement.innerHTML = content.subtitleTop;
   subtitleBottomElement.innerHTML = content.subtitleBottom;
   therapyPsychotherapyElement.textContent = content.therapyPsychotherapy;
   therapySextherapyElement.textContent = content.therapySextherapy;
