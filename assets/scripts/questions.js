@@ -56,7 +56,7 @@ const generateContent = (text) => {
 };
 
 const updateQuestionsContent = (language) => {
-  const content = questionsDataMap[language] || coverContent.EN;
+  const content = questionsDataMap[language] || questionsDataMap.EN;
 
   const questionsContent = document.querySelector(".questions__text");
   const sectionTitle = document.querySelector(".questions__title");

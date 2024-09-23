@@ -2,34 +2,31 @@
   display: flex;
   position: fixed;
   flex-direction: column;
-  justify-content: flex-start; /* Меняем центрирование на начало */
+  justify-content: flex-start;
   align-items: center;
-  height: auto;
+  max-height: 90%;
   padding: 4rem;
-  top: 5%; /* Убираем 50%, чтобы окно начиналось сверху */
+  top: 5%;
   left: 50%;
-  transform: translateX(-50%); /* Сместим только по оси X */
+  transform: translateX(-50%);
   background-color: white;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   z-index: 2000;
   gap: 30px;
-  overflow: hidden; 
+  overflow: hidden;
 
-
-  /* Мобильная адаптивность */
   @include md {
     max-width: 90%;
     width: 100%;
-    height: auto;
-    top: 5%; 
+    top: 5%;
   }
 }
 
 /* Стиль для модального окна Политики конфиденциальности */
 .modal--privacy-policy {
   height: auto;
-  text-align: left; 
+  text-align: left;
 }
 
 /* Стиль для модального окна благодарности */
@@ -39,14 +36,13 @@
   padding: 20px;
 }
 
-
-.modal__content {
-  font-size: 20px;
-  line-height: 150%;
-  overflow-y: auto;
-  max-height: 90vh;
-  padding: 2rem; 
-}
+// .modal__content {
+//   font-size: 20px;
+//   line-height: 150%;
+//   overflow-y: auto;
+//   max-height: 90vh;
+//   padding: 2rem;
+// }
 
 .modal-text {
   display: flex;
@@ -60,7 +56,8 @@
   top: 10px;
   right: 10px;
   border-radius: 50%;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
 }
 
@@ -78,8 +75,6 @@
 .hidden {
   display: none;
 }
-
-
 
 // .modal {
 //   display: flex;

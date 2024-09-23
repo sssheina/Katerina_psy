@@ -12,9 +12,7 @@ function initSendQuestion() {
   el.addEventListener("click", submitForm);
   el.disabled = false;
 
-  document
-    .getElementById("btn_close_modal")
-    .addEventListener("click", closeModal);
+  document.querySelector(".button-close").addEventListener("click", closeModal);
   document.getElementById("overlay").addEventListener("click", closeModal);
   document
     .getElementById("modal_window")
@@ -92,12 +90,13 @@ async function submitForm() {
 const openModal = function (content) {
   let modal = document.getElementById("modal_window");
   let overlay = document.getElementById("overlay");
-  let modalContent = document.getElementById("modal_window_content");
+  // let modalContent = document.querySelector(".modal__content");
   document.body.classList.add("no-scroll");
-  modalContent.innerHTML = content;
+
+  // modalContent.innerHTML = content;
   modal.classList.remove("hidden");
   overlay.classList.remove("hidden");
-  document.body.style.overflow = "hidden"; // Блокируем прокрутку
+  document.body.style.overflow = "hidden";
 };
 
 const closeModal = function () {
@@ -106,5 +105,5 @@ const closeModal = function () {
   document.body.classList.remove("no-scroll");
   modal.classList.add("hidden");
   overlay.classList.add("hidden");
-  document.body.style.overflow = ""; // Разблокируем прокрутку
+  document.body.style.overflow = "";
 };

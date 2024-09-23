@@ -34,7 +34,7 @@ document
 
     const form = document.querySelector(".footer__form");
     const formData = new FormData(form);
-    const modalContent = document.getElementById("modal_window_content");
+    const modalContent = document.querySelector(".modal__content");
     const overlay = document.getElementById("overlay");
     const modalWindow = document.getElementById("modal_window");
 
@@ -98,19 +98,19 @@ document
   });
 
 // Функции для открытия и закрытия модального окна
-const openModal = function (content) {
-  let modal = document.getElementById("modal_window");
-  let overlay = document.getElementById("overlay");
-  let modalContent = document.getElementById("modal_window_content");
+// const openModal = function (content) {
+//   let modal = document.getElementById("modal_window");
+//   let overlay = document.getElementById("overlay");
+//   let modalContent = document.querySelector(".modal__content");
 
-  document.body.classList.add("no-scroll");
+//   document.body.classList.add("no-scroll");
 
-  modalContent.innerHTML = content;
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
+//   // modalContent.innerHTML = content;
+//   modal.classList.remove("hidden");
+//   overlay.classList.remove("hidden");
 
-  document.body.style.overflow = "hidden";
-};
+//   document.body.style.overflow = "hidden";
+// };
 
 const closeModal = function () {
   let modal = document.getElementById("modal_window");
@@ -124,9 +124,7 @@ const closeModal = function () {
 };
 
 // Обработка кнопок закрытия модального окна
-document
-  .getElementById("btn_close_modal")
-  .addEventListener("click", closeModal);
+document.querySelector(".button-close").addEventListener("click", closeModal);
 document.getElementById("overlay").addEventListener("click", closeModal);
 
 // Обработка закрытия модального окна клавишей Escape
