@@ -45,8 +45,8 @@ document
     }
 
     // Проверка согласия с политикой
-    const consentCheckbox = document.getElementById("consentCheckbox");
-    const errorPolitics = document.getElementById("errorPolitics");
+    const consentCheckbox = document.querySelector(".footer__checkbox");
+    const errorPolitics = document.querySelector(".footer__error");
 
     if (!consentCheckbox.checked) {
       errorPolitics.innerText = "Прочтите и подтвердите согласие";
