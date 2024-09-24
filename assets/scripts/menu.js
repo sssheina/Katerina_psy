@@ -58,6 +58,8 @@ const menuDataMap = {
 const updateContent = (language) => {
   const menuContainer = document.querySelector(".header__menu");
 
+  menuContainer.innerHTML = "";
+
   menuDataMap[language].forEach((item) => {
     const listElement = document.createElement("li");
     listElement.className = "header__menu-item";
