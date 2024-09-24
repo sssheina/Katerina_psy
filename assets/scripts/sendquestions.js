@@ -46,7 +46,7 @@ document
     const userInput = formData.get("message");
     if (!validateInput(userInput)) {
       errorDiv.innerHTML =
-        "<p>Ошибка! Сообщение содержит недопустимые слова или символы.</p>";
+        "<p>Сообщение содержит недопустимые слова или символы.</p>";
       errorPolitics.innerText = "";
       return;
     } else {

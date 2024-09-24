@@ -907,7 +907,7 @@ textarea {
 }
 
 .span-text {
-  font-family: var(--montserrat-font-family);
+  font-family: var(--raleway-font-family);
   font-size: var(--span-text-font-size);
   font-weight: var(--span-text-font-weight, 400);
   font-style: italic;
@@ -3893,7 +3893,7 @@ body.lock {
 }
 .questions__comment {
   width: 100%;
-  min-height: 127px;
+  min-height: 150px;
   border: 1px solid #b1b1b1;
   font-family: var(--montserrat-font-family);
   font-size: var(--paragraph-standard-font-size);
