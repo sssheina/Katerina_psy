@@ -164,7 +164,7 @@
 
 [lang="en"] .cover {
   &__content {
-    grid-template-columns: auto 16% 1fr 2% auto;
+    grid-template-columns: auto 16% 1fr 5% auto;
     gap: 12px;
     grid-template-areas:
       "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top"
@@ -173,6 +173,7 @@
       "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
 
     @include lg {
+      grid-template-columns: auto 18% 1fr 7% auto;
       gap: 12px 25px;
     }
 
@@ -236,13 +237,17 @@
 
 [lang="fr"] .cover {
   &__content {
-    grid-template-columns: auto auto 1fr 4% auto;
+    grid-template-columns: auto auto 1fr 7% auto;
     gap: 12px 35px;
     grid-template-areas:
       "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top"
       "title-top title-top title-top icons psychotherapy"
       "sextherapy preposition title-bottom title-bottom title-bottom"
       "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+
+    @include lg {
+      grid-template-columns: auto 15% 1fr 9% auto;
+    }
 
     @include md {
       grid-template-columns: auto 15% 1fr 10% auto;

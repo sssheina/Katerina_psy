@@ -2253,12 +2253,13 @@ body.lock {
 }
 
 [lang=en] .cover__content {
-  grid-template-columns: auto 16% 1fr 2% auto;
+  grid-template-columns: auto 16% 1fr 5% auto;
   gap: 12px;
   grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top icons psychotherapy" "sextherapy preposition title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
 }
 @media only screen and (max-width: 1919px) {
   [lang=en] .cover__content {
+    grid-template-columns: auto 18% 1fr 7% auto;
     gap: 12px 25px;
   }
 }
@@ -2310,9 +2311,14 @@ body.lock {
 }
 
 [lang=fr] .cover__content {
-  grid-template-columns: auto auto 1fr 4% auto;
+  grid-template-columns: auto auto 1fr 7% auto;
   gap: 12px 35px;
   grid-template-areas: "subtitle-top subtitle-top subtitle-top subtitle-top subtitle-top" "title-top title-top title-top icons psychotherapy" "sextherapy preposition title-bottom title-bottom title-bottom" "subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom subtitle-bottom";
+}
+@media only screen and (max-width: 1919px) {
+  [lang=fr] .cover__content {
+    grid-template-columns: auto 15% 1fr 9% auto;
+  }
 }
 @media only screen and (max-width: 1439px) {
   [lang=fr] .cover__content {
