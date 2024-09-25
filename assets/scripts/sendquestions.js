@@ -97,3 +97,9 @@ sendButton.addEventListener("click", async function (event) {
 questionsComment.addEventListener("input", function () {
   errorDiv.innerHTML = "";
 });
+
+consentCheckbox.addEventListener("change", function () {
+  if (this.checked) {
+    errorPolitics.innerText = "";
+  }
+});
