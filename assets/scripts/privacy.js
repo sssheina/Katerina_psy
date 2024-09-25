@@ -39,7 +39,7 @@ const generatePrivacyPolicyContent = (title, text) => {
 const updatePrivacyPolicyContent = (language) => {
   const content = privacyPolicyData[language] || privacyPolicyData.EN;
 
-  const privacyContent = document.querySelector(".modal__content");
+  const privacyContent = document.querySelector(".questions__modal-content");
   console.log(privacyContent);
 
   const button = document.querySelector(".button-close");

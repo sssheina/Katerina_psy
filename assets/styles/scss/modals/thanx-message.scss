@@ -1,19 +1,31 @@
-.modal {
-  display: flex;
+.overlay {
   position: fixed;
-  flex-direction: column;
-  justify-content: flex-start;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  max-height: 90%;
-  padding: 4rem;
-  top: 5%;
-  left: 50%;
-  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  height: auto;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  gap: 30px;
+  padding: 2rem;
+  z-index: 2000;
   background-color: white;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  z-index: 2000;
-  gap: 30px;
   overflow: hidden;
 
   @include md {
@@ -23,31 +35,14 @@
   }
 }
 
-/* Стиль для модального окна Политики конфиденциальности */
-.modal--privacy-policy {
-  height: auto;
-  text-align: left;
+.modal__privacy-policy {
+  height: 80%;
+  padding: 4rem;
 }
 
-/* Стиль для модального окна благодарности */
-.modal--thank-you {
+.modal__thank-you {
   height: auto;
-  max-height: 200px;
   padding: 20px;
-}
-
-// .modal__content {
-//   font-size: 20px;
-//   line-height: 150%;
-//   overflow-y: auto;
-//   max-height: 90vh;
-//   padding: 2rem;
-// }
-
-.modal-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
@@ -61,161 +56,6 @@
   cursor: pointer;
 }
 
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px); /* Усиленный эффект размытия */
-  z-index: 1000;
-}
-
 .hidden {
   display: none;
 }
-
-// .modal {
-//   display: flex;
-//   position: absolute;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   max-width: 450px;
-//   width: 100%;
-//   max-height: 300px;
-//   height: 100%;
-//   // max-height: calc(95vh - 50px);
-//   padding: 1.3rem;
-//   // top: 55%;
-//   // left: 22%;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: $color-white;
-//   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.15);
-//   z-index: 2000;
-
-//   @include lg {
-//     // height: 275px;
-//     // width: 420px;
-//     // top: 52%;
-//     // left: 16%;
-//   }
-
-//   @include md {
-//     // height: 250px;
-//     // width: 400px;
-//     // top: 51%;
-//     // left: -12%;
-//   }
-
-//   @include sm {
-//     // top: 57%;
-//     // left: -3%;
-//     height: 200px;
-//     max-width: unset;
-//     width: 90vw;
-//   }
-
-//   @include xs {
-//     // top: 57%;
-//     // left: 0;
-//     height: 200px;
-//     width: 260px;
-//   }
-
-//   &__content {
-//     // position: absolute;
-//     // top: 50%;
-//     // left: 50%;
-//     // transform: translate(-50%, -50%);
-//     display: flex;
-//     flex-direction: column;
-//     // width: 300px;
-//     font-size: 20px;
-//     line-height: 150%;
-
-//     @include lg {
-//       font-size: 18px;
-//     }
-
-//     @include md {
-//       width: 275px;
-//       font-size: 16px;
-//     }
-
-//     @include sm {
-//       font-size: 15px;
-//     }
-
-//     @include xs {
-//       font-size: 14px;
-//     }
-
-//     @include xs {
-//       width: 200px;
-//     }
-//   }
-// }
-
-// .btn-close {
-//   position: absolute;
-//   transform: translate(10px, -20px);
-//   padding: 0.5rem 0.75rem;
-//   top: 13%;
-//   right: 6%;
-//   background: $color-orange;
-//   border-radius: 50%;
-//   border: none;
-
-//   @include lg {
-//     padding: 0.3rem 0.67rem;
-//     width: 35px;
-//     height: 35px;
-//   }
-
-//   @include md {
-//     padding: 0.2rem 0.5rem;
-//     top: 14%;
-//     right: 6%;
-//     width: 32px;
-//     height: 32px;
-//   }
-
-//   @include sm {
-//     width: 28px;
-//     height: 28px;
-//   }
-
-//   @include xs {
-//     top: 15%;
-//     right: 8%;
-//     padding: 0.14rem 0.43rem;
-//     width: 25px;
-//     height: 25px;
-//   }
-// }
-
-// .btn-close:hover {
-//   background: $color-orange;
-// }
-
-// .overlay {
-//   position: fixed;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   height: 100%;
-//   background: rgba(0, 0, 0, 0.5);
-//   backdrop-filter: blur(3px);
-//   z-index: 1000;
-
-// }
-
-// .hidden {
-//   display: none;
-// }

@@ -304,11 +304,18 @@
                 </div>
               </div>
 
-              <div class="questions__policy-error error error-text policy__error"></div>
+              <div class="questions__policy-error policy__error error error-text "></div>
             </div>
           </form>
 
           <button class="questions__button button__outline button button-text"></button>
+        </div>
+
+        <div class="overlay hidden">
+          <section class="questions__modal modal">
+            <button class="button__primary button-close" title="">⨉</button>
+            <div class="questions__modal-content modal-content"></div>
+          </section>
         </div>
       </div>
     </section>
@@ -339,8 +346,7 @@
           <h3 class="h3-title">Подпишитесь на новости</h3>
           <form class="footer__form" method="POST">
             <div class="footer__input">
-              <input class="footer__field paragraph-standard" type="text" name="subscribe" id="subscribe"
-                placeholder="Ваш e-mail">
+              <input class="footer__field paragraph-standard" type="text" name="subscribe" placeholder="Ваш e-mail">
 
               <button class="footer__button">
                 <svg class="icon-arrow-right">
@@ -349,7 +355,7 @@
               </button>
             </div>
 
-            <div id="errorEmail" class="footer__error-message error error-text"></div>
+            <div class="footer__errors error error-text"></div>
 
             <div class="footer__policy policy">
               <div class="footer__policy-block policy__block">
@@ -360,16 +366,9 @@
                 </div>
               </div>
 
-              <div class="footer__error policy__error error error-text"></div>
+              <div class="footer__policy-error policy__error error error-text"></div>
             </div>
           </form>
-
-          <div class="overlay hidden" id="overlay">
-            <section class="modal hidden" id="modal_window">
-              <button class="button__primary button-close" title="">⨉</button>
-              <div class="modal__content"></div>
-            </section>
-          </div>
         </div>
 
         <div class="footer__contacts">
@@ -439,6 +438,7 @@
   <script type="module" src="/assets/scripts/questions.js"></script>
   <script type="module" src="/assets/scripts/sendemail.js"></script>
   <script type="module" src="/assets/scripts/sendquestions.js"></script>
+  <script type="module" src="/assets/scripts/composables/privacy-policy.js"></script>
   <script type="module" src="/assets/scripts/footer.js"></script>
   <script type="module" src="/assets/scripts/index.js"></script>
   <script src="https://assets.calendly.com/assets/external/widget.js"></script>
