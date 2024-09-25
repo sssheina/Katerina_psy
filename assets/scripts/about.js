@@ -32,7 +32,7 @@ const aboutContent = {
       "* Acceptance & Commitment Therapy",
       "**  Emotionally Focused Therapy for couples",
     ],
-    videoSrc: "/assets/video/kate_ru_sub.mp4",
+    videoSrc: "/assets/video/kate_en.mp4",
     buttonText: "Book free session",
   },
   FR: {
@@ -47,7 +47,7 @@ const aboutContent = {
       "* Thérapie d’Acceptation et d’Engagement (Acceptance & Commitment Therapy ACT)",
       "**  Thérapie Centrée sur l’Emotion (Emotionally Focused Therapy EFT)",
     ],
-    videoSrc: "/assets/video/kate_ru_sub.mp4",
+    videoSrc: "/assets/video/kate_fr.mp4",
     buttonText: "Ton premier RDV! ",
   },
 };
