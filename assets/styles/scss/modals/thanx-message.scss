@@ -33,6 +33,25 @@
     width: 100%;
     top: 5%;
   }
+
+  &__list-ordered {
+    list-style: decimal;
+  }
+
+  &__list-unordered {
+    // list-style: disc;
+    // list-style-type: disc;
+
+    li {
+      position: relative;
+      padding-left: 25px;
+    }
+    li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+    }
+  }
 }
 
 .modal__privacy-policy {

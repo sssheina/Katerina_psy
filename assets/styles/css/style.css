@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -3982,6 +3983,18 @@ body.lock {
     width: 100%;
     top: 5%;
   }
+}
+.modal__list-ordered {
+  list-style: decimal;
+}
+.modal__list-unordered li {
+  position: relative;
+  padding-left: 25px;
+}
+.modal__list-unordered li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
 }
 
 .modal__privacy-policy {
