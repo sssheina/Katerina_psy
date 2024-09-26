@@ -12,13 +12,41 @@ const modalText = {
   ru: "Мы собираем файлы cookie для улучшения вашего опыта. Это включает информацию о трекинге и аналитике.",
 };
 
+const buttonText = {
+  en: {
+    moreInfo: "Learn more",
+    accept: "Accept",
+    decline: "Decline",
+  },
+  fr: {
+    moreInfo: "En savoir plus",
+    accept: "Accepter",
+    decline: "Décliner",
+  },
+  ru: {
+    moreInfo: "Узнать больше",
+    accept: "Принять",
+    decline: "Отклонить",
+  },
+};
+
 // Render cookie consent text based on selected language
 const renderCookieText = () => {
   const selectedLanguage = (
     localStorage.getItem("selectedLanguage") || "en"
   ).toLowerCase();
   const cookieElement = document.getElementById("cookie-text");
+  const acceptBtnElement = document.querySelector("#accept-cookies");
+  const declineBtnElement = document.querySelector("#decline-cookies");
+
   cookieElement.textContent = cookieText[selectedLanguage] || cookieText["en"];
+  const moreInfoLinkElement = document.getElementById("more-info-link");
+  moreInfoLinkElement.textContent =
+    buttonText[selectedLanguage].moreInfo || buttonText["en"].moreInfo;
+  acceptBtnElement.textContent =
+    buttonText[selectedLanguage].accept || buttonText["en"].accept;
+  declineBtnElement.textContent =
+    buttonText[selectedLanguage].decline || buttonText["en"].decline;
 };
 
 // Open modal and render its content based on selected language
