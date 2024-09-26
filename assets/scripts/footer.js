@@ -11,6 +11,9 @@ const footerDataMap = {
     consentLink: "Политикой конфиденциальности",
     subscribe: "Подпишитесь на новости",
     contacts: "Контакты",
+    placeholder: "Ваш e-mail",
+    author: "&copy; 2024 Екатерина Тартари.&nbsp; <br> Все права защищены.",
+    developed: "Разработано",
   },
   EN: {
     logoText:
@@ -19,6 +22,9 @@ const footerDataMap = {
     consentLink: "Privacy policy",
     subscribe: "Subscribe to the news",
     contacts: "Contacts",
+    placeholder: "Your e-mail",
+    author: "&copy; 2024 Ekaterina Tartary.&nbsp; <br> All rights reserved",
+    developed: "Created by",
   },
   FR: {
     logoText:
@@ -27,23 +33,33 @@ const footerDataMap = {
     consentLink: "la politique de confidentialité",
     subscribe: "S'inscrire aux nouvelles",
     contacts: "Contacts",
+    placeholder: "Votre e-mail",
+    author:
+      "&copy; 2024 Ekaterina Tartary.&nbsp; <br> Tous les droits réservés",
+    developed: "Développé par",
   },
 };
 
 const updateFooterContent = (language) => {
   const content = footerDataMap[language] || footerDataMap.EN;
 
+  const inputSubscribe = document.querySelector(".footer__field");
   const consent = document.querySelector(".footer__consent-text");
   const consentLink = document.querySelector(".footer__consent-link");
   const logoText = document.querySelector(".footer__logo-text");
   const subscribeTitle = document.querySelector(".footer__subscribe-title");
   const contactsTitle = document.querySelector(".footer__contacts-title");
+  const author = document.querySelector(".footer__copyright.author");
+  const developed = document.querySelector(".footer__developed");
 
+  inputSubscribe.placeholder = content.placeholder;
   consent.textContent = content.consent;
   consentLink.textContent = content.consentLink;
   logoText.innerHTML = content.logoText;
   subscribeTitle.textContent = content.subscribe;
   contactsTitle.textContent = content.contacts;
+  author.innerHTML = content.author;
+  developed.textContent = content.developed;
 };
 
 loadLanguage(updateFooterContent);

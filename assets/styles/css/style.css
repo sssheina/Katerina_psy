@@ -1824,17 +1824,21 @@ body.lock {
     align-items: center;
   }
 }
-.footer__copy {
-  display: flex;
-}
-@media only screen and (max-width: 767px) {
-  .footer__copy {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 .footer__copyright {
   color: #fefefe;
+}
+@media only screen and (max-width: 1439px) {
+  .footer__copyright.author {
+    text-align: center;
+  }
+}
+.footer__copyright.author br {
+  display: none;
+}
+@media only screen and (max-width: 1439px) {
+  .footer__copyright.author br {
+    display: block;
+  }
 }
 .footer__link-studio {
   color: #fefefe;

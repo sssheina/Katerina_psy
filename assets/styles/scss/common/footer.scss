@@ -181,18 +181,9 @@
     }
   }
 
-&__copyright-container {
-  display: flex;
-  justify-content: space-between;
-
-  @include sm {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-  &__copy {
+  &__copyright-container {
     display: flex;
+    justify-content: space-between;
 
     @include sm {
       flex-direction: column;
@@ -202,6 +193,20 @@
 
   &__copyright {
     color: $color-white;
+
+    &.author {
+      @include md {
+        text-align: center;
+      }
+
+      br {
+        display: none;
+
+        @include md {
+          display: block;
+        }
+      }
+    }
   }
 
   &__link-studio {
