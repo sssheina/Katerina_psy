@@ -2026,15 +2026,17 @@ body.lock {
 }
 
 .button__outline {
-  border: 1px solid #ce6a0e;
+  border: 2px solid #ce6a0e;
   background: #fefefe;
   color: #ce6a0e;
 }
 .button__outline:hover {
+  border: 2px solid #d69961;
   background: #d69961;
   color: #fefefe;
 }
 .button__outline:active {
+  border: 2px solid #bd5b01;
   background: #bd5b01;
   color: #fefefe;
 }
@@ -2057,6 +2059,71 @@ body.lock {
 }
 .button-up:active {
   background: #d69961;
+}
+
+.button__secondary {
+  background: #010e23;
+  color: #fefefe;
+}
+.button__secondary:hover {
+  background: #35445B;
+}
+.button__secondary:active {
+  background: #fefefe;
+  color: #010e23;
+}
+
+.button__outline-blue {
+  border: 2px solid #010e23;
+  background: #fefefe;
+  color: #010e23;
+}
+.button__outline-blue:hover {
+  border: 2px solid #35445B;
+  background: #35445B;
+}
+.button__outline-blue:active {
+  border: 2px solid #010e23;
+  background: #010e23;
+  color: #fefefe;
+}
+
+.button__secondary,
+.button__outline-blue {
+  text-align: center;
+  outline: none;
+  transition: 0.4s ease;
+  max-width: 386px;
+  width: 100%;
+  height: 80px;
+}
+@media only screen and (max-width: 1919px) {
+  .button__secondary,
+  .button__outline-blue {
+    max-width: 295px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .button__secondary,
+  .button__outline-blue {
+    max-width: 213px;
+    height: 48px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button__secondary,
+  .button__outline-blue {
+    max-width: 278px;
+    height: 48px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .button__secondary,
+  .button__outline-blue {
+    max-width: 205px;
+    height: 48px;
+  }
 }
 
 .button-block {

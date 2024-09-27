@@ -51,16 +51,18 @@
 }
 
 .button__outline {
-  border: 1px solid $color-orange;
+  border: 2px solid $color-orange;
   background: $color-white;
   color: $color-orange;
 
   &:hover {
+    border: 2px solid $color-orange-light;
     background: $color-orange-light;
     color: $color-white;
   }
 
   &:active {
+    border: 2px solid $color-orange-dark;
     background: $color-orange-dark;
     color: $color-white;
   }
@@ -85,5 +87,66 @@
 
   &:active {
     background: $color-orange-light;
+  }
+}
+
+.button__secondary {
+  background: $color-blue-dark;
+  color: $color-white;
+
+  &:hover {
+    background: $color-blue-middle;
+  }
+
+  &:active {
+    background: $color-white;
+    color: $color-blue-dark;
+  }
+}
+
+.button__outline-blue {
+  border: 2px solid $color-blue-dark;
+  background: $color-white;
+  color: $color-blue-dark;
+
+  &:hover {
+    border: 2px solid $color-blue-middle;
+    background: $color-blue-middle;
+  }
+
+  &:active {
+    border: 2px solid $color-blue-dark;
+  background: $color-blue-dark;
+  color: $color-white;
+  }
+}
+
+.button__secondary,
+.button__outline-blue {
+  text-align: center;
+  outline: none;
+  transition: $transition;
+  max-width: 386px;
+  width: 100%;
+  height: 80px;
+
+  @include lg {
+    max-width: 295px;
+    height: 60px;
+  }
+
+  @include md {
+    max-width: 213px;
+    height: 48px;
+  }
+
+  @include sm {
+    max-width: 278px;
+    height: 48px;
+  }
+
+  @include xs {
+    max-width: 205px;
+    height: 48px;
   }
 }
