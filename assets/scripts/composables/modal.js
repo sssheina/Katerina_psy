@@ -4,13 +4,11 @@ export const modalContent = document.querySelector(".modal-content");
 export const buttonsClose = document.querySelector(".button-close");
 
 export const openModal = () => {
-  document.body.classList.add("no-scroll");
   overlay.classList.remove("hidden");
   document.body.style.overflow = "hidden";
 };
 
 export const closeModal = () => {
-  document.body.classList.remove("no-scroll");
   overlay.classList.add("hidden");
   document.body.style.overflow = "";
 };

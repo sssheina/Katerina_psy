@@ -4022,35 +4022,33 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
+  padding: 10% 0;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
   z-index: 1000;
+  overflow-y: scroll;
+}
+@media only screen and (min-width: 767.1px) {
+  .overlay {
+    padding: 5% 0;
+  }
 }
 
 .modal {
   position: relative;
-  height: auto;
-  max-height: 80%;
+  max-width: 90%;
+  min-width: 270px;
   padding: 2rem;
   z-index: 2000;
   background-color: white;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  overflow-y: scroll;
-}
-@media only screen and (max-width: 1439px) {
-  .modal {
-    max-width: 90%;
-    width: 100%;
-    top: 5%;
-  }
 }
 @media only screen and (max-width: 767px) {
   .modal {
-    padding: 2.5rem 1rem;
+    padding: 2.5rem 1.5rem 1.5rem;
   }
 }
 .modal__title {
@@ -4098,17 +4096,6 @@ body.lock {
   .modal__item-unordered {
     padding-left: unset;
   }
-}
-
-.modal__privacy-policy {
-  height: 80%;
-  padding: 4rem;
-}
-
-.modal__thank-you {
-  height: auto;
-  padding: 20px;
-  text-align: center;
 }
 
 .modal-content {
