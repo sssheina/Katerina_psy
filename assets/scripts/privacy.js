@@ -34,10 +34,10 @@ const privacyPolicyData = {
               "Геолокация (обезличенная)",
               "Поведение на сайте (просмотры страниц, клики и т.д.)",
             ],
-            additionalText:
-              "Вся собранная информация является анонимной и не позволяет идентифицировать личность пользователя.",
           },
         ],
+        additionalText:
+          "Вся собранная информация является анонимной и не позволяет идентифицировать личность пользователя.",
       },
       {
         title: "Как мы используем ваши данные",
@@ -100,6 +100,58 @@ const privacyPolicyData = {
           },
         ],
       },
+      {
+        title: "Как долго мы храним ваши данные",
+        text: "Мы храним ваши данные до тех пор, пока это необходимо для целей, указанных в данной Политике конфиденциальности, или до тех пор, пока вы не отзовёте своё согласие на обработку.",
+      },
+      {
+        title: "Защита ваших данных",
+        text: "Мы принимаем все разумные меры для защиты ваших данных от несанкционированного доступа, изменения, разглашения или уничтожения. Мы используем безопасные серверы и протоколы для передачи данных.",
+      },
+      {
+        title: "Ваши права в соответствии с GDPR",
+        text: "В соответствии с GDPR у вас есть следующие права:",
+        items: [
+          {
+            title: "Право на доступ к вашим данным",
+            text: "Вы можете запросить информацию о том, какие данные мы собираем и как они обрабатываются.",
+          },
+          {
+            title: "Право на исправление данных",
+            text: "Вы можете потребовать исправления ваших данных, если они неточные или неполные.",
+          },
+          {
+            title: 'Право на удаление данных ("право быть забытым»)',
+            text: "Вы можете потребовать удаления ваших персональных данных. Обратите внимание, что обезличенные данные, собранные через Google Analytics и Яндекс Метрику, не могут быть удалены, так как они не могут быть связаны с вашей личностью.",
+          },
+          {
+            title: "Право на ограничение обработки",
+            text: "Вы можете потребовать ограничить обработку ваших персональных данных в определённых ситуациях.",
+          },
+          {
+            title: "Право на перенос данных",
+            text: "Вы можете запросить передачу ваших данных в машиночитаемом формате.",
+          },
+          {
+            title: "Право на возражение против обработки",
+            text: "Вы можете возразить против обработки ваших данных.",
+          },
+          {
+            title: "Право отозвать согласие на обработку данных",
+            text: "Вы можете отозвать своё согласие на обработку данных в любое время. Для обезличенных данных, которые собираются через Google Analytics и Яндекс Метрику, реализация некоторых прав невозможна, так как эти данные не идентифицируют вас как пользователя.",
+          },
+        ],
+        additionalText:
+          "Чтобы воспользоваться этими правами, обратитесь к контактным данным, указанным ниже.",
+      },
+      {
+        title: "Контактная информация",
+        text: "Если у вас есть вопросы относительно данной Политики конфиденциальности или вы хотите воспользоваться своими правами, свяжитесь с нами по еmail: <a href='mailto:kat.tartary@gmail.com' target='_blank' class='link'>kat.tartary@gmail.com</a>.",
+      },
+      {
+        title: "Изменения в Политике конфиденциальности",
+        text: "Мы можем обновлять данную Политику конфиденциальности в любое время. Обновления будут опубликованы на этой странице. Мы рекомендуем регулярно проверять Политику конфиденциальности для получения актуальной информации о том, как мы защищаем ваши данные.",
+      },
     ],
     buttonText: "Закрыть",
   },
@@ -132,10 +184,10 @@ const privacyPolicyData = {
               "Geolocation (anonymized)",
               "On-site behavior (page views, clicks, etc.)",
             ],
-            additionalText:
-              "All collected information is anonymous and does not allow for the identification of the user's identity.",
           },
         ],
+        additionalText:
+          "All collected information is anonymous and does not allow for the identification of the user's identity.",
       },
       {
         title: "How We Use Your Data",
@@ -198,8 +250,60 @@ const privacyPolicyData = {
           },
         ],
       },
+      {
+        title: "How Long We Retain Your Data",
+        text: "We take all reasonable measures to protect your data from unauthorized access, alteration, disclosure, or destruction. We use secure servers and protocols for data transmission.",
+      },
+      {
+        title: "How We Protect Your Data",
+        text: "We take all reasonable measures to protect your data from unauthorized access, alteration, disclosure, or destruction. We use secure servers and protocols for data transmission.",
+      },
+      {
+        title: "Your Rights Under GDPR",
+        text: "Under GDPR, you have the following rights:",
+        items: [
+          {
+            title: "Right of access",
+            text: "You can request information about what data we collect and how it is processed.",
+          },
+          {
+            title: "Right to rectification",
+            text: "You can request the correction of your data if it is inaccurate or incomplete.",
+          },
+          {
+            title: 'Right to erasure ("right to be forgotten")',
+            text: "You can request the deletion of your personal data. Please note that anonymized data collected through Google Analytics and Yandex Metrica cannot be deleted as it cannot be linked to your identity.",
+          },
+          {
+            title: "Right to restrict processing",
+            text: "You can request to restrict the processing of your personal data in certain situations.",
+          },
+          {
+            title: "Right to data portability",
+            text: "You can request the transfer of your data in a machine-readable format.",
+          },
+          {
+            title: "Right to object to processing",
+            text: "You can object to the processing of your data.",
+          },
+          {
+            title: "Right to withdraw consent to data processing",
+            text: "You can withdraw your consent to data processing at any time. For anonymized data collected through Google Analytics and Yandex Metrica, the implementation of some rights is not possible, as this data does not identify you as a user.",
+          },
+        ],
+        additionalText:
+          "To exercise these rights, please refer to the contact details provided below.",
+      },
+      {
+        title: "Contact Information",
+        text: "If you have questions about this Privacy Policy or wish to exercise your rights, please contact us at email: <a href='mailto:kat.tartary@gmail.com' target='_blank' class='link'>kat.tartary@gmail.com</a>.",
+      },
+      {
+        title: "Changes to the Privacy Policy",
+        text: "We may update this Privacy Policy at any time. Updates will be posted on this page. We recommend regularly reviewing the Privacy Policy for the latest information on how we protect your data.",
+      },
     ],
-    buttonText: "Закрыть",
+    buttonText: "Close",
   },
   FR: {
     title: "Politique de Confidentialité",
@@ -230,10 +334,10 @@ const privacyPolicyData = {
               "Géolocalisation (anonymisée)",
               "Comportement sur le site (vues de pages, clics, etc.).",
             ],
-            additionalText:
-              "Toutes les informations collectées sont anonymes et ne permettent pas d'identifier l'identité de l'utilisateur.",
           },
         ],
+        additionalText:
+          "Toutes les informations collectées sont anonymes et ne permettent pas d'identifier l'identité de l'utilisateur.",
       },
       {
         title: "Comment Nous Utilisons Vos Données",
@@ -296,8 +400,60 @@ const privacyPolicyData = {
           },
         ],
       },
+      {
+        title: "Durée de Conservation de Vos Données",
+        text: "Nous prenons toutes les mesures raisonnables pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Nous utilisons des serveurs et des protocoles sécurisés pour la transmission des données.",
+      },
+      {
+        title: "Comment Nous Protégeons Vos Données",
+        text: "Nous prenons toutes les mesures raisonnables pour protéger vos données contre tout accès non autorisé, modification, divulgation ou destruction. Nous utilisons des serveurs et des protocoles sécurisés pour la transmission des données.",
+      },
+      {
+        title: "Vos Droits en Vertu du RGPD",
+        text: "En vertu du RGPD, vous avez les droits suivants:",
+        items: [
+          {
+            title: "Droit d'accès",
+            text: "Vous pouvez demander des informations sur les données que nous collectons et comment elles sont traitées.",
+          },
+          {
+            title: "Droit de rectification",
+            text: "Vous pouvez demander la correction de vos données si elles sont inexactes ou incomplètes.",
+          },
+          {
+            title: `Droit à l'effacement ("droit d'être oublié")`,
+            text: "Vous pouvez demander la suppression de vos données personnelles. Veuillez noter que les données anonymisées collectées par Google Analytics et Yandex Metrica ne peuvent pas être supprimées, car elles ne peuvent pas être liées à votre identité.",
+          },
+          {
+            title: "Droit de restreindre le traitement",
+            text: "Vous pouvez demander à restreindre le traitement de vos données personnelles dans certaines situations.",
+          },
+          {
+            title: "Droit à la portabilité des données",
+            text: "Vous pouvez demander le transfert de vos données dans un format lisible par machine.",
+          },
+          {
+            title: "Droit de s'opposer au traitement",
+            text: "Vous pouvez vous opposer au traitement de vos données.",
+          },
+          {
+            title: "Droit de retirer le consentement au traitement des données",
+            text: "Vous pouvez retirer votre consentement au traitement des données à tout moment. Pour les données anonymisées collectées par Google Analytics et Yandex Metrica, la mise en œuvre de certains droits n'est pas possible, car ces données ne vous identifient pas en tant qu'utilisateur.",
+          },
+        ],
+        additionalText:
+          "Pour exercer ces droits, veuillez vous référer aux coordonnées fournies ci-dessous.",
+      },
+      {
+        title: "Informations de Contact",
+        text: "Si vous avez des questions concernant cette Politique de Confidentialité ou si vous souhaitez exercer vos droits, veuillez nous contacter à l'email: <a href='mailto:kat.tartary@gmail.com' target='_blank' class='link'>kat.tartary@gmail.com</a>.",
+      },
+      {
+        title: "Modifications de la Politique de Confidentialité",
+        text: "Nous pouvons mettre à jour cette Politique de Confidentialité à tout moment. Les mises à jour seront publiées sur cette page. Nous recommandons de consulter régulièrement la Politique de Confidentialité pour obtenir les dernières informations sur la manière dont nous protégeons vos données.",
+      },
     ],
-    buttonText: "Закрыть",
+    buttonText: "Fermer",
   },
 };
 
@@ -331,16 +487,16 @@ const generatePrivacyPolicyContent = (content) => {
                 </ul>`
                     : ""
                 }
-                ${
-                  el.additionalText
-                    ? `<p class='modal__text paragraph-small'>${el.additionalText}</p>`
-                    : ""
-                }
+                
               </li>
             `
               )
               .join("")}
           </ul>`
+          : ""
+      }${
+        item.additionalText
+          ? `<p class='modal__text paragraph-small'>${item.additionalText}</p>`
           : ""
       }
     </li>
