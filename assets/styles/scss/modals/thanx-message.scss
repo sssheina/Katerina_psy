@@ -16,17 +16,13 @@
   position: relative;
   height: auto;
   max-height: 80%;
-  display: flex;
-  flex-direction: column;
-  // justify-content: flex-start;
-  // align-items: center;
-  gap: 30px;
   padding: 2rem;
   z-index: 2000;
   background-color: white;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  overflow: hidden;
+
+  overflow-y: scroll;
 
   @include md {
     max-width: 90%;
@@ -34,22 +30,57 @@
     top: 5%;
   }
 
-  &__list-ordered {
-    list-style: decimal;
+  @include sm {
+    padding: 2.5rem 1rem;
   }
 
-  &__list-unordered {
-    // list-style: disc;
-    // list-style-type: disc;
+  &__title {
+    font-size: 25px;
+    line-height: 100%;
+    text-align: center;
 
-    li {
-      position: relative;
-      padding-left: 25px;
+    @include sm {
+      font-size: 18px;
     }
-    li::before {
+  }
+
+  &__text {
+    text-align: justify;
+    line-height: 130%;
+  }
+
+  &__list-ordered {
+    list-style: decimal;
+    padding-left: 19px;
+  }
+
+  &__item-ordered {
+    margin-bottom: 5px;
+    font-family: var(--montserrat-font-family);
+  }
+
+  &__item-unordered {
+    position: relative;
+    padding-left: 25px;
+
+    &::before {
       content: "—";
       position: absolute;
       left: 0;
+
+      @include sm {
+        content: "-";
+        top: -2px;
+        left: -11px;
+      }
+    }
+
+    .modal__text {
+      line-height: 150%;
+    }
+
+    @include sm {
+      padding-left: unset;
     }
   }
 }
@@ -63,6 +94,12 @@
   height: auto;
   padding: 20px;
   text-align: center;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .button-close {
