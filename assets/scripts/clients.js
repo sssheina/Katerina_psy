@@ -6,7 +6,7 @@ import {
 
 const clientsSectionContent = {
   RU: {
-    title: "Кто может обратиться ко мне",
+    title: "Кто может обратиться ко\u00A0мне",
     buttonText: "Запись",
     clients: [
       {
@@ -66,7 +66,7 @@ const clientsSectionContent = {
     ],
   },
   FR: {
-    title: "Qui peut me consulter ",
+    title: "Qui peut me\u00A0consulter ",
     buttonText: "Inscription  ",
     clients: [
       {

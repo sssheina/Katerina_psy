@@ -87,7 +87,7 @@ const stepsDataMap = {
     buttonText: "Book First Session",
   },
   FR: {
-    title: "Les étapes de thérapie",
+    title: "Les étapes de\u00A0thérapie",
     image: "Lignes abstraites",
     data: stepsDataFr,
     buttonText: "Prendre RDV",

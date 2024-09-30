@@ -9,10 +9,10 @@ import {
         title: "Запись на первую сессию",
     },
     EN: {
-        title: "Book your session",
+        title: "Book your\u00A0session",
     },
     FR: {
-        title: "Prendre votre rdv",
+        title: "Prendre votre\u00A0rdv",
     },    
    }
 

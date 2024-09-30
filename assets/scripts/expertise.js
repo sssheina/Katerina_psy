@@ -278,17 +278,17 @@ const expertiseDataFr = [
 const expertiseDataMap = {
   RU: {
     data: expertiseDataRu,
-    title: "С чем я работаю",
+    title: "С чем я\u00A0работаю",
     buttonText: "Запись на сессию",
   },
   EN: {
     data: expertiseDataEn,
-    title: "WHAT I WORK WITH",
+    title: "WHAT I\u00A0WORK\u00A0WITH",
     buttonText: "Let’s talk!",
   },
   FR: {
     data: expertiseDataFr,
-    title: "QUELS sujets je traite",
+    title: "QUELS sujets je\u00A0traite",
     buttonText: "Inscription",
   },
 };

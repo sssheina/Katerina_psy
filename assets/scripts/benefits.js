@@ -169,7 +169,7 @@ const benefitsDataMap = {
     buttonText: "Book First Session",
   },
   FR: {
-    title: "Pourquoi me consulter",
+    title: "Pourquoi me\u00A0consulter",
     data: benefitsDataFr,
     buttonText: "Prendre RDV",
   },

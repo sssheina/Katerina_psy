@@ -92,12 +92,12 @@ const methodsDataMap = {
     buttonText: "Запись",
   },
   EN: {
-    title: "I use these methods",
+    title: "I use these\u00A0methods",
     data: methodsDataEn,
     buttonText: "Start First session",
   },
   FR: {
-    title: "J’utilise ces méthodes",
+    title: "J’utilise ces\u00A0méthodes",
     data: methodsDataFr,
     buttonText: "Prendre RDV",
   },
