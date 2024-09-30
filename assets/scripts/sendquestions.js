@@ -80,7 +80,7 @@ sendButton.addEventListener("click", async function (event) {
 
     if (response.ok) {
       modalContent.innerHTML =
-        '<div class="modal-text"><p>Спасибо!</p><p>Сообщение было успешно отправлено</p></div>';
+      '<div style="text-align: center; padding: 2em;" class="modal-text"><p class="h4-title" style="margin-bottom: 1em;">Спасибо!</p><p class="paragraph-standard">Сообщение было успешно отправлено</p></div>';
       form.reset();
     } else {
       modalContent.innerText = "Произошла ошибка при отправке формы.";
