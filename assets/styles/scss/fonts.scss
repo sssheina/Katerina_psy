@@ -111,11 +111,11 @@
   }
 
   @include md {
-    --h2-title-font-size: 41px;
+    --h2-title-font-size: 34px;
   }
 
   @include xs {
-    --h2-title-font-size: 31px;
+    --h2-title-font-size: 25px;
   }
 
   // h3 - title

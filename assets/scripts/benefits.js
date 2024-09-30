@@ -159,7 +159,7 @@ const benefitsDataFr = [
 
 const benefitsDataMap = {
   RU: {
-    title: "Почему выбирают меня",
+    title: "Почему выбирают\u00A0меня",
     data: benefitsDataRu,
     buttonText: "Запись на сессию",
   },

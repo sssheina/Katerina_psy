@@ -6,7 +6,7 @@ import {
 
    const registrationContent = {
     RU: {
-        title: "Запись на первую сессию",
+        title: "Запись на первую\u00A0сессию",
     },
     EN: {
         title: "Book your\u00A0session",

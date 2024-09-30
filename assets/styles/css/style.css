@@ -1104,12 +1104,12 @@ textarea {
 }
 @media only screen and (max-width: 1439px) {
   :root {
-    --h2-title-font-size: 41px;
+    --h2-title-font-size: 34px;
   }
 }
 @media only screen and (max-width: 427px) {
   :root {
-    --h2-title-font-size: 31px;
+    --h2-title-font-size: 25px;
   }
 }
 @media only screen and (max-width: 1919px) {
