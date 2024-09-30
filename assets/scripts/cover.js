@@ -22,31 +22,25 @@ const coverContent = {
   EN: {
     titleTop: "Online Counseling",
     titleBottom: "Katerina Tartari",
-    subtitleTop: "Get started with a free session",
+    subtitleTop: "Get started <br> with a free session",
     subtitleBottom:
       "For Individual, couples, <br> polyamorous unions and families",
     therapyPsychotherapy: "psychotherapy",
     therapySextherapy: "sex therapy",
-    svg: [
-      "/assets/images/figures/sprite.svg#cross",
-      "/assets/images/figures/sprite.svg#cross",
-    ],
+    svg: ["/assets/images/figures/sprite.svg#cross"],
     preposition: "with",
     buttonText: "Let’s talk!",
     videoSrc: "/assets/video/video_5.mp4",
   },
   FR: {
-    titleTop: "Thérapie en ligne",
+    titleTop: "Thérapie <br> en ligne",
     titleBottom: "Katerina Tartary",
     subtitleTop: "Commence avec <br> une consultation gratuite",
     subtitleBottom:
       "En individuel, pour couples, <br> unions polyamoureuses et familles",
     therapyPsychotherapy: "psychothérapie",
     therapySextherapy: "sexothérapie",
-    svg: [
-      "/assets/images/figures/sprite.svg#cross",
-      "/assets/images/figures/sprite.svg#cross",
-    ],
+    svg: ["/assets/images/figures/sprite.svg#cross"],
     preposition: "par",
     buttonText: "Inscription",
     videoSrc: "/assets/video/video_5.mp4",
@@ -86,7 +80,7 @@ const updateCoverSection = (language) => {
   const videoElement = document.querySelector(".cover__video source");
   const button = document.querySelector(".cover__button");
 
-  titleTopElement.textContent = content.titleTop;
+  titleTopElement.innerHTML = content.titleTop;
   titleBottomElement.textContent = content.titleBottom;
   subtitleTopElement.innerHTML = content.subtitleTop;
   subtitleBottomElement.innerHTML = content.subtitleBottom;

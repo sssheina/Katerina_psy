@@ -88,7 +88,7 @@
 
   @include sm {
     --h1-title-font-size: 41px;
-    --h1-title-font-size-en-fr: 41px;
+    --h1-title-font-size-en-fr: 38px;
   }
 
   @include xs {
@@ -349,10 +349,16 @@
     --span-text-font-size-fr: 16px;
   }
 
+  @include sm {
+    --span-text-font-size-ru: 17px;
+    --span-text-font-size-en: 20px;
+    --span-text-font-size-fr: 22px;
+  }
+
   @include xs {
     --span-text-font-size-ru: 14px;
     --span-text-font-size-en: 14px;
-    --span-text-font-size-fr: 14px;
+    --span-text-font-size-fr: 15px;
   }
 
   // swiper-navigation-size
