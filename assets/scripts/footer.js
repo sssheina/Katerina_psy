@@ -12,7 +12,7 @@ const footerDataMap = {
     subscribe: "Подпишитесь на новости",
     contacts: "Контакты",
     placeholder: "Ваш e-mail",
-    author: "&copy; 2024 Екатерина Тартари.&nbsp; <br> Все права защищены.",
+    author: "&copy; 2024 Therapeutic Journeys.&nbsp; <br> Все права защищены.",
     developed: "Разработано",
   },
   EN: {
@@ -23,7 +23,7 @@ const footerDataMap = {
     subscribe: "Subscribe to the news",
     contacts: "Contacts",
     placeholder: "Your e-mail",
-    author: "&copy; 2024 Ekaterina Tartary.&nbsp; <br> All rights reserved",
+    author: "&copy; 2024 Therapeutic Journeys.&nbsp; <br> All rights reserved",
     developed: "Created by",
   },
   FR: {
@@ -35,7 +35,7 @@ const footerDataMap = {
     contacts: "Contacts",
     placeholder: "Votre e-mail",
     author:
-      "&copy; 2024 Ekaterina Tartary.&nbsp; <br> Tous les droits réservés",
+      "&copy; 2024 Therapeutic Journeys.&nbsp; <br> Tous les droits réservés",
     developed: "Développé par",
   },
 };
