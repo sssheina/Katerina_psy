@@ -2008,8 +2008,33 @@ body.lock {
 }
 @media only screen and (max-width: 427px) {
   .button {
-    max-width: 208px;
+    max-width: 212px;
     height: 53px;
+  }
+}
+
+.button-main {
+  max-width: 523px;
+  width: 100%;
+}
+@media only screen and (max-width: 1919px) {
+  .button-main {
+    max-width: 392px;
+  }
+}
+@media only screen and (max-width: 1439px) {
+  .button-main {
+    max-width: 227px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .button-main {
+    max-width: 278px;
+  }
+}
+@media only screen and (max-width: 427px) {
+  .button-main {
+    max-width: 212px;
   }
 }
 

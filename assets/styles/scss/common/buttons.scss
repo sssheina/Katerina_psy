@@ -31,8 +31,30 @@
   }
 
   @include xs {
-    max-width: 208px;
+    max-width: 212px;
     height: 53px;
+  }
+}
+
+.button-main {
+  max-width: 523px;
+  width: 100%;
+
+
+  @include lg {
+    max-width: 392px;
+  }
+
+  @include md {
+    max-width: 227px;
+  }
+
+  @include sm {
+    max-width: 278px;
+  }
+
+  @include xs {
+    max-width: 212px;
   }
 }
 
