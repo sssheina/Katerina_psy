@@ -2180,7 +2180,7 @@ body.lock {
     justify-content: center;
     align-items: center;
   }
-  .button-block .corner-icon-cross {
+  .button-block .icon-cross {
     display: none;
   }
 }
