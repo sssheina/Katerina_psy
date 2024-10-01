@@ -65,8 +65,6 @@ const validateInput = (input) => {
 };
 
 const checkMessageField = (userInput) => {
-  console.log("userInput", userInput);
-
   if (!validateInput(userInput)) {
     errorDiv.innerHTML =
       "<p>Сообщение содержит недопустимые слова или символы.</p>";
@@ -84,7 +82,6 @@ const checkMessageField = (userInput) => {
 
 const updateModalContent = (language) => {
   const content = modalMessageMap[language] || modalMessageMap.EN;
-  console.log(content);
 
   thanksMessage = `<div class="modal-content__small">
   <h4 class="h4-title text-center">${content.thanksTitle}</h4>
