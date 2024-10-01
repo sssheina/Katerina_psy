@@ -58,7 +58,7 @@ footerSendButton.addEventListener("click", async function (event) {
 
     if (response.ok) {
       modalContent.innerHTML =
-        '<div class="modal-text"><p>Спасибо!</p><p>Вы успешно подписались на рассылку новостей.</p></div>';
+        '<div class="modal-text"><p class="text-center">Спасибо!</p><p class="text-center text-success">Вы успешно подписались на рассылку новостей.</p></div>';
       form.reset();
     } else {
       modalContent.innerText = "Произошла ошибка при отправке формы.";

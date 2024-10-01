@@ -13,7 +13,8 @@ $color-gray-light: #d9d9d9;
 
 $color-white: #fefefe;
 $color-blue-light-gradient: linear-gradient($color-white, $color-blue-light);
-$color-red: red;
+$color-success: rgb(70, 145, 70);
+$color-danger: red;
 
 $transition: 0.4s ease;
 
@@ -188,7 +189,7 @@ $transition: 0.4s ease;
   line-height: var(--error-text-line-height);
   text-transform: var(--error-text-text-transform);
   text-decoration: var(--error-text-text-decoration);
-  color: $color-red;
+  color: $color-danger;
   -webkit-font-smoothing: var(--font-smoothing);
   -moz-osx-font-smoothing: var(--font-smoothing);
   text-rendering: var(--text-rendering);

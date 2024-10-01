@@ -1,13 +1,40 @@
 import { openModal } from "./composables/modal.js";
 import { modalContent } from "./composables/modal.js";
 import { checkPrivacyPolicyConsent } from "./composables/privacy-policy.js";
+import {
+  dropdown,
+  changeLanguage,
+  loadLanguage,
+} from "./composables/language.js";
 
+let thanksMessage, errorMessage;
 const form = document.querySelector(".questions__form");
 const sendButton = document.querySelector(".questions__button");
 const questionsComment = document.querySelector(".questions__comment");
 const consentCheckbox = document.querySelector(".questions__checkbox");
 const errorDiv = document.querySelector(".questions__errors");
 const errorPolitics = document.querySelector(".questions__policy-error");
+
+const modalMessageMap = {
+  RU: {
+    thanksTitle: "Спасибо!",
+    thanksText: "✔ Сообщение было успешно отправлено",
+    errorTitle: "Ошибка",
+    errorText: "Произошла ошибка при отправке формы",
+  },
+  EN: {
+    thanksTitle: "Thank you!",
+    thanksText: "✔ Message was successfully sent",
+    errorTitle: "Error",
+    errorText: "An error occurred while submitting the form",
+  },
+  FR: {
+    thanksTitle: "Merci !",
+    thanksText: "✔ Le message a été envoyé avec succès",
+    errorTitle: "Erreur",
+    errorText: "Une erreur s'est produite lors de l'envoi du formulaire",
+  },
+};
 
 const validateInput = (input) => {
   const forbiddenWords = [
@@ -55,6 +82,25 @@ const checkMessageField = (userInput) => {
   }
 };
 
+const updateModalContent = (language) => {
+  const content = modalMessageMap[language] || modalMessageMap.EN;
+  console.log(content);
+
+  thanksMessage = `<div class="modal-content__small">
+  <h4 class="h4-title text-center">${content.thanksTitle}</h4>
+  <p class="paragraph-standard text-center text-success">${content.thanksText}</p>
+  </div> `;
+
+  errorMessage = `<div class="modal-content__small">
+  <h4 class="h4-title text-center">${content.errorTitle}</h4>
+  <p class="paragraph-standard text-center text-danger">${content.errorText}</p>
+  </div>
+  `;
+};
+
+loadLanguage(updateModalContent);
+dropdown.addEventListener("change", changeLanguage(updateModalContent));
+
 sendButton.addEventListener("click", async function (event) {
   event.preventDefault();
 
@@ -79,17 +125,19 @@ sendButton.addEventListener("click", async function (event) {
     });
 
     if (response.ok) {
-      modalContent.innerHTML =
-      '<div style="text-align: center; padding: 2em;" class="modal-text"><p class="h4-title" style="margin-bottom: 1em;">Спасибо!</p><p class="paragraph-standard">Сообщение было успешно отправлено</p></div>';
+      modalContent.innerHTML = thanksMessage;
+
       form.reset();
     } else {
-      modalContent.innerText = "Произошла ошибка при отправке формы.";
+      console.error("Unknown error occured");
+      modalContent.innerHTML = errorMessage;
     }
 
     openModal();
   } catch (error) {
-    console.error("Ошибка:", error);
-    modalContent.innerText = "Произошла ошибка при отправке формы.";
+    console.error("Error:", error);
+    modalContent.innerHTML = errorMessage;
+
     openModal();
   }
 });
