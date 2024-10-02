@@ -2214,10 +2214,6 @@ body.lock {
   color: #d69961;
 }
 
-.error {
-  padding-top: 0.5em;
-}
-
 .text-center {
   text-align: center;
 }
@@ -4068,7 +4064,6 @@ body.lock {
   grid-area: button;
   justify-self: end;
   align-self: end;
-  margin-top: 1rem;
 }
 @media only screen and (max-width: 740px) {
   .questions__button {

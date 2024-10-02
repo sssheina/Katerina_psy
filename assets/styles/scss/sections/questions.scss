@@ -111,7 +111,6 @@
     grid-area: button;
     justify-self: end;
     align-self: end;
-    margin-top: 1rem; // Отступ 1rem между полем и кнопкой
 
     @include r(740) {
       justify-self: center;
