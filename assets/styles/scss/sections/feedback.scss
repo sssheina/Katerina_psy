@@ -24,8 +24,8 @@
       padding: 0 40px;
     }
 
-    @include xs {
-      padding: 0 20px;
+    @include sm {
+      padding: unset;
     }
   }
 
@@ -52,17 +52,22 @@
       padding-right: 2rem;
     }
 
-    @include xs {
-      padding-right: 3rem;
+    @include sm {
+      padding-right: unset;
     }
   }
 
   &__line {
-    width: 240px;
+    max-width: 240px;
+    width: 100%;
     height: 1px;
     background-color: $color-orange-light;
     border: none;
     margin-left: 0;
+
+    @include md {
+      max-width: 140px;
+    }
   }
 
   &__client {
@@ -105,20 +110,19 @@
   background: $color-orange-light !important;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  @include sm {
+    display: none !important;
+  }
+}
+
 .swiper-button-prev::after {
   left: 0;
   color: $color-white;
 
   @include md {
     font-size: 35px !important;
-  }
-
-  @include sm {
-    font-size: 30px !important;
-  }
-
-  @include xs {
-    font-size: 24px !important;
   }
 }
 
@@ -128,21 +132,5 @@
 
   @include md {
     font-size: 35px !important;
-  }
-
-  @include sm {
-    font-size: 30px !important;
-  }
-
-  @include xs {
-    font-size: 24px !important;
-  }
-}
-
-.swiper-wrapper {
-  gap: 25px;
-
-  @include md {
-    gap: 18px;
   }
 }

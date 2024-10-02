@@ -367,12 +367,14 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: 2,
   breakpoints: {
     320: {
-      slidesPerView: 1,
-      spaceBetween: 10,
+      slidesPerView: 1.2,
+      spaceBetween: 20,
+      grabCursor: true,
     },
     428: {
-      slidesPerView: 1,
-      spaceBetween: 15,
+      slidesPerView: 1.3,
+      spaceBetween: 20,
+      grabCursor: true,
     },
     768: {
       slidesPerView: 2,

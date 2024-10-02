@@ -3255,9 +3255,9 @@ body.lock {
     padding: 0 40px;
   }
 }
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
   .feedback__content {
-    padding: 0 20px;
+    padding: unset;
   }
 }
 .feedback__slide {
@@ -3285,17 +3285,23 @@ body.lock {
     padding-right: 2rem;
   }
 }
-@media only screen and (max-width: 427px) {
+@media only screen and (max-width: 767px) {
   .feedback__text {
-    padding-right: 3rem;
+    padding-right: unset;
   }
 }
 .feedback__line {
-  width: 240px;
+  max-width: 240px;
+  width: 100%;
   height: 1px;
   background-color: #d69961;
   border: none;
   margin-left: 0;
+}
+@media only screen and (max-width: 1439px) {
+  .feedback__line {
+    max-width: 140px;
+  }
 }
 .feedback__client {
   color: #d69961;
@@ -3336,6 +3342,13 @@ body.lock {
   background: #d69961 !important;
 }
 
+@media only screen and (max-width: 767px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none !important;
+  }
+}
+
 .swiper-button-prev::after {
   left: 0;
   color: #fefefe;
@@ -3343,16 +3356,6 @@ body.lock {
 @media only screen and (max-width: 1439px) {
   .swiper-button-prev::after {
     font-size: 35px !important;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .swiper-button-prev::after {
-    font-size: 30px !important;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .swiper-button-prev::after {
-    font-size: 24px !important;
   }
 }
 
@@ -3363,25 +3366,6 @@ body.lock {
 @media only screen and (max-width: 1439px) {
   .swiper-button-next::after {
     font-size: 35px !important;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .swiper-button-next::after {
-    font-size: 30px !important;
-  }
-}
-@media only screen and (max-width: 427px) {
-  .swiper-button-next::after {
-    font-size: 24px !important;
-  }
-}
-
-.swiper-wrapper {
-  gap: 25px;
-}
-@media only screen and (max-width: 1439px) {
-  .swiper-wrapper {
-    gap: 18px;
   }
 }
 
