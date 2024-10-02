@@ -1980,6 +1980,10 @@ body.lock {
   flex-direction: row-reverse;
 }
 
+.error {
+  padding-top: 0.5em;
+}
+
 .button {
   max-width: 386px;
   width: 100%;

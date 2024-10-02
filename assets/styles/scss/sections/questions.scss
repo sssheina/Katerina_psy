@@ -84,8 +84,8 @@
     text-decoration: var(--paragraph-standard-text-decoration);
     color: $color-blue-dark;
     padding: 16px;
-    resize: vertical; // Позволяет изменять высоту только вертикально
-    overflow: auto; // Добавляем полосы прокрутки при необходимости
+    resize: vertical;
+    overflow: auto;
     transition: $transition;
 
     @include sm {
