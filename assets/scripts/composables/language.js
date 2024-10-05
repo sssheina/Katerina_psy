@@ -1,4 +1,4 @@
-export const dropdown = document.querySelector(".language-dropdown");
+export const dropdown = document.querySelector(".language");
 let selectedLanguage;
 
 const setLanguage = (language) => {

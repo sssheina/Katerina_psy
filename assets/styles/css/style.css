@@ -1516,6 +1516,11 @@ body.lock {
     gap: 25px;
   }
 }
+@media only screen and (max-width: 767px) {
+  .header__end {
+    gap: 20px;
+  }
+}
 .header__contacts {
   display: flex;
   align-items: center;
@@ -1565,6 +1570,36 @@ body.lock {
 .header.scrolled .header__burger::before, .header.scrolled .header__burger::after,
 .header.scrolled .header__burger span {
   background: #010e23;
+}
+.header.scrolled .language {
+  color: #010e23;
+}
+
+.language {
+  font-size: 18px;
+  padding: 3px 5px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: transparent;
+  color: #fefefe;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.language:focus {
+  background: transparent !important;
+}
+.language:hover {
+  background: transparent !important;
+}
+.language__option {
+  border-radius: 3px;
+  border: none;
+  outline: none;
+  background: #010e23;
+  color: #fefefe;
 }
 
 .header-burger {
