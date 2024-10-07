@@ -136,6 +136,11 @@
       display: none;
     }
   }
+
+  &__button {
+    opacity: 0;
+    pointer-events: none;
+  }
 }
 
 [lang="ru"] .cover {

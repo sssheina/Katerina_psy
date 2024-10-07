@@ -158,23 +158,27 @@ ScrollTrigger.create({
 });
 
 // button
-const mainButton = gsap.from(".cover__button", {
-  opacity: 0,
+
+gsap.set(".cover__button", { opacity: 0, pointerEvents: "none" });
+
+const mainButton = gsap.to(".cover__button", {
+  opacity: 1,
   delay: 5.5,
+  onStart: () => {
+    gsap.set(".cover__button", { pointerEvents: "auto" });
+  },
 });
 
 ScrollTrigger.create({
   trigger: ".cover__button",
-  start: "top 99%",
+  start: "top 90%",
   onEnter: () => mainButton.play(),
-  //   markers: true,
 });
 
 ScrollTrigger.create({
   trigger: ".cover__button",
   start: "top bottom",
   onLeaveBack: () => mainButton.pause(0),
-  //   markers: true,
 });
 
 // H2 TITLE

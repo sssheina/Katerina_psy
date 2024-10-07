@@ -2389,6 +2389,10 @@ body.lock {
     display: none;
   }
 }
+.cover__button {
+  opacity: 0;
+  pointer-events: none;
+}
 
 [lang=ru] .cover__content {
   grid-template-columns: auto 1fr auto auto;
