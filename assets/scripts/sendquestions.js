@@ -18,19 +18,19 @@ const errorPolitics = document.querySelector(".questions__policy-error");
 const modalMessageMap = {
   RU: {
     thanksTitle: "Спасибо!",
-    thanksText: "✔ Сообщение было успешно отправлено",
+    thanksText: "Сообщение было успешно отправлено",
     errorTitle: "Ошибка",
     errorText: "Произошла ошибка при отправке формы",
   },
   EN: {
     thanksTitle: "Thank you!",
-    thanksText: "✔ Message was successfully sent",
+    thanksText: "Message was successfully sent",
     errorTitle: "Error",
     errorText: "An error occurred while submitting the form",
   },
   FR: {
     thanksTitle: "Merci !",
-    thanksText: "✔ Le message a été envoyé avec succès",
+    thanksText: "Le message a été envoyé avec succès",
     errorTitle: "Erreur",
     errorText: "Une erreur s'est produite lors de l'envoi du formulaire",
   },
@@ -85,12 +85,18 @@ const updateModalContent = (language) => {
 
   thanksMessage = `<div class="modal-content__small">
   <h4 class="h4-title text-center">${content.thanksTitle}</h4>
-  <p class="paragraph-standard text-center text-success">${content.thanksText}</p>
+  <svg class="modal-content__icon icon-success">
+    <use xlink:href="/assets/images/figures/sprite.svg#success"></use>
+  </svg>
+  <p class="paragraph-standard text-center">${content.thanksText}</p>
   </div> `;
 
   errorMessage = `<div class="modal-content__small">
   <h4 class="h4-title text-center">${content.errorTitle}</h4>
-  <p class="paragraph-standard text-center text-danger">${content.errorText}</p>
+  <svg class="modal-content__icon icon-error">
+    <use xlink:href="/assets/images/figures/sprite.svg#error"></use>
+  </svg>
+  <p class="paragraph-standard text-center">${content.errorText}</p>
   </div>
   `;
 };

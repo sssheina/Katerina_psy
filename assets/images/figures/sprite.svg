@@ -85,6 +85,19 @@
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 28" id="icon-arrow-right-flat">
     <path d="M1.98156 28C1.72826 28 1.46904 27.906 1.27464 27.7236C0.885853 27.3587 0.885853 26.7616 1.27464 26.3967L14.5818 13.9074L1.46904 1.60055C1.08025 1.23566 1.08025 0.638563 1.46904 0.27367C1.85783 -0.0912228 2.49403 -0.0912228 2.88282 0.27367L16.7084 13.244C17.0972 13.6088 17.0972 14.2059 16.7084 14.5708L2.69431 27.7236C2.49403 27.9115 2.24076 28 1.98156 28Z" fill="currentColor"></path>
   </symbol>
+
+  <!-- success -->
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" id="success">
+    <path d="M62 122C95.1371 122 122 95.1371 122 62C122 28.8629 95.1371 2 62 2C28.8629 2 2 28.8629 2 62C2 95.1371 28.8629 122 62 122Z" stroke="currentColor" stroke-width="4" stroke-miterlimit="10"></path>
+    <path d="M32.2 55.3002L57.3 85.1002V85.2002L95 40.2002" stroke="currentColor" stroke-width="4" stroke-miterlimit="10" stroke-linejoin="round"></path>
+  </symbol>
+
+  <!-- error -->
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 124" id="error">
+    <path d="M62 122C95.1371 122 122 95.1371 122 62C122 28.8629 95.1371 2 62 2C28.8629 2 2 28.8629 2 62C2 95.1371 28.8629 122 62 122Z" stroke="currentColor" stroke-width="4" stroke-miterlimit="10"></path>
+    <path d="M30.1001 93.9001L93.9001 30.1001" stroke="currentColor" stroke-width="4" stroke-miterlimit="10"></path>
+    <path d="M30.1001 30.1001L93.9001 93.9001" stroke="currentColor" stroke-width="4" stroke-miterlimit="10"></path>
+  </symbol>
 </svg>
 
 

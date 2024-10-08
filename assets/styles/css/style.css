@@ -2257,14 +2257,6 @@ body.lock {
   text-align: center;
 }
 
-.text-success {
-  color: rgb(70, 145, 70);
-}
-
-.text-danger {
-  color: red;
-}
-
 .cover {
   position: relative;
   background: linear-gradient(180deg, rgba(1, 8, 20, 0) 0%, rgba(1, 9, 22, 0.105) 23.5%, rgba(1, 13, 32, 0.66) 55.5%, #010e23 96%);
@@ -4190,8 +4182,23 @@ body.lock {
 .modal-content__small {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 15px;
   padding: 1.5rem 1rem;
+}
+.modal-content__small .h4-title {
+  font-size: 20px;
+}
+.modal-content__icon {
+  max-width: 70px;
+  max-height: 70px;
+  display: block;
+  margin: 0 auto;
+}
+.modal-content__icon.icon-success {
+  color: #35445b;
+}
+.modal-content__icon.icon-error {
+  color: #ce6a0e;
 }
 
 .button-close {
