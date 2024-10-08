@@ -1,6 +1,7 @@
 import { loading } from "./loader.js";
 
-// LOADING
+// ----- LOADING -----
+
 loading();
 
 //  ----- HEADER COLOR -----
