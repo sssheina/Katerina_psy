@@ -155,3 +155,10 @@ btnUp.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// ----- REGISTRATION -----
+
+// Calendly.initInlineWidget({
+//   url: "https://calendly.com/katerina-tartary/discovery-session",
+//   parentElement: document.getElementById("calendly-embed"),
+// });

@@ -19,8 +19,12 @@
       justify-items: end;
     }
 
-    @include xs {
+    @include sm {
       gap: 40px;
+    }
+
+    @include xs {
+      gap: 25px;
     }
   }
 

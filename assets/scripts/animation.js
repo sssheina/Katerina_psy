@@ -157,28 +157,23 @@ ScrollTrigger.create({
   onLeaveBack: () => mainSubtitleTop.pause(0),
 });
 
-// button
-
-gsap.set(".cover__button", { opacity: 0, pointerEvents: "none" });
-
-const mainButton = gsap.to(".cover__button", {
-  opacity: 1,
-  delay: 5.5,
-  onStart: () => {
-    gsap.set(".cover__button", { pointerEvents: "auto" });
-  },
+// button block
+const mainButtonBlock = gsap.from(".cover__action", {
+  y: 30,
+  opacity: 0,
+  delay: 6,
 });
 
 ScrollTrigger.create({
-  trigger: ".cover__button",
+  trigger: ".cover__action",
   start: "top 90%",
-  onEnter: () => mainButton.play(),
+  onEnter: () => mainButtonBlock.play(),
 });
 
 ScrollTrigger.create({
-  trigger: ".cover__button",
+  trigger: ".cover__action",
   start: "top bottom",
-  onLeaveBack: () => mainButton.pause(0),
+  onLeaveBack: () => mainButtonBlock.pause(0),
 });
 
 // H2 TITLE
@@ -244,7 +239,6 @@ ScrollTrigger.create({
 
 document.addEventListener("DOMContentLoaded", () => {
   const expertise_heading = gsap.utils.toArray(".expertise-heading");
-
   expertise_heading.forEach((title) => {
     const anim = gsap.from(title, {
       x: -40,
@@ -358,6 +352,104 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // FEEDBACK
+
+  const feedback = gsap.from(".feedback__content", {
+    y: 40,
+    opacity: 0,
+  });
+
+  ScrollTrigger.create({
+    trigger: ".feedback__content",
+    start: "top 70%",
+    onEnter: () => feedback.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: ".feedback__content",
+    start: "top bottom",
+    onLeaveBack: () => feedback.pause(0),
+  });
+
+  // STEPS
+
+  const stepsNumber = gsap.utils.toArray(".steps__number");
+  stepsNumber.forEach((number) => {
+    const anim = gsap.from(number, {
+      opacity: 0,
+    });
+
+    ScrollTrigger.create({
+      trigger: number,
+      start: "top 70%",
+      onEnter: () => anim.play(),
+    });
+
+    ScrollTrigger.create({
+      trigger: number,
+      start: "top bottom",
+      onLeaveBack: () => anim.pause(0),
+    });
+  });
+
+  const steps = gsap.utils.toArray(".steps__step");
+  steps.forEach((step) => {
+    const anim = gsap.from(step, {
+      x: -40,
+      opacity: 0,
+    });
+
+    ScrollTrigger.create({
+      trigger: step,
+      start: "top 70%",
+      onEnter: () => anim.play(),
+    });
+
+    ScrollTrigger.create({
+      trigger: step,
+      start: "top bottom",
+      onLeaveBack: () => anim.pause(0),
+    });
+  });
+
+  const stepsText = gsap.utils.toArray(".steps__text");
+  stepsText.forEach((step) => {
+    const anim = gsap.from(step, {
+      y: -30,
+      opacity: 0,
+      delay: 1,
+    });
+
+    ScrollTrigger.create({
+      trigger: step,
+      start: "top 70%",
+      onEnter: () => anim.play(),
+    });
+
+    ScrollTrigger.create({
+      trigger: step,
+      start: "top bottom",
+      onLeaveBack: () => anim.pause(0),
+    });
+  });
+
+  // PRICE
+
+  const prices = gsap.utils.toArray(".price-card");
+
+  prices.forEach((card, index) => {
+    gsap.from(card, {
+      scrollTrigger: {
+        trigger: card,
+        start: "top 75%",
+        end: "top bottom",
+        toggleActions: "play none none reverse",
+      },
+      y: 30,
+      stagger: 0.8,
+    });
+  });
+
   // WORDS
 
   const words = gsap.from(".words__content", {
@@ -376,29 +468,82 @@ document.addEventListener("DOMContentLoaded", () => {
     start: "top bottom",
     onLeaveBack: () => words.pause(0),
   });
-});
 
-// FAQ
+  // FAQ
 
-const faqBox = gsap.utils.toArray(".faq-box");
+  const faqBox = gsap.utils.toArray(".faq-box");
 
-faqBox.forEach((box) => {
-  const anim = gsap.from(box, {
-    y: -30,
+  faqBox.forEach((box) => {
+    const anim = gsap.from(box, {
+      y: -30,
+      opacity: 0,
+      delay: 0.4,
+      stagger: 0.4,
+    });
+
+    ScrollTrigger.create({
+      trigger: box,
+      start: "top bottom",
+      onEnter: () => anim.play(),
+    });
+
+    ScrollTrigger.create({
+      trigger: box,
+      start: "top bottom",
+      onLeaveBack: () => anim.pause(0),
+    });
+  });
+
+  // QUESTIONS
+
+  const questionsImage = gsap.from(".questions__img", {
+    y: 40,
     opacity: 0,
-    delay: 0.4,
-    stagger: 0.4,
   });
 
   ScrollTrigger.create({
-    trigger: box,
-    start: "top bottom",
-    onEnter: () => anim.play(),
+    trigger: ".questions__img",
+    start: "top 70%",
+    onEnter: () => questionsImage.play(),
   });
 
   ScrollTrigger.create({
-    trigger: box,
+    trigger: ".questions__img",
     start: "top bottom",
-    onLeaveBack: () => anim.pause(0),
+    onLeaveBack: () => questionsImage.pause(0),
+  });
+
+  const questionsText = gsap.from(".questions__text", {
+    y: 40,
+    opacity: 0,
+  });
+
+  ScrollTrigger.create({
+    trigger: ".questions__text",
+    start: "top 70%",
+    onEnter: () => questionsText.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: ".questions__text",
+    start: "top bottom",
+    onLeaveBack: () => questionsText.pause(0),
+  });
+
+  const questionsForm = gsap.from(".questions__form", {
+    y: 40,
+    opacity: 0,
+  });
+
+  ScrollTrigger.create({
+    trigger: ".questions__form",
+    start: "top 70%",
+    onEnter: () => questionsForm.play(),
+  });
+
+  ScrollTrigger.create({
+    trigger: "questions__form",
+    start: "top bottom",
+    onLeaveBack: () => questionsForm.pause(0),
   });
 });
