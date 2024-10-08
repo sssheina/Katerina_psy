@@ -20,3 +20,4 @@ import "./composables/privacy-policy.js";
 import "./main.js";
 import "./buttons.js";
 import "./animation.js";
+import "./loader.js";

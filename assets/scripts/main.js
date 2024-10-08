@@ -1,3 +1,8 @@
+import { loading } from "./loader.js";
+
+// LOADING
+loading();
+
 //  ----- HEADER COLOR -----
 
 window.addEventListener("scroll", function () {

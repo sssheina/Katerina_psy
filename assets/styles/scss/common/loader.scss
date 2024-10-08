@@ -1,0 +1,44 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  background: $color-blue-dark;
+  z-index: 999;
+
+  &__wrapper {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__loader {
+    width: 100%;
+    height: 100%;
+    border: 3px solid $color-blue-middle;
+    border-top-color: $color-blue-light;
+    border-bottom-color: $color-orange-light;
+    border-radius: 50%;
+    animation: rotate 5s linear infinite;
+  }
+
+  &__inner {
+    border-top-color: $color-orange-light;
+    border-bottom-color: $color-blue-light;
+    animation-duration: 2.5s;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: scale(1) rotate(360deg);
+    }
+    50% {
+      transform: scale(0.8) rotate(-360deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+}
