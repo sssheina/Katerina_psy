@@ -1,5 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
+import {
+  animateSingleElement,
+  animateElementsGroup,
+} from "./composables/animation.js";
+
 // COVER
 
 // title top
@@ -148,13 +153,13 @@ const mainSubtitleBottom = gsap.from(".cover__subtitle.bottom", {
 ScrollTrigger.create({
   trigger: ".cover__subtitle.bottom",
   start: "top 80%",
-  onEnter: () => mainSubtitleTop.play(),
+  onEnter: () => mainSubtitleBottom.play(),
 });
 
 ScrollTrigger.create({
   trigger: ".cover__subtitle.bottom",
   start: "top bottom",
-  onLeaveBack: () => mainSubtitleTop.pause(0),
+  onLeaveBack: () => mainSubtitleBottom.pause(0),
 });
 
 // button block
@@ -200,40 +205,8 @@ h2_title.forEach((title) => {
 });
 
 // ABOUT
-
-const aboutVideoBlock = gsap.from(".about__video-block", {
-  y: 40,
-  opacity: 0,
-});
-
-ScrollTrigger.create({
-  trigger: ".about__video-block",
-  start: "top 70%",
-  onEnter: () => aboutVideoBlock.play(),
-});
-
-ScrollTrigger.create({
-  trigger: ".about__video-block",
-  start: "top bottom",
-  onLeaveBack: () => aboutVideoBlock.pause(0),
-});
-
-const aboutTextBlock = gsap.from(".about__text-block", {
-  y: 40,
-  opacity: 0,
-});
-
-ScrollTrigger.create({
-  trigger: ".about__text-block",
-  start: "top 70%",
-  onEnter: () => aboutTextBlock.play(),
-});
-
-ScrollTrigger.create({
-  trigger: ".about__text-block",
-  start: "top bottom",
-  onLeaveBack: () => aboutTextBlock.pause(0),
-});
+animateSingleElement(".about__video-block");
+animateSingleElement(".about__text-block");
 
 // EXPERTISE
 
@@ -302,74 +275,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // CLIENTS
-
-  const clientsCards = gsap.utils.toArray(".clients-card");
-
-  clientsCards.forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 70%",
-        end: "top bottom",
-        toggleActions: "play none none reverse",
-      },
-      y: 30,
-      stagger: 0.8,
-    });
-  });
+  animateSingleElement(".clients__cards");
 
   // METHODS
-
-  const methods = gsap.utils.toArray(".methods-card");
-
-  methods.forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 70%",
-        end: "top bottom",
-        toggleActions: "play none none reverse",
-      },
-      y: 30,
-      stagger: 0.8,
-    });
-  });
+  animateElementsGroup(".methods-card");
 
   // BENEFITS
-
-  const benefits = gsap.utils.toArray(".benefits-card");
-
-  benefits.forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 70%",
-        end: "top bottom",
-        toggleActions: "play none none reverse",
-      },
-      y: 30,
-      stagger: 0.8,
-    });
-  });
+  animateElementsGroup(".benefits-card");
 
   // FEEDBACK
-
-  const feedback = gsap.from(".feedback__content", {
-    y: 40,
-    opacity: 0,
-  });
-
-  ScrollTrigger.create({
-    trigger: ".feedback__content",
-    start: "top 70%",
-    onEnter: () => feedback.play(),
-  });
-
-  ScrollTrigger.create({
-    trigger: ".feedback__content",
-    start: "top bottom",
-    onLeaveBack: () => feedback.pause(0),
-  });
+  animateSingleElement(".feedback__content");
 
   // STEPS
 
@@ -434,116 +349,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // PRICE
-
-  const prices = gsap.utils.toArray(".price-card");
-
-  prices.forEach((card, index) => {
-    gsap.from(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: "top 75%",
-        end: "top bottom",
-        toggleActions: "play none none reverse",
-      },
-      y: 30,
-      stagger: 0.8,
-    });
-  });
+  animateSingleElement(".price__cards");
 
   // WORDS
-
-  const words = gsap.from(".words__content", {
-    y: 40,
-    opacity: 0,
-  });
-
-  ScrollTrigger.create({
-    trigger: ".words__content",
-    start: "top 75%",
-    onEnter: () => words.play(),
-  });
-
-  ScrollTrigger.create({
-    trigger: ".words__content",
-    start: "top bottom",
-    onLeaveBack: () => words.pause(0),
-  });
+  animateSingleElement(".words__content");
 
   // FAQ
-
-  const faqBox = gsap.utils.toArray(".faq-box");
-
-  faqBox.forEach((box) => {
-    const anim = gsap.from(box, {
-      y: -30,
-      opacity: 0,
-      delay: 0.4,
-      stagger: 0.4,
-    });
-
-    ScrollTrigger.create({
-      trigger: box,
-      start: "top bottom",
-      onEnter: () => anim.play(),
-    });
-
-    ScrollTrigger.create({
-      trigger: box,
-      start: "top bottom",
-      onLeaveBack: () => anim.pause(0),
-    });
-  });
+  animateElementsGroup(".faq-box");
 
   // QUESTIONS
-
-  const questionsImage = gsap.from(".questions__img", {
-    y: 40,
-    opacity: 0,
-  });
-
-  ScrollTrigger.create({
-    trigger: ".questions__img",
-    start: "top 70%",
-    onEnter: () => questionsImage.play(),
-  });
-
-  ScrollTrigger.create({
-    trigger: ".questions__img",
-    start: "top bottom",
-    onLeaveBack: () => questionsImage.pause(0),
-  });
-
-  const questionsText = gsap.from(".questions__text", {
-    y: 40,
-    opacity: 0,
-  });
-
-  ScrollTrigger.create({
-    trigger: ".questions__text",
-    start: "top 70%",
-    onEnter: () => questionsText.play(),
-  });
-
-  ScrollTrigger.create({
-    trigger: ".questions__text",
-    start: "top bottom",
-    onLeaveBack: () => questionsText.pause(0),
-  });
-
-  const questionsForm = gsap.from(".questions__form", {
-    y: 40,
-    opacity: 0,
-  });
-
-  ScrollTrigger.create({
-    trigger: ".questions__form",
-    start: "top 70%",
-    onEnter: () => questionsForm.play(),
-  });
-
-  ScrollTrigger.create({
-    trigger: "questions__form",
-    start: "top bottom",
-    onLeaveBack: () => questionsForm.pause(0),
-  });
+  animateSingleElement(".questions__img");
+  animateSingleElement(".questions__text");
+  animateSingleElement(".questions__form");
 });
